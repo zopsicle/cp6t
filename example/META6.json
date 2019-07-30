@@ -1,0 +1,9 @@
+{
+    "name": "App::meta62nixexample",
+    "provides": {
+        "App::META62Nix::Example": "lib/App/META62Nix/Example.pm6"
+    },
+    "depends": [
+        "Pod::To::HTML"
+    ]
+}

@@ -1,0 +1,48 @@
+=head1 NAME
+
+META62Nix - Nix expressions for Perl 6 libraries
+
+=head1 SYNOPSIS
+
+    {perl6Packages}:
+    let package = {
+        name = "App::frobnicate";
+        src = ./.;
+        depends = [
+            perl6Packages.ecosystem.URI
+        ];
+    }; in
+    perl6Packages.mkDerivation package
+
+=head1 DESCRIPTION
+
+META62Nix consists of three parts, each described in this section.
+
+=head2 perl6Packages
+
+Infrastructure for building Perl 6 libraries with Nix. It offers a few Nix
+functions for working with Perl 6 libraries. If offers two main features:
+given a list of Perl 6 libraries, it can generate a PERL6LIB environment
+variable for use with Rakudo; and using this it can also generate a
+derivation that wraps executables in bin/*.
+
+TODO: Allow running tests of packages as well.
+
+See perl6Packages.nix for detailed information about each of the functions.
+
+=head2 ecosystem
+
+perl6Packages-compatible definitions for the
+L<ecosystem|https://github.com/perl6/ecosystem>.
+
+=head2 meta62nix
+
+A tool to generate Nix expressions from META6.json files.
+
+TODO: Write meta62nix (it does not yet exist).
+
+=head1 BUGS
+
+You need Rakudo to use META62Nix. Rakudo in Nixpkgs is outdated. Use
+L<rakudo-nix|https://github.com/chloekek/rakudo-nix> if you want a recent
+version of Rakudo.
