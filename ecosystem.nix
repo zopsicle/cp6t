@@ -11,16 +11,6 @@ self: {
         depends = [
         ];
     };
-    Pod-Load = {
-        name = "Pod::Load";
-        src = fetchTarball {
-            # TODO: Figure out how to get this from CPAN instead.
-            url = "https://github.com/JJ/p6-pod-load/archive/v0.5.2.tar.gz";
-            sha256 = "00fvpm2skjqb0mic6s4z43msxhj573acjy4fpnjfasfchk7h363v";
-        };
-        depends = [
-        ];
-    };
     Pod-To-HTML = {
         name = "Pod::To::HTML";
         src = fetchTarball {

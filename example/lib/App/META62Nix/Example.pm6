@@ -2,7 +2,7 @@ unit module App::META62Nix::Example;
 
 # Check that dependencies from the ecosystem can be imported.
 use ArrayHash;
-use Pod::To::HTML;
+use Net::IP;
 
 sub MAIN
     is export

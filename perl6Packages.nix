@@ -1,4 +1,4 @@
-{lib, stdenv, makeWrapper, rakudo}:
+{lib, fetchzip, stdenv, makeWrapper, rakudo}:
 if rakudo.version == "2017.01" then throw (
     "It seems like you are using Rakudo from Nixpkgs. This is an outdated " +
     "version. Consider using rakudo-nix instead."
@@ -15,9 +15,12 @@ rec {
         lib.concatMapStringsSep "," (p: p.src)
             (lib.concatMap closure packages);
 
-    # The packages from the ecosystem.
+    # The libraries from CPAN and the ecosystem.
+    libraries  = cpan // ecosystem;
+    cpan       = cpanF      libraries;
+    ecosystem  = ecosystemF libraries;
+    cpanF      = import ./cpan.nix {inherit fetchzip;};
     ecosystemF = import ./ecosystem.nix;
-    ecosystem = ecosystemF ecosystem;
 
     # Take a package and turn it into a derivation. The derivation will contain
     # some metadata about the package in $out/share and wrappers for any

@@ -30,7 +30,7 @@ TODO: Allow running tests of packages as well.
 
 See perl6Packages.nix for detailed information about each of the functions.
 
-=head2 ecosystem
+=head2 cpan and ecosystem
 
 perl6Packages-compatible definitions for libraries on CPAN and the
 L<ecosystem|https://github.com/perl6/ecosystem>.
@@ -51,6 +51,11 @@ The CPAN cache is a file in this repository that maps CPAN archive URLs to
 Nix hashes as reported by «nix-prefetch-url --unpack». Given a path to the
 CPAN cache, this script updates it with all new Perl 6 libraries on CPAN. To
 do this it downloads all of those archives into the Nix store.
+
+=head3 meta62nixscripts cpan generate-nix scripts/cache/cpan
+
+Generate a Nix expression for each library from CPAN that is in the CPAN
+cache. Will download archives if necessary.
 
 =head1 BUGS
 

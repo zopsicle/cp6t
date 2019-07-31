@@ -4,7 +4,7 @@
     name = "App::meta62nixexample";
     src = ./.;
     depends = [
-        perl6Packages.ecosystem.ArrayHash
-        perl6Packages.ecosystem.Pod-To-HTML
+        perl6Packages.libraries."ArrayHash"
+        perl6Packages.libraries."Net::IP"
     ];
 }
