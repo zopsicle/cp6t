@@ -2,7 +2,7 @@ unit module App::meta62nixscripts::Main;
 
 use App::meta62nixscripts::CPAN;
 
-sub MAIN(‘cpan’, IO() $cache --> Nil)
+sub MAIN(‘cpan’, ‘update-cache’, IO() $cache --> Nil)
     is export
 {
     my %cache := CPANCache.new($cache);

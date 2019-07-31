@@ -45,7 +45,7 @@ TODO: Write meta62nix (it does not yet exist).
 
 A collection of scripts to perform maintenance on this repository.
 
-=head3 meta62nixscripts cpan scripts/cache/cpan
+=head3 meta62nixscripts cpan update-cache scripts/cache/cpan
 
 The CPAN cache is a file in this repository that maps CPAN archive URLs to
 Nix hashes as reported by «nix-prefetch-url --unpack». Given a path to the
