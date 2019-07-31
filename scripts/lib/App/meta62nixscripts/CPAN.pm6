@@ -22,6 +22,7 @@ sub cpan-archives(--> Seq:D)
     $proc.out.lines
         .grep(/[‘.tar.gz’ | ‘.tgz’ | ‘.zip’]$/)
         .map(*.split(/\s+/)[4])
+        .grep(* !~~ /‘id/P/PS/PSIXDISTS/’/)
         .map(｢https://www.cpan.org/authors/｣ ~ *);
 }
 
