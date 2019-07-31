@@ -65,6 +65,7 @@ class CPANCache
             STORE => sub ($, Str:D $hash --> Nil) {
                 return if %!entries{$archive}:exists;
                 $!file.put: “$archive $hash”;
+                $!file.flush;
                 %!entries{$archive} = $hash;
             },
         );
