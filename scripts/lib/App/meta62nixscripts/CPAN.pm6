@@ -24,3 +24,11 @@ sub cpan-archives(--> Seq:D)
         .map(*.split(/\s+/)[4])
         .map(｢https://www.cpan.org/authors/｣ ~ *);
 }
+
+#| Read the cache which contains a mapping from archive URLs to hashes
+#| reported by «nix-prefetch-url --unpack».
+sub read-cpan-cache(IO() $path --> Hash:D[Str:D, Str:D])
+    is export
+{
+    my Str:D % = $path.lines».split(‘ ’).map({ .[0] => .[1] });
+}
