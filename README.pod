@@ -16,7 +16,7 @@ META62Nix - Nix expressions for Perl 6 libraries
 
 =head1 DESCRIPTION
 
-META62Nix consists of three parts, each described in this section.
+META62Nix consists of four parts, each described in this section.
 
 =head2 perl6Packages
 
@@ -40,6 +40,17 @@ L<ecosystem|https://github.com/perl6/ecosystem>.
 A tool to generate Nix expressions from META6.json files.
 
 TODO: Write meta62nix (it does not yet exist).
+
+=head2 scripts
+
+A collection of scripts to perform maintenance on this repository.
+
+=head3 meta62nixscripts cpan scripts/cache/cpan
+
+The CPAN cache is a file in this repository that maps CPAN archive URLs to
+Nix hashes as reported by «nix-prefetch-url --unpack». Given a path to the
+CPAN cache, this script updates it with all new Perl 6 libraries on CPAN. To
+do this it downloads all of those archives into the Nix store.
 
 =head1 BUGS
 
