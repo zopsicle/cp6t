@@ -32,3 +32,23 @@ sub read-cpan-cache(IO() $path --> Hash:D[Str:D, Str:D])
 {
     my Str:D % = $path.lines».split(‘ ’).map({ .[0] => .[1] });
 }
+
+#| Append an entry into the CPAN cache. See read-cpan-cache for more
+#| information about the CPAN cache.
+sub append-cpan-cache(IO() $path, Str:D $archive, Str:D $hash --> Nil)
+    is export
+{
+    my $file := open $path, :a;
+    $file.put: “$archive $hash”;
+    $file.close;
+}
+
+#| Find the Nix store path for a CPAN archive. The URL and hash of the archive
+#| must be given.
+sub cpan-nix-store-path(Str:D $archive, Str:D $hash --> IO::Path:D)
+    is export
+{
+    my @cmd := «nix-prefetch-url --print-path --unpack “$archive” “$hash”»;
+    my $proc := run @cmd, :out;
+    $proc.out.lines[1].IO;
+}

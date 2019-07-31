@@ -8,7 +8,7 @@ sub MAIN(‘cpan’, IO() $cache --> Nil)
     my %cache := read-cpan-cache $cache;
     %cache.perl.say;
 
-    for cpan-archives[^10] -> $archive {
+    for cpan-archives[^5] -> $archive {
         next if %cache{$archive}:exists;
 
         $archive.say;
@@ -16,10 +16,13 @@ sub MAIN(‘cpan’, IO() $cache --> Nil)
         my @cmd := «nix-prefetch-url --unpack “$archive”»;
         my $hash := run(@cmd, :out).out.slurp.chomp;
 
+        append-cpan-cache $cache, $archive, $hash;
         %cache{$archive} = $hash;
 
         sleep 1;
     }
 
-    .say for %cache.pairs;
+    for %cache.kv -> $archive, $hash {
+        say cpan-nix-store-path($archive, $hash).perl;
+    }
 }
