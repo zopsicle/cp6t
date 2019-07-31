@@ -5,21 +5,27 @@ use App::meta62nixscripts::CPAN;
 sub MAIN(‘cpan’, IO() $cache --> Nil)
     is export
 {
-    my %cache := read-cpan-cache $cache;
-    %cache.perl.say;
+    my %cache := CPANCache.new($cache);
+    my @archives = cpan-archives;
 
-    for cpan-archives[^5] -> $archive {
-        next if %cache{$archive}:exists;
+    for ^∞ Z @archives -> ($i, $archive) {
+        my &log := { $*OUT.put: qq｢[$i/{@archives.elems}] $_ $archive｣ };
 
-        $archive.say;
+        if %cache{$archive}:exists {
+            log ｢CACHE｣;
+            next;
+        }
 
+        log ｢GET｣;
+
+        avoid-flooding-cpan;
         my @cmd := «nix-prefetch-url --unpack “$archive”»;
-        my $hash := run(@cmd, :out).out.slurp.chomp;
-
-        append-cpan-cache $cache, $archive, $hash;
-        %cache{$archive} = $hash;
-
-        sleep 1;
+        my $proc := run(@cmd, :out, :err);
+        if $proc {
+            %cache{$archive} = $proc.out.slurp.chomp;
+        } else {
+            $*ERR.put: $proc.err.slurp;
+        }
     }
 
     for %cache.kv -> $archive, $hash {

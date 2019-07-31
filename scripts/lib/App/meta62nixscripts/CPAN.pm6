@@ -25,22 +25,60 @@ sub cpan-archives(--> Seq:D)
         .map(｢https://www.cpan.org/authors/｣ ~ *);
 }
 
-#| Read the cache which contains a mapping from archive URLs to hashes
+#| The CPAN cache contains mappings from archive URLs to their hashes as
 #| reported by «nix-prefetch-url --unpack».
-sub read-cpan-cache(IO() $path --> Hash:D[Str:D, Str:D])
+class CPANCache
+    does Associative
     is export
 {
-    my Str:D % = $path.lines».split(‘ ’).map({ .[0] => .[1] });
-}
+    has IO::Handle $!file is required;
+    has Str:D %!entries;
 
-#| Append an entry into the CPAN cache. See read-cpan-cache for more
-#| information about the CPAN cache.
-sub append-cpan-cache(IO() $path, Str:D $archive, Str:D $hash --> Nil)
-    is export
-{
-    my $file := open $path, :a;
-    $file.put: “$archive $hash”;
-    $file.close;
+    #| Open the CPAN cache and read it. The file stays open for writing.
+    method new(IO() $path --> ::?CLASS:D)
+    {
+        my $file := open $path, :ra;
+        $file.seek: 0, SeekFromBeginning;
+        my Str:D %entries = $file.lines».split(‘ ’).map({ .[0] => .[1] });
+        self.bless(:$file, :%entries);
+    }
+
+    submethod BUILD(:$!file, :%!entries)
+    {
+    }
+
+    #| Close the file handle.
+    method close(::?CLASS:D: --> Nil)
+    {
+        $!file.close;
+    }
+
+    #| Get or set the hash for an archive.
+    method AT-KEY(::?CLASS:D: Str:D $archive --> Str)
+        is rw
+    {
+        Proxy.new(
+            FETCH => sub ($ --> Str) {
+                %!entries{$archive};
+            },
+            STORE => sub ($, Str:D $hash --> Nil) {
+                return if %!entries{$archive}:exists;
+                $!file.put: “$archive $hash”;
+                %!entries{$archive} = $hash;
+            },
+        );
+    }
+
+    #| Check whether the cache contains a hash for an archive.
+    method EXISTS-KEY(::?CLASS:D: Str:D $archive --> Bool:D)
+    {
+        %!entries{$archive}:exists;
+    }
+
+    method kv(::?CLASS:D: --> Seq:D)
+    {
+        %!entries.kv;
+    }
 }
 
 #| Find the Nix store path for a CPAN archive. The URL and hash of the archive
@@ -51,4 +89,11 @@ sub cpan-nix-store-path(Str:D $archive, Str:D $hash --> IO::Path:D)
     my @cmd := «nix-prefetch-url --print-path --unpack “$archive” “$hash”»;
     my $proc := run @cmd, :out;
     $proc.out.lines[1].IO;
+}
+
+#| Do not send too many requests to CPAN in quick succession.
+sub avoid-flooding-cpan(--> Nil)
+    is export
+{
+    sleep 0.1;
 }
