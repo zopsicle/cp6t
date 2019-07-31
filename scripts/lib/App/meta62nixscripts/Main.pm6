@@ -8,7 +8,7 @@ sub MAIN(‘cpan’, IO() $cache --> Nil)
     my %cache := CPANCache.new($cache);
     my @archives = cpan-archives;
 
-    for ^∞ Z @archives -> ($i, $archive) {
+    for 1 .. ∞ Z @archives -> ($i, $archive) {
         my &log := { $*OUT.put: qq｢[$i/{@archives.elems}] $_ $archive｣ };
 
         if %cache{$archive}:exists {
