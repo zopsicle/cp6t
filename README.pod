@@ -32,7 +32,7 @@ See perl6Packages.nix for detailed information about each of the functions.
 
 =head2 ecosystem
 
-perl6Packages-compatible definitions for the
+perl6Packages-compatible definitions for libraries on CPAN and the
 L<ecosystem|https://github.com/perl6/ecosystem>.
 
 =head2 meta62nix
