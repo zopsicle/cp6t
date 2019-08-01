@@ -1,8 +1,8 @@
-unit module App::meta62nixscripts::Main;
+unit module App::cp6t-ecosystem::Main;
 
-use App::meta62nixscripts::CPAN;
+use App::cp6t-ecosystem::CPAN;
 
-multi MAIN(‘cpan’, ‘update-cache’, IO() $cache --> Nil)
+multi MAIN(‘cpan’, ‘update-archives’, IO() $cache --> Nil)
     is export
 {
     my %cache := CPANCache.new($cache);

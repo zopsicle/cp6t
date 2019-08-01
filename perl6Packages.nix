@@ -16,11 +16,11 @@ rec {
             (lib.concatMap closure packages);
 
     # The libraries from CPAN and the ecosystem.
-    libraries  = cpan // ecosystem;
-    cpan       = cpanF      libraries;
-    ecosystem  = ecosystemF libraries;
-    cpanF      = import ./cpan.nix {inherit fetchzip;};
-    ecosystemF = import ./ecosystem.nix;
+    libraries = cpan // p6c;
+    cpan      = cpanF libraries;
+    p6c       = p6cF  libraries;
+    cpanF     = import ./ecosystem/cpan.nix {inherit fetchzip;};
+    p6cF      = import ./ecosystem/p6c.nix;
 
     # Take a package and turn it into a derivation. The derivation will contain
     # some metadata about the package in $out/share and wrappers for any

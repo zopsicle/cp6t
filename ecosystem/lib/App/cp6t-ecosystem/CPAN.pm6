@@ -1,4 +1,4 @@
-unit module App::meta62nixscripts::CPAN;
+unit module App::cp6t-ecosystem::CPAN;
 
 #| List all Perl 6 archives on CPAN. Returns a sequence of strings, each
 #| containing an HTTP URL to the archive.

@@ -1,7 +1,0 @@
-{
-    "name": "App::meta62nixscripts",
-    "provides": {
-        "App::meta62nixscripts::CPAN": "lib/App/meta62nixscripts/CPAN.pm6",
-        "App::meta62nixscripts::Main": "lib/App/meta62nixscripts/Main.pm6"
-    }
-}
