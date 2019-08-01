@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+nix-build ./meta6-to-nix
+regenerate-META6.nix() {
+    result/bin/cp6t-meta6-to-nix --distribution=$1 --src=./. > $1/META6.nix
+}
+regenerate-META6.nix ecosystem
+regenerate-META6.nix example
+regenerate-META6.nix meta6-to-nix
+regenerate-META6.nix p6al
