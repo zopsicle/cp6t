@@ -1,0 +1,24 @@
+=head1 NAME
+
+cp6t-ecosystem - Perl 6 ecosystem scraping
+
+=head1 SYNOPSIS
+
+    nix-build ./ecosystem
+    result/bin/cp6t-ecosystem cpan update-archives ecosystem/cpan.archives
+    result/bin/cp6t-ecosystem cpan generate-nix ecosystem/cpan.archives > ecosystem/cpan.nix
+
+=head1 DESCRIPTION
+
+cp6t-ecosystem performs maintenance on the cpan.archives, cpan.nix, and
+p6c.nix files.
+
+=head2 cp6t-ecosystem cpan update-archives ARCHIVES
+
+Find which archives are on CPAN and download them into the Nix store if they
+are not already in ARCHIVES. Add them to ARCHIVES if necessary.
+
+=head2 cp6t-ecosystem cpan generate-nix ARCHIVES
+
+Generate a Nix expression for each archive in ARCHIVES, downloading the
+archive if necessary. The Nix expressions are written to stdout.
