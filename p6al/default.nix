@@ -1,7 +1,6 @@
 let
     nixpkgs = import ../nix/nixpkgs.nix {};
-    p6al = nixpkgs.perl6-on-nix.mkDerivation
-               (nixpkgs.callPackage ./META6.nix {});
+    p6al = nixpkgs.callPackage ./META6.nix {};
     LD_LIBRARY_PATH = nixpkgs.lib.makeLibraryPath [nixpkgs.openssl];
 in
     # TODO: Once perl6-on-nix supports setting LD_LIBRARY_PATH, get rid of this

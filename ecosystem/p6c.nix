@@ -1,7 +1,7 @@
 # In this files you find Perl 6 Nix expressions for the modules from the Perl 6
 # ecosystem list.
 {perl6-on-nix}: {
-    "ArrayHash" = {
+    "ArrayHash" = perl6-on-nix.mkDerivation {
         # XXX: Not actually in the ecosystem, but fun to try out.
         name = "ArrayHash";
         src = fetchTarball {
@@ -11,7 +11,7 @@
         depends = [
         ];
     };
-    "Base64" = {
+    "Base64" = perl6-on-nix.mkDerivation {
         name = "Base64";
         src = fetchTarball {
             url = "https://github.com/ugexe/Perl6-Base64/archive/ee98cf5da9660f8d5e55c3eb5d51e37389fe4a75.tar.gz";
@@ -20,7 +20,7 @@
         depends = [
         ];
     };
-    "Crypt::Random" = {
+    "Crypt::Random" = perl6-on-nix.mkDerivation {
         name = "Crypt::Random";
         src = fetchTarball {
             url = "https://github.com/skinkade/crypt-random/archive/c1bf9393ab736ac5e5de2d0c3f56078c178cc071.tar.gz";
@@ -29,7 +29,7 @@
         depends = [
         ];
     };
-    "DateTime::Parse" = {
+    "DateTime::Parse" = perl6-on-nix.mkDerivation {
         name = "DateTime::Parse";
         src = fetchTarball {
             url = "https://github.com/sergot/datetime-parse/archive/acf2f4f493891d3accdc25e8209ce275899d5dd2.tar.gz";
@@ -38,7 +38,7 @@
         depends = [
         ];
     };
-    "Digest" = {
+    "Digest" = perl6-on-nix.mkDerivation {
         name = "Digest";
         src = fetchTarball {
             url = "https://github.com/grondilu/libdigest-perl6/archive/39bb469a81485ede064de7c7aa9284d1c4b327c7.tar.gz";
@@ -47,7 +47,7 @@
         depends = [
         ];
     };
-    "Digest::HMAC" = {
+    "Digest::HMAC" = perl6-on-nix.mkDerivation {
         name = "Digest::HMAC";
         src = fetchTarball {
             url = "https://github.com/retupmoca/P6-Digest-HMAC/archive/dcc292d77c7158eb7b53d3673cbee66d8b7b4fdf.tar.gz";
@@ -57,7 +57,7 @@
             perl6-on-nix.libraries."Digest"
         ];
     };
-    "HTTP::HPACK" = {
+    "HTTP::HPACK" = perl6-on-nix.mkDerivation {
         name = "HTTP::HPACK";
         src = fetchTarball {
             url = "https://github.com/jnthn/p6-http-hpack/archive/608a74c5f56d76891ce9c7f9422320e9fdd5b6af.tar.gz";
@@ -66,7 +66,7 @@
         depends = [
         ];
     };
-    "IO::Path::ChildSecure" = {
+    "IO::Path::ChildSecure" = perl6-on-nix.mkDerivation {
         name = "IO::Path::ChildSecure";
         src = fetchTarball {
             url = "https://github.com/perl6-community-modules/perl6-IO-Path-ChildSecure/archive/d98c6f45c8a7152e3676b0c39166a62598dbcbf4.tar.gz";
@@ -75,7 +75,7 @@
         depends = [
         ];
     };
-    "JSON::JWT" = {
+    "JSON::JWT" = perl6-on-nix.mkDerivation {
         name = "JSON::JWT";
         src = fetchTarball {
             url = "https://github.com/retupmoca/P6-JSON-JWT/archive/cf0dceb420aa7b62b2ff5509acddc6f3133e82c8.tar.gz";
@@ -88,7 +88,7 @@
             perl6-on-nix.libraries."Digest::HMAC"
         ];
     };
-    "MIME::Base64" = {
+    "MIME::Base64" = perl6-on-nix.mkDerivation {
         name = "MIME::Base64";
         src = fetchTarball {
             url = "https://github.com/perl6/Perl6-MIME-Base64/archive/v1.2.1.tar.gz";
@@ -97,7 +97,7 @@
         depends = [
         ];
     };
-    "OO::Monitors" = {
+    "OO::Monitors" = perl6-on-nix.mkDerivation {
         name = "OO::Monitors";
         src = fetchTarball {
             url = "https://github.com/jnthn/oo-monitors/archive/6dc1a363c7859b760bf973d0ada0773cfdb14356.tar.gz";
@@ -106,7 +106,7 @@
         depends = [
         ];
     };
-    "OpenSSL" = {
+    "OpenSSL" = perl6-on-nix.mkDerivation {
         name = "OpenSSL";
         src = fetchTarball {
             url = "https://github.com/sergot/openssl/archive/597e836c73684bb53ac5cb4511edca9b4f10ea87.tar.gz";
@@ -115,7 +115,7 @@
         depends = [
         ];
     };
-    "Pod::To::HTML" = {
+    "Pod::To::HTML" = perl6-on-nix.mkDerivation {
         name = "Pod::To::HTML";
         src = fetchTarball {
             url = "https://github.com/perl6/Pod-To-HTML/archive/v0.6.0.tar.gz";
@@ -127,7 +127,7 @@
             perl6-on-nix.libraries."URI"
         ];
     };
-    "Template::Mustache" = {
+    "Template::Mustache" = perl6-on-nix.mkDerivation {
         name = "Template::Mustache";
         src = fetchTarball {
             url = "https://github.com/softmoth/p6-Template-Mustache/archive/4f09e0a97f38fe5d8c75514ca0c858cdfb26d09b.tar.gz";
@@ -136,7 +136,7 @@
         depends = [
         ];
     };
-    "URI" = {
+    "URI" = perl6-on-nix.mkDerivation {
         name = "URI";
         src = fetchTarball {
             url = "https://github.com/perl6-community-modules/uri/archive/v0.2.2.tar.gz";

@@ -23,7 +23,7 @@ sub meta6-to-nix(IO(Cool) :$distribution, Str:D :$src --> List:D)
         # !!! THIS IS A GENERATED FILE !!!
         # DO NOT UPDATE THIS FILE MANUALLY
         \{perl6-on-nix\}:
-        \{
+        perl6-on-nix.mkDerivation \{
             name = "$name";
             src = $src;
             depends = [{
