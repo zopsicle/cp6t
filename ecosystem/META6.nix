@@ -5,6 +5,6 @@ perl6-on-nix.mkDerivation {
     name = "App::cp6t-ecosystem";
     src = ./.;
     depends = [
-        perl6-on-nix.libraries."App::cp6t-meta6-to-nix"
+        perl6-on-nix.libraries."App::meta6-to-nix"
     ];
 }

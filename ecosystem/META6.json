@@ -6,6 +6,6 @@
         "App::cp6t-ecosystem::Main": "lib/App/cp6t-ecosystem/Main.pm6"
     },
     "depends": [
-        "App::cp6t-meta6-to-nix"
+        "App::meta6-to-nix"
     ]
 }

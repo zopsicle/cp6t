@@ -1,4 +1,4 @@
-unit module App::cp6t-meta6-to-nix;
+unit module App::meta6-to-nix;
 
 #| Returns a list with four elements: the name of the library, the version
 #| number, the full name of the library including its version number, the

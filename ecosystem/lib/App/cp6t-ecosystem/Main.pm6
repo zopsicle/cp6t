@@ -1,7 +1,7 @@
 unit module App::cp6t-ecosystem::Main;
 
 use App::cp6t-ecosystem::CPAN;
-use App::cp6t-meta6-to-nix;
+use App::meta6-to-nix;
 
 multi MAIN(‘cpan’, ‘update-archives’, IO() $cache --> Nil)
     is export

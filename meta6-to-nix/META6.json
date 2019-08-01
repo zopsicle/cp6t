@@ -1,8 +1,8 @@
 {
-    "name": "App::cp6t-meta6-to-nix",
+    "name": "App::meta6-to-nix",
     "version": "0.0.0",
     "provides": {
-        "App::cp6t-meta6-to-nix": "lib/App/cp6t-meta6-to-nix.pm6",
-        "App::cp6t-meta6-to-nix::Main": "lib/App/cp6t-meta6-to-nix/Main.pm6"
+        "App::meta6-to-nix": "lib/App/meta6-to-nix.pm6",
+        "App::meta6-to-nix::Main": "lib/App/meta6-to-nix/Main.pm6"
     }
 }
