@@ -1,6 +1,7 @@
 unit module App::cp6t-ecosystem::Main;
 
 use App::cp6t-ecosystem::CPAN;
+use App::cp6t-meta6-to-nix;
 
 multi MAIN(‘cpan’, ‘update-archives’, IO() $cache --> Nil)
     is export
@@ -34,31 +35,27 @@ multi MAIN(‘cpan’, ‘generate-nix’, IO() $cache --> Nil)
     put ｢# !!! THIS IS A GENERATED FILE !!!｣;
     put ｢# DO NOT UPDATE THIS FILE MANUALLY｣;
 
-    put ｢{fetchzip}:｣;
-    put ｢self: {｣;
+    put ｢{callPackage, fetchzip, perl6-on-nix}: {｣;
 
     my Version:D %latest;
     my %all := SetHash.new;
 
     my %cache := CPANCache.new($cache);
     for %cache.kv -> $archive, $hash {
-        my $path := cpan-nix-store-path($archive, $hash);
-        my $meta := try Distribution::Path.new($path).meta;
-        without $meta {
-            $*ERR.put: “$archive: $!”;
-            next;
-        }
+        my $distribution := cpan-nix-store-path($archive, $hash);
 
-        my $fetch := $archive ~~ /‘.zip’$/ ?? ‘fetchzip’ !! ‘fetchTarball’;
+        my $src := qq:to/EOF/.chomp;
+            {$archive ~~ /‘.zip’$/ ?? ‘fetchzip’ !! ‘fetchTarball’} \{
+                    url = "$archive";
+                    sha256 = "$hash";
+                \}
+            EOF
 
-        my $name := $meta<name> // next;
-        my $version := Version.new($meta<version> // next);
-        next if $meta<depends> ~~ Hash; # TODO: Deal with this.
-        my @depends := $meta<depends> // ();
+        my ($name, $version, $full, $nix) :=
+            do try { meta6-to-nix(:$distribution, :$src) } //
+            do { $*ERR.put: $!; next; };
 
         %latest{$name} max= $version;
-
-        my $full := “{$name}:ver<$version>”;
 
         # Sometimes we get the same module name twice. In that case, ignore the
         # last one.
@@ -66,29 +63,14 @@ multi MAIN(‘cpan’, ‘generate-nix’, IO() $cache --> Nil)
         next if %all{$full};
         %all{$full} = True;
 
-        print qq:to/EOF/;
-            "{$full}" = \{
-                name = "$name";
-                src = $fetch \{
-                    url = "$archive";
-                    sha256 = "$hash";
-                \};
-                depends = [{
-                    @depends.map({
-                        # TODO: Until we find a nice way to deal with them, we
-                        # will TODO: ignore ver and auth bounds.
-                        my $dep-full := S/‘:’ [ver | auth] .*//;
-                        qq｢\n            self."$dep-full"｣
-                    }).join
-                }
-                ];
-            \};
-        EOF
+        put qq:to/EOF/.chomp;
+            "$full" = callPackage ($nix) \{\};
+            EOF
     }
 
     for %latest.kv -> $name, $version {
         print qq:to/EOF/;
-            "$name" = self."{$name}:ver<$version>";
+            "$name" = perl6-on-nix.libraries."{$name}:ver<$version>";
         EOF
     }
 

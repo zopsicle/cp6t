@@ -1,4 +1,4 @@
-{lib, fetchzip, stdenv, makeWrapper, rakudo}:
+{lib, callPackage, fetchzip, stdenv, makeWrapper, rakudo}:
 if rakudo.version == "2017.01" then throw (
     "It seems like you are using Rakudo from Nixpkgs. This is an outdated " +
     "version. Consider using rakudo-nix instead."
@@ -17,10 +17,8 @@ rec {
 
     # The libraries from CPAN and the ecosystem.
     libraries = cpan // p6c;
-    cpan      = cpanF libraries;
-    p6c       = p6cF  libraries;
-    cpanF     = import ../ecosystem/cpan.nix {inherit fetchzip;};
-    p6cF      = import ../ecosystem/p6c.nix;
+    cpan      = callPackage ../ecosystem/cpan.nix {};
+    p6c       = callPackage ../ecosystem/p6c.nix {};
 
     # Take a package and turn it into a derivation. The derivation will contain
     # some metadata about the package in $out/share and wrappers for any

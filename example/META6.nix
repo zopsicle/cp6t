@@ -1,6 +1,6 @@
 {perl6-on-nix}:
 {
-    name = "App::meta62nixexample";
+    name = "App::cp6t-example";
     src = ./.;
     depends = [
         perl6-on-nix.libraries."ArrayHash"

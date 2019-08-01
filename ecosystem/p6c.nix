@@ -1,6 +1,6 @@
 # In this files you find Perl 6 Nix expressions for the modules from the Perl 6
 # ecosystem list.
-self: {
+{perl6-on-nix}: {
     ArrayHash = {
         # XXX: Not actually in the ecosystem, but fun to try out.
         name = "ArrayHash";
@@ -18,9 +18,9 @@ self: {
             sha256 = "0iqganz3sbv53w5pjpikadaj4dkfr6axq53bsq60zac6kgclhnha";
         };
         depends = [
-            self.Pod-Load
-            self.Template-Mustache
-            self.URI
+            perl6-on-nix.libraries.Pod-Load
+            perl6-on-nix.libraries.Template-Mustache
+            perl6-on-nix.libraries.URI
         ];
     };
     Template-Mustache = {
