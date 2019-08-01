@@ -1,4 +1,4 @@
-{lib, callPackage, fetchzip, stdenv, makeWrapper, rakudo}:
+{lib, callPackage, fetchzip, stdenv, makeWrapper, rakudo, openssl}:
 if rakudo.version == "2017.01" then throw (
     "It seems like you are using Rakudo from Nixpkgs. This is an outdated " +
     "version. Consider using rakudo-nix instead."
@@ -19,18 +19,41 @@ rec {
             buildInputs = [makeWrapper];
             phases = ["installPhase"];
             installPhase = ''
+                export HOME=$PWD
+
                 mkdir --parents $out/share
 
                 {
-                    echo -n $out/share/DISTRIBUTION
+                    # The REPOSITORY directory contains the installed
+                    # distribution, which includes precompiled objects.
+                    echo -n 'inst#'$out/share/REPOSITORY
+
+                    # The PERL6LIB file contains the value of the PERL6LIB
+                    # environment variable.
                     for depend in ${lib.concatMapStringsSep " " (p: "${p}") depends}; do
                         echo -n ,
                         cat $depend/share/PERL6LIB
                     done
+
+                    # The DISTRIBUTION directory contains the distribution,
+                    # which includes source code.
+                    echo -n ,'file#'$out/share/DISTRIBUTION
                 } > $out/share/PERL6LIB
 
+                mkdir $out/share/REPOSITORY
                 ln -s ${src} $out/share/DISTRIBUTION
 
+                # Install the library so that it gets precompiled. We must
+                # *not* pass the --for option, since that clears PERL6LIB.
+                # TODO: Don't pass OpenSSL here; make it configurable which
+                # TODO: libraries a library needs during compilation.
+                LD_LIBRARY_PATH=${lib.makeLibraryPath [openssl]}:$LD_LIBRARY_PATH \
+                PERL6LIB=$(< $out/share/PERL6LIB) \
+                    ${rakudo}/bin/perl6 ${./install-dist.p6} \
+                        --from=$out/share/DISTRIBUTION \
+                        --to='inst#'$out/share/REPOSITORY
+
+                # Wrap executables.
                 if [[ -d ${src}/bin ]]; then
                     mkdir --parents $out/bin
                     for f in $(find ${src}/bin -mindepth 1); do

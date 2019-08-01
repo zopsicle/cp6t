@@ -27,6 +27,7 @@
             sha256 = "0b0xkdv714dkxqwdv3gpaps06pc42sqxhq7n638ridh2zapnf1yx";
         };
         depends = [
+            perl6-on-nix.libraries."if"
         ];
     };
     "DateTime::Parse" = perl6-on-nix.mkDerivation {
@@ -62,6 +63,15 @@
         src = fetchTarball {
             url = "https://github.com/jnthn/p6-http-hpack/archive/608a74c5f56d76891ce9c7f9422320e9fdd5b6af.tar.gz";
             sha256 = "1n6pwqw8w5jf3fidpgyrvxxhwzz12yni6iishbb5bxkxyv96g00x";
+        };
+        depends = [
+        ];
+    };
+    "if" = perl6-on-nix.mkDerivation {
+        name = "if";
+        src = fetchTarball {
+            url = "https://github.com/FROGGS/p6-if/archive/d4ef4186a0837b405dfda652d3ed58ceecb0a082.tar.gz";
+            sha256 = "0cc1wfx77q1nsbn4p4zxd8ihjspbplbsycy8kqn70is4yjsqr1c0";
         };
         depends = [
         ];
