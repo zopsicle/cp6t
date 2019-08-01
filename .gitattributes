@@ -1,0 +1,5 @@
+/ecosystem/META6.nix binary
+/ecosystem/cpan.archives binary
+/ecosystem/cpan.nix binary
+/example/META6.nix binary
+/meta6-to-nix/META6.nix binary

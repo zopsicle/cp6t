@@ -20,6 +20,8 @@ sub meta6-to-nix(IO(Cool) :$distribution, Str:D :$src --> List:D)
     # FIXME: Guard against Nix injection attacks.
 
     my $nix := qq:to/EOF/.chomp;
+        # !!! THIS IS A GENERATED FILE !!!
+        # DO NOT UPDATE THIS FILE MANUALLY
         \{perl6-on-nix\}:
         \{
             name = "$name";
