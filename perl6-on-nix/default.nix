@@ -19,8 +19,8 @@ rec {
     libraries = cpan // p6c;
     cpan      = cpanF libraries;
     p6c       = p6cF  libraries;
-    cpanF     = import ./ecosystem/cpan.nix {inherit fetchzip;};
-    p6cF      = import ./ecosystem/p6c.nix;
+    cpanF     = import ../ecosystem/cpan.nix {inherit fetchzip;};
+    p6cF      = import ../ecosystem/p6c.nix;
 
     # Take a package and turn it into a derivation. The derivation will contain
     # some metadata about the package in $out/share and wrappers for any

@@ -1,4 +1,4 @@
-unit module App::META62Nix::Example;
+unit module App::cp6t-example::Main;
 
 # Check that dependencies from the ecosystem can be imported.
 use ArrayHash;

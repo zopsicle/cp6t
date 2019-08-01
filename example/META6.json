@@ -1,7 +1,8 @@
 {
-    "name": "App::meta62nixexample",
+    "name": "App::cp6t-example",
+    "version": "0.0.0",
     "provides": {
-        "App::META62Nix::Example": "lib/App/META62Nix/Example.pm6"
+        "App::cp6t-example::Main": "lib/App/cp6t-example/Main.pm6"
     },
     "depends": [
         "ArrayHash",
