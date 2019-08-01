@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-App::cp6t-p6al - Perl 6 Archive Listing
+App::p6al - Perl 6 Archive Listing
 
 =head1 DESCRIPTION
 

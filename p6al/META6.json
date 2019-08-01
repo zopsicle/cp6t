@@ -1,0 +1,10 @@
+{
+    "name": "App::p6al",
+    "version": "0.0.0",
+    "provides": {
+        "App::p6al::Main": "lib/App/p6al/Main.pm6"
+    },
+    "depends": [
+        "Cro::HTTP"
+    ]
+}

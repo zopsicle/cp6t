@@ -35,7 +35,7 @@ rec {
 
                 if [[ -d ${package.src}/bin ]]; then
                     mkdir --parents $out/bin
-                    for f in $(find ${package.src}/bin); do
+                    for f in $(find ${package.src}/bin -mindepth 1); do
                         makeWrapper ${rakudo}/bin/perl6 $out/bin/$(basename $f) \
                             --set PERL6LIB $(< $out/share/PERL6LIB) \
                             --add-flags $f

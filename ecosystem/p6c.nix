@@ -1,7 +1,7 @@
 # In this files you find Perl 6 Nix expressions for the modules from the Perl 6
 # ecosystem list.
 {perl6-on-nix}: {
-    ArrayHash = {
+    "ArrayHash" = {
         # XXX: Not actually in the ecosystem, but fun to try out.
         name = "ArrayHash";
         src = fetchTarball {
@@ -11,19 +11,123 @@
         depends = [
         ];
     };
-    Pod-To-HTML = {
+    "Base64" = {
+        name = "Base64";
+        src = fetchTarball {
+            url = "https://github.com/ugexe/Perl6-Base64/archive/ee98cf5da9660f8d5e55c3eb5d51e37389fe4a75.tar.gz";
+            sha256 = "14k1yz9dr7gd1ywhcmfzl1q7pvwamckjjafj06gazp2ip3f45vrc";
+        };
+        depends = [
+        ];
+    };
+    "Crypt::Random" = {
+        name = "Crypt::Random";
+        src = fetchTarball {
+            url = "https://github.com/skinkade/crypt-random/archive/c1bf9393ab736ac5e5de2d0c3f56078c178cc071.tar.gz";
+            sha256 = "0b0xkdv714dkxqwdv3gpaps06pc42sqxhq7n638ridh2zapnf1yx";
+        };
+        depends = [
+        ];
+    };
+    "DateTime::Parse" = {
+        name = "DateTime::Parse";
+        src = fetchTarball {
+            url = "https://github.com/sergot/datetime-parse/archive/acf2f4f493891d3accdc25e8209ce275899d5dd2.tar.gz";
+            sha256 = "0rqxcgccq2ipyawhx2pgb8yk99zgrylg0ia7ra5p78dpsqywb30v";
+        };
+        depends = [
+        ];
+    };
+    "Digest" = {
+        name = "Digest";
+        src = fetchTarball {
+            url = "https://github.com/grondilu/libdigest-perl6/archive/39bb469a81485ede064de7c7aa9284d1c4b327c7.tar.gz";
+            sha256 = "1m434xkqhvllqgp662a621p0wl08p1cpasygzwfpvnyzqnm18r6p";
+        };
+        depends = [
+        ];
+    };
+    "Digest::HMAC" = {
+        name = "Digest::HMAC";
+        src = fetchTarball {
+            url = "https://github.com/retupmoca/P6-Digest-HMAC/archive/dcc292d77c7158eb7b53d3673cbee66d8b7b4fdf.tar.gz";
+            sha256 = "1dpxz370gj4cl80p4jjfl554vxfkiq8vlx2cjkvfmv86bijmm5zg";
+        };
+        depends = [
+            perl6-on-nix.libraries."Digest"
+        ];
+    };
+    "HTTP::HPACK" = {
+        name = "HTTP::HPACK";
+        src = fetchTarball {
+            url = "https://github.com/jnthn/p6-http-hpack/archive/608a74c5f56d76891ce9c7f9422320e9fdd5b6af.tar.gz";
+            sha256 = "1n6pwqw8w5jf3fidpgyrvxxhwzz12yni6iishbb5bxkxyv96g00x";
+        };
+        depends = [
+        ];
+    };
+    "IO::Path::ChildSecure" = {
+        name = "IO::Path::ChildSecure";
+        src = fetchTarball {
+            url = "https://github.com/perl6-community-modules/perl6-IO-Path-ChildSecure/archive/d98c6f45c8a7152e3676b0c39166a62598dbcbf4.tar.gz";
+            sha256 = "11a2i6lpdkgifp89lss1gzjmkxcnarinjqxam1xwzhf24idrcdwm";
+        };
+        depends = [
+        ];
+    };
+    "JSON::JWT" = {
+        name = "JSON::JWT";
+        src = fetchTarball {
+            url = "https://github.com/retupmoca/P6-JSON-JWT/archive/cf0dceb420aa7b62b2ff5509acddc6f3133e82c8.tar.gz";
+            sha256 = "0q65q3w89cw1j3mrxnpr1yg2mrddi8jpm27rmlfl87c1bzlkzqrl";
+        };
+        depends = [
+            perl6-on-nix.libraries."JSON::Fast"
+            perl6-on-nix.libraries."MIME::Base64"
+            perl6-on-nix.libraries."OpenSSL"
+            perl6-on-nix.libraries."Digest::HMAC"
+        ];
+    };
+    "MIME::Base64" = {
+        name = "MIME::Base64";
+        src = fetchTarball {
+            url = "https://github.com/perl6/Perl6-MIME-Base64/archive/v1.2.1.tar.gz";
+            sha256 = "0l67m8mvz3gxml425sd1ggfnhzh4lf754k7w8fngfr453s6lsza1";
+        };
+        depends = [
+        ];
+    };
+    "OO::Monitors" = {
+        name = "OO::Monitors";
+        src = fetchTarball {
+            url = "https://github.com/jnthn/oo-monitors/archive/6dc1a363c7859b760bf973d0ada0773cfdb14356.tar.gz";
+            sha256 = "1rnw12lx12z00bff32rg5ibkc5n50cyh8788qzprlb0z6ahz1qms";
+        };
+        depends = [
+        ];
+    };
+    "OpenSSL" = {
+        name = "OpenSSL";
+        src = fetchTarball {
+            url = "https://github.com/sergot/openssl/archive/597e836c73684bb53ac5cb4511edca9b4f10ea87.tar.gz";
+            sha256 = "0mw7747vsdaq34l7c002k2bb3q4bwwgwhz5ial7h1plyzr6xjkyi";
+        };
+        depends = [
+        ];
+    };
+    "Pod::To::HTML" = {
         name = "Pod::To::HTML";
         src = fetchTarball {
             url = "https://github.com/perl6/Pod-To-HTML/archive/v0.6.0.tar.gz";
             sha256 = "0iqganz3sbv53w5pjpikadaj4dkfr6axq53bsq60zac6kgclhnha";
         };
         depends = [
-            perl6-on-nix.libraries.Pod-Load
-            perl6-on-nix.libraries.Template-Mustache
-            perl6-on-nix.libraries.URI
+            perl6-on-nix.libraries."Pod::Load"
+            perl6-on-nix.libraries."Template::Mustache"
+            perl6-on-nix.libraries."URI"
         ];
     };
-    Template-Mustache = {
+    "Template::Mustache" = {
         name = "Template::Mustache";
         src = fetchTarball {
             url = "https://github.com/softmoth/p6-Template-Mustache/archive/4f09e0a97f38fe5d8c75514ca0c858cdfb26d09b.tar.gz";
@@ -32,7 +136,7 @@
         depends = [
         ];
     };
-    URI = {
+    "URI" = {
         name = "URI";
         src = fetchTarball {
             url = "https://github.com/perl6-community-modules/uri/archive/v0.2.2.tar.gz";
