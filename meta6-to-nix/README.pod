@@ -1,0 +1,20 @@
+=head1 NAME
+
+cp6t-meta6-to-nix - Turn META6.json into META6.nix
+
+=head1 SYNOPSIS
+
+    nix-build ./meta6-to-nix
+    result/bin/cp6t-meta6-to-nix --distribution=example --src=./. > example/META6.nix
+
+=head1 DESCRIPTION
+
+cp6t-meta6-to-nix reads a META6.json file and generates a corresponding Nix
+expression. The Nix expression is written to stdout.
+
+=head2 cp6t-meta6-to-nix --distribution=DISTRIBUTION --src=SRC
+
+Generate a Nix expression for I<DISTRIBUTION/META6.json>, with SRC as the src
+attribute of the library. The generated Nix expression is to be used with
+callPackage; it receives perl6-on-nix as input. Dependencies listed in the
+depends property of META6.json are taken from C<perl6-on-nix.libraries>.
