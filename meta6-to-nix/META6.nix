@@ -6,4 +6,8 @@ perl6-on-nix.mkDerivation {
     src = ./.;
     depends = [
     ];
+    provides = {
+        "App::meta6-to-nix" = "lib/App/meta6-to-nix.pm6";
+        "App::meta6-to-nix::Main" = "lib/App/meta6-to-nix/Main.pm6";
+    };
 }

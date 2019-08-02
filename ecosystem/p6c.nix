@@ -10,6 +10,9 @@
         };
         depends = [
         ];
+        provides = {
+            "ArrayHash" = "lib/ArrayHash.pm6";
+        };
     };
     "Base64" = perl6-on-nix.mkDerivation {
         name = "Base64";
@@ -19,6 +22,9 @@
         };
         depends = [
         ];
+        provides = {
+            "Base64" = "lib/Base64.pm6";
+        };
     };
     "Crypt::Random" = perl6-on-nix.mkDerivation {
         name = "Crypt::Random";
@@ -29,6 +35,12 @@
         depends = [
             perl6-on-nix.libraries."if"
         ];
+        provides = {
+            "Crypt::Random" = "lib/Crypt/Random.pm6";
+            "Crypt::Random::Extra" = "lib/Crypt/Random/Extra.pm6";
+            "Crypt::Random::Nix" = "lib/Crypt/Random/Nix.pm6";
+            "Crypt::Random::Win" = "lib/Crypt/Random/Win.pm6";
+        };
     };
     "DateTime::Parse" = perl6-on-nix.mkDerivation {
         name = "DateTime::Parse";
@@ -38,6 +50,9 @@
         };
         depends = [
         ];
+        provides = {
+            "DateTime::Parse" = "lib/DateTime/Parse.pm6";
+        };
     };
     "Digest" = perl6-on-nix.mkDerivation {
         name = "Digest";
@@ -47,6 +62,11 @@
         };
         depends = [
         ];
+        provides = {
+            "Digest" = "lib/Digest.pm";
+            "Digest::RIPEMD" = "lib/Digest/RIPEMD.pm";
+            "Digest::SHA" = "lib/Digest/SHA.pm";
+        };
     };
     "Digest::HMAC" = perl6-on-nix.mkDerivation {
         name = "Digest::HMAC";
@@ -57,6 +77,9 @@
         depends = [
             perl6-on-nix.libraries."Digest"
         ];
+        provides = {
+            "Digest::HMAC" = "lib/Digest/HMAC.pm6";
+        };
     };
     "HTTP::HPACK" = perl6-on-nix.mkDerivation {
         name = "HTTP::HPACK";
@@ -66,6 +89,9 @@
         };
         depends = [
         ];
+        provides = {
+            "HTTP::HPACK" = "lib/HTTP/HPACK.pm6";
+        };
     };
     "if" = perl6-on-nix.mkDerivation {
         name = "if";
@@ -75,6 +101,9 @@
         };
         depends = [
         ];
+        provides = {
+            "if" = "lib/if.pm";
+        };
     };
     "IO::Path::ChildSecure" = perl6-on-nix.mkDerivation {
         name = "IO::Path::ChildSecure";
@@ -84,6 +113,9 @@
         };
         depends = [
         ];
+        provides = {
+            "IO::Path::ChildSecure" = "lib/IO/Path/ChildSecure.pm6";
+        };
     };
     "JSON::JWT" = perl6-on-nix.mkDerivation {
         name = "JSON::JWT";
@@ -97,6 +129,9 @@
             perl6-on-nix.libraries."OpenSSL"
             perl6-on-nix.libraries."Digest::HMAC"
         ];
+        provides = {
+            "JSON::JWT" = "lib/JSON/JWT.pm6";
+        };
     };
     "MIME::Base64" = perl6-on-nix.mkDerivation {
         name = "MIME::Base64";
@@ -106,6 +141,10 @@
         };
         depends = [
         ];
+        provides = {
+            "MIME::Base64" = "lib/MIME/Base64.pm6";
+            "MIME::Base64::Perl" = "lib/MIME/Base64/Perl.pm6";
+        };
     };
     "OO::Monitors" = perl6-on-nix.mkDerivation {
         name = "OO::Monitors";
@@ -115,6 +154,9 @@
         };
         depends = [
         ];
+        provides = {
+            "OO::Monitors" = "lib/OO/Monitors.pm6";
+        };
     };
     "OpenSSL" = perl6-on-nix.mkDerivation {
         name = "OpenSSL";
@@ -124,6 +166,27 @@
         };
         depends = [
         ];
+        provides = {
+            "OpenSSL" = "lib/OpenSSL.pm6";
+            "OpenSSL::Bio" = "lib/OpenSSL/Bio.pm6";
+            "OpenSSL::Cipher" = "lib/OpenSSL/Cipher.pm6";
+            "OpenSSL::CryptTools" = "lib/OpenSSL/CryptTools.pm6";
+            "OpenSSL::Digest" = "lib/OpenSSL/Digest.pm6";
+            "OpenSSL::Ctx" = "lib/OpenSSL/Ctx.pm6";
+            "OpenSSL::Err" = "lib/OpenSSL/Err.pm6";
+            "OpenSSL::EVP" = "lib/OpenSSL/EVP.pm6";
+            "OpenSSL::Method" = "lib/OpenSSL/Method.pm6";
+            "OpenSSL::NativeLib" = "lib/OpenSSL/NativeLib.pm6";
+            "OpenSSL::PEM" = "lib/OpenSSL/PEM.pm6";
+            "OpenSSL::RSA" = "lib/OpenSSL/RSA.pm6";
+            "OpenSSL::RSATools" = "lib/OpenSSL/RSATools.pm6";
+            "OpenSSL::Session" = "lib/OpenSSL/Session.pm6";
+            "OpenSSL::Stack" = "lib/OpenSSL/Stack.pm6";
+            "OpenSSL::SSL" = "lib/OpenSSL/SSL.pm6";
+            "OpenSSL::X509" = "lib/OpenSSL/X509.pm6";
+            "OpenSSL::Digest::MD5" = "lib/OpenSSL/Digest/MD5.pm6";
+            "OpenSSL::Version" = "lib/OpenSSL/Version.pm6";
+        };
     };
     "Pod::To::HTML" = perl6-on-nix.mkDerivation {
         name = "Pod::To::HTML";
@@ -136,6 +199,9 @@
             perl6-on-nix.libraries."Template::Mustache"
             perl6-on-nix.libraries."URI"
         ];
+        provides = {
+            "Pod::To::HTML" = "lib/Pod/To/HTML.pm";
+        };
     };
     "Template::Mustache" = perl6-on-nix.mkDerivation {
         name = "Template::Mustache";
@@ -145,6 +211,9 @@
         };
         depends = [
         ];
+        provides = {
+            "Template::Mustache" = "lib/Template/Mustache.pm";
+        };
     };
     "URI" = perl6-on-nix.mkDerivation {
         name = "URI";
@@ -154,5 +223,13 @@
         };
         depends = [
         ];
+        provides = {
+            "IETF::RFC_Grammar" = "lib/IETF/RFC_Grammar.pm";
+            "IETF::RFC_Grammar::IPv6" = "lib/IETF/RFC_Grammar/IPv6.pm";
+            "IETF::RFC_Grammar::URI" = "lib/IETF/RFC_Grammar/URI.pm";
+            "URI" = "lib/URI.pm";
+            "URI::Escape" = "lib/URI/Escape.pm";
+            "URI::DefaultPort" = "lib/URI/DefaultPort.pm";
+        };
     };
 }

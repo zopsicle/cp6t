@@ -8,4 +8,7 @@ perl6-on-nix.mkDerivation {
         perl6-on-nix.libraries."ArrayHash"
         perl6-on-nix.libraries."Net::IP"
     ];
+    provides = {
+        "App::cp6t-example::Main" = "lib/App/cp6t-example/Main.pm6";
+    };
 }

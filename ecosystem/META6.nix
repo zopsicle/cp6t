@@ -7,4 +7,8 @@ perl6-on-nix.mkDerivation {
     depends = [
         perl6-on-nix.libraries."App::meta6-to-nix"
     ];
+    provides = {
+        "App::cp6t-ecosystem::Main" = "lib/App/cp6t-ecosystem/Main.pm6";
+        "App::cp6t-ecosystem::CPAN" = "lib/App/cp6t-ecosystem/CPAN.pm6";
+    };
 }

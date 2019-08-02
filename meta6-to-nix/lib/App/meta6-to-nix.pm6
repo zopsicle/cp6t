@@ -11,9 +11,10 @@ sub meta6-to-nix(IO(Cool) :$distribution, Str:D :$src --> List:D)
 {
     my $meta := Distribution::Path.new($distribution).meta;
 
-    my $name    := $meta<name>;
-    my $version := Version.new($meta<version>);
-    my @depends := $meta<depends> // ();
+    my $name     := $meta<name>;
+    my $version  := Version.new($meta<version>);
+    my @depends  := $meta<depends> // ();
+    my %provides := $meta<provides> // {};
 
     my $full := “{$name}:ver<$version>”;
 
@@ -35,6 +36,12 @@ sub meta6-to-nix(IO(Cool) :$distribution, Str:D :$src --> List:D)
                 }).join
             }
             ];
+            provides = \{{
+                %provides.pairs.map({
+                    qq｢\n        "{.key}" = "{.value}";｣;
+                }).join
+            }
+            \};
         \}
         EOF
 

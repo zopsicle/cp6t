@@ -13,7 +13,7 @@ rec {
     # some metadata about the package in $out/share and wrappers for any
     # executables in $out/bin. The wrappers invoke Rakudo with the executable
     # Perl 6 scripts from the bin directory.
-    mkDerivation = {name, src, depends, ...}:
+    mkDerivation = {name, src, depends, provides, ...}:
         stdenv.mkDerivation {
             name = lib.replaceStrings ["::"] ["-"] name;
             buildInputs = [makeWrapper];
@@ -21,7 +21,8 @@ rec {
             installPhase = ''
                 export HOME=$PWD
 
-                mkdir --parents $out/share
+                mkdir --parents $out/share/{DOCUMENTATION,REPOSITORY}
+                ln -s ${src} $out/share/DISTRIBUTION
 
                 {
                     # The REPOSITORY directory contains the installed
@@ -40,9 +41,6 @@ rec {
                     echo -n ,'file#'$out/share/DISTRIBUTION
                 } > $out/share/PERL6LIB
 
-                mkdir $out/share/REPOSITORY
-                ln -s ${src} $out/share/DISTRIBUTION
-
                 # Install the library so that it gets precompiled. We must
                 # *not* pass the --for option, since that clears PERL6LIB.
                 # TODO: Don't pass OpenSSL here; make it configurable which
@@ -52,6 +50,21 @@ rec {
                     ${rakudo}/bin/perl6 ${./install-dist.p6} \
                         --from=$out/share/DISTRIBUTION \
                         --to='inst#'$out/share/REPOSITORY
+
+                # Render documentation for each compilation unit.
+                ${
+                    lib.concatStringsSep "\n" (
+                        lib.mapAttrsToList (comp-unit: file: ''
+                            # TODO: Don't pass OpenSSL here; make it
+                            # TODO: configurable which libraries a library
+                            # TODO: needs during compilation.
+                            LD_LIBRARY_PATH=${lib.makeLibraryPath [openssl]}:$LD_LIBRARY_PATH \
+                            PERL6LIB=$(< $out/share/PERL6LIB) \
+                                ${rakudo}/bin/perl6 --doc $out/share/DISTRIBUTION/${file} \
+                                > $out/share/DOCUMENTATION/${comp-unit}.txt
+                        '') provides
+                    )
+                }
 
                 # Wrap executables.
                 if [[ -d ${src}/bin ]]; then
