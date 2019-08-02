@@ -33,4 +33,8 @@ version.
 For each archive or package, its documentation page tells the user how to
 obtain the archive or package using Nix, Zef, or HTTPS.
 
+=item *
+The application is fully functional regardless of whether the user has
+enabled or disabled the execution of ECMAScript code in their web browser.
+
 =back
