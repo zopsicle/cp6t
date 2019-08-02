@@ -2,6 +2,7 @@
     "name": "App::p6al",
     "version": "0.0.0",
     "provides": {
+        "App::p6al::Application": "lib/App/p6al/Application.pm6",
         "App::p6al::Main": "lib/App/p6al/Main.pm6"
     },
     "depends": [
