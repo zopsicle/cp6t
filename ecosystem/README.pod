@@ -7,6 +7,7 @@ cp6t-ecosystem - Perl 6 ecosystem scraping
     nix-build ./ecosystem
     result/bin/cp6t-ecosystem cpan update-archives ecosystem/cpan.archives
     result/bin/cp6t-ecosystem cpan generate-nix ecosystem/cpan.archives > ecosystem/cpan.nix
+    result/bin/cp6t-ecosystem database generate > ecosystem/database
 
 =head1 DESCRIPTION
 
@@ -22,3 +23,9 @@ are not already in ARCHIVES. Add them to ARCHIVES if necessary.
 
 Generate a Nix expression for each archive in ARCHIVES, downloading the
 archive if necessary. The Nix expressions are written to stdout.
+
+=head2 cp6t-ecosystem database generate
+
+Generate a database with detailed information about each library. For each
+library, the database contains metadata about the library, the packages in
+the library, and rendered POD. This database is used by P6AL.
