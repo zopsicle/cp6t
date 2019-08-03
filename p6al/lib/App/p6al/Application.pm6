@@ -48,7 +48,7 @@ sub application(DBDish::SQLite::Connection:D $database --> Cro::Transform:D)
             content ‘text/html’, qq:to/EOF/;
                 <article>
                     <header>
-                        <h1>{$name}</h1>
+                        <h1>{$name}:ver&lt;{$version}></h1>
                     </header>
                     <section>
                         <header>
@@ -74,8 +74,16 @@ sub application(DBDish::SQLite::Connection:D $database --> Cro::Transform:D)
                 EOF
         }
         get -> ‘distribution’, Str:D $distribution, Str:D $version, ‘comp-unit’, Str:D $name {
-            # TODO: Check if the comp unit exists, and if it doesn’t, respond
-            # TODO: with 404.
+            my $sth := $database.prepare(q:to/SQL/);
+                    SELECT documentation
+                    FROM comp_units
+                    WHERE
+                        distribution = ? AND
+                        version = ? AND
+                        name = ?
+                    SQL
+            $sth.execute($distribution, $version, $name);
+            my ($documentation) := $sth.row // die ‘404’;
 
             content ‘text/html’, qq:to/EOF/;
                 <article>
@@ -85,6 +93,9 @@ sub application(DBDish::SQLite::Connection:D $database --> Cro::Transform:D)
                             {$name}
                         </h1>
                     </header>
+                    <section>
+                        <pre>{$documentation}</pre>
+                    </section>
                 </article>
                 EOF
         }
