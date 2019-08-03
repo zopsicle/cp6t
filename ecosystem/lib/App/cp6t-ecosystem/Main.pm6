@@ -1,6 +1,7 @@
 unit module App::cp6t-ecosystem::Main;
 
 use App::cp6t-ecosystem::CPAN;
+use App::cp6t-ecosystem::Database;
 use App::cp6t-ecosystem::Nix;
 use App::meta6-to-nix;
 
@@ -78,17 +79,7 @@ multi MAIN(‘cpan’, ‘generate-nix’, IO() $archives --> Nil)
     put ｢}｣;
 }
 
-multi MAIN(‘database’, ‘generate’ --> Nil)
+multi MAIN(‘database’, ‘generate’, IO(Str:D) $path --> Nil)
 {
-    # TODO: The database should not contain Nix store paths, but rather
-    # TODO: detailed information. See README.pod.
-    hyper for list-nix-libraries() -> $library {
-        my $path := try build-nix-library($library);
-        with $! {
-            $*OUT.put: qq｢$library BROKEN｣;
-            $*ERR.put: $_;
-        } else {
-            $*OUT.put: qq｢$library $path｣;
-        }
-    }
+    generate-database $path;
 }

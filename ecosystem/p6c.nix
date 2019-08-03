@@ -54,6 +54,45 @@
             "DateTime::Parse" = "lib/DateTime/Parse.pm6";
         };
     };
+    "DBIish" = perl6-on-nix.mkDerivation {
+        name = "DBIish";
+        src = fetchTarball {
+            url = "https://github.com/perl6/DBIish/archive/8d1749dd2357f2324acd9bda5d395d97a841baa4.tar.gz";
+            sha256 = "1zlg3c6ql3qg54fq1hfi3i8x8y4iyfc6l20cz6vk7qadm8y7idgg";
+        };
+        depends = [
+            perl6-on-nix.libraries."NativeHelpers::Blob"
+        ];
+        provides = {
+            "DBIish" = "lib/DBIish.pm6";
+            "DBIish::Common" = "lib/DBIish/Common.pm6";
+            "DBIish::CommonTesting" = "lib/DBIish/CommonTesting.pm6";
+            "DBDish" = "lib/DBDish.pm6";
+            "DBDish::Connection" = "lib/DBDish/Connection.pm6";
+            "DBDish::ErrorHandling" = "lib/DBDish/ErrorHandling.pm6";
+            "DBDish::StatementHandle" = "lib/DBDish/StatementHandle.pm6";
+            "DBDish::TestMock" = "lib/DBDish/TestMock.pm6";
+            "DBDish::TestMock::StatementHandle" = "lib/DBDish/TestMock/StatementHandle.pm6";
+            "DBDish::TestMock::Connection" = "lib/DBDish/TestMock/Connection.pm6";
+            "DBDish::mysql" = "lib/DBDish/mysql.pm6";
+            "DBDish::mysql::Connection" = "lib/DBDish/mysql/Connection.pm6";
+            "DBDish::mysql::Native" = "lib/DBDish/mysql/Native.pm6";
+            "DBDish::mysql::StatementHandle" = "lib/DBDish/mysql/StatementHandle.pm6";
+            "DBDish::Oracle" = "lib/DBDish/Oracle.pm6";
+            "DBDish::Oracle::Connection" = "lib/DBDish/Oracle/Connection.pm6";
+            "DBDish::Oracle::Native" = "lib/DBDish/Oracle/Native.pm6";
+            "DBDish::Oracle::StatementHandle" = "lib/DBDish/Oracle/StatementHandle.pm6";
+            "DBDish::Pg" = "lib/DBDish/Pg.pm6";
+            "DBDish::Pg::Connection" = "lib/DBDish/Pg/Connection.pm6";
+            "DBDish::Pg::Native" = "lib/DBDish/Pg/Native.pm6";
+            "DBDish::Pg::StatementHandle" = "lib/DBDish/Pg/StatementHandle.pm6";
+            "DBDish::SQLite" = "lib/DBDish/SQLite.pm6";
+            "DBDish::SQLite::Connection" = "lib/DBDish/SQLite/Connection.pm6";
+            "DBDish::SQLite::Native" = "lib/DBDish/SQLite/Native.pm6";
+            "DBDish::SQLite::StatementHandle" = "lib/DBDish/SQLite/StatementHandle.pm6";
+            "NativeLibs" = "lib/NativeLibs.pm6";
+        };
+    };
     "Digest" = perl6-on-nix.mkDerivation {
         name = "Digest";
         src = fetchTarball {
@@ -144,6 +183,21 @@
         provides = {
             "MIME::Base64" = "lib/MIME/Base64.pm6";
             "MIME::Base64::Perl" = "lib/MIME/Base64/Perl.pm6";
+        };
+    };
+    "NativeHelpers::Blob" = perl6-on-nix.mkDerivation {
+        name = "NativeHelpers::Blob";
+        src = fetchTarball {
+            url = "https://github.com/salortiz/NativeHelpers-Blob/archive/b00a4899ce219dae5fe97e9e414d01dd92874f53.tar.gz";
+            sha256 = "08bpc361n7xrdz59jl8nbib3n2pvgncjsz12fhkqav40dvc09kqh";
+        };
+        depends = [
+        ];
+        provides = {
+        	"NativeHelpers::Blob" = "lib/NativeHelpers/Blob.pm6";
+        	"NativeHelpers::CStruct" = "lib/NativeHelpers/CStruct.pm6";
+        	"NativeHelpers::Pointer" = "lib/NativeHelpers/Pointer.pm6";
+            "MoarVM::Guts::REPRs" = "lib/MoarVM/Guts/REPRs.pm6";
         };
     };
     "OO::Monitors" = perl6-on-nix.mkDerivation {

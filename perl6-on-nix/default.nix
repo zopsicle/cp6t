@@ -1,4 +1,4 @@
-{lib, callPackage, fetchzip, stdenv, makeWrapper, rakudo, openssl}:
+{lib, callPackage, fetchzip, stdenv, makeWrapper, rakudo, openssl, sqlite}:
 if rakudo.version == "2017.01" then throw (
     "It seems like you are using Rakudo from Nixpkgs. This is an outdated " +
     "version. Consider using rakudo-nix instead."
@@ -43,9 +43,10 @@ rec {
 
                 # Install the library so that it gets precompiled. We must
                 # *not* pass the --for option, since that clears PERL6LIB.
-                # TODO: Don't pass OpenSSL here; make it configurable which
-                # TODO: libraries a library needs during compilation.
-                LD_LIBRARY_PATH=${lib.makeLibraryPath [openssl]}:$LD_LIBRARY_PATH \
+                # TODO: Don't pass OpenSSL and SQLite here; make it
+                # TODO: configurable which libraries a library needs during
+                # TODO: compilation.
+                LD_LIBRARY_PATH=${lib.makeLibraryPath [openssl sqlite]}:$LD_LIBRARY_PATH \
                 PERL6LIB=$(< $out/share/PERL6LIB) \
                     ${rakudo}/bin/perl6 ${./install-dist.p6} \
                         --from=$out/share/DISTRIBUTION \
@@ -55,10 +56,10 @@ rec {
                 ${
                     lib.concatStringsSep "\n" (
                         lib.mapAttrsToList (comp-unit: file: ''
-                            # TODO: Don't pass OpenSSL here; make it
+                            # TODO: Don't pass OpenSSL and SQLite here; make it
                             # TODO: configurable which libraries a library
                             # TODO: needs during compilation.
-                            LD_LIBRARY_PATH=${lib.makeLibraryPath [openssl]}:$LD_LIBRARY_PATH \
+                            LD_LIBRARY_PATH=${lib.makeLibraryPath [openssl sqlite]}:$LD_LIBRARY_PATH \
                             PERL6LIB=$(< $out/share/PERL6LIB) \
                                 ${rakudo}/bin/perl6 --doc $out/share/DISTRIBUTION/${file} \
                                 > $out/share/DOCUMENTATION/${comp-unit}.txt
@@ -70,7 +71,11 @@ rec {
                 if [[ -d ${src}/bin ]]; then
                     mkdir --parents $out/bin
                     for f in $(find ${src}/bin -mindepth 1); do
+                        # TODO: Don't pass OpenSSL and SQLite here; make it
+                        # TODO: configurable which libraries a library
+                        # TODO: needs during runtime.
                         makeWrapper ${rakudo}/bin/perl6 $out/bin/$(basename $f) \
+                            --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [openssl sqlite]} \
                             --set PERL6LIB $(< $out/share/PERL6LIB) \
                             --add-flags $f
                     done
