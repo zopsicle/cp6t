@@ -40,6 +40,7 @@ sub install-schema(--> Nil)
             distribution    TEXT    NOT NULL,
             version         TEXT    NOT NULL,
             name            TEXT    NOT NULL,
+            documentation   TEXT    NOT NULL,
             PRIMARY KEY (distribution, version, name),
             FOREIGN KEY (distribution, version)
                 REFERENCES distributions (name, version)
@@ -66,9 +67,10 @@ sub insert-distribution(IO::Path:D $path --> Nil)
         SQL
 
     for %meta<provides>.keys -> $comp-unit {
-        $*database.prepare(q:to/SQL/).execute(|%meta<name version>, $comp-unit)
-            INSERT INTO comp_units (distribution, version, name)
-            VALUES (?, ?, ?)
+        my $documentation := $path.add(‘share’).add(‘DOCUMENTATION’).add(“$comp-unit.txt”).slurp;
+        $*database.prepare(q:to/SQL/).execute(|%meta<name version>, $comp-unit, $documentation)
+            INSERT INTO comp_units (distribution, version, name, documentation)
+            VALUES (?, ?, ?, ?)
             SQL
     }
 }
