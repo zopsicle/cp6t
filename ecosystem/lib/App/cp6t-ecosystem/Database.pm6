@@ -48,4 +48,9 @@ sub install-schema(DBDish::SQLite::Connection:D $database --> Nil)
             FOREIGN KEY (distribution) REFERENCES distributions (name)
         )
         SQL
+
+    $database.do(q:to/SQL/);
+        CREATE INDEX comp_units_name_ix
+            ON comp_units (name)
+        SQL
 }
