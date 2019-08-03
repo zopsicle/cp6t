@@ -1,30 +1,10 @@
 unit module App::p6al::Application;
 
+use App::p6al::Search :handlers;
 use Cro::HTTP::Router;
 use Cro::Transform;
 use DBDish::SQLite::Connection;
 use Template::Classic;
-
-my &search-template := template :(), q:to/HTML/;
-    <form action="/search">
-        <input type="search">
-        <button>Search</button>
-    </form>
-    HTML
-
-my &search-results-template := template :(), q:to/HTML/;
-    <ul>
-        <li>
-            <article>
-                <header>
-                    <h1>
-                        <a href="/distribution/Acme::Cow/0.0.4">Acme::Cow:ver&lt;0.0.4></a>
-                    </h1>
-                </header>
-            </article>
-        </li>
-    </ul>
-    HTML
 
 my &distribution-template := template :($name, $version, @comp-units), q:to/HTML/;
     <article>
@@ -70,12 +50,9 @@ sub application(DBDish::SQLite::Connection:D $database --> Cro::Transform:D)
     is export
 {
     route {
-        get -> {
-            content ‘text/html’, search-template.eager.join;
-        }
-        get -> ‘search’ {
-            content ‘text/html’, search-results-template.eager.join;
-        }
+        get ->                          { search }
+        get -> ‘search’, Str :$query    { search-results($database, $query) }
+
         get -> ‘distribution’, Str:D $name, Str:D $version {
             # TODO: Check if the distribution exists, and if it doesn’t,
             # TODO: respond with 404.

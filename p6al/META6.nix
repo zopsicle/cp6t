@@ -11,6 +11,7 @@ perl6-on-nix.mkDerivation {
     provides = {
         "App::p6al::Application" = "lib/App/p6al/Application.pm6";
         "App::p6al::Main" = "lib/App/p6al/Main.pm6";
+        "App::p6al::Search" = "lib/App/p6al/Search.pm6";
         "Template::Classic" = "lib/Template/Classic.pm6";
     };
 }
