@@ -6,24 +6,28 @@ my $layout := template :($title, @body, :$query), q:to/EOF/;
     <!DOCTYPE html>
     <meta charset="utf-8">
     <title><%= $title %></title>
-    <header>
-        <h1>P6AL</h1>
-        <form action="/search">
-            <input type="search" name="query" value="<%= $query // ｢｣ %>">
-            <button>Search</button>
+    <link rel="stylesheet" href="/static/p6al.css">
+    <header class="p6al--header">
+        <h1 class="-title">P6AL</h1>
+        <form action="/search" class="-search">
+            <input class="-query"
+                   type="search"
+                   name="query"
+                   value="<%= $query // ｢｣ %>">
+            <button class="-submit">Search</button>
         </form>
     </header>
-    <section>
+    <section class="p6al--content">
     <% .take for @body %>
     </section>
-    <footer>
-        <p>
+    <footer class="p6al--footer">
+        <p class="-disclaimer">
             P6AL is provided for your convenience in the hope that it is
             useful. Please report any bugs you encounter and any other
             constructive feedback you may have on
             <a href="https://github.com/chloekek/cp6t/issues">GitHub</a>.
         </p>
-        <p>
+        <p class="-legal">
             P6AL is free software.
             Attribution for third-party information presented on P6AL goes to
             the respective authors.

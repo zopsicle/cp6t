@@ -3,7 +3,7 @@
 {perl6-on-nix}:
 perl6-on-nix.mkDerivation {
     name = "App::p6al";
-    src = ./.;
+    src = import ./pre.nix;
     depends = [
         perl6-on-nix.libraries."Cro::HTTP"
         perl6-on-nix.libraries."DBIish"

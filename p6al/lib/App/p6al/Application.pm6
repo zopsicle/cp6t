@@ -54,6 +54,7 @@ sub application(DBDish::SQLite::Connection:D $database --> Cro::Transform:D)
         get -> { home }
         get -> ‘search’, Str :$query { search($database, $query) }
 
+        get -> ‘static’, ‘p6al.css’ { static %?RESOURCES<p6al.css> }
         get -> ‘static’, ‘p6al.svg’ { static %?RESOURCES<p6al.svg> }
 
         get -> ‘distribution’, Str:D $name, Str:D $version {

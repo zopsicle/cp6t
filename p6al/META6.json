@@ -10,6 +10,7 @@
         "Template::Classic": "lib/Template/Classic.pm6"
     },
     "resources": [
+        "p6al.css",
         "p6al.svg"
     ],
     "depends": [
