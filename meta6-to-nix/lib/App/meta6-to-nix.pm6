@@ -37,7 +37,7 @@ sub meta6-to-nix(IO(Cool) :$distribution, Str:D :$src --> List:D)
             }
             ];
             provides = \{{
-                %provides.pairs.map({
+                %provides.pairs.sort.map({
                     qq｢\n        "{.key}" = "{.value}";｣;
                 }).join
             }
