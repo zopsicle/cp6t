@@ -82,8 +82,8 @@ multi MAIN(‘database’, ‘generate’ --> Nil)
 {
     # TODO: The database should not contain Nix store paths, but rather
     # TODO: detailed information. See README.pod.
-    hyper for list-libraries() -> $library {
-        my $path := try build-library($library);
+    hyper for list-nix-libraries() -> $library {
+        my $path := try build-nix-library($library);
         with $! {
             $*OUT.put: qq｢$library BROKEN｣;
             $*ERR.put: $_;

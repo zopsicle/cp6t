@@ -10,8 +10,8 @@ sub nix-archive-path(Str:D $url, Str:D $hash --> IO::Path:D)
     $proc.out.lines[1].IO;
 }
 
-#| List the names of all libraries in I<perl6-on-nix.libraries>.
-sub list-libraries(--> Seq:D)
+#| List the names of all libraries in perl6-on-nix.
+sub list-nix-libraries(--> Seq:D)
     is export
 {
     my $nix := q:to/EOF/;
@@ -29,8 +29,8 @@ sub list-libraries(--> Seq:D)
     $proc.out.lines;
 }
 
-#| Build a library and return its Nix store path.
-sub build-library(Str:D $library --> IO::Path:D)
+#| Build a library in perl6-on-nix and return its Nix store path.
+sub build-nix-library(Str:D $library --> IO::Path:D)
     is export
 {
     # FIXME: Avoid Nix injection.
