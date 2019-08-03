@@ -1,12 +1,10 @@
 unit module App::p6al::Application;
 
-use App::p6al::Database;
 use Cro::HTTP::Router;
 use Cro::Transform;
+use DBDish::SQLite::Connection;
 
-my constant Database = App::p6al::Database;
-
-sub application(Database:D $database --> Cro::Transform:D)
+sub application(DBDish::SQLite::Connection:D $database --> Cro::Transform:D)
     is export
 {
     route {
@@ -25,16 +23,7 @@ sub application(Database:D $database --> Cro::Transform:D)
                         <article>
                             <header>
                                 <h1>
-                                    <a href="/distribution/Pod::Load">Pod::Load</a>
-                                </h1>
-                            </header>
-                        </article>
-                    </li>
-                    <li>
-                        <article>
-                            <header>
-                                <h1>
-                                    <a href="/distribution/Pod::To::HTML">Pod::To::HTML</a>
+                                    <a href="/distribution/Acme::Cow/0.0.4">Acme::Cow:ver&lt;0.0.4></a>
                                 </h1>
                             </header>
                         </article>
@@ -42,26 +31,37 @@ sub application(Database:D $database --> Cro::Transform:D)
                 </ul>
                 EOF
         }
-        get -> ‘distribution’, Str:D $distribution-name {
-            my $distribution := $database.distribution($distribution-name);
-            my @comp-unit-names := $distribution.comp-units.keys.List;
+        get -> ‘distribution’, Str:D $name, Str:D $version {
+            # TODO: Check if the distribution exists, and if it doesn’t,
+            # TODO: respond with 404.
+
+            my $sth := $database.prepare(q:to/SQL/);
+                    SELECT name
+                    FROM comp_units
+                    WHERE
+                        distribution = ? AND
+                        version = ?
+                    SQL
+            $sth.execute($name, $version);
+            my @comp-units := $sth.allrows»[0];
+
             content ‘text/html’, qq:to/EOF/;
                 <article>
                     <header>
-                        <h1>{$distribution-name}</h1>
+                        <h1>{$name}</h1>
                     </header>
                     <section>
                         <header>
                             <h1>Compilation units</h1>
                         </header>
                         <ul>
-                            {@comp-unit-names.map(-> $comp-unit-name {
+                            {@comp-units.map(-> $comp-unit {
                                 qq:to/EOF/
                                     <li>
                                         <article>
                                             <header>
                                                 <h1>
-                                                    <a href="/distribution/{$distribution-name}/comp-unit/{$comp-unit-name}">{$comp-unit-name}</a>
+                                                    <a href="/distribution/{$name}/{$version}/comp-unit/{$comp-unit}">{$comp-unit}</a>
                                                 </h1>
                                             </header>
                                         </article>
@@ -73,19 +73,18 @@ sub application(Database:D $database --> Cro::Transform:D)
                 </article>
                 EOF
         }
-        get -> ‘distribution’, Str:D $distribution-name, ‘comp-unit’, Str:D $comp-unit-name {
-            my $comp-unit := $database.comp-unit($distribution-name, $comp-unit-name);
+        get -> ‘distribution’, Str:D $distribution, Str:D $version, ‘comp-unit’, Str:D $name {
+            # TODO: Check if the comp unit exists, and if it doesn’t, respond
+            # TODO: with 404.
+
             content ‘text/html’, qq:to/EOF/;
                 <article>
                     <header>
                         <h1>
-                            <a href="/distribution/{$distribution-name}">{$distribution-name}</a>
-                            {$comp-unit-name}
+                            <a href="/distribution/{$distribution}/{$version}">{$distribution}:ver&lt;{$version}></a>
+                            {$name}
                         </h1>
                     </header>
-                    <section>
-                        <pre>{$comp-unit.perl}</pre>
-                    </section>
                 </article>
                 EOF
         }
