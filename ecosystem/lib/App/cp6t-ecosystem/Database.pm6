@@ -3,7 +3,6 @@ unit module App::cp6t-ecosystem::Database;
 use fatal;
 
 use App::cp6t-ecosystem::Nix;
-use DBDish::SQLite::Connection;
 use DBIish;
 
 sub generate-database(IO() $path --> Nil)
@@ -11,46 +10,65 @@ sub generate-database(IO() $path --> Nil)
 {
     $path.unlink;
 
-    my $database := DBIish.connect(‘SQLite’, database => $path);
-    LEAVE { $database.dispose if defined($database) }
+    my $*database := DBIish.connect(‘SQLite’, database => $path);
+    LEAVE { $*database.dispose if $*database.defined }
 
-    install-schema($database);
+    install-schema;
 
-    return;
-
-    # TODO: The database should not contain Nix store paths, but rather
-    # TODO: detailed information. See README.pod.
-    hyper for list-nix-libraries() -> $library {
+    for list-nix-libraries() -> $library {
         my $path := try build-nix-library($library);
         with $! {
-            $*OUT.put: qq｢$library BROKEN｣;
-            $*ERR.put: $_;
+            $*ERR.put: qq｢Cannot build $library: $!｣;
         } else {
-            $*OUT.put: qq｢$library $path｣;
+            insert-distribution($path);
         }
     }
 }
 
-sub install-schema(DBDish::SQLite::Connection:D $database --> Nil)
+sub install-schema(--> Nil)
 {
-    $database.do(q:to/SQL/);
+    $*database.do(q:to/SQL/);
         CREATE TABLE distributions (
             name            TEXT    NOT NULL,
-            PRIMARY KEY (name)
+            version         TEXT    NOT NULL,
+            PRIMARY KEY (name, version)
         )
         SQL
 
-    $database.do(q:to/SQL/);
+    $*database.do(q:to/SQL/);
         CREATE TABLE comp_units (
             distribution    TEXT    NOT NULL,
+            version         TEXT    NOT NULL,
             name            TEXT    NOT NULL,
-            PRIMARY KEY (distribution, name),
-            FOREIGN KEY (distribution) REFERENCES distributions (name)
+            PRIMARY KEY (distribution, version, name),
+            FOREIGN KEY (distribution, version)
+                REFERENCES distributions (name, version)
         )
         SQL
 
-    $database.do(q:to/SQL/);
+    $*database.do(q:to/SQL/);
         CREATE INDEX comp_units_name_ix
             ON comp_units (name)
         SQL
+}
+
+#| Given a Nix store path of a built derivation, insert the corresponding
+#| distribution into the database.
+sub insert-distribution(IO::Path:D $path --> Nil)
+{
+    my $distribution-path := $path.add(‘share’).add(‘DISTRIBUTION’);
+    my $distribution := Distribution::Path.new($distribution-path);
+    my %meta := $distribution.meta;
+
+    $*database.prepare(q:to/SQL/).execute(|%meta<name version>);
+        INSERT INTO distributions (name, version)
+        VALUES (?, ?)
+        SQL
+
+    for %meta<provides>.keys -> $comp-unit {
+        $*database.prepare(q:to/SQL/).execute(|%meta<name version>, $comp-unit)
+            INSERT INTO comp_units (distribution, version, name)
+            VALUES (?, ?, ?)
+            SQL
+    }
 }

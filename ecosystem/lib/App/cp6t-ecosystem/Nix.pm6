@@ -26,7 +26,8 @@ sub list-nix-libraries(--> Seq:D)
     EOF
     my @cmd := «nix eval --raw “($nix)”»;
     my $proc := run @cmd, :out;
-    $proc.out.lines;
+    # Skip the “latest version” aliases.
+    $proc.out.lines.grep(/‘:ver’/);
 }
 
 #| Build a library in perl6-on-nix and return its Nix store path.
