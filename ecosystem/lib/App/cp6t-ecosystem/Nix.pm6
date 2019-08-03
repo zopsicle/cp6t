@@ -1,5 +1,15 @@
 unit module App::cp6t-ecosystem::Nix;
 
+#| Find the Nix store path for an archive, which must be a tarball or zipball
+#| file. The URL and hash of the archive must be given.
+sub nix-archive-path(Str:D $url, Str:D $hash --> IO::Path:D)
+    is export
+{
+    my @cmd := «nix-prefetch-url --print-path --unpack “$url” “$hash”»;
+    my $proc := run @cmd, :out;
+    $proc.out.lines[1].IO;
+}
+
 #| List the names of all libraries in I<perl6-on-nix.libraries>.
 sub list-libraries(--> Seq:D)
     is export

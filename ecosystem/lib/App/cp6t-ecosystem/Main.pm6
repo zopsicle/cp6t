@@ -4,16 +4,16 @@ use App::cp6t-ecosystem::CPAN;
 use App::cp6t-ecosystem::Nix;
 use App::meta6-to-nix;
 
-multi MAIN(‘cpan’, ‘update-archives’, IO() $cache --> Nil)
+multi MAIN(‘cpan’, ‘update-archives’, IO() $archives --> Nil)
     is export
 {
-    my %cache := CPANCache.new($cache);
+    my %archives := CPANArchiveSet.new($archives);
     my @archives = cpan-archives;
 
     for 1 .. ∞ Z @archives -> ($i, $archive) {
         my &log := { $*OUT.put: qq｢[$i/{@archives.elems}] $_ $archive｣ };
 
-        if %cache{$archive}:exists {
+        if %archives{$archive}:exists {
             log ｢CACHE｣;
             next;
         }
@@ -24,14 +24,14 @@ multi MAIN(‘cpan’, ‘update-archives’, IO() $cache --> Nil)
         my @cmd := «nix-prefetch-url --unpack “$archive”»;
         my $proc := run(@cmd, :out, :err);
         if $proc {
-            %cache{$archive} = $proc.out.slurp.chomp;
+            %archives{$archive} = $proc.out.slurp.chomp;
         } else {
             $*ERR.put: $proc.err.slurp;
         }
     }
 }
 
-multi MAIN(‘cpan’, ‘generate-nix’, IO() $cache --> Nil)
+multi MAIN(‘cpan’, ‘generate-nix’, IO() $archives --> Nil)
 {
     put ｢# !!! THIS IS A GENERATED FILE !!!｣;
     put ｢# DO NOT UPDATE THIS FILE MANUALLY｣;
@@ -41,9 +41,9 @@ multi MAIN(‘cpan’, ‘generate-nix’, IO() $cache --> Nil)
     my Version:D %latest;
     my %all := SetHash.new;
 
-    my %cache := CPANCache.new($cache);
-    for %cache.kv -> $archive, $hash {
-        my $distribution := cpan-nix-store-path($archive, $hash);
+    my %archives := CPANArchiveSet.new($archives);
+    for %archives.kv -> $archive, $hash {
+        my $distribution := nix-archive-path($archive, $hash);
 
         my $src := qq:to/EOF/.chomp;
             {$archive ~~ /‘.zip’$/ ?? ‘fetchzip’ !! ‘fetchTarball’} \{

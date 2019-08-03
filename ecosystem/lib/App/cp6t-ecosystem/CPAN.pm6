@@ -26,16 +26,16 @@ sub cpan-archives(--> Seq:D)
         .map(｢https://www.cpan.org/authors/｣ ~ *);
 }
 
-#| The CPAN cache contains mappings from archive URLs to their hashes as
+#| The CPAN archive set contains mappings from archive URLs to their hashes as
 #| reported by «nix-prefetch-url --unpack».
-class CPANCache
+class CPANArchiveSet
     does Associative
     is export
 {
     has IO::Handle $!file is required;
     has Str:D %!entries;
 
-    #| Open the CPAN cache and read it. The file stays open for writing.
+    #| Open the archive set and read it. The file stays open for writing.
     method new(IO() $path --> ::?CLASS:D)
     {
         my $file := open $path, :ra;
@@ -71,7 +71,7 @@ class CPANCache
         );
     }
 
-    #| Check whether the cache contains a hash for an archive.
+    #| Check whether the archive set contains a hash for an archive.
     method EXISTS-KEY(::?CLASS:D: Str:D $archive --> Bool:D)
     {
         %!entries{$archive}:exists;
@@ -81,16 +81,6 @@ class CPANCache
     {
         %!entries.kv;
     }
-}
-
-#| Find the Nix store path for a CPAN archive. The URL and hash of the archive
-#| must be given.
-sub cpan-nix-store-path(Str:D $archive, Str:D $hash --> IO::Path:D)
-    is export
-{
-    my @cmd := «nix-prefetch-url --print-path --unpack “$archive” “$hash”»;
-    my $proc := run @cmd, :out;
-    $proc.out.lines[1].IO;
 }
 
 #| Do not send too many requests to CPAN in quick succession.
