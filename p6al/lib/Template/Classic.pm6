@@ -78,7 +78,7 @@ my class Actions
         if $<put> {
             make qq｢take(Template::Classic::escape(do \{ {$<source>} \}));｣;
         } else {
-            make $<source>;
+            make qq｢$<source>;｣;
         }
     }
 }

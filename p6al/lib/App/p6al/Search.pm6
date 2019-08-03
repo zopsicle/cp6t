@@ -1,5 +1,6 @@
 unit module App::p6al::Search;
 
+use App::p6al::Layout;
 use Cro::HTTP::Router;
 use DBDish::SQLite::Connection;
 use Template::Classic;
@@ -48,14 +49,7 @@ my class Result
     }
 }
 
-sub search()
-    is export(:handlers)
-{
-    my $html := search-template;
-    content ‘text/html’, $html.eager.join;
-}
-
-sub search-results(DBDish::SQLite::Connection:D $database, Str $query)
+sub search(DBDish::SQLite::Connection:D $database, Str $query)
     is export(:handlers)
 {
     if !$query.defined || $query eq '' {
@@ -66,19 +60,11 @@ sub search-results(DBDish::SQLite::Connection:D $database, Str $query)
     my @comp-units    = Result.for-comp-units\  ($database, $query);
     my @results := |@distributions, |@comp-units;
 
-    my $html := search-results-template(@results);
+    my $html := layout $query, search-template(@results), :$query;
     content ‘text/html’, $html.eager.join;
 }
 
-my &search-template := template :(), q:to/HTML/;
-    <h1>P6AL</h1>
-    <form action="/search">
-        <input type="search" name="query">
-        <button>Search</button>
-    </form>
-    HTML
-
-my &search-results-template := template :(@results), q:to/HTML/;
+my &search-template := template :(@results), q:to/HTML/;
     <ul>
         <% for @results -> $result { %>
             <li>

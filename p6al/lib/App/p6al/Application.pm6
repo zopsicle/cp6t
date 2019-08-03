@@ -1,5 +1,6 @@
 unit module App::p6al::Application;
 
+use App::p6al::Home :handlers;
 use App::p6al::Search :handlers;
 use Cro::HTTP::Router;
 use Cro::Transform;
@@ -50,8 +51,10 @@ sub application(DBDish::SQLite::Connection:D $database --> Cro::Transform:D)
     is export
 {
     route {
-        get ->                          { search }
-        get -> ‘search’, Str :$query    { search-results($database, $query) }
+        get -> { home }
+        get -> ‘search’, Str :$query { search($database, $query) }
+
+        get -> ‘static’, ‘p6al.svg’ { static %?RESOURCES<p6al.svg> }
 
         get -> ‘distribution’, Str:D $name, Str:D $version {
             # TODO: Check if the distribution exists, and if it doesn’t,
