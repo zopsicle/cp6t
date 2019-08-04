@@ -79,7 +79,10 @@ multi MAIN(‘cpan’, ‘generate-nix’, IO() $archives --> Nil)
     put ｢}｣;
 }
 
-multi MAIN(‘database’, ‘generate’, IO(Str:D) $path --> Nil)
+multi MAIN(‘database’, ‘generate’,
+           IO(Str:D) $path,
+           Bool:D :$only-substitutes = False,
+           --> Nil)
 {
-    generate-database $path;
+    generate-database $path, :$only-substitutes;
 }

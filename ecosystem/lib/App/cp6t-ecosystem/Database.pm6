@@ -5,7 +5,7 @@ use fatal;
 use App::cp6t-ecosystem::Nix;
 use DBIish;
 
-sub generate-database(IO() $path --> Nil)
+sub generate-database(IO() $path, Bool:D :$only-substitutes = False --> Nil)
     is export
 {
     $path.unlink;
@@ -17,7 +17,7 @@ sub generate-database(IO() $path --> Nil)
 
     for list-nix-distributions() -> $distribution {
         $*ERR.put: qq｢BUILD $distribution｣;
-        my $path := try build-nix-distribution($distribution);
+        my $path := try build-nix-distribution($distribution, :$only-substitutes);
         with $! {
             $*ERR.put: qq｢ERROR $distribution $!｣;
         } else {

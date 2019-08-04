@@ -26,12 +26,17 @@ are not already in ARCHIVES. Add them to ARCHIVES if necessary.
 Generate a Nix expression for each archive in ARCHIVES, downloading the
 archive if necessary. The Nix expressions are written to stdout.
 
-=head2 cp6t-ecosystem database generate DATABASE
+=head2 cp6t-ecosystem [--only-substitutes] database generate DATABASE
 
 Generate a database with detailed information about each distribution. For
 each distribution, the database contains metadata about the distribution, the
 comp units in the distribution, and rendered POD. This database is used by
 P6AL.
+
+If --only-substitutes is given, then the database will be populated only with
+distributions for which a substitute exists in the binary cache. Use this
+option if you don’t want to build derivations that weren’t already built in
+CI.
 
 =head1 CAVEATS
 
