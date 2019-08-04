@@ -7,7 +7,7 @@ App::p6al - Perl 6 Archive Listing
 =head1 DESCRIPTION
 
 P6AL (pronounced “sixal”) is a web application that lists and searches Perl 6
-archives and packages.
+distributions and comp units.
 
 =head2 Requirements
 
@@ -15,23 +15,23 @@ archives and packages.
 
 =item *
 On every page, a search field is presented. When submitted, the application
-searches through archive and package names and descriptions and presents a
-search result for each archive and package found. Following a search result
-takes the user to the rendered readme or POD documentation of the archive or
-package respectively.
+searches through distribution and comp unit names and descriptions and
+presents a search result for each distribution and comp unit found. Following
+a search result takes the user to the rendered readme or POD documentation of
+the distribution or comp unit respectively.
 
 =item *
-For each archive or package, its documentation page lists metadata about the
-author, dependencies, and source location, if known.
+For each distribution or comp unit, its documentation page lists metadata
+about the author, dependencies, and source location, if known.
 
 =item *
-For each archive or package, its documentation page presents a list of
+For each distribution or comp unit, its documentation page presents a list of
 versions that the user can follow to go to the documentation page for that
 version.
 
 =item *
-For each archive or package, its documentation page tells the user how to
-obtain the archive or package using Nix, Zef, or HTTPS.
+For each distribution or comp unit, its documentation page tells the user how
+to obtain the distribution or comp unit using Nix, Zef, or HTTPS.
 
 =item *
 The application is fully functional regardless of whether the user has
