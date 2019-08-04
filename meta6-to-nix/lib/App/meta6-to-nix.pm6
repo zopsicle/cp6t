@@ -23,6 +23,7 @@ sub meta6-to-nix(IO(Cool) :$distribution, Str:D :$src --> List:D)
     # Core modules should not be included in the Nix expression as
     # dependencies, since they are already shipped with Rakudo.
     my %core-modules := set <
+        NativeCall
         Test
     >;
 

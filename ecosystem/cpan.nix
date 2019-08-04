@@ -691,7 +691,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qadlk8khhh56bfx6q0pqvqsp5zbifvl73p2lhxgw5m80zdph5vw";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -1212,7 +1211,6 @@ perl6-on-nix.mkDerivation {
     depends = [
         perl6-on-nix.distributions."Digest::SHA1::Native"
         perl6-on-nix.distributions."File::Temp"
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."P5getpriority"
         perl6-on-nix.distributions."P5localtime"
         perl6-on-nix.distributions."Term::termios"
@@ -1258,7 +1256,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "119wi98356fz0fnp2q48pil6w07hvck8jw1ckix0mcs1bzvd1hgq";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."JSON::Fast"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
@@ -1400,7 +1397,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "14krj6n1ki5wx5kz1gbza9ds9wz23r298d63zjj7715x95ycj06a";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."NativeLibs"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
@@ -1669,7 +1665,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1hcrrq83kw5paamqz4xykz48cnh178a85cf440sypaisrpf9b7md";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -1891,7 +1886,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0yd5vcyi2paks86ix0g7hgh65yl5s4rxcl0vldndcdyjlaaykn76";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."LibUUID"
         perl6-on-nix.distributions."epoll"
         perl6-on-nix.distributions."Test::When"
@@ -1990,7 +1984,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0pycv3k13b2lkrlcc5l7yxbadickir5djjbll93q9w3kb8ifcpvp";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Archive::Libarchive::Constants" = "lib/Archive/Libarchive/Constants.pm6";
@@ -2222,7 +2215,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qh79xb60k1g01z727i5hjz4qwx3wq8lvccr119bphz00w3lkqb6";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -3640,7 +3632,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1r0y8aaa04958g8216mxchjnxar6a0dj89dpsav8j8lnprask70q";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Fcntl" = "lib/Fcntl.pm";
@@ -6576,7 +6567,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "033nvj799nw6885nl1dfc3mdx5zkizwvm95ams954dsj9r06i2xn";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -7227,7 +7217,6 @@ perl6-on-nix.mkDerivation {
     };
     depends = [
         perl6-on-nix.distributions."DB"
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -7701,7 +7690,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "09c01640dbj3r2w7sl50ia8pnkl2c0275i094ad5m0zjj5d220js";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."LibUUID"
         perl6-on-nix.distributions."JSON::Fast"
         perl6-on-nix.distributions."Test::When"
@@ -7862,7 +7850,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1aczhlf812ibhpv33m8n0n891dlpvx9ijnzzd9jvfzg4iyp8mjha";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
         perl6-on-nix.distributions."File::Temp"
@@ -8441,7 +8428,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "022crhmhfd0jspy29ydwyibz762bah5k287229j6qsnckq8448ds";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Inline" = "lib/Inline.pm";
@@ -8458,7 +8444,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "00z2f59jmf2xizw68azmvyyfwnf0ibiclyap6cr1ypx1gdmpg0pb";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."NativeLibs"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
@@ -9114,7 +9099,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "18cjaaw01b97265wd5l5iq4fy2fs5wr0w6hzjw98pi7q0f78qrh9";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -9785,7 +9769,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1i2rswriwcsjj5dj3rp6zn8fi5g53sj46wjgw4yw9cld2pamr0cg";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "CCLog" = "CCLog/lib/CCLog.pm6";
@@ -11117,7 +11100,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "05qb76waqi8j6bf0c2f5dqlngda0d5pi5kbmr1ppp4d4iqf27w9f";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "CCLog" = "CCLog/lib/CCLog.pm6";
@@ -12278,7 +12260,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hc4xrbv8rx4jflmi62vr7vbq8k17ic8q8j7d40fnsllr2nc737n";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."LibUUID"
         perl6-on-nix.distributions."epoll"
         perl6-on-nix.distributions."Test::When"
@@ -12651,7 +12632,6 @@ perl6-on-nix.mkDerivation {
     depends = [
         perl6-on-nix.distributions."DB"
         perl6-on-nix.distributions."NativeLibs"
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."JSON::Fast"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
@@ -14490,7 +14470,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "05mvahw3xcq0k7n0irw2yhnqyx9ldb3087lhdspn3jvpvrvhqsgn";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."LibUUID"
         perl6-on-nix.distributions."epoll"
         perl6-on-nix.distributions."Test::When"
@@ -14763,7 +14742,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "071mj29h88hhykng6zzy8k7p0z20f2zfdhiyx85z8bbikqbh4x2h";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "CCLog" = "CCLog/lib/CCLog.pm6";
@@ -16295,7 +16273,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "14rlyl8jk6hkjsm1w7b0rb1ms801jz23bmszd2m3p73688bwr03p";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."JSON::Fast"
         perl6-on-nix.distributions."Test::When"
     ];
@@ -16604,7 +16581,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "00pvaarhbkwhy2f57pdipx29jrz2mgf6ywlnhb3128x561g0lrd0";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Inline" = "lib/Inline.pm";
@@ -18712,7 +18688,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1xws423ffpkxkl049vgi85nn8bkk8m8w2chy3g1kicmirqfbz1iq";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -19413,7 +19388,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "155m6j719kmmnnz8n0krj1ii3agv9g32pwc1jz08q1wicjc9na81";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Inline" = "lib/Inline.pm";
@@ -20361,7 +20335,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0i1whn3y48a2ra37flgiiaj7an9082c8g4fikabykgsm526ranh9";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -21645,7 +21618,6 @@ perl6-on-nix.mkDerivation {
     depends = [
         perl6-on-nix.distributions."DB"
         perl6-on-nix.distributions."NativeLibs"
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -23725,7 +23697,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0100qmady1y4ihm6d7wfjv151vbbpkk92nx7ayc4v306xp928hw9";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Inline" = "lib/Inline.pm";
@@ -23777,7 +23748,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rn1mk11pici5qxabqsa7yh6ix3vk6hkayblgz040pnlzfk56fkn";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."JSON::Fast"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
@@ -24083,7 +24053,6 @@ perl6-on-nix.mkDerivation {
     depends = [
         perl6-on-nix.distributions."DB"
         perl6-on-nix.distributions."NativeLibs"
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."JSON::Fast"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
@@ -24372,7 +24341,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "160d6d038icwydadlxzz7khf3di3z2h5q52lf1f2405432w9ihly";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."JSON::Fast"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
@@ -24565,7 +24533,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fr908wdd2lm5pfd40rzcn53v0c29gsqs5m99s8ywlrppzm1rrm2";
     };
     depends = [
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
@@ -25164,7 +25131,6 @@ perl6-on-nix.mkDerivation {
     depends = [
         perl6-on-nix.distributions."DB"
         perl6-on-nix.distributions."NativeLibs"
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."JSON::Fast"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
@@ -25950,7 +25916,6 @@ perl6-on-nix.mkDerivation {
     depends = [
         perl6-on-nix.distributions."Digest::SHA1::Native"
         perl6-on-nix.distributions."File::Temp"
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."P5getpriority"
         perl6-on-nix.distributions."P5localtime"
         perl6-on-nix.distributions."Term::termios"
@@ -26317,7 +26282,6 @@ perl6-on-nix.mkDerivation {
     };
     depends = [
         perl6-on-nix.distributions."DB"
-        perl6-on-nix.distributions."NativeCall"
         perl6-on-nix.distributions."Test::When"
         perl6-on-nix.distributions."Test::META"
     ];
