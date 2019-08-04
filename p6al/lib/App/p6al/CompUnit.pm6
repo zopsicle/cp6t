@@ -36,6 +36,29 @@ my &comp-unit-template := template :($distribution, $version, $name, $documentat
                 » <%= $name %>
             </h1>
         </header>
+        <aside class="-toolbar">
+            <section class="-install">
+                <header>
+                    <h1>Install with</h1>
+                </header>
+                <details>
+                    <summary>META6.json</summary>
+                    <pre><code>"depends": [
+        "<%= “{$distribution}:ver<$version>” %>"
+    ]</code></pre>
+                </details>
+                <details>
+                    <summary>Nix</summary>
+                    <pre><code>depends = [
+        perl6-on-nix.distributions."<%= “{$distribution}:ver<$version>” %>"
+    ];</code></pre>
+                </details>
+                <details>
+                    <summary>Zef</summary>
+                    <pre><code>zef install '<%= “{$distribution}:ver<$version>” %>'</code></pre>
+                </details>
+            </section>
+        </aside>
         <section class="-documentation">
             <% take $documentation %>
         </section>
