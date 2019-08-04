@@ -72,7 +72,7 @@ multi MAIN(‘cpan’, ‘generate-nix’, IO() $archives --> Nil)
 
     for %latest.kv -> $name, $version {
         print qq:to/EOF/;
-            "$name" = perl6-on-nix.libraries."{$name}:ver<$version>";
+            "$name" = perl6-on-nix.distributions."{$name}:ver<$version>";
         EOF
     }
 

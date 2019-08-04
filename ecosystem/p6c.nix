@@ -33,7 +33,7 @@
             sha256 = "0b0xkdv714dkxqwdv3gpaps06pc42sqxhq7n638ridh2zapnf1yx";
         };
         depends = [
-            perl6-on-nix.libraries."if"
+            perl6-on-nix.distributions."if"
         ];
         provides = {
             "Crypt::Random" = "lib/Crypt/Random.pm6";
@@ -61,7 +61,7 @@
             sha256 = "1zlg3c6ql3qg54fq1hfi3i8x8y4iyfc6l20cz6vk7qadm8y7idgg";
         };
         depends = [
-            perl6-on-nix.libraries."NativeHelpers::Blob"
+            perl6-on-nix.distributions."NativeHelpers::Blob"
         ];
         provides = {
             "DBIish" = "lib/DBIish.pm6";
@@ -114,7 +114,7 @@
             sha256 = "1dpxz370gj4cl80p4jjfl554vxfkiq8vlx2cjkvfmv86bijmm5zg";
         };
         depends = [
-            perl6-on-nix.libraries."Digest"
+            perl6-on-nix.distributions."Digest"
         ];
         provides = {
             "Digest::HMAC" = "lib/Digest/HMAC.pm6";
@@ -163,10 +163,10 @@
             sha256 = "0q65q3w89cw1j3mrxnpr1yg2mrddi8jpm27rmlfl87c1bzlkzqrl";
         };
         depends = [
-            perl6-on-nix.libraries."JSON::Fast"
-            perl6-on-nix.libraries."MIME::Base64"
-            perl6-on-nix.libraries."OpenSSL"
-            perl6-on-nix.libraries."Digest::HMAC"
+            perl6-on-nix.distributions."JSON::Fast"
+            perl6-on-nix.distributions."MIME::Base64"
+            perl6-on-nix.distributions."OpenSSL"
+            perl6-on-nix.distributions."Digest::HMAC"
         ];
         provides = {
             "JSON::JWT" = "lib/JSON/JWT.pm6";
@@ -249,9 +249,9 @@
             sha256 = "0iqganz3sbv53w5pjpikadaj4dkfr6axq53bsq60zac6kgclhnha";
         };
         depends = [
-            perl6-on-nix.libraries."Pod::Load"
-            perl6-on-nix.libraries."Template::Mustache"
-            perl6-on-nix.libraries."URI"
+            perl6-on-nix.distributions."Pod::Load"
+            perl6-on-nix.distributions."Template::Mustache"
+            perl6-on-nix.distributions."URI"
         ];
         provides = {
             "Pod::To::HTML" = "lib/Pod/To/HTML.pm";

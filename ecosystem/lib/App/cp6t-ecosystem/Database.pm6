@@ -15,10 +15,10 @@ sub generate-database(IO() $path --> Nil)
 
     install-schema;
 
-    for list-nix-libraries() -> $library {
-        my $path := try build-nix-library($library);
+    for list-nix-distributions() -> $distribution {
+        my $path := try build-nix-distribution($distribution);
         with $! {
-            $*ERR.put: qq｢Cannot build $library: $!｣;
+            $*ERR.put: qq｢Cannot build $distribution: $!｣;
         } else {
             insert-distribution($path);
         }

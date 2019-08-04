@@ -41,8 +41,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "05k5rcm3mw3x96r0gyj78c3f2i2r044lfwqwsk0jql2sv0n89ybd";
     };
     depends = [
-        perl6-on-nix.libraries."DB"
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."DB"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "DB::MySQL::Statement" = "lib/DB/MySQL/Statement.pm6";
@@ -63,8 +63,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1hrpw0p8v7s2175i2g6m2wgfclxp745xp995l5sjvm0r0xib5pxj";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Capture::Simple"
-        perl6-on-nix.libraries."Test"
+        perl6-on-nix.distributions."IO::Capture::Simple"
+        perl6-on-nix.distributions."Test"
     ];
     provides = {
         "Test::Declare" = "lib/Test/Declare.pm6";
@@ -85,9 +85,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1hq625nwk9lgvqliwggqzvasq9l3s6gzbhsc5443y3shnd52ja96";
     };
     depends = [
-        perl6-on-nix.libraries."PDF"
-        perl6-on-nix.libraries."PDF::Grammar"
-        perl6-on-nix.libraries."PDF::Content"
+        perl6-on-nix.distributions."PDF"
+        perl6-on-nix.distributions."PDF::Grammar"
+        perl6-on-nix.distributions."PDF::Content"
     ];
     provides = {
         "PDF::ColorSpace::CalGray" = "lib/PDF/ColorSpace/CalGray.pm";
@@ -241,7 +241,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fr908wdd2lm5pfd40rzcn53v0c29gsqs5m99s8ywlrppzm1rrm2";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "epoll" = "lib/epoll.pm6";
@@ -257,7 +257,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "00mwpgi3cf9wlnismvybz2jajrdj8mdv780fch2xhiqzgmj78s46";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
+        perl6-on-nix.distributions."XML"
     ];
     provides = {
         "App::CPAN::Feed" = "lib/App/CPAN/Feed.pm6";
@@ -273,7 +273,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wv9k5rvn5cqx0r0pdc5zg94iqk55nq0yg6vd08h4gfzh3s168bd";
     };
     depends = [
-        perl6-on-nix.libraries."AttrX::Mooish"
+        perl6-on-nix.distributions."AttrX::Mooish"
     ];
     provides = {
         "Async::Workers" = "lib/Async/Workers.pm6";
@@ -289,7 +289,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "141ijy1ryw063vjsiin9xmr22ii969mf7zc4ipp9pswp73bd6ba5";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "Proc::InvokeEditor" = "lib/Proc/InvokeEditor.pm6";
@@ -305,7 +305,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0p8zd837y1j4yxj1a9v6di0nrc7dnfd2vvlzilb18zg06impnk3x";
     };
     depends = [
-        perl6-on-nix.libraries."nqp"
+        perl6-on-nix.distributions."nqp"
     ];
     provides = {
         "ProcStats" = "lib/ProcStats.pm6";
@@ -336,7 +336,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0zhyqks57mygp5w69vq9gsmmrmjcph94s0fnac5gsn7fs6dhdc26";
     };
     depends = [
-        perl6-on-nix.libraries."P5chr"
+        perl6-on-nix.distributions."P5chr"
     ];
     provides = {
         "P5ord" = "lib/P5ord.pm6";
@@ -367,7 +367,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0v8hr700s4lmyrkngyy33k9xxa72papl16x6l8b52x13ywyyjmdy";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Class"
+        perl6-on-nix.distributions."JSON::Class"
     ];
     provides = {
         "License::SPDX" = "lib/License/SPDX.pm";
@@ -383,7 +383,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1a64knfnax88q4il5vzl37byj2c0hwv7kr5j30a1gjqprhalm0km";
     };
     depends = [
-        perl6-on-nix.libraries."FindBin"
+        perl6-on-nix.distributions."FindBin"
     ];
     provides = {
         "FileSystem::Parent" = "lib/FileSystem/Parent.pm6";
@@ -399,7 +399,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0rqlcy97b3nr9w0l4kfk33v1xpgds2h0jhv55871y081bsp1qifi";
     };
     depends = [
-        perl6-on-nix.libraries."FileSystem::Parent"
+        perl6-on-nix.distributions."FileSystem::Parent"
     ];
     provides = {
         "FindBin::Frobnicate" = "lib/FindBin/Frobnicate.pm6";
@@ -575,7 +575,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vcxy5xhmyvjsrzmvnr8mhpnvlciis1xic1jg6s4qaiqpnisyw5y";
     };
     depends = [
-        perl6-on-nix.libraries."OpenSSL"
+        perl6-on-nix.distributions."OpenSSL"
     ];
     provides = {
         "IO::Socket::Async::SSL" = "lib/IO/Socket/Async/SSL.pm6";
@@ -591,7 +591,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0libx136nccx7j6g5mpcmw1kgsimhmh7vjpxmrgrqssalrbkgl29";
     };
     depends = [
-        perl6-on-nix.libraries."Desktop::Notify"
+        perl6-on-nix.distributions."Desktop::Notify"
     ];
     provides = {
         "Desktop::Notify::Progress" = "lib/Desktop/Notify/Progress.pm6";
@@ -607,10 +607,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "03g3ihycccy12wfxrgd4pzw4qnbbml8ycrd0pmkpddkg8295m661";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Terminal::Print"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Terminal::Print"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -659,11 +659,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "15gd8c66jkn7q2nnsm88pza34dlsz16lpr75p9llm4glh4mjlkij";
     };
     depends = [
-        perl6-on-nix.libraries."GraphQL"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."HTML::Parser::XML"
-        perl6-on-nix.libraries."XML"
-        perl6-on-nix.libraries."XML::XPath"
+        perl6-on-nix.distributions."GraphQL"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTML::Parser::XML"
+        perl6-on-nix.distributions."XML"
+        perl6-on-nix.distributions."XML::XPath"
     ];
     provides = {
         "GraphQL::Html" = "lib/GraphQL/Html.pm6";
@@ -708,13 +708,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "0k6jsjs1fl84vrz8bry5h8nsh7zrdqb7zw7zhkbnn9rnfwlbx0xg";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Canvas"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."PDF::Lite"
-        perl6-on-nix.libraries."PDF::Content"
-        perl6-on-nix.libraries."Color"
-        perl6-on-nix.libraries."PDF::Font::Loader"
-        perl6-on-nix.libraries."CSS::Properties"
+        perl6-on-nix.distributions."HTML::Canvas"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."PDF::Lite"
+        perl6-on-nix.distributions."PDF::Content"
+        perl6-on-nix.distributions."Color"
+        perl6-on-nix.distributions."PDF::Font::Loader"
+        perl6-on-nix.distributions."CSS::Properties"
     ];
     provides = {
         "HTML::Canvas::To::PDF" = "lib/HTML/Canvas/To/PDF.pm6";
@@ -730,12 +730,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mzdl4sqb92cnm345jbcbavm067kh8hs2fyy3qav7jmyl6155lv5";
     };
     depends = [
-        perl6-on-nix.libraries."Text::Wrap"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."CommandLine::Usage"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Text::Wrap"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."CommandLine::Usage"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "App::Platform::CLI::Destroy" = "lib/App/Platform/CLI/Destroy.pm6";
@@ -778,8 +778,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0d02dzphi7k5rzh8xbhjpl2b6gcmsz4sh780cxcs2in5mgd9vrwl";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -795,8 +795,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1x2gd0kzqfk2w57f48f6zam19p42a8j8lvgdwvxcpvd2xk80m3wv";
     };
     depends = [
-        perl6-on-nix.libraries."File::HomeDir"
-        perl6-on-nix.libraries."HTTP::UserAgent"
+        perl6-on-nix.distributions."File::HomeDir"
+        perl6-on-nix.distributions."HTTP::UserAgent"
     ];
     provides = {
         "Rdf::Literal" = "lib/Rdf/Literal.pm6";
@@ -836,7 +836,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "19j1z10m7mc0f7amdyf3xa4jvq5n4vjzb4n8nrbs91y8p904lflp";
     };
     depends = [
-        perl6-on-nix.libraries."FindBin"
+        perl6-on-nix.distributions."FindBin"
     ];
     provides = {
         "FileSystem::Parent" = "lib/FileSystem/Parent.pm6";
@@ -852,7 +852,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "00pvaarhbkwhy2f57pdipx29jrz2mgf6ywlnhb3128x561g0lrd0";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Inline::C" = "lib/Inline/C.pm";
@@ -869,10 +869,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hdghaqhh8fgnd61243gkhqg0jn02hlm1k39yfjapvyxbfiwplka";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."p6doc"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."p6doc"
     ];
     provides = {
         "App::Perl6LangServer" = "lib/App/Perl6LangServer.pm6";
@@ -888,7 +888,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0626iziqmckxnjyqrd4xq2ihx3mxqybr462jggihl3zm4175xgjc";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Class"
+        perl6-on-nix.distributions."JSON::Class"
     ];
     provides = {
         "META6" = "lib/META6.pm";
@@ -904,8 +904,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1apwcayfqrxm3wvh5iqcczxq321m3vz37vl9vhbbs7jahqyf53xb";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -921,7 +921,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0m5d9q9xyjv3pahpqka23drmflpw0cnjqgkiyw9r1gx7hz92dbva";
     };
     depends = [
-        perl6-on-nix.libraries."P5getservbyname"
+        perl6-on-nix.distributions."P5getservbyname"
     ];
     provides = {
         "Net::servent" = "lib/Net/servent.pm6";
@@ -972,9 +972,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1zpmmhmkka9a3b49m6kg53b4ripp7sjyk4hniwcbj9svn3p62f0j";
     };
     depends = [
-        perl6-on-nix.libraries."if"
-        perl6-on-nix.libraries."NativeHelpers::Blob"
-        perl6-on-nix.libraries."StrictClass"
+        perl6-on-nix.distributions."if"
+        perl6-on-nix.distributions."NativeHelpers::Blob"
+        perl6-on-nix.distributions."StrictClass"
     ];
     provides = {
         "TCP::LowLevel::Socket-Linux" = "lib/TCP/LowLevel/Socket-Linux.pm6";
@@ -992,7 +992,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1s0fgn1d1w0k7zq1c0mh8kh5acb6pxngij1hfhqarcck2g5sykbf";
     };
     depends = [
-        perl6-on-nix.libraries."Net::OSC"
+        perl6-on-nix.distributions."Net::OSC"
     ];
     provides = {
         "Reaper::Control" = "lib/Reaper/Control.pm6";
@@ -1008,8 +1008,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1asbifq1qqyd1q1qp4cvb12hhg4rddjahpjlyjl0hvdamldx8884";
     };
     depends = [
-        perl6-on-nix.libraries."TimeUnit"
-        perl6-on-nix.libraries."OO::Monitors"
+        perl6-on-nix.distributions."TimeUnit"
+        perl6-on-nix.distributions."OO::Monitors"
     ];
     provides = {
         "Propius::Linked" = "lib/Propius/Linked.pm6";
@@ -1071,7 +1071,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0zcbivqgabgfw52kpkmvifcqsiwdssxawx97k9rsmvb8nsmgw7fk";
     };
     depends = [
-        perl6-on-nix.libraries."File::Which"
+        perl6-on-nix.distributions."File::Which"
     ];
     provides = {
         "URI::FetchFile" = "lib/URI/FetchFile.pm";
@@ -1105,7 +1105,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "11w0b3x76ydg7xb2wii8gkh4xvfhn4w5bhac76bx7pjvnbqw1dji";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Nuget" = "lib/Sparrowdo/VSTS/YAML/Nuget.pm6";
@@ -1121,7 +1121,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vh2z65xbsg9ivxswqabzs4ws7qfcbkd6v1c9ppmxsr6y7ap5w4r";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Tinyish"
+        perl6-on-nix.distributions."HTTP::Tinyish"
     ];
     provides = {
         "CPAN::Uploader::Tiny" = "lib/CPAN/Uploader/Tiny.pm6";
@@ -1138,11 +1138,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0w3kbd4qwwfah5ydi3kdga6vqlz6ylg7nbx8h17fjlxh6a6qgf0v";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Terminal::Print"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Terminal::Print"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -1158,15 +1158,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "1g8hxdpdy8b149gq9wam75wkdm2w000xwczmzknys00jisfp8mvg";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::CLI" = "lib/Uzu/CLI.pm6";
@@ -1190,9 +1190,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0lfp01z582cd061bjdhqfb8d4344svf1avvsig4k6r6apxxwvh3w";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -1209,9 +1209,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1z32m9w7dlg4fh9fjyvsw972yqz26pirrh06i1mypbn1w62qz7y8";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Munge"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Munge"
     ];
     provides = {
         "CroX::HTTP::Auth::Munge::Header" = "lib/CroX/HTTP/Auth/Munge/Header.pm6";
@@ -1228,7 +1228,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rmc5whcfmjjg0lmrwxmrccd1rmq4wll4qicm4nswgcn6rspj9ng";
     };
     depends = [
-        perl6-on-nix.libraries."P5lcfirst"
+        perl6-on-nix.distributions."P5lcfirst"
     ];
     provides = {
         "P5ucfirst" = "lib/P5ucfirst.pm6";
@@ -1274,8 +1274,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1y2fc7j725q39v650miaqzx50jc9xmb7qpzz0qlsa74azfbwb4xw";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Marshal"
-        perl6-on-nix.libraries."JSON::Unmarshal"
+        perl6-on-nix.distributions."JSON::Marshal"
+        perl6-on-nix.distributions."JSON::Unmarshal"
     ];
     provides = {
         "JSON::Class" = "lib/JSON/Class.pm";
@@ -1312,7 +1312,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1hd8cvld9y8f1yziyjpz33qbx1ba7b46147klsqd8nayipwfvdhg";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Terminal::Getpass" = "lib/Terminal/Getpass.pm6";
@@ -1358,11 +1358,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1ydg9dha4fr1yfyw2crqwkkz76lwljlk26zx86l1ahvkrcc6qlx1";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::WebSocket::FrameSerializer" = "lib/Cro/WebSocket/FrameSerializer.pm6";
@@ -1391,12 +1391,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "069iksyndvf96x19s4w26h171fmgb1spjkqxyp3kkikqqyb4lyxj";
     };
     depends = [
-        perl6-on-nix.libraries."Cairo"
-        perl6-on-nix.libraries."Color"
-        perl6-on-nix.libraries."CSS::Properties"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Base64::Native"
-        perl6-on-nix.libraries."Font::FreeType"
+        perl6-on-nix.distributions."Cairo"
+        perl6-on-nix.distributions."Color"
+        perl6-on-nix.distributions."CSS::Properties"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Base64::Native"
+        perl6-on-nix.distributions."Font::FreeType"
     ];
     provides = {
         "HTML::Canvas::Pattern" = "lib/HTML/Canvas/Pattern.pm";
@@ -1433,10 +1433,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "09wfb6n4264rp13pq4lwvzapmw7d912yp2c1qfdaaii5m84654zb";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrow6::DSL::Systemd" = "lib/Sparrow6/DSL/Systemd.pm6";
@@ -1489,7 +1489,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1lnypa2ajzn6gd85q1qvxsfr7rdaz663h97h2k0qnxyp2zghj31b";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Angular::Build" = "lib/Sparrowdo/VSTS/YAML/Angular/Build.pm6";
@@ -1505,7 +1505,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1dp2cs3zqhlr455jpxdd206kddcy1fh2hv9lbhglw4lj6wq517vi";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Terminal::Getpass" = "lib/Terminal/Getpass.pm6";
@@ -1521,7 +1521,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "098y5rgsafadydbfwjb00iqdibf42k7y1qif13mz46vizbmhisif";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge:api<1>"
+        perl6-on-nix.distributions."Hash::Merge:api<1>"
     ];
     provides = {
         "Config::Exception::FileNotFoundException" = "lib/Config/Exception/FileNotFoundException.pm6";
@@ -1542,8 +1542,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0r5i1b1vb8nxmkbbxhsa5634saxbn7l4rvsa6advbk2lxpd61xql";
     };
     depends = [
-        perl6-on-nix.libraries."Digest::HMAC"
-        perl6-on-nix.libraries."OpenSSL"
+        perl6-on-nix.distributions."Digest::HMAC"
+        perl6-on-nix.distributions."OpenSSL"
     ];
     provides = {
         "PKCS5::PBKDF2" = "lib/PKCS5/PBKDF2.pm6";
@@ -1574,8 +1574,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0g662s8jmgpinwn9061iw69qpx07r7j8cf9yf7jpypdcj5i4yq4q";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
     ];
     provides = {
         "Cro::TLS" = "lib/Cro/TLS.pm6";
@@ -1606,7 +1606,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0c0d9qm595dbqz3vxdvswaxz8ldcx6rmhfdl9ay6zrdkkyp4b8yj";
     };
     depends = [
-        perl6-on-nix.libraries."FastCGI::NativeCall"
+        perl6-on-nix.distributions."FastCGI::NativeCall"
     ];
     provides = {
         "FastCGI::NativeCall::Async" = "lib/FastCGI/NativeCall/Async.pm";
@@ -1622,8 +1622,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1saxi856nnnrms1b9zm0fs9bwfrxm1sqw5llijmgrrcl323af33s";
     };
     depends = [
-        perl6-on-nix.libraries."WhereList"
-        perl6-on-nix.libraries."File::Find"
+        perl6-on-nix.distributions."WhereList"
+        perl6-on-nix.distributions."File::Find"
     ];
     provides = {
         "OO::Plugin::Exception" = "lib/OO/Plugin/Exception.pm6";
@@ -1646,7 +1646,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jvj8d30vz78gz4phmx6sb9vizrfc9nj7bnx2jygmn2syjdxd30v";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::MsBuild" = "lib/Sparrowdo/VSTS/YAML/MsBuild.pm6";
@@ -1690,7 +1690,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "01rz3kbqy4r1q2lvv737l0yimbgn6krbdgw25rhz3r5drlcv58hs";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "CucumisSextus::Tags" = "lib/CucumisSextus/Tags.pm6";
@@ -1764,7 +1764,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1g8s32c1b55ixlfm186qshjafvyh7chxr1rgm5zn53cvxg29n5bv";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Class"
+        perl6-on-nix.distributions."JSON::Class"
     ];
     provides = {
         "META6" = "lib/META6.pm";
@@ -1780,10 +1780,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rsrzdk82agblg3zwckmm478pblzydky7vnv42akwxyvd7h1rjj6";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Terminal::Print"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Terminal::Print"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -1902,13 +1902,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "0jkmqp31652gvlm8y8w6whk952rn0v1n4zamw18i480wk9smxl3a";
     };
     depends = [
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."DBIish"
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Time::Crontab"
-        perl6-on-nix.libraries."Bailador"
-        perl6-on-nix.libraries."Text::Markdown"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."DBIish"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Time::Crontab"
+        perl6-on-nix.distributions."Bailador"
+        perl6-on-nix.distributions."Text::Markdown"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparky" = "lib/Sparky.pm6";
@@ -1924,7 +1924,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ybx87r2szky90ifqxk3yr2g418x7ll3dapbcagrx00scjxh12m3";
     };
     depends = [
-        perl6-on-nix.libraries."P5index"
+        perl6-on-nix.distributions."P5index"
     ];
     provides = {
         "P5rindex" = "lib/P5rindex.pm6";
@@ -1940,7 +1940,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1hcrrq83kw5paamqz4xykz48cnh178a85cf440sypaisrpf9b7md";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "LibUUID" = "lib/LibUUID.pm6";
@@ -2079,7 +2079,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0sf4mk5nzml2grm82ab6b44mr832ccyvb7rnlqma5ry39hf7y653";
     };
     depends = [
-        perl6-on-nix.libraries."Object::Trampoline"
+        perl6-on-nix.distributions."Object::Trampoline"
     ];
     provides = {
         "Object::Delayed" = "lib/Object/Delayed.pm6";
@@ -2110,11 +2110,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0sf1pmj7djif86xyjxz7zk21mls4zkkw0iplziwivzanf0rjbl97";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Path::Router"
-        perl6-on-nix.libraries."Smack"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Path::Router"
+        perl6-on-nix.distributions."Smack"
     ];
     provides = {
         "X::Cofra::Web::Error::NotFound" = "lib/X/Cofra/Web/Error.pm6";
@@ -2165,10 +2165,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0cq379yiqra6br4rzl9sxrjvpbgclc9fbm7z72d2dz7kqgdb56vw";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrow6::Task::Runner::Helpers::Powershell" = "lib/Sparrow6/Task/Runner/Helpers/Powershell.pm6";
@@ -2221,7 +2221,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mq70zfwhy8ikc575k9hd0rbsliip109h4qx0hx4yl6cys4s5k7f";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge"
+        perl6-on-nix.distributions."Hash::Merge"
     ];
     provides = {
         "Config" = "lib/Config.pm6";
@@ -2242,7 +2242,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hnpms5kkxkhbl06w7hpahbi91gvqnlag9b0imcb1fx33pa8pkz0";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Grammar::Parser" = "lib/ANTLR4/Grammar/Parser.pm6";
@@ -2275,9 +2275,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "02sbb2ix9wgg8ylrp3wg7fs3d3lbqk5hfhimg21xkf45kfda2n75";
     };
     depends = [
-        perl6-on-nix.libraries."ScaleVec"
-        perl6-on-nix.libraries."Math::Curves"
-        perl6-on-nix.libraries."Net::OSC"
+        perl6-on-nix.distributions."ScaleVec"
+        perl6-on-nix.distributions."Math::Curves"
+        perl6-on-nix.distributions."Net::OSC"
     ];
     provides = {
         "Music::Engine" = "lib/Music/Engine.pm6";
@@ -2345,8 +2345,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "160d6d038icwydadlxzz7khf3di3z2h5q52lf1f2405432w9ihly";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "LibCurl::REST" = "lib/LibCurl/REST.pm6";
@@ -2406,7 +2406,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1if3ksk6c5pnjqf7j4sqddz0nsw3sfaps6w3cy86wfnzbzk51bz7";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "CommonMark" = "lib/CommonMark.pm6";
@@ -2437,7 +2437,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0xn8bq73i1qy8iahmwk1z5pjpgcxqg333dpm3s9nn230yidv7568";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Terminal::Getpass" = "lib/Terminal/Getpass.pm6";
@@ -2453,15 +2453,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jlfrgx51wngmdhfbadhxwbpbn679spiz4kgkngpnv3nccl06gkj";
     };
     depends = [
-        perl6-on-nix.libraries."Apache::LogFormat::Compiler"
-        perl6-on-nix.libraries."DateTime::Format"
-        perl6-on-nix.libraries."Digest::MD5"
-        perl6-on-nix.libraries."Hash::MultiValue"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Supply"
-        perl6-on-nix.libraries."HTTP::Status"
+        perl6-on-nix.distributions."Apache::LogFormat::Compiler"
+        perl6-on-nix.distributions."DateTime::Format"
+        perl6-on-nix.distributions."Digest::MD5"
+        perl6-on-nix.distributions."Hash::MultiValue"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Supply"
+        perl6-on-nix.distributions."HTTP::Status"
     ];
     provides = {
         "Smack::Exception" = "lib/Smack/Exception.pm6";
@@ -2576,8 +2576,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "16b0b6rq9sfjkq3qgyqyf0bhkd446r3iwabi7xix152h6wl9qw70";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."META6"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."META6"
     ];
     provides = {
         "App::ModuleSnap" = "lib/App/ModuleSnap.pm";
@@ -2609,7 +2609,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0cl1bdcdgapppkdd4c5ihqsvxd1w69g4rgg3z9nmxqkm0b8wj8pi";
     };
     depends = [
-        perl6-on-nix.libraries."P5opendir"
+        perl6-on-nix.distributions."P5opendir"
     ];
     provides = {
         "DirHandle" = "lib/DirHandle.pm6";
@@ -2625,24 +2625,24 @@ perl6-on-nix.mkDerivation {
         sha256 = "1m07i7i14j05jn284lxk4bma1b4293w7w8zi2wcjv7dcd72yvx2n";
     };
     depends = [
-        perl6-on-nix.libraries."Digest"
-        perl6-on-nix.libraries."Digest::HMAC"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::MultiPartParser"
-        perl6-on-nix.libraries."HTTP::Server::Ogre"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Log::Any"
-        perl6-on-nix.libraries."Path::Iterator"
-        perl6-on-nix.libraries."Template::Mojo"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."URI::Encode"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Digest"
+        perl6-on-nix.distributions."Digest::HMAC"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::MultiPartParser"
+        perl6-on-nix.distributions."HTTP::Server::Ogre"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Log::Any"
+        perl6-on-nix.distributions."Path::Iterator"
+        perl6-on-nix.distributions."Template::Mojo"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."URI::Encode"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Bailador::Gradual" = "lib/Bailador/Gradual.pm";
@@ -2697,7 +2697,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "05qb76waqi8j6bf0c2f5dqlngda0d5pi5kbmr1ppp4d4iqf27w9f";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "CCLog" = "CCLog/lib/CCLog.pm6";
@@ -2714,8 +2714,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "119wi98356fz0fnp2q48pil6w07hvck8jw1ckix0mcs1bzvd1hgq";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "LibCurl::MultiHandle" = "lib/LibCurl/MultiHandle.pm6";
@@ -2735,9 +2735,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vzrng20jhxpxri0jraan3m68s1cpgkb1hp6hvwi0iyzdhzi2cj7";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Parser"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."IO::Blob"
+        perl6-on-nix.distributions."HTTP::Parser"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."IO::Blob"
     ];
     provides = {
         "HTTP::Server::Tiny" = "lib/HTTP/Server/Tiny.pm6";
@@ -2798,7 +2798,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "185821zrg5whifxz4i947vwzkps70zq68njqvf48r9ik89lrlqdk";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "JSON::Path" = "lib/JSON/Path.pm6";
@@ -2829,9 +2829,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "10c4yrm4wdqqi66z5qkbbjxd9kzfhqyagr1awl8xkcsvwr1nln6s";
     };
     depends = [
-        perl6-on-nix.libraries."Net::ZMQ"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro"
+        perl6-on-nix.distributions."Net::ZMQ"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro"
     ];
     provides = {
         "Cro::ZeroMQ::Collector" = "lib/Cro/ZeroMQ/Collector.pm6";
@@ -2861,7 +2861,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "07yb7iw6xc4ykpc49zwacw9yrq5anxjjqmx9m2x6lyy2rw8a5pkg";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Tinyish"
+        perl6-on-nix.distributions."HTTP::Tinyish"
     ];
     provides = {
         "CPAN::Uploader::Tiny" = "lib/CPAN/Uploader/Tiny.pm6";
@@ -2878,7 +2878,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1r887aq3j39wz78kkbiqyy19b3n7vb51qqmqd60wk5vhdr9qznhn";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Cordova::OSx::Build" = "lib/Sparrowdo/Cordova/OSx/Build.pm6";
@@ -2915,8 +2915,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1v9qf0nicp2i0k5wnqikhxjwbbra0s15nh7mmi6d27lfwsdh19j9";
     };
     depends = [
-        perl6-on-nix.libraries."TAP"
-        perl6-on-nix.libraries."Getopt::Long"
+        perl6-on-nix.distributions."TAP"
+        perl6-on-nix.distributions."Getopt::Long"
     ];
     provides = {
         "App::Prove6" = "lib/App/Prove6.pm6";
@@ -2963,7 +2963,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "19hdd0sz4ba2gvkyhqh3v6770fikgdgkanrjckzqj2pm7vklgif2";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
+        perl6-on-nix.distributions."XML"
     ];
     provides = {
         "Printing::Jdf" = "lib/Printing/Jdf.pm6";
@@ -2994,11 +2994,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "00m887gysi2qs47fmqxp06xsbijqnh3p1namgzs1448riwbv0296";
     };
     depends = [
-        perl6-on-nix.libraries."if"
-        perl6-on-nix.libraries."DateTime::Monotonic"
-        perl6-on-nix.libraries."NativeHelpers::Blob"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."StrictClass"
+        perl6-on-nix.distributions."if"
+        perl6-on-nix.distributions."DateTime::Monotonic"
+        perl6-on-nix.distributions."NativeHelpers::Blob"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."StrictClass"
     ];
     provides = {
         "Net::BGP::SAFI" = "lib/Net/BGP/SAFI.pm6";
@@ -3091,8 +3091,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0q88nhi8sph0dhrlrdxzkh7m39n4cajbnijxykxax7np6f39zwpq";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -3154,7 +3154,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "02dhcrxjrsm7n1m3smz42s0ljyg7kzx6dcmsif259s8j6a1kmmyb";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Grammar::PrettyErrors" = "lib/Grammar/PrettyErrors.pm6";
@@ -3170,7 +3170,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0winyvakmbkrcd636wjv9qq2bmqc4hfn8vn0h0c1fvczxdbipnb9";
     };
     depends = [
-        perl6-on-nix.libraries."Red"
+        perl6-on-nix.distributions."Red"
     ];
     provides = {
         "Cro::HTTP::Session::Red" = "lib/Cro/HTTP/Session/Red.pm6";
@@ -3186,7 +3186,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0kzbh6pj2wcak7fii7gk8nzrn2zpcw47cv3j1pbs430gazsmrl60";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build" = "lib/Sparrowdo/VSTS/YAML/Build.pm6";
@@ -3222,8 +3222,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "192i6cda8r273lw0nyqsgyii15744f3mxxjv9b951gs0jlm5crqi";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -3239,7 +3239,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dj6n2xjvyqmn7yywi8b69ff088g36jbqh60qx3q5yxbrwgby7rq";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Actions::Perl6" = "lib/ANTLR4/Actions/Perl6.pm6";
@@ -3256,7 +3256,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qaxdcqgmg64an600x3abxzkxyph8wp7v0x9hcnywbcz73rj7mh5";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -3272,7 +3272,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0i1whn3y48a2ra37flgiiaj7an9082c8g4fikabykgsm526ranh9";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Native::Exec" = "lib/Native/Exec.pm6";
@@ -3288,7 +3288,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1ifw6r09r66zwl050afn0zswyf324838dr10g6lnhg3li1db7mjs";
     };
     depends = [
-        perl6-on-nix.libraries."System::Passwd"
+        perl6-on-nix.distributions."System::Passwd"
     ];
     provides = {
         "Sys::Lastlog" = "lib/Sys/Lastlog.pm";
@@ -3304,9 +3304,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "09fkp1vnb5q3vy3sfqhkkwk1gjh66dhsf1ynqmhns3qil8pk2c1d";
     };
     depends = [
-        perl6-on-nix.libraries."Net::ZMQ"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro"
+        perl6-on-nix.distributions."Net::ZMQ"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro"
     ];
     provides = {
         "Cro::ZeroMQ::Internal" = "lib/Cro/ZeroMQ/Internal.pm6";
@@ -3351,7 +3351,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fqaizx4d50668sx0kw791kb7rfv6cjq4mlxrlax3q8sm870y05q";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Glob"
+        perl6-on-nix.distributions."IO::Glob"
     ];
     provides = {
         "Path::Finder" = "lib/Path/Finder.pm";
@@ -3367,8 +3367,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "12abkymvb1587c4hd965hm5l2b5gfpsm7hf1jl4ai1hwz7fg4ylf";
     };
     depends = [
-        perl6-on-nix.libraries."Config::INI"
-        perl6-on-nix.libraries."DateTime::Format::W3CDTF"
+        perl6-on-nix.distributions."Config::INI"
+        perl6-on-nix.distributions."DateTime::Format::W3CDTF"
     ];
     provides = {
         "AWS::Credentials" = "lib/AWS/Credentials.pm6";
@@ -3391,7 +3391,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1q1kzx1fy26c0kczvg0rgr5sscjv4sw2jvf3yfx2428bmjddqaj9";
     };
     depends = [
-        perl6-on-nix.libraries."P5math"
+        perl6-on-nix.distributions."P5math"
     ];
     provides = {
         "P5rand" = "lib/P5rand.pm6";
@@ -3422,8 +3422,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0yz7mrx0gv60fsi4zq4lcfvi9ngl9bm7jfx64qjl1xmgh2iwb3dj";
     };
     depends = [
-        perl6-on-nix.libraries."AccessorFacade"
-        perl6-on-nix.libraries."NativeHelpers::Array"
+        perl6-on-nix.distributions."AccessorFacade"
+        perl6-on-nix.distributions."NativeHelpers::Array"
     ];
     provides = {
         "Audio::Encode::LameMP3" = "lib/Audio/Encode/LameMP3.pm";
@@ -3439,9 +3439,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ph8ph38m17gbrr2yk9xsf4h4piy071im2ks7mvr5lbzfw498yxi";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -3458,8 +3458,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0cjxxsma08qdcqybcm4q42h18nxfssq061szxg1kymz18gm0yrds";
     };
     depends = [
-        perl6-on-nix.libraries."Digest::SHA"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Digest::SHA"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Temp::Path" = "lib/Temp/Path.pm6";
@@ -3490,7 +3490,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0100qmady1y4ihm6d7wfjv151vbbpkk92nx7ayc4v306xp928hw9";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Inline" = "lib/Inline.pm";
@@ -3537,7 +3537,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "033nvj799nw6885nl1dfc3mdx5zkizwvm95ams954dsj9r06i2xn";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "LibUUID" = "lib/LibUUID.pm6";
@@ -3595,13 +3595,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "0gc7xa3snkrs95qx7nmcrma9lr3nw27rjqprnskh7hlxrb193aw3";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Canvas"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."PDF::Lite"
-        perl6-on-nix.libraries."PDF::Content"
-        perl6-on-nix.libraries."Color"
-        perl6-on-nix.libraries."PDF::Font::Loader"
-        perl6-on-nix.libraries."CSS::Properties"
+        perl6-on-nix.distributions."HTML::Canvas"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."PDF::Lite"
+        perl6-on-nix.distributions."PDF::Content"
+        perl6-on-nix.distributions."Color"
+        perl6-on-nix.distributions."PDF::Font::Loader"
+        perl6-on-nix.distributions."CSS::Properties"
     ];
     provides = {
         "HTML::Canvas::To::PDF" = "lib/HTML/Canvas/To/PDF.pm6";
@@ -3617,10 +3617,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1f4vp5kacwyggr7xcibkn7blqm7aym0wxm2a07zlss69jmpdd947";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Readsecret"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Readsecret"
     ];
     provides = {
         "App::Assixt::Commands::Touch::Bin" = "lib/App/Assixt/Commands/Touch/Bin.pm6";
@@ -3668,8 +3668,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rl277pg12jgziw6wj302f581qp23wg3bqxs6z849wsrgn9ih3j5";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "I18n::Simple::Template" = "lib/I18n/Simple/Template.pm6";
@@ -3686,7 +3686,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1zvmar8a0cw2qhl3bsbb2mp8vx2rzf61smbc5h6jr0y1j61w1gb1";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Inline::Perl5::Array" = "lib/Inline/Perl5/Array.pm6";
@@ -3729,9 +3729,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "00igd3n7y95kq8anh1z196djybqxwc2cymvwwcxdkncv3ph5dzgf";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."JSON::Pointer"
-        perl6-on-nix.libraries."DateTime::Parse"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."JSON::Pointer"
+        perl6-on-nix.distributions."DateTime::Parse"
     ];
     provides = {
         "OpenAPI::Schema::Validate" = "lib/OpenAPI/Schema/Validate.pm6";
@@ -3747,8 +3747,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1xz5rfa5p47whzvq06r2x4r3z8yzsfj2zvwbl566nilmblrbbwr6";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -3764,7 +3764,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1dj05w7jvfm7lw5l9cf1lbgl09ichiyjl7gv8ak3v0n8n2k6nd43";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Test::Color" = "lib/Test/Color.pm6";
@@ -3827,8 +3827,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qw54x54p5819d4n2g2jdpjsy11r82x480hgiz2vxvgid6sk18hj";
     };
     depends = [
-        perl6-on-nix.libraries."DBIish"
-        perl6-on-nix.libraries."DB::Pg"
+        perl6-on-nix.distributions."DBIish"
+        perl6-on-nix.distributions."DB::Pg"
     ];
     provides = {
         "Red::Driver::Pg" = "lib/Red/Driver/Pg.pm6";
@@ -3908,15 +3908,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0877l9xcf278xszhq0lyswnnfznlzvmg6f4dsw6hn0b5kqf76l0j";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::LiveReload" = "lib/Uzu/LiveReload.pm6";
@@ -3955,8 +3955,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ynpxnsn7p8qnpvhhqyp7y12717yg9hqflrm981yi711h2b7g3lx";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."URI"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."URI"
     ];
     provides = {
         "CamelPub::Net" = "lib/CamelPub/Net.pm6";
@@ -3977,8 +3977,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1bmpn927c3z7zmyjgfdsfqx7xqymrn25ybkri0fpp3a0vyw9n72v";
     };
     depends = [
-        perl6-on-nix.libraries."PSGI"
-        perl6-on-nix.libraries."FastCGI::NativeCall"
+        perl6-on-nix.distributions."PSGI"
+        perl6-on-nix.distributions."FastCGI::NativeCall"
     ];
     provides = {
         "FastCGI::NativeCall::PSGI" = "lib/FastCGI/NativeCall/PSGI.pm6";
@@ -3994,7 +3994,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1sr00w298x5nhr9bxnxj3psvdpk9231mz6ijig8qswmf6jzwcx26";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Nuget::Build" = "lib/Sparrowdo/VSTS/YAML/Nuget/Build.pm6";
@@ -4025,17 +4025,17 @@ perl6-on-nix.mkDerivation {
         sha256 = "13aya1mgj3j8jrvkiqg6l1gsvi3grwngfzdfqlg44qsmfwhi3q48";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."Cro::WebSocket"
-        perl6-on-nix.libraries."Docker::File"
-        perl6-on-nix.libraries."File::Ignore"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."Cro::WebSocket"
+        perl6-on-nix.distributions."Docker::File"
+        perl6-on-nix.distributions."File::Ignore"
     ];
     provides = {
         "Cro::Tools::Template::HTTPService" = "lib/Cro/Tools/Template/HTTPService.pm6";
@@ -4084,9 +4084,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0sdcbm4amal0xbyrkxnrip83l3yqfx29lmb4vi06anqf8sl3m3ms";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Sparrowdo::Archive"
-        perl6-on-nix.libraries."Sparrowdo::RemoteFile"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo::Archive"
+        perl6-on-nix.distributions."Sparrowdo::RemoteFile"
     ];
     provides = {
         "Sparrowdo::Prometheus" = "lib/Sparrowdo/Prometheus.pm6";
@@ -4102,11 +4102,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1aqqnixdbpmbbg5rx3md27icjd311v2vwij7wyy7vijpjdrcr0gk";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP::Router"
-        perl6-on-nix.libraries."Cro::HTTP::Request"
-        perl6-on-nix.libraries."Cro::Transform"
-        perl6-on-nix.libraries."Cro::Message"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP::Router"
+        perl6-on-nix.distributions."Cro::HTTP::Request"
+        perl6-on-nix.distributions."Cro::Transform"
+        perl6-on-nix.distributions."Cro::Message"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::RPC::JSON::Exception" = "lib/Cro/RPC/JSON/Exception.pm6";
@@ -4164,7 +4164,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0b710vznpxmri6333bjcdzw7yhc7842dk7bd5xbm80cw7rnxm2w5";
     };
     depends = [
-        perl6-on-nix.libraries."Object::Trampoline"
+        perl6-on-nix.distributions."Object::Trampoline"
     ];
     provides = {
         "Object::Delayed" = "lib/Object/Delayed.pm6";
@@ -4196,7 +4196,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rd59bsk3znm18968wrdi7zkg8y5142mqmwkzhw4qzx0ra6raf8j";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Nuget::Build" = "lib/Sparrowdo/VSTS/YAML/Nuget/Build.pm6";
@@ -4227,11 +4227,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1pi20qq7s2i393c6xrh4g1sm1vyrxdrczj9w4i8ch020s6l5gbrb";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::GitCommit" = "lib/App/Mi6/Release/GitCommit.pm6";
@@ -4319,9 +4319,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0q4ilmsnkp5m9l0kpaq9pyl3dcb5ric1fw6rmlhbhdmy8c5mxcx4";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pointer"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."JSON::Pointer"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "OpenAPI::Model::Reference" = "lib/OpenAPI/Model/Reference.pm6";
@@ -4341,7 +4341,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "11v9idkr6s7rr8cfrlbr0cg0wzz44c3vy19c1vgr832k2k65v8fm";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "RDF::Turtle" = "lib/RDF/Turtle.pm6";
@@ -4389,7 +4389,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0kg6ng2vxwjgw570840bnkprmscr9likyb5vvlvf1fp12iymmjz0";
     };
     depends = [
-        perl6-on-nix.libraries."Pod::To::Text"
+        perl6-on-nix.distributions."Pod::To::Text"
     ];
     provides = {
         "Lingua::Lipogram" = "lib/Lingua/Lipogram.pm6";
@@ -4405,8 +4405,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "134xrl3bvj46pv84ccjqm2b79zwxb54wbhyw6g6qw7k0jh9rlxcs";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
     ];
     provides = {
         "Cro::TLS" = "lib/Cro/TLS.pm6";
@@ -4422,10 +4422,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1kqj1f7nbkinhcicc6cnbkdixaj7c81mzpkcp0x4ppz2bdwgz23c";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::RewriteChanges" = "lib/App/Mi6/Release/RewriteChanges.pm6";
@@ -4507,11 +4507,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "14k5m179abdzyayc59q3czhsk6z1rb6z8x4ir1w6rx0j97hlyfyr";
     };
     depends = [
-        perl6-on-nix.libraries."Archive::Libarchive::Raw"
-        perl6-on-nix.libraries."Archive::Libarchive::Constants"
-        perl6-on-nix.libraries."NativeHelpers::Callback"
-        perl6-on-nix.libraries."Number::Bytes::Human"
-        perl6-on-nix.libraries."BitEnum"
+        perl6-on-nix.distributions."Archive::Libarchive::Raw"
+        perl6-on-nix.distributions."Archive::Libarchive::Constants"
+        perl6-on-nix.distributions."NativeHelpers::Callback"
+        perl6-on-nix.distributions."Number::Bytes::Human"
+        perl6-on-nix.distributions."BitEnum"
     ];
     provides = {
         "Libarchive::Filter" = "lib/Libarchive/Filter.pm6";
@@ -4535,11 +4535,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1whr7zv2gl8m5n8ppcb0w22ywpg77aqv2790mc6rnbwhdr4xrs97";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Server::Async"
-        perl6-on-nix.libraries."Test::Util::ServerPort"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."HTTP::Server::Async"
+        perl6-on-nix.distributions."Test::Util::ServerPort"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Test::HTTP::Server::Event" = "lib/Test/HTTP/Server/Event.pm6";
@@ -4575,10 +4575,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "020v91mcg81lirjawgxcz7hfcnh2sgmcamkaz87iwvxm2s9h3v3h";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::GitCommit" = "lib/App/Mi6/Release/GitCommit.pm6";
@@ -4611,15 +4611,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0q4nvyz3chibdl48iikgcdcvi4cmrqgpw8k5l56xnhf10fgm6i2s";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."Cro::WebSocket"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."Cro::WebSocket"
     ];
     provides = {
         "Cro::Tools::Template::ZeroMQWorkSinkService" = "lib/Cro/Tools/Template/ZeroMQWorkSinkService.pm6";
@@ -4672,10 +4672,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0acqg401b56a5gnj5xivsvdbmzfkzj9mmxh681jswcfbdaic6w6x";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::RewriteChanges" = "lib/App/Mi6/Release/RewriteChanges.pm6";
@@ -4708,11 +4708,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1knh7g8f5v9ni3fg0nap8v0066c8bmxc56kqkacd1ldg7ad2mx7v";
     };
     depends = [
-        perl6-on-nix.libraries."Text::Wrap"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."CommandLine::Usage"
+        perl6-on-nix.distributions."Text::Wrap"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."CommandLine::Usage"
     ];
     provides = {
         "App::Platform::CLI::SSH" = "lib/App/Platform/CLI/SSH.pm6";
@@ -4784,13 +4784,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "0zs8wdp1niwac6nqchd2wczb98p98sbniq12f3wdhxxziqdp22rj";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Entity"
-        perl6-on-nix.libraries."HTML::Parser::XML"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."IRC::Client"
-        perl6-on-nix.libraries."IRC::TextColor"
-        perl6-on-nix.libraries."URL::Find"
+        perl6-on-nix.distributions."HTML::Entity"
+        perl6-on-nix.distributions."HTML::Parser::XML"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."IRC::Client"
+        perl6-on-nix.distributions."IRC::TextColor"
+        perl6-on-nix.distributions."URL::Find"
     ];
     provides = {
         "IRC::Client::Plugin::UrlTitle" = "lib/IRC/Client/Plugin/UrlTitle.pm6";
@@ -4808,8 +4808,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "11g1vrcgnjdjhz1010hxggbgwr58sdp1w0dn0r3g26wsralma3xs";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."curl:from<bin>"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."curl:from<bin>"
     ];
     provides = {
         "HTTP::Tinyish::Base" = "lib/HTTP/Tinyish/Base.pm6";
@@ -4828,11 +4828,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vsw22wc77rm9g4jxdcj1vxlrbi47q6r026jwf5bdiz7slph6gjp";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."OpenAPI::Model"
-        perl6-on-nix.libraries."OpenAPI::Schema::Validate"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."OpenAPI::Model"
+        perl6-on-nix.distributions."OpenAPI::Schema::Validate"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Cro::OpenAPI::RoutesFromDefinition::SecurityChecker" = "lib/Cro/OpenAPI/RoutesFromDefinition/SecurityChecker.pm6";
@@ -4851,7 +4851,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0a6brjdmbzv209hwzni22cb4syn2lzvchm0gqx9k1m5rdv8jq4fm";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge:api<1>"
+        perl6-on-nix.distributions."Hash::Merge:api<1>"
     ];
     provides = {
         "Config::Exception::FileNotFoundException" = "lib/Config/Exception/FileNotFoundException.pm6";
@@ -4872,7 +4872,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1pwps4j3xrgh3zv4hq75qf5qbvad6d2gfdmz9gz3p443jp8x190d";
     };
     depends = [
-        perl6-on-nix.libraries."NativeHelpers::Array"
+        perl6-on-nix.distributions."NativeHelpers::Array"
     ];
     provides = {
         "RPi::Device::SMBus" = "lib/RPi/Device/SMBus.pm";
@@ -4888,7 +4888,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "13irwaj78ay728wz8mkl0ynsz49nf0yl4yg4qbn7va3mik0bqsw4";
     };
     depends = [
-        perl6-on-nix.libraries."WWW"
+        perl6-on-nix.distributions."WWW"
     ];
     provides = {
         "X::OEIS" = "lib/X/OEIS.pm6";
@@ -4907,10 +4907,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1lq7wyq03ciwawrwv5q99xc56qwjck45z6sd1z6n50bz2ig19cpb";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "Dist::Helper::Path" = "lib/Dist/Helper/Path.pm6";
@@ -4945,8 +4945,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qm7ypv5by2y4jrmq1k5l8h071x722bfaa3vlpi9bfanjy4j3ca9";
     };
     depends = [
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Audio::Silan" = "lib/Audio/Silan.pm";
@@ -4992,8 +4992,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ym6vjqi42pi6blq3dpacss1h2llpd9nx0q5s1f1s4jm7qphq545";
     };
     depends = [
-        perl6-on-nix.libraries."Pod::To::HTML"
-        perl6-on-nix.libraries."Pod::To::Markdown"
+        perl6-on-nix.distributions."Pod::To::HTML"
+        perl6-on-nix.distributions."Pod::To::Markdown"
     ];
     provides = {
         "Pod::Render" = "lib/Pod/Render.pm6";
@@ -5009,7 +5009,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1izsnwny68v3jz1ajgd435f90kn99whwd5b8xprl90mqymj2lhy4";
     };
     depends = [
-        perl6-on-nix.libraries."Tinky"
+        perl6-on-nix.distributions."Tinky"
     ];
     provides = {
         "Tinky::Hash" = "lib/Tinky/Hash.pm6";
@@ -5040,9 +5040,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "045yfsalf931l196p0kf3rr83a5s6a7pqlzn6vnjmirq6r07n972";
     };
     depends = [
-        perl6-on-nix.libraries."Bailador"
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."IRC::Client"
+        perl6-on-nix.distributions."Bailador"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."IRC::Client"
     ];
     provides = {
         "IRC::Client::Plugin::Github::WebhookEvents::Issues" = "lib/IRC/Client/Plugin/Github/WebhookEvents/Issues.pm6";
@@ -5062,7 +5062,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vrwpxxpji7g681y8f14k3agj7gd4ixg4hg47gnbpzp3704nwcbp";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -5126,11 +5126,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "07a09yf7b8s8p27cakfadnm6phcclrx4xzcz9z89dzh6fybr35hf";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Server::Async"
-        perl6-on-nix.libraries."Test::Util::ServerPort"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."HTTP::Server::Async"
+        perl6-on-nix.distributions."Test::Util::ServerPort"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Test::HTTP::Server::Event" = "lib/Test/HTTP/Server/Event.pm6";
@@ -5147,8 +5147,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0xhbwjcvmcq5vpygdfaz25a60f4g09kdfvqsbd9148d4y4id3a5p";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
     ];
     provides = {
         "Gnome::GObject::Value" = "lib/Gnome/GObject/Value.pm6";
@@ -5170,8 +5170,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0d7iyzdfaf1jfg1chqjk13w6lqyjcsqh0m8c9k21zfc370gsy89x";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Grammar::Tracer"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Grammar::Tracer"
     ];
     provides = {
         "Log::Minimal" = "lib/Log/Minimal.pm6";
@@ -5217,15 +5217,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "03gcfmwayj4igdgbxgpsfnfw3nqxba2c4vmvd7wy7y25ms0dmnwa";
     };
     depends = [
-        perl6-on-nix.libraries."Apache::LogFormat::Compiler"
-        perl6-on-nix.libraries."DateTime::Format"
-        perl6-on-nix.libraries."Digest::MD5"
-        perl6-on-nix.libraries."Hash::MultiValue"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Supply"
-        perl6-on-nix.libraries."HTTP::Status"
+        perl6-on-nix.distributions."Apache::LogFormat::Compiler"
+        perl6-on-nix.distributions."DateTime::Format"
+        perl6-on-nix.distributions."Digest::MD5"
+        perl6-on-nix.distributions."Hash::MultiValue"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Supply"
+        perl6-on-nix.distributions."HTTP::Status"
     ];
     provides = {
         "Smack::Test" = "lib/Smack/Test.pm6";
@@ -5287,7 +5287,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "04r72szpk13lkcj5kljklzi37mrk0jyvzsdi9wv45414lfgnwhdc";
     };
     depends = [
-        perl6-on-nix.libraries."NativeHelpers::Array"
+        perl6-on-nix.distributions."NativeHelpers::Array"
     ];
     provides = {
         "Algorithm::LibSVM::Problem" = "lib/Algorithm/LibSVM/Problem.pm6";
@@ -5324,8 +5324,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1a17alwhzfk4cj3k33kzwf0f2lv7q87hygcw28g9l4rcwx8sxdnn";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::RPC::JSON::Message" = "lib/Cro/RPC/JSON/Message.pm6";
@@ -5346,11 +5346,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "00qxqp0h5xnbs65ky8kf6mzrxfc449hl5xwqzn763idffsyx5g9d";
     };
     depends = [
-        perl6-on-nix.libraries."if"
-        perl6-on-nix.libraries."DateTime::Monotonic"
-        perl6-on-nix.libraries."NativeHelpers::Blob"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."StrictClass"
+        perl6-on-nix.distributions."if"
+        perl6-on-nix.distributions."DateTime::Monotonic"
+        perl6-on-nix.distributions."NativeHelpers::Blob"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."StrictClass"
     ];
     provides = {
         "Net::BGP::Path-Attribute::Generic" = "lib/Net/BGP/Path-Attribute/Generic.pm6";
@@ -5481,8 +5481,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1hj06p7pkihlf34mypv6m8hiprs1h0njyirzimvkd62p48h6lmk7";
     };
     depends = [
-        perl6-on-nix.libraries."Text::More"
-        perl6-on-nix.libraries."META6"
+        perl6-on-nix.distributions."Text::More"
+        perl6-on-nix.distributions."META6"
     ];
     provides = {
         "META6::To::Man" = "lib/META6/To/Man.pm6";
@@ -5498,7 +5498,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jqhhqnldm3yh2ks1zgnkwadjh11ccjhlzz8yhxk121864rrggad";
     };
     depends = [
-        perl6-on-nix.libraries."Object::Trampoline"
+        perl6-on-nix.distributions."Object::Trampoline"
     ];
     provides = {
         "Object::Delayed" = "lib/Object/Delayed.pm6";
@@ -5529,7 +5529,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1gyc9zz0kll0k5d8slkkpw35plassrd7z3hj59g4is5mafw2x8ga";
     };
     depends = [
-        perl6-on-nix.libraries."File::Which"
+        perl6-on-nix.distributions."File::Which"
     ];
     provides = {
         "Audio::Liquidsoap" = "lib/Audio/Liquidsoap.pm";
@@ -5545,7 +5545,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "04d2fn7vl7s4irbrkbcfzi6sxi4z2grj24l54gyizgv3gx2ijs0v";
     };
     depends = [
-        perl6-on-nix.libraries."Log::Async"
+        perl6-on-nix.distributions."Log::Async"
     ];
     provides = {
         "Algorithm::Evolutionary::Fitness::P-Peaks" = "lib/Algorithm/Evolutionary/Fitness/P-Peaks.pm6";
@@ -5579,14 +5579,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "020nrbzch0yxjr9mfcgcyylpcf1g0z818x06rf1b7csndhfgxbmg";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::Config" = "lib/Uzu/Config.pm6";
@@ -5610,9 +5610,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1pzslq2vyglkj6csljxw9495zgkp2r01xz7xqq7h4bkxzv6slg3k";
     };
     depends = [
-        perl6-on-nix.libraries."Net::ZMQ"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro"
+        perl6-on-nix.distributions."Net::ZMQ"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro"
     ];
     provides = {
         "Cro::ZeroMQ::Component" = "lib/Cro/ZeroMQ/Component.pm6";
@@ -5642,8 +5642,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1nnxdhknlymy5lf5cklrh7v82j8d4hhsx1j1xzx7nsciipxrimzw";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."MPD::Client"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."MPD::Client"
     ];
     provides = {
         "App::MPD::AutoQueue" = "lib/App/MPD/AutoQueue.pm6";
@@ -5659,7 +5659,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "12bsmjcnmgninxyz1415fwnpi47bc3i0l22z4fqvhv8mvi1c8yhs";
     };
     depends = [
-        perl6-on-nix.libraries."FindBin"
+        perl6-on-nix.distributions."FindBin"
     ];
     provides = {
         "FileSystem::Parent" = "lib/FileSystem/Parent.pm6";
@@ -5690,10 +5690,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1x50qbiza600lkvx0hyl2d0nsg7k3xkj3cl3mg9h4hsnv6zcq7qx";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."HTTP::Tinyish"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."HTTP::Tinyish"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Magento::Sales" = "lib/Magento/Sales.pm6";
@@ -5758,7 +5758,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "16y3dl5x3f2a7wclq25iv17mzqhnhd05kbmj0lzl397h7hpadi8a";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "Proc::InvokeEditor" = "lib/Proc/InvokeEditor.pm6";
@@ -5789,7 +5789,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "15p6llw9976aiqxnmyf4js9y3b7l4gildg28zhjdx53dwbfyxvf7";
     };
     depends = [
-        perl6-on-nix.libraries."Array::Agnostic"
+        perl6-on-nix.distributions."Array::Agnostic"
     ];
     provides = {
         "Array::Sparse" = "lib/Array/Sparse.pm6";
@@ -5805,10 +5805,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "05hd9rxnhrzfv1zm2fsx48gl1x3mnak6bqr1q021y5vr1zab5yln";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::Assixt::Commands::Test" = "lib/App/Assixt/Commands/Test.pm6";
@@ -5843,7 +5843,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "06gjwvxj4fxnrmxdin4mg1jln1vrs9na1scs8443va6yv8vs6ycd";
     };
     depends = [
-        perl6-on-nix.libraries."FileSystem::Parent"
+        perl6-on-nix.distributions."FileSystem::Parent"
     ];
     provides = {
         "FindBin::libs" = "lib/FindBin/libs.pm6";
@@ -5860,7 +5860,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1yq8098awqg7j0icdh6qig1nrvzsqcc9942r2cqlkvvd3qlfpvgn";
     };
     depends = [
-        perl6-on-nix.libraries."Concurrent::Stack"
+        perl6-on-nix.distributions."Concurrent::Stack"
     ];
     provides = {
         "DB::Result" = "lib/DB/Result.pm6";
@@ -5880,7 +5880,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jpzk7hd99y111dlzx3is19z379l35xaaiyy02a16f71hx9xlpks";
     };
     depends = [
-        perl6-on-nix.libraries."Net::OSC"
+        perl6-on-nix.distributions."Net::OSC"
     ];
     provides = {
         "Reaper::Control" = "lib/Reaper/Control.pm6";
@@ -5896,8 +5896,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1zh2vxd6l3gm87pnya76dx7prsjhk6jvsql9a1jlgmxsh1knsliq";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Config::Parser::yaml" = "lib/Config/Parser/yaml.pm6";
@@ -5973,7 +5973,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "18rv5jqbb486f67cpqmqgp3k4qf6k4j9v2wzv1f54w94n4qc7qzh";
     };
     depends = [
-        perl6-on-nix.libraries."Temp::Path"
+        perl6-on-nix.distributions."Temp::Path"
     ];
     provides = {
         "Pod::Load" = "lib/Pod/Load.pm6";
@@ -6019,9 +6019,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dcm964p6207bzv6vl9ijh52p2fcw0x03gbxhs1g09c63wsj5xjg";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pointer"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."JSON::Pointer"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "OpenAPI::Model::Reference" = "lib/OpenAPI/Model/Reference.pm6";
@@ -6041,7 +6041,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jwhhrslr4ddybmjrqww5ivpx2d5y264sr1a5jwdkpmsrpcmflyv";
     };
     depends = [
-        perl6-on-nix.libraries."Serialise::Map"
+        perl6-on-nix.distributions."Serialise::Map"
     ];
     provides = {
         "PowerNap" = "lib/PowerNap.pm6";
@@ -6058,7 +6058,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "10wz28n5q7s4l8c9shz3w771s87ilqd325jqx38d6b0al70zv59h";
     };
     depends = [
-        perl6-on-nix.libraries."Array::Agnostic"
+        perl6-on-nix.distributions."Array::Agnostic"
     ];
     provides = {
         "Array::Sparse" = "lib/Array/Sparse.pm6";
@@ -6074,7 +6074,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0065djvmx6k1a961kri65mvwan0r4w3y5z379if7w9qgrjsj08r0";
     };
     depends = [
-        perl6-on-nix.libraries."FileSystem::Parent"
+        perl6-on-nix.distributions."FileSystem::Parent"
     ];
     provides = {
         "FindBin::libs" = "lib/FindBin/libs.pm6";
@@ -6105,10 +6105,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0mr6cr9kp45rj6ri8c1rzaqmvmm527d4f5xfpdyd871ai13vzzkg";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::Package" = "lib/Sparrowdo/Core/DSL/Package.pm6";
@@ -6138,14 +6138,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "1f9mkqw3825psjwm9f8r9iwix5dx3mbpzs2qd2lymc3nngcra6lx";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::Config" = "lib/Uzu/Config.pm6";
@@ -6184,7 +6184,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "18558y3l19cs493cky52syc073kgnb2wxa3fm63imxr1crkwvgsz";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "JSON::Path" = "lib/JSON/Path.pm6";
@@ -6200,11 +6200,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "07zlb84qx7g9sl87s9pqrapa8ch81nrmzbhci39gbw74cbdrlgcj";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."OpenAPI::Model"
-        perl6-on-nix.libraries."OpenAPI::Schema::Validate"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."OpenAPI::Model"
+        perl6-on-nix.distributions."OpenAPI::Schema::Validate"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Cro::OpenAPI::RoutesFromDefinition::SecurityChecker" = "lib/Cro/OpenAPI/RoutesFromDefinition/SecurityChecker.pm6";
@@ -6223,7 +6223,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fw9ak3vi9r4zpw3jr46f2pp6fxg4vgwhmk6sspvx0iwhxww3n26";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "JSON::Path" = "lib/JSON/Path.pm6";
@@ -6255,8 +6255,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vrjqpkvmm5s5bnd71wswqbp8zlbh81dpn62z1hz63p3v263vfy1";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
     ];
     provides = {
         "Cro::TLS" = "lib/Cro/TLS.pm6";
@@ -6302,7 +6302,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0r9f19hyh809njjm55ii6q9w4cxcx8z8n3kz4d3z76147n9z48h2";
     };
     depends = [
-        perl6-on-nix.libraries."P5opendir"
+        perl6-on-nix.distributions."P5opendir"
     ];
     provides = {
         "DirHandle" = "lib/DirHandle.pm6";
@@ -6333,7 +6333,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1yrkxmizfdg2b2wgfjmdjsa4pn3p01bnw5cjhnslwpf79i0sdi6d";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Azure::Web::Cert" = "lib/Sparrowdo/Azure/Web/Cert.pm6";
@@ -6349,7 +6349,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "11s1w8ik5bsdwfwxgz1kykxnyvmjqxlxjia2zqvv9bbh9610d23y";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Term::ReadKey" = "lib/Term/ReadKey.pm6";
@@ -6365,7 +6365,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "13fvl9fb4g76gwc51z93w544v03yarfj3bwbn22328bm1g2n7jnz";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Cordova::OSx::Build" = "lib/Sparrowdo/Cordova/OSx/Build.pm6";
@@ -6381,7 +6381,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1q1cg69qq1v2b5f5jbxifwbiax4q14k458fn49sgwwkbxjw8d9ka";
     };
     depends = [
-        perl6-on-nix.libraries."List::MoreUtils"
+        perl6-on-nix.distributions."List::MoreUtils"
     ];
     provides = {
         "List::SomeUtils" = "lib/List/SomeUtils.pm6";
@@ -6397,8 +6397,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wvb181yqgcnay0vdk8ds5fs7x2vdb8r0nfb2bh50jd4al68hqk3";
     };
     depends = [
-        perl6-on-nix.libraries."UUID"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."UUID"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "LogP6::Filter" = "lib/LogP6/Filter.pm6";
@@ -6493,10 +6493,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0iaw4j9mcpkx4ibzdcymxv52yphw227zv8j73bi9fsaqi0ziwa4x";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."HTTP::Tinyish"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."HTTP::Tinyish"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Magento::Sales" = "lib/Magento/Sales.pm6";
@@ -6559,8 +6559,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0nkf9v7l55gf840hb7b1hysg62scxdv50c0h6p019pcb0dw91xjc";
     };
     depends = [
-        perl6-on-nix.libraries."Pod::Load"
-        perl6-on-nix.libraries."IO::Capture::Simple"
+        perl6-on-nix.distributions."Pod::Load"
+        perl6-on-nix.distributions."IO::Capture::Simple"
     ];
     provides = {
         "Test::Script::Output" = "lib/Test/Script/Output.pm6";
@@ -6591,11 +6591,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0m8j43nrf03kjs0al45qcpkapckdyv2d31840wl3w00w7ngxsj1z";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Compress::Zlib"
-        perl6-on-nix.libraries."Getopt::Advance"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Which"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Compress::Zlib"
+        perl6-on-nix.distributions."Getopt::Advance"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Which"
     ];
     provides = {
         "CPAN::Tar" = "lib/CPAN/Tar.pm6";
@@ -6613,9 +6613,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0y2bq91j7xv7w69xz9yhw5np2cygdr6aaxg8gmgwcs7zf7k9xwf4";
     };
     depends = [
-        perl6-on-nix.libraries."Math::RungeKutta"
-        perl6-on-nix.libraries."SVG"
-        perl6-on-nix.libraries."SVG::Plot"
+        perl6-on-nix.distributions."Math::RungeKutta"
+        perl6-on-nix.distributions."SVG"
+        perl6-on-nix.distributions."SVG::Plot"
     ];
     provides = {
         "Math::Model" = "lib/Math/Model.pm";
@@ -6646,8 +6646,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0055gys62s7snm2xkzdraf234bmy5r431v4qhv3zkk9nf7w1jxq0";
     };
     depends = [
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Audio::Silan" = "lib/Audio/Silan.pm";
@@ -6663,7 +6663,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1r6f5lfnizjfbmv44gwb5skz7d9rz1dabfqgmpmad4xc847iy54c";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Inline::Perl5::Hash" = "lib/Inline/Perl5/Hash.pm6";
@@ -6736,7 +6736,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "04fw99n1dqp346rvczp6myvdq2djxvw9z3giycm10wbm1ichdl4k";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -6752,8 +6752,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1prpc9y8rd3b0scvfcwwxgakgv3wbk56n3k5cmlqnwph3y0y5d1d";
     };
     depends = [
-        perl6-on-nix.libraries."IO::String"
-        perl6-on-nix.libraries."Linenoise"
+        perl6-on-nix.distributions."IO::String"
+        perl6-on-nix.distributions."Linenoise"
     ];
     provides = {
         "Path::Router::Shell" = "lib/Path/Router/Shell.pm6";
@@ -6781,9 +6781,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "155r4y8fj95fw74mdpgpmryb4cm9sxxgdwim9chzg57f61zs2ab3";
     };
     depends = [
-        perl6-on-nix.libraries."Serialise::Map"
-        perl6-on-nix.libraries."Result"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."Serialise::Map"
+        perl6-on-nix.distributions."Result"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "ScaleVec::Vector" = "lib/ScaleVec/Vector.pm6";
@@ -6817,11 +6817,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1xbz870rya4z81nzsa6w6hr9z0b1121yjyqx9yi5gjvphf7zc0zk";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::INI" = "lib/App/Mi6/INI.pm6";
@@ -6840,8 +6840,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "14krj6n1ki5wx5kz1gbza9ds9wz23r298d63zjj7715x95ycj06a";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."NativeLibs"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."NativeLibs"
     ];
     provides = {
         "LibUUID" = "lib/LibUUID.pm6";
@@ -6857,7 +6857,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0p3zq60pyhd5qsz93kv9nci513fhn89f8w7xgn9ba72xr5a1rwyw";
     };
     depends = [
-        perl6-on-nix.libraries."Pod::To::Text"
+        perl6-on-nix.distributions."Pod::To::Text"
     ];
     provides = {
         "Lingua::Pangram" = "lib/Lingua/Pangram.pm6";
@@ -6890,7 +6890,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1ncy6lw0ddc4vl01jb54i0rxckcdyj4bmmjqqizvxm616rvgd45n";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Class"
+        perl6-on-nix.distributions."JSON::Class"
     ];
     provides = {
         "License::SPDX" = "lib/License/SPDX.pm";
@@ -6906,7 +6906,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "16q1cc1d2wddgr9g3jqsmr4rrp0m8q1m486ppnwpcijickcc59fa";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build::Assembly::Patch" = "lib/Sparrowdo/VSTS/YAML/Build/Assembly/Patch.pm6";
@@ -6952,7 +6952,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fh88nhv4lgpkha2fnl59qwacdxc1g4vha89hlaz4sssdpq9mmpp";
     };
     depends = [
-        perl6-on-nix.libraries."Color"
+        perl6-on-nix.distributions."Color"
     ];
     provides = {
         "Libui::Separator" = "lib/Libui/Separator.pm6";
@@ -7109,7 +7109,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "19nms055wg4lb4rkhxd47pasxxzs01s6v303mq6arj940p5z8phx";
     };
     depends = [
-        perl6-on-nix.libraries."OpenSSL"
+        perl6-on-nix.distributions."OpenSSL"
     ];
     provides = {
         "IO::Socket::Async::SSL" = "lib/IO/Socket/Async/SSL.pm6";
@@ -7125,45 +7125,45 @@ perl6-on-nix.mkDerivation {
         sha256 = "1ah1b4s7wplnrnvg36xp2fd7pwqaz699slqnqz30s2z7wcbszz56";
     };
     depends = [
-        perl6-on-nix.libraries."P5__FILE__"
-        perl6-on-nix.libraries."P5caller"
-        perl6-on-nix.libraries."P5chdir"
-        perl6-on-nix.libraries."P5chomp"
-        perl6-on-nix.libraries."P5chr"
-        perl6-on-nix.libraries."P5defined"
-        perl6-on-nix.libraries."P5each"
-        perl6-on-nix.libraries."P5fc"
-        perl6-on-nix.libraries."P5fileno"
-        perl6-on-nix.libraries."P5getgrnam"
-        perl6-on-nix.libraries."P5getnetbyname"
-        perl6-on-nix.libraries."P5getpriority"
-        perl6-on-nix.libraries."P5getprotobyname"
-        perl6-on-nix.libraries."P5getpwnam"
-        perl6-on-nix.libraries."P5getservbyname"
-        perl6-on-nix.libraries."P5hex"
-        perl6-on-nix.libraries."P5index"
-        perl6-on-nix.libraries."P5lc"
-        perl6-on-nix.libraries."P5lcfirst"
-        perl6-on-nix.libraries."P5length"
-        perl6-on-nix.libraries."P5localtime"
-        perl6-on-nix.libraries."P5math"
-        perl6-on-nix.libraries."P5opendir"
-        perl6-on-nix.libraries."P5pack"
-        perl6-on-nix.libraries."P5print"
-        perl6-on-nix.libraries."P5push"
-        perl6-on-nix.libraries."P5quotemeta"
-        perl6-on-nix.libraries."P5readlink"
-        perl6-on-nix.libraries."P5ref"
-        perl6-on-nix.libraries."P5reset"
-        perl6-on-nix.libraries."P5reverse"
-        perl6-on-nix.libraries."P5seek"
-        perl6-on-nix.libraries."P5shift"
-        perl6-on-nix.libraries."P5sleep"
-        perl6-on-nix.libraries."P5study"
-        perl6-on-nix.libraries."P5substr"
-        perl6-on-nix.libraries."P5tie"
-        perl6-on-nix.libraries."P5times"
-        perl6-on-nix.libraries."P5-X"
+        perl6-on-nix.distributions."P5__FILE__"
+        perl6-on-nix.distributions."P5caller"
+        perl6-on-nix.distributions."P5chdir"
+        perl6-on-nix.distributions."P5chomp"
+        perl6-on-nix.distributions."P5chr"
+        perl6-on-nix.distributions."P5defined"
+        perl6-on-nix.distributions."P5each"
+        perl6-on-nix.distributions."P5fc"
+        perl6-on-nix.distributions."P5fileno"
+        perl6-on-nix.distributions."P5getgrnam"
+        perl6-on-nix.distributions."P5getnetbyname"
+        perl6-on-nix.distributions."P5getpriority"
+        perl6-on-nix.distributions."P5getprotobyname"
+        perl6-on-nix.distributions."P5getpwnam"
+        perl6-on-nix.distributions."P5getservbyname"
+        perl6-on-nix.distributions."P5hex"
+        perl6-on-nix.distributions."P5index"
+        perl6-on-nix.distributions."P5lc"
+        perl6-on-nix.distributions."P5lcfirst"
+        perl6-on-nix.distributions."P5length"
+        perl6-on-nix.distributions."P5localtime"
+        perl6-on-nix.distributions."P5math"
+        perl6-on-nix.distributions."P5opendir"
+        perl6-on-nix.distributions."P5pack"
+        perl6-on-nix.distributions."P5print"
+        perl6-on-nix.distributions."P5push"
+        perl6-on-nix.distributions."P5quotemeta"
+        perl6-on-nix.distributions."P5readlink"
+        perl6-on-nix.distributions."P5ref"
+        perl6-on-nix.distributions."P5reset"
+        perl6-on-nix.distributions."P5reverse"
+        perl6-on-nix.distributions."P5seek"
+        perl6-on-nix.distributions."P5shift"
+        perl6-on-nix.distributions."P5sleep"
+        perl6-on-nix.distributions."P5study"
+        perl6-on-nix.distributions."P5substr"
+        perl6-on-nix.distributions."P5tie"
+        perl6-on-nix.distributions."P5times"
+        perl6-on-nix.distributions."P5-X"
     ];
     provides = {
         "P5built-ins" = "lib/P5built-ins.pm6";
@@ -7179,7 +7179,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ix4bwh0wvjfiqyjgqzp2dw2yzjfqyy49d8kqg7j26ccf27376ik";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Escape"
+        perl6-on-nix.distributions."HTML::Escape"
     ];
     provides = {
         "HTML::Lazy" = "lib/HTML/Lazy.pm6";
@@ -7195,8 +7195,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "14dws4ac5bwhnpcmwng1bdqkz30x2kbfhvhi70r2sn2jhi295j41";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."IRC::Client"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."IRC::Client"
     ];
     provides = {
         "IRC::Client::Plugin::NickServ" = "lib/IRC/Client/Plugin/NickServ.pm6";
@@ -7212,7 +7212,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1xws423ffpkxkl049vgi85nn8bkk8m8w2chy3g1kicmirqfbz1iq";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "DB::Pg::Native" = "lib/DB/Pg/Native.pm6";
@@ -7239,7 +7239,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1h7r2d3r10s3lmmrd9q1mzk11f8krrr3l1bfwl58lx2pjykrjb60";
     };
     depends = [
-        perl6-on-nix.libraries."DBIish"
+        perl6-on-nix.distributions."DBIish"
     ];
     provides = {
         "DBIx::NamedQueries::Handle::DBIish" = "lib/DBIx/NamedQueries/Handle/DBIish.pm";
@@ -7273,10 +7273,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0rbrbm3nsn3n5ms3lmwgcl9x2n21z0fbks2vc4nfrwkgqsijg04w";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrow6::Task::Runner::Helpers::Perl6" = "lib/Sparrow6/Task/Runner/Helpers/Perl6.pm6";
@@ -7361,7 +7361,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0rbb6ryp87mrn6ss76j5p0w94nm7gxhsgmap0rywdpdrqq4yk4jz";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Agnostic"
+        perl6-on-nix.distributions."Hash::Agnostic"
     ];
     provides = {
         "Map::Agnostic" = "lib/Map/Agnostic.pm6";
@@ -7377,8 +7377,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0sgyiv14510708n3ss6rdx5v80k0lid24vp7mdh9zzd585ik5cah";
     };
     depends = [
-        perl6-on-nix.libraries."Term::Choose"
-        perl6-on-nix.libraries."Term::Choose::Util"
+        perl6-on-nix.distributions."Term::Choose"
+        perl6-on-nix.distributions."Term::Choose::Util"
     ];
     provides = {
         "Term::TablePrint" = "lib/Term/TablePrint.pm6";
@@ -7409,7 +7409,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0c7gnk4p3smw716gaygl1l868vg0ms64f3s0gdz6qzdp6qd3dfiv";
     };
     depends = [
-        perl6-on-nix.libraries."P5getprotobyname"
+        perl6-on-nix.distributions."P5getprotobyname"
     ];
     provides = {
         "Net::protoent" = "lib/Net/protoent.pm6";
@@ -7425,8 +7425,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "05vyhkr0l3ml1aw4iv4n3xg7ajakgn4a1bcyafx28fssrcan1w4f";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -7442,7 +7442,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "18cjaaw01b97265wd5l5iq4fy2fs5wr0w6hzjw98pi7q0f78qrh9";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "epoll" = "lib/epoll.pm6";
@@ -7458,8 +7458,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0l94bfx93wf0paja4fxxy0z8whmq1xsrn4xmy12hwiccgvs2xfdx";
     };
     depends = [
-        perl6-on-nix.libraries."XML::Actions"
-        perl6-on-nix.libraries."Gnome::Gtk3"
+        perl6-on-nix.distributions."XML::Actions"
+        perl6-on-nix.distributions."Gnome::Gtk3"
     ];
     provides = {
         "Gnome::Gtk3::Glade::Engine::Test" = "lib/Gnome/Gtk3/Glade/Engine/Test.pm6";
@@ -7480,15 +7480,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0k95rjd39aimsxxs7d4rbyvmrgxh26ca5fmfb49gzlxxk8bg0b5h";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."XML::Class"
-        perl6-on-nix.libraries."URI::Encode"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."Digest"
-        perl6-on-nix.libraries."Digest::HMAC"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."URI"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."XML::Class"
+        perl6-on-nix.distributions."URI::Encode"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."Digest"
+        perl6-on-nix.distributions."Digest::HMAC"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."URI"
     ];
     provides = {
         "WebService::AWS::S3::Request" = "lib/WebService/AWS/S3/Request.pm6";
@@ -7545,7 +7545,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0c6c5bp1vwax8lxgcvan5rjn3drr0jyzmypn0ajbwfb1l2qz1pvk";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
+        perl6-on-nix.distributions."XML"
     ];
     provides = {
         "XML::Class" = "lib/XML/Class.pm";
@@ -7561,9 +7561,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "06a2lbqzb0nprr5xp0cs1cfmnfb7x9l5vp3bjms5a75c0p5kxl97";
     };
     depends = [
-        perl6-on-nix.libraries."List::Util"
-        perl6-on-nix.libraries."List::MoreUtils"
-        perl6-on-nix.libraries."List::UtilsBy"
+        perl6-on-nix.distributions."List::Util"
+        perl6-on-nix.distributions."List::MoreUtils"
+        perl6-on-nix.distributions."List::UtilsBy"
     ];
     provides = {
         "List::AllUtils" = "lib/List/AllUtils.pm6";
@@ -7579,10 +7579,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0b32w7iyz7pdvdfns8fkjwl1y96bjjb0l8zj7d5wf7nkra1las1q";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config:api<1>"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config:api<1>"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::Assixt::Commands::Touch::Lib" = "lib/App/Assixt/Commands/Touch/Lib.pm6";
@@ -7621,7 +7621,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1swh5zy9d3xxr0shwp7gqii64gw5f9vnhjlcx2zmza76si0v2lq4";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Text::BorderedBlock" = "lib/Text/BorderedBlock.pm6";
@@ -7655,7 +7655,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1lj61pgf5nzwvs8gcfhfhc3aq57fbgzdyjfxgzs0gf338lclm18f";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Term::Choose::Screen" = "lib/Term/Choose/Screen.pm6";
@@ -7706,7 +7706,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0x7w99anr20dxyw2z632l9jyx6b1ly1ygy578yqqrscymmb0iaqr";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Artifact" = "lib/Sparrowdo/VSTS/YAML/Artifact.pm6";
@@ -7722,8 +7722,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0cswlm0dpa8if3si7nr2a6i4fg1j9ifgfa9w8db7ypc8205r1aq6";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -7754,8 +7754,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0avhnvj14xfjxfkh0ra8qv8rgwa19h76ya8g8vnnbsxxaalq5f1v";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Config::TOML"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Config::TOML"
     ];
     provides = {
         "Config::Parser::toml" = "lib/Config/Parser/toml.pm6";
@@ -7771,7 +7771,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "15qszr0d4gnjdwkyv3n7hpxa7pj3lax5l3y8d844s88m45cwp76p";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Angular::Build" = "lib/Sparrowdo/VSTS/YAML/Angular/Build.pm6";
@@ -7821,7 +7821,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1yv4975k7swdvf76p5jlkga45qq2p10rv6zn2bfmgc5zfscb4d2s";
     };
     depends = [
-        perl6-on-nix.libraries."InterceptAllMethods"
+        perl6-on-nix.distributions."InterceptAllMethods"
     ];
     provides = {
         "Object::Trampoline" = "lib/Object/Trampoline.pm6";
@@ -7837,10 +7837,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0f0m2xmk1csk27z3k7qbjmdvs5c5wxgsx211gmi81k0cmk3wacd4";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
-        perl6-on-nix.libraries."Gnome::Gdk3"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::Gdk3"
     ];
     provides = {
         "Gnome::Gtk3::TextTag" = "lib/Gnome/Gtk3/TextTag.pm6";
@@ -7934,8 +7934,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "150y9gzhgqy23cm25158gjfzngm16r0ndvw1y3rna0p08cnhn3yc";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -7951,7 +7951,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1pw9gvsn6kmqbk92qh40nh86adbra3szsx621ms5vg2lqz91fc52";
     };
     depends = [
-        perl6-on-nix.libraries."Array::Agnostic"
+        perl6-on-nix.distributions."Array::Agnostic"
     ];
     provides = {
         "Array::Sparse" = "lib/Array/Sparse.pm6";
@@ -7967,9 +7967,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0r237pclyh858lshh2ryqv7ylm3dvnmj9gl2pjrqsjmcn9z8r2cn";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
     ];
     provides = {
         "Gnome::Gdk3::Screen" = "lib/Gnome/Gdk3/Screen.pm6";
@@ -7992,9 +7992,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "09jygr4l3xf6cjf6b3jpbm1m4411ms54743lccvyi55yzjwx1yqc";
     };
     depends = [
-        perl6-on-nix.libraries."Serialise::Map"
-        perl6-on-nix.libraries."Result"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."Serialise::Map"
+        perl6-on-nix.distributions."Result"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "ScaleVec::Chord::Voicer" = "lib/ScaleVec/Chord/Voicer.pm6";
@@ -8045,8 +8045,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0k942yhsq0k31h7jz353cl843n2a6i289d1a0fny779x96iln4yp";
     };
     depends = [
-        perl6-on-nix.libraries."nqp"
-        perl6-on-nix.libraries."Temp::Path"
+        perl6-on-nix.distributions."nqp"
+        perl6-on-nix.distributions."Temp::Path"
     ];
     provides = {
         "Pod::Load" = "lib/Pod/Load.pm6";
@@ -8062,7 +8062,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1x7kr9gp6k7wwxbw8g18qi2rq3b0bf0d8ra5hh4phgmi1kkbpgpb";
     };
     depends = [
-        perl6-on-nix.libraries."DBIish"
+        perl6-on-nix.distributions."DBIish"
     ];
     provides = {
         "DB::Migration::Simple" = "lib/DB/Migration/Simple.pm6";
@@ -8122,7 +8122,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1j5vxhplxr45gikc0s5jpz9mhpv21k9va31zylajh4fr3crmgyxy";
     };
     depends = [
-        perl6-on-nix.libraries."NativeHelpers::Array"
+        perl6-on-nix.distributions."NativeHelpers::Array"
     ];
     provides = {
         "Algorithm::LBFGS::Status" = "lib/Algorithm/LBFGS/Status.pm6";
@@ -8157,7 +8157,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1yxgjkgkqgkpndd3i90pidmsgih4pgdr67x19idw1ivy86bh7nd1";
     };
     depends = [
-        perl6-on-nix.libraries."NativeHelpers::Array"
+        perl6-on-nix.distributions."NativeHelpers::Array"
     ];
     provides = {
         "Audio::Fingerprint::Chromaprint" = "lib/Audio/Fingerprint/Chromaprint.pm";
@@ -8173,8 +8173,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0zb99v5absivfn5qj46h8iw2wzxrssbfv1jdgvszx1wp3j2xf1nr";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -8206,7 +8206,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vzswzrpw0kz1mb2z2hxalhhmcqhwc10q256v83cy2d8v36nsd9w";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Actions::Perl6" = "lib/ANTLR4/Actions/Perl6.pm6";
@@ -8253,10 +8253,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0m9z1yh7dg57vri704w3jay8x84rk3nyrdqpsmbdlx4h9dyrsh66";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::Assixt::Commands::Help" = "lib/App/Assixt/Commands/Help.pm6";
@@ -8289,7 +8289,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0n2jw3dmw7d387pl3d5v2xvl66azp71s0kdnmzd1zviwlp2bc13k";
     };
     depends = [
-        perl6-on-nix.libraries."InterceptAllMethods"
+        perl6-on-nix.distributions."InterceptAllMethods"
     ];
     provides = {
         "Object::Trampoline" = "lib/Object/Trampoline.pm6";
@@ -8339,14 +8339,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "1cc2a8bnrdvg23fsa7fs1475kx91v4xxg8sk6jbcb65nqdd5sf5k";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."IO::Path::ChildSecure"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."HTTP::HPACK"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro::TLS"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."IO::Path::ChildSecure"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."HTTP::HPACK"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro::TLS"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::HTTP2::FrameParser" = "lib/Cro/HTTP2/FrameParser.pm6";
@@ -8399,15 +8399,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vzqb4mqhscq4k5ys4pplgfm9v80ir7zlnc3nnqa1k0h54ggq3q2";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."MIME::Base64"
-        perl6-on-nix.libraries."SemVer"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."MIME::Base64"
+        perl6-on-nix.distributions."SemVer"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "Dist::Helper::Template" = "lib/Dist/Helper/Template.pm6";
@@ -8468,11 +8468,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1x1m3f0wmmmkl5j9x10grz190mxqsq6aim0ndwnc47vzkrdwyc2z";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::UploadToCPAN" = "lib/App/Mi6/Release/UploadToCPAN.pm6";
@@ -8504,10 +8504,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "006db598114din7k96iwjxskxgn7r9msaqjxqvnchygslf38ki6q";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Terminal::Print"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Terminal::Print"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -8538,7 +8538,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0idh4msfxq4k1lxwgyr0z1h25pw1a0ww4d4rnd9k2z0gsmwjw99n";
     };
     depends = [
-        perl6-on-nix.libraries."OpenSSL"
+        perl6-on-nix.distributions."OpenSSL"
     ];
     provides = {
         "IO::Socket::Async::SSL" = "lib/IO/Socket/Async/SSL.pm6";
@@ -8554,10 +8554,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0485xmrh1b4chsfkb6x0zlxg09mafzbs9rw5c8bxmgp52rsiz134";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::Package" = "lib/Sparrowdo/Core/DSL/Package.pm6";
@@ -8587,9 +8587,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "04n2fxayfdp8bf75mg1wxk3vpzbi6xmy6qjh5h78jlgq40k0fapl";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pointer"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."JSON::Pointer"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "OpenAPI::Model::OpenAPI" = "lib/OpenAPI/Model/OpenAPI.pm6";
@@ -8624,10 +8624,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "16522smij9kca0dk8j6h833p4ldbk5az3c8ypazba6n24jdc13nq";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrow6::DSL::Template" = "lib/Sparrow6/DSL/Template.pm6";
@@ -8695,11 +8695,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "07ha8jqxv64j8r6ndz3wnwgb2rj1l46phgi92mc4agvdpjqwl20x";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::WebSocket::FrameParser" = "lib/Cro/WebSocket/FrameParser.pm6";
@@ -8800,9 +8800,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0v364dry15nw97sh0jmscxrhpl89vllp2gw32r7a5g6dkwyz2vrv";
     };
     depends = [
-        perl6-on-nix.libraries."LogP6"
-        perl6-on-nix.libraries."Matrix::Client"
-        perl6-on-nix.libraries."Text::Markdown"
+        perl6-on-nix.distributions."LogP6"
+        perl6-on-nix.distributions."Matrix::Client"
+        perl6-on-nix.distributions."Text::Markdown"
     ];
     provides = {
         "Matrix::Bot" = "lib/Matrix/Bot.pm6";
@@ -8853,7 +8853,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1i2rswriwcsjj5dj3rp6zn8fi5g53sj46wjgw4yw9cld2pamr0cg";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "CCLogFull" = "CCLog/lib/CCLogFull.pm6";
@@ -8900,7 +8900,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hgahcywa6b8ibpxrym79laxv7kgh4pa8lr1kxbfahmzabl45xvm";
     };
     depends = [
-        perl6-on-nix.libraries."P5chomp"
+        perl6-on-nix.distributions."P5chomp"
     ];
     provides = {
         "P5chop" = "lib/P5chop.pm6";
@@ -8916,8 +8916,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1whgdxw7qqfzy1khvz5s1y9pclp6f40x1jlnb41g12j2dcv53gq3";
     };
     depends = [
-        perl6-on-nix.libraries."DB"
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."DB"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "DB::SQLite" = "lib/DB/SQLite.pm6";
@@ -8956,7 +8956,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0d898nprmgs8jbhhm8h6gv07gx8hypadssj9cya5szi2a0kbz58b";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Azure::Web::Cert" = "lib/Sparrowdo/Azure/Web/Cert.pm6";
@@ -8972,8 +8972,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "19z6w4lrdb8aqd53cd9xqa4597wsi8mbd4li8pnrjndxwh6sn0d8";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Server::Async"
-        perl6-on-nix.libraries."Test::Util::ServerPort"
+        perl6-on-nix.distributions."HTTP::Server::Async"
+        perl6-on-nix.distributions."Test::Util::ServerPort"
     ];
     provides = {
         "Test::HTTP::Server::Event" = "lib/Test/HTTP/Server/Event.pm6";
@@ -9030,7 +9030,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1n5svvqp0yq2g5l51lrfqh5d00760dd54j7qf92rlx1y5clqm8bi";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "DateTime::DST" = "lib/DateTime/DST.pm6";
@@ -9076,10 +9076,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0n046brc1sy7i1s3dl4gxii04wkxb8z7cbicw9zmi3njvpn75y4g";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrow6::DSL::Directory" = "lib/Sparrow6/DSL/Directory.pm6";
@@ -9132,10 +9132,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1hp4k62yg789fpa4xn44zbzb6k8bgqfmzf8gy8kf06mz78kiprfs";
     };
     depends = [
-        perl6-on-nix.libraries."DB"
-        perl6-on-nix.libraries."NativeLibs"
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."DB"
+        perl6-on-nix.distributions."NativeLibs"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "DB::MySQL::Statement" = "lib/DB/MySQL/Statement.pm6";
@@ -9156,8 +9156,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dnx65pdwrj618wahxh6qskzhi8sjc1ps72bw8vgi9wnmlhz3q44";
     };
     depends = [
-        perl6-on-nix.libraries."Config::INI"
-        perl6-on-nix.libraries."DateTime::Format::W3CDTF"
+        perl6-on-nix.distributions."Config::INI"
+        perl6-on-nix.distributions."DateTime::Format::W3CDTF"
     ];
     provides = {
         "AWS::Credentials::Provider" = "lib/AWS/Credentials.pm6";
@@ -9180,7 +9180,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "074p2rnf1xl543xn8slr56f087r58mgvvw57bk3agm849dwv4y29";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Solution" = "lib/Sparrowdo/VSTS/YAML/Solution.pm6";
@@ -9226,7 +9226,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "03kvf4vjxhgc7fcx750gq4py1djh45jbidnyap1ijdmvqmwh3hmf";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Agnostic"
+        perl6-on-nix.distributions."Hash::Agnostic"
     ];
     provides = {
         "Map::Agnostic" = "lib/Map/Agnostic.pm6";
@@ -9242,7 +9242,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "071mj29h88hhykng6zzy8k7p0z20f2zfdhiyx85z8bbikqbh4x2h";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "CCLogFull" = "CCLog/lib/CCLogFull.pm6";
@@ -9299,7 +9299,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0g34x66n3lphb54l1aaln8wf2j37yh7mhmrqsdinzr7avwnx5pd7";
     };
     depends = [
-        perl6-on-nix.libraries."nqp"
+        perl6-on-nix.distributions."nqp"
     ];
     provides = {
         "ProcStats" = "lib/ProcStats.pm6";
@@ -9332,7 +9332,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0cakcrlczmajkp8c51kidmzs6ya71wpvj8j09v9ipk1dj5g1vw00";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Config::Parser::json" = "lib/Config/Parser/json.pm6";
@@ -9348,7 +9348,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "175lfd0kr9pldg9av6704cxy52888ph6ck51sk6h1051qff3vx6n";
     };
     depends = [
-        perl6-on-nix.libraries."Exportable"
+        perl6-on-nix.distributions."Exportable"
     ];
     provides = {
         "File::Stat" = "lib/File/Stat.pm6";
@@ -9364,45 +9364,45 @@ perl6-on-nix.mkDerivation {
         sha256 = "1k2834f8a45zygv62w47vzfwmpmig2g7xls1byc5ari8fqg1mmqd";
     };
     depends = [
-        perl6-on-nix.libraries."P5__FILE__"
-        perl6-on-nix.libraries."P5caller"
-        perl6-on-nix.libraries."P5chdir"
-        perl6-on-nix.libraries."P5chomp"
-        perl6-on-nix.libraries."P5chr"
-        perl6-on-nix.libraries."P5defined"
-        perl6-on-nix.libraries."P5each"
-        perl6-on-nix.libraries."P5fc"
-        perl6-on-nix.libraries."P5fileno"
-        perl6-on-nix.libraries."P5getgrnam"
-        perl6-on-nix.libraries."P5getnetbyname"
-        perl6-on-nix.libraries."P5getpriority"
-        perl6-on-nix.libraries."P5getprotobyname"
-        perl6-on-nix.libraries."P5getpwnam"
-        perl6-on-nix.libraries."P5getservbyname"
-        perl6-on-nix.libraries."P5hex"
-        perl6-on-nix.libraries."P5index"
-        perl6-on-nix.libraries."P5lc"
-        perl6-on-nix.libraries."P5lcfirst"
-        perl6-on-nix.libraries."P5length"
-        perl6-on-nix.libraries."P5localtime"
-        perl6-on-nix.libraries."P5math"
-        perl6-on-nix.libraries."P5opendir"
-        perl6-on-nix.libraries."P5pack"
-        perl6-on-nix.libraries."P5print"
-        perl6-on-nix.libraries."P5push"
-        perl6-on-nix.libraries."P5quotemeta"
-        perl6-on-nix.libraries."P5readlink"
-        perl6-on-nix.libraries."P5ref"
-        perl6-on-nix.libraries."P5reset"
-        perl6-on-nix.libraries."P5reverse"
-        perl6-on-nix.libraries."P5seek"
-        perl6-on-nix.libraries."P5shift"
-        perl6-on-nix.libraries."P5sleep"
-        perl6-on-nix.libraries."P5study"
-        perl6-on-nix.libraries."P5substr"
-        perl6-on-nix.libraries."P5tie"
-        perl6-on-nix.libraries."P5times"
-        perl6-on-nix.libraries."P5-X"
+        perl6-on-nix.distributions."P5__FILE__"
+        perl6-on-nix.distributions."P5caller"
+        perl6-on-nix.distributions."P5chdir"
+        perl6-on-nix.distributions."P5chomp"
+        perl6-on-nix.distributions."P5chr"
+        perl6-on-nix.distributions."P5defined"
+        perl6-on-nix.distributions."P5each"
+        perl6-on-nix.distributions."P5fc"
+        perl6-on-nix.distributions."P5fileno"
+        perl6-on-nix.distributions."P5getgrnam"
+        perl6-on-nix.distributions."P5getnetbyname"
+        perl6-on-nix.distributions."P5getpriority"
+        perl6-on-nix.distributions."P5getprotobyname"
+        perl6-on-nix.distributions."P5getpwnam"
+        perl6-on-nix.distributions."P5getservbyname"
+        perl6-on-nix.distributions."P5hex"
+        perl6-on-nix.distributions."P5index"
+        perl6-on-nix.distributions."P5lc"
+        perl6-on-nix.distributions."P5lcfirst"
+        perl6-on-nix.distributions."P5length"
+        perl6-on-nix.distributions."P5localtime"
+        perl6-on-nix.distributions."P5math"
+        perl6-on-nix.distributions."P5opendir"
+        perl6-on-nix.distributions."P5pack"
+        perl6-on-nix.distributions."P5print"
+        perl6-on-nix.distributions."P5push"
+        perl6-on-nix.distributions."P5quotemeta"
+        perl6-on-nix.distributions."P5readlink"
+        perl6-on-nix.distributions."P5ref"
+        perl6-on-nix.distributions."P5reset"
+        perl6-on-nix.distributions."P5reverse"
+        perl6-on-nix.distributions."P5seek"
+        perl6-on-nix.distributions."P5shift"
+        perl6-on-nix.distributions."P5sleep"
+        perl6-on-nix.distributions."P5study"
+        perl6-on-nix.distributions."P5substr"
+        perl6-on-nix.distributions."P5tie"
+        perl6-on-nix.distributions."P5times"
+        perl6-on-nix.distributions."P5-X"
     ];
     provides = {
         "P5built-ins" = "lib/P5built-ins.pm6";
@@ -9418,11 +9418,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1grl75p1y78kmjpih6ldp7fw653djpz86bl11mykv56wv2xjb00v";
     };
     depends = [
-        perl6-on-nix.libraries."Compress::Zlib::Raw"
-        perl6-on-nix.libraries."Compress::Zlib"
-        perl6-on-nix.libraries."Compress::Bzip2"
-        perl6-on-nix.libraries."CompUnit::Util"
-        perl6-on-nix.libraries."IO::Blob"
+        perl6-on-nix.distributions."Compress::Zlib::Raw"
+        perl6-on-nix.distributions."Compress::Zlib"
+        perl6-on-nix.distributions."Compress::Bzip2"
+        perl6-on-nix.distributions."CompUnit::Util"
+        perl6-on-nix.distributions."IO::Blob"
     ];
     provides = {
         "Archive::SimpleZip" = "lib/Archive/SimpleZip.pm6";
@@ -9460,11 +9460,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1m894vlylav1ckpzq1n713qyy97kwz60j1lrln0vyskighm16pp8";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Parser::XML"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."IRC::Client"
-        perl6-on-nix.libraries."IRC::TextColor"
-        perl6-on-nix.libraries."URL::Find"
+        perl6-on-nix.distributions."HTML::Parser::XML"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."IRC::Client"
+        perl6-on-nix.distributions."IRC::TextColor"
+        perl6-on-nix.distributions."URL::Find"
     ];
     provides = {
         "IRC::Client::Plugin::UrlTitle" = "lib/IRC/Client/Plugin/UrlTitle.pm6";
@@ -9480,12 +9480,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rm6n8qxq0isj6hhnmfw4kcr4y0afsbm8aagf1gzd0arcp380qib";
     };
     depends = [
-        perl6-on-nix.libraries."Text::Wrap"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."CommandLine::Usage"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Text::Wrap"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."CommandLine::Usage"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "App::Platform::Util::OS" = "lib/App/Platform/Util/OS.pm6";
@@ -9528,12 +9528,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "1xmcl8fmjavx4cawazf3sjn76xxg9i4a6bj89s0jjgsadfr7dih3";
     };
     depends = [
-        perl6-on-nix.libraries."AWS::Session"
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."WebService::AWS::Auth::V4"
-        perl6-on-nix.libraries."String::CRC32"
+        perl6-on-nix.distributions."AWS::Session"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."WebService::AWS::Auth::V4"
+        perl6-on-nix.distributions."String::CRC32"
     ];
     provides = {
         "Amazon::DynamoDB::UA::AutoUA" = "lib/Amazon/DynamoDB/UA.pm6";
@@ -9553,7 +9553,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0cqkrh2vr7ik0szs5p1439xaigsv88qzc87pbv4miwy7540dxaba";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -9569,14 +9569,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "0kvprwh3484fybay4v0pch0x96qp6z4wmjp5370cz2mvh3wfpp6b";
     };
     depends = [
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."DBIish"
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Time::Crontab"
-        perl6-on-nix.libraries."Bailador"
-        perl6-on-nix.libraries."Text::Markdown"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Number::Denominate"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."DBIish"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Time::Crontab"
+        perl6-on-nix.distributions."Bailador"
+        perl6-on-nix.distributions."Text::Markdown"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Number::Denominate"
     ];
     provides = {
         "Sparky" = "lib/Sparky.pm6";
@@ -9637,10 +9637,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ylssfdjm6ja50pjnvibmcl3f9f9bbg69agj0aqf7xkflvv7fryq";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::GitCommit" = "lib/App/Mi6/Release/GitCommit.pm6";
@@ -9688,7 +9688,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1g9d5zd26hj1f4ahdd6r8n4m27iscvininmgsybg7g1g51p4hh46";
     };
     depends = [
-        perl6-on-nix.libraries."Concurrent::Stack"
+        perl6-on-nix.distributions."Concurrent::Stack"
     ];
     provides = {
         "DB::Mock" = "lib/DB/Mock.pm6";
@@ -9738,7 +9738,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0bhlnvysif978zixkc3mw0xy5l795mv76sf6zrl3i250ricxalgi";
     };
     depends = [
-        perl6-on-nix.libraries."Serialise::Map"
+        perl6-on-nix.distributions."Serialise::Map"
     ];
     provides = {
         "PowerNap::Controller" = "lib/PowerNap/Controller.pm6";
@@ -9755,7 +9755,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "16l50fh6vpqpkwzv7fd8fh7ra1yidg9zkxv98s90zsv6ywnm5j72";
     };
     depends = [
-        perl6-on-nix.libraries."Digest::SHA256::Native"
+        perl6-on-nix.distributions."Digest::SHA256::Native"
     ];
     provides = {
         "BlkMeV::Command::Version" = "lib/BlkMeV/Command/Version.pm6";
@@ -9788,7 +9788,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0d20bclzqhkyd5zr5f5mh9vwx5in5kgl0zg0s7g4y7gib3kc09wh";
     };
     depends = [
-        perl6-on-nix.libraries."XML::XPath"
+        perl6-on-nix.distributions."XML::XPath"
     ];
     provides = {
         "File::XML::DMARC::Google" = "lib/File/XML/DMARC/Google.pm6";
@@ -9804,7 +9804,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0km3s8kqlmldaadbsdk60s84i5f6q8isvkv6g1as5gxc25y2ldxa";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -9835,11 +9835,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "08gicrdgbkk758f36m63a4nzsqrkw688rk807rav341vjgw0qz68";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::RewriteChanges" = "lib/App/Mi6/Release/RewriteChanges.pm6";
@@ -9890,10 +9890,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "003334ydxz3ljicp9bgprzn1shyc4nzkqcsn770awjdsrrj5xy7z";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Terminal::Print"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Terminal::Print"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -9924,8 +9924,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0v19fspmi0lv5s90s30qkjd7zlrvskg4nfnmqdwlvgfir5icbbrq";
     };
     depends = [
-        perl6-on-nix.libraries."Config::INI"
-        perl6-on-nix.libraries."Getopt::Long"
+        perl6-on-nix.distributions."Config::INI"
+        perl6-on-nix.distributions."Getopt::Long"
     ];
     provides = {
         "CI::Gen" = "lib/CI/Gen.pm6";
@@ -9941,7 +9941,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1cqm4hk52g00ys781zc3d8fdswb3y2g6l9lq6vkgwxa9vnpqn59k";
     };
     depends = [
-        perl6-on-nix.libraries."Data::MessagePack"
+        perl6-on-nix.distributions."Data::MessagePack"
     ];
     provides = {
         "MessagePack::Class" = "lib/MessagePack/Class.pm";
@@ -9988,7 +9988,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0gjran8fbd7dk99ab5nmcy8p5vrby95kgpjayl9r592ixvkcjn0w";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Cordova::OSx::Build" = "lib/Sparrowdo/Cordova/OSx/Build.pm6";
@@ -10022,8 +10022,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1z0l0rf4lpgn0pqn2b0rzgx0v9vi4ksjh3qcbgvl0ghifgljnm1y";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
     ];
     provides = {
         "Cro::TLS" = "lib/Cro/TLS.pm6";
@@ -10039,10 +10039,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1k1n1qqn6i4fard8qqc6j91a42dylhiq54rwkdsc52xbzggkb14b";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::MakeDist" = "lib/App/Mi6/Release/MakeDist.pm6";
@@ -10075,8 +10075,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "144vwsib39hvh0y17d2pf56vfin861nx1zj6vgc1bwxfz94fzynq";
     };
     depends = [
-        perl6-on-nix.libraries."Number::More"
-        perl6-on-nix.libraries."Text::More"
+        perl6-on-nix.distributions."Number::More"
+        perl6-on-nix.distributions."Text::More"
     ];
     provides = {
         "Net::IP" = "lib/Net/IP.pm6";
@@ -10142,7 +10142,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wgfrx9znm7zlgjb29c0mzc5c3q25dpl4xfiqf3syd7m8rzh8djd";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Grammar::Parser" = "lib/ANTLR4/Grammar/Parser.pm6";
@@ -10160,7 +10160,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "007pym1mwcy6sp24b31jcd4ph4afniscca2vqdh7vww09c7qa0q1";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
+        perl6-on-nix.distributions."Cro::HTTP"
     ];
     provides = {
         "Cro::HTTP::Test" = "lib/Cro/HTTP/Test.pm6";
@@ -10177,8 +10177,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "08fbyps5wly6gnvs3c4mhcq5jq1a6lfywr3l76wxnbsbs9nygiwd";
     };
     depends = [
-        perl6-on-nix.libraries."Pod::To::HTML"
-        perl6-on-nix.libraries."Pod::To::Markdown"
+        perl6-on-nix.distributions."Pod::To::HTML"
+        perl6-on-nix.distributions."Pod::To::Markdown"
     ];
     provides = {
         "Pod::Render" = "lib/Pod/Render.pm6";
@@ -10209,10 +10209,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vw7njr2sqbzgcfcizndmsa7g9mi2zzcrcb9i2chkcigc2c3jgn3";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Server::Async"
-        perl6-on-nix.libraries."Test::Util::ServerPort"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Server::Async"
+        perl6-on-nix.distributions."Test::Util::ServerPort"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::UserAgent"
     ];
     provides = {
         "Test::HTTP::Server::Event" = "lib/Test/HTTP/Server/Event.pm6";
@@ -10244,7 +10244,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "16w1lhkwljzv6fcssk0snc5hc0lmxqq5j7m070wwqlzg8kinj93s";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Perl6::Ecosystem" = "lib/Perl6/Ecosystem.pm6";
@@ -10312,7 +10312,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "09nfiakm51qfxfsj3v54wywiaaspngx8yc1gx6wy6sisd1q19mb6";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Grammar" = "lib/ANTLR4/Grammar.pm6";
@@ -10375,7 +10375,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1f7jjqk3347vpm86686kxm385jq2ygny7fizgpbh20ik9yjp8bs4";
     };
     depends = [
-        perl6-on-nix.libraries."Browser::Open"
+        perl6-on-nix.distributions."Browser::Open"
     ];
     provides = {
         "P6Repl::Helper" = "lib/P6Repl/Helper.pm6";
@@ -10391,7 +10391,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "00r374mvg13jhqlnxgxjsawlqlbmnbbs4akk8wxw3dgki97p6s80";
     };
     depends = [
-        perl6-on-nix.libraries."P5localtime"
+        perl6-on-nix.distributions."P5localtime"
     ];
     provides = {
         "Time::gmtime" = "lib/Time/gmtime.pm6";
@@ -10407,8 +10407,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "02nzm5zfx1ydwk5wd29cmbvwby7kr0xgg06fjqjh9wjiqs1lgpa0";
     };
     depends = [
-        perl6-on-nix.libraries."Sparky"
-        perl6-on-nix.libraries."TelegramBot"
+        perl6-on-nix.distributions."Sparky"
+        perl6-on-nix.distributions."TelegramBot"
     ];
     provides = {
         "Sparky::Plugin::Notify::Telegram" = "lib/Sparky/Plugin/Notify/Telegram.pm6";
@@ -10441,8 +10441,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "14rlyl8jk6hkjsm1w7b0rb1ms801jz23bmszd2m3p73688bwr03p";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "LibCurl::MultiHandle" = "lib/LibCurl/MultiHandle.pm6";
@@ -10462,10 +10462,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1bq4dzrffslp2px5a1zh8y28hnmxjxq2jfgpjvf8dchk2lgi0r3f";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::Systemd" = "lib/Sparrowdo/Core/DSL/Systemd.pm6";
@@ -10510,7 +10510,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rblqrcy3w7k1my73y8b0963w8jhpdbxay5w15zd5qn8nz1mwq32";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Actions::Perl6" = "lib/ANTLR4/Actions/Perl6.pm6";
@@ -10542,7 +10542,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "031idwbk2xkq3j6x6bg86r17887b8fs7s3rq8d4j3ajsaq0iggsd";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
+        perl6-on-nix.distributions."XML"
     ];
     provides = {
         "XML::Actions" = "lib/XML/Actions.pm6";
@@ -10588,9 +10588,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "03n6g65rjxqgzvsn64q84ga2h994ydcmm0gc9pgjshqkfcm60w1y";
     };
     depends = [
-        perl6-on-nix.libraries."Net::ZMQ"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro"
+        perl6-on-nix.distributions."Net::ZMQ"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro"
     ];
     provides = {
         "Cro::ZeroMQ::Component" = "lib/Cro/ZeroMQ/Component.pm6";
@@ -10655,8 +10655,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hgsyjs26jidiajyglw78nq8p6y9lpwig4x6q9mil1m2a8yyfbdj";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
     ];
     provides = {
         "Gnome::GObject::InitiallyUnowned" = "lib/Gnome/GObject/InitiallyUnowned.pm6";
@@ -10693,8 +10693,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0s8d4zi0rlwpza8pywz9fqxc1vghi3b6wsmvxp4ggj020d75yxx6";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "IO::Glob::Globber::Match" = "lib/IO/Glob.pm6";
@@ -10718,7 +10718,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vp6jxy9hq3g9wlr52k5xc4c67rk7a4j71ny0pjgdjc4glmf0z3z";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Grammar::PrettyErrors" = "lib/Grammar/PrettyErrors.pm6";
@@ -10734,11 +10734,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "04jdqnbi629p8c7znvqxi02aqr1db3gl8hmz73hpm3plbyixzxxp";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Server::Async"
-        perl6-on-nix.libraries."Test::Util::ServerPort"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."HTTP::Server::Async"
+        perl6-on-nix.distributions."Test::Util::ServerPort"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Test::HTTP::Server::Event" = "lib/Test/HTTP/Server/Event.pm6";
@@ -10771,7 +10771,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0aw9v0ybfkb4yqzr5600q2r0li5s5790hab92ijy6ic9klx249kv";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "Inline::Go::Grammar" = "lib/Inline/Go/Grammar.pm6";
@@ -10788,10 +10788,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ka2qhf3hh6bjy7c2wpylhd5basrnihwfr5ycqs8x6fgvdwgi5ry";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."Crypt::Random"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."Crypt::Random"
     ];
     provides = {
         "Cro::WebSocket::MessageParser" = "lib/Cro/WebSocket/MessageParser.pm6";
@@ -10816,17 +10816,17 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hd8kv7yk54wqhh9dibvacz1dvfh0jv50v172jygczcsjhnd51kd";
     };
     depends = [
-        perl6-on-nix.libraries."BSON"
-        perl6-on-nix.libraries."Semaphore::ReadersWriters"
-        perl6-on-nix.libraries."Config::DataLang::Refine"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::MD5"
-        perl6-on-nix.libraries."OpenSSL"
-        perl6-on-nix.libraries."URI::Escape"
-        perl6-on-nix.libraries."Auth::SCRAM"
-        perl6-on-nix.libraries."Unicode::PRECIS"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Log::Async"
+        perl6-on-nix.distributions."BSON"
+        perl6-on-nix.distributions."Semaphore::ReadersWriters"
+        perl6-on-nix.distributions."Config::DataLang::Refine"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::MD5"
+        perl6-on-nix.distributions."OpenSSL"
+        perl6-on-nix.distributions."URI::Escape"
+        perl6-on-nix.distributions."Auth::SCRAM"
+        perl6-on-nix.distributions."Unicode::PRECIS"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Log::Async"
     ];
     provides = {
         "MongoDB::Collection" = "lib/MongoDB/Collection.pm6";
@@ -10859,7 +10859,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wx41rwa85qc38dw2xmi83pn7lphmq3q17d73wk200nqj67ry133";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::RemoteFile" = "lib/Sparrowdo/RemoteFile.pm6";
@@ -10875,8 +10875,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "195z0yixfn1svz6ddqhxd3ra1fc2nf2rngqgdx95rml7jv1dpd82";
     };
     depends = [
-        perl6-on-nix.libraries."IO::String"
-        perl6-on-nix.libraries."Linenoise"
+        perl6-on-nix.distributions."IO::String"
+        perl6-on-nix.distributions."Linenoise"
     ];
     provides = {
         "X::Path::Router::AmbiguousMatch::ReverseMatch" = "lib/X/Path/Router.pm6";
@@ -10919,7 +10919,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1f939aacqkc2gjlpig26pz3mfamfxcwacpka1rdnqcdnybydnjjj";
     };
     depends = [
-        perl6-on-nix.libraries."Sparky"
+        perl6-on-nix.distributions."Sparky"
     ];
     provides = {
         "Sparky::Plugin::Hello" = "lib/Sparky/Plugin/Hello.pm6";
@@ -10950,7 +10950,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0iyq16d3b9xpdc9wjvi4gpqfq0b98dyh1lm5866naknxszsihdkk";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -10966,12 +10966,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "1wq0cvpll9367zjh2b69bgzq2rvnzh69z8zr4wyxwbmqffa9pmm3";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Parser::XML"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."IRC::Client"
-        perl6-on-nix.libraries."IRC::TextColor"
-        perl6-on-nix.libraries."URL::Find"
+        perl6-on-nix.distributions."HTML::Parser::XML"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."IRC::Client"
+        perl6-on-nix.distributions."IRC::TextColor"
+        perl6-on-nix.distributions."URL::Find"
     ];
     provides = {
         "IRC::Client::Plugin::UrlTitle" = "lib/IRC/Client/Plugin/UrlTitle.pm6";
@@ -11005,11 +11005,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1piv2rkqabrplfhk2pkni02qdh5zhg30acaac86q89lbaiqvw76x";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Template" = "lib/App/Mi6/Template.pm6";
@@ -11057,7 +11057,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0jn22w2nrcysjcv6nw4c661dx1c49jgwk7n2d5hq24n5azw59pvl";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Inline::Perl5::Array" = "lib/Inline/Perl5/Array.pm6";
@@ -11084,7 +11084,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "022crhmhfd0jspy29ydwyibz762bah5k287229j6qsnckq8448ds";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Inline::C" = "lib/Inline/C.pm";
@@ -11101,9 +11101,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "16c4rxn4smxaz7kyddwqhb59i8850fi84p75fzcpy9bli1asnjzn";
     };
     depends = [
-        perl6-on-nix.libraries."PDF"
-        perl6-on-nix.libraries."PDF::Grammar"
-        perl6-on-nix.libraries."PDF::Content"
+        perl6-on-nix.distributions."PDF"
+        perl6-on-nix.distributions."PDF::Grammar"
+        perl6-on-nix.distributions."PDF::Content"
     ];
     provides = {
         "PDF::Encoding" = "lib/PDF/Encoding.pm";
@@ -11272,7 +11272,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qw7g8da9qxssffzpx4709j2q8cw335zwy088j3ml7gk490k7bq5";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
+        perl6-on-nix.distributions."XML"
     ];
     provides = {
         "App::CPAN::Feed" = "lib/App/CPAN/Feed.pm6";
@@ -11304,7 +11304,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1pbhm68w8vrgavi2faq6y7kzy1820fw05d5rhz47db4k4kxgar32";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Test::Color" = "lib/Test/Color.pm6";
@@ -11350,7 +11350,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "068h3ck8an4vccmb24vvihw30p7cdq6n2h8405dw64i4r6ab4ziw";
     };
     depends = [
-        perl6-on-nix.libraries."P5localtime"
+        perl6-on-nix.distributions."P5localtime"
     ];
     provides = {
         "Time::localtime" = "lib/Time/localtime.pm6";
@@ -11366,7 +11366,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1j7a4djni38hlq4832a5psg2f9mli0gbvk5p37wqyil9cn0rqnls";
     };
     depends = [
-        perl6-on-nix.libraries."Log::Async"
+        perl6-on-nix.distributions."Log::Async"
     ];
     provides = {
         "Algorithm::Evolutionary::Fitness::P-Peaks" = "lib/Algorithm/Evolutionary/Fitness/P-Peaks.pm6";
@@ -11414,12 +11414,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ak3ri8y4ag1g69lacac23rbm8947bhq0ddvc6s25q1rkxazjs78";
     };
     depends = [
-        perl6-on-nix.libraries."Text::Wrap"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."CommandLine::Usage"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Text::Wrap"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."CommandLine::Usage"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "App::Platform::Docker::DNS::Windows" = "lib/App/Platform/Docker/DNS/Windows.pm6";
@@ -11462,7 +11462,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1447ln3wsfh08j5wnq2a1ncrqz1r271y28acy54jih34k32f8mbf";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Grammar::Parser" = "lib/ANTLR4/Grammar/Parser.pm6";
@@ -11501,8 +11501,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1y6557hsmr1j6i6cxhhliqxm8c0bl7javhkf0zxk0ibhdk6c6wla";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -11533,7 +11533,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0p2jd7fipzk3gcna3nh3ry66al6d2syzy025w2xx1s5xx0jr439x";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -11564,14 +11564,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "0a9rj1gsxxkrhjprrydsxv8qqj089kmj024agsazhwccqdyn889j";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."MIME::Base64"
-        perl6-on-nix.libraries."SemVer"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."MIME::Base64"
+        perl6-on-nix.distributions."SemVer"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "Dist::Helper" = "lib/Dist/Helper.pm6";
@@ -11591,9 +11591,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0125x3d5haylqsf5556bl17wf3c5ha3d4z4wwfxw0r974f75z89s";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -11610,8 +11610,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0irnlp0krkjzhfqwjv2chbk12v3mbnvrxlgdzjjw9fr7lax4yzki";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "IO::Glob::Globber::Term" = "lib/IO/Glob.pm6";
@@ -11662,17 +11662,17 @@ perl6-on-nix.mkDerivation {
         sha256 = "12swj5dzs4k67gaxa31fn03nd85csbzg15xynsgvrsvbhjr37p25";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."IO::Path::ChildSecure"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."HTTP::HPACK"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro::TLS"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::JWT"
-        perl6-on-nix.libraries."DateTime::Parse"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."IO::Path::ChildSecure"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."HTTP::HPACK"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro::TLS"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::JWT"
+        perl6-on-nix.distributions."DateTime::Parse"
     ];
     provides = {
         "Cro::HTTP::Middleware" = "lib/Cro/HTTP/Middleware.pm6";
@@ -11768,7 +11768,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "060gvwp0qkixxbbnyffcns9629w5sddkmiv71zhp3d9fb5k87nml";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Glob"
+        perl6-on-nix.distributions."IO::Glob"
     ];
     provides = {
         "Path::Finder" = "lib/Path/Finder.pm";
@@ -11784,8 +11784,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1qj61i60mawgai3kq4s45kz10096w3ajy26c3827jj72mj90726q";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Sparrow6"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Sparrow6"
     ];
     provides = {
         "Sparrowdo::Docker" = "lib/Sparrowdo/Docker.pm6";
@@ -11806,7 +11806,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1najkaajck8dvq5m1yfq7zpas0kkbdm5bz2hak1mv83vj8q8f344";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
+        perl6-on-nix.distributions."XML"
     ];
     provides = {
         "XML::Actions" = "lib/XML/Actions.pm6";
@@ -11822,7 +11822,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "155m6j719kmmnnz8n0krj1ii3agv9g32pwc1jz08q1wicjc9na81";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Inline::C" = "lib/Inline/C.pm";
@@ -11839,7 +11839,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rcpg6i81kgkld54xd1m3hy2b525n2kxk62mwi4c7m3ll41nc9hx";
     };
     depends = [
-        perl6-on-nix.libraries."OpenSSL"
+        perl6-on-nix.distributions."OpenSSL"
     ];
     provides = {
         "IO::Socket::Async::SSL" = "lib/IO/Socket/Async/SSL.pm6";
@@ -11855,7 +11855,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0z49vc9id7ymi8xqhyz0wml108057ydaz6i6afzck027x5zbr8rl";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build" = "lib/Sparrowdo/VSTS/YAML/Build.pm6";
@@ -11871,11 +11871,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "01whxbmfn86mw2w69qxhz86f0nj3fxgw0l9zfmn5bzl02k10471s";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Compress::Zlib"
-        perl6-on-nix.libraries."Getopt::Advance"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Which"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Compress::Zlib"
+        perl6-on-nix.distributions."Getopt::Advance"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Which"
     ];
     provides = {
         "CPAN::Pack6" = "lib/CPAN/Pack6.pm6";
@@ -11893,15 +11893,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "12l75shv7mmaar2d4cnprqxmmxzlsw6j19hf4fy5vp99yja527l0";
     };
     depends = [
-        perl6-on-nix.libraries."Apache::LogFormat::Compiler"
-        perl6-on-nix.libraries."DateTime::Format"
-        perl6-on-nix.libraries."Digest::MD5"
-        perl6-on-nix.libraries."Hash::MultiValue"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Supply"
-        perl6-on-nix.libraries."HTTP::Status"
+        perl6-on-nix.distributions."Apache::LogFormat::Compiler"
+        perl6-on-nix.distributions."DateTime::Format"
+        perl6-on-nix.distributions."Digest::MD5"
+        perl6-on-nix.distributions."Hash::MultiValue"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Supply"
+        perl6-on-nix.distributions."HTTP::Status"
     ];
     provides = {
         "Smack::Middleware::XFramework" = "lib/Smack/Middleware/XFramework.pm6";
@@ -11960,7 +11960,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1aznlslwqmlsgcj5pi2jxid5w54gfmlzg1cs8ifhrmpk15qvqp03";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "JSON::Path" = "lib/JSON/Path.pm6";
@@ -11976,8 +11976,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "07ps08ci7hr0r7pgnxiypmhrwjzfjwws7hw5nbj2wyqd80ycy1cg";
     };
     depends = [
-        perl6-on-nix.libraries."Bailador"
-        perl6-on-nix.libraries."DBIx::NamedQueries"
+        perl6-on-nix.distributions."Bailador"
+        perl6-on-nix.distributions."DBIx::NamedQueries"
     ];
     provides = {
         "Bailador::Plugin::NamedQueries" = "lib/Bailador/Plugin/NamedQueries.pm";
@@ -11993,14 +11993,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "1yvdn5liph7brz2q1gssahsrmzdcmrsmx5mm0vl15frbvxswkm5x";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::Render" = "lib/Uzu/Render.pm6";
@@ -12054,9 +12054,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1d09slr2nb0b25sp3vva9lpw8h1xwfl42wqd5i565fj4s4x4m8yw";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrow6"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Sparrow6"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -12103,7 +12103,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jsqsl9lmmiqzvi54bh3zjywnkhwm6k2xafhvg0rxysrp4dk4vai";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Vroom::Reveal" = "lib/Vroom/Reveal.pm";
@@ -12149,7 +12149,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "05210r7d5i8k9l9w5gvb22b8l5nxqa5l02bcgmc8sig7r2z0rz0r";
     };
     depends = [
-        perl6-on-nix.libraries."P5localtime"
+        perl6-on-nix.distributions."P5localtime"
     ];
     provides = {
         "Time::gmtime" = "lib/Time/gmtime.pm6";
@@ -12165,7 +12165,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "099j3kfb61rhpz1ab5kbglnl2a9r0m2nhn3zpff0mfszc4qhhcbp";
     };
     depends = [
-        perl6-on-nix.libraries."XML::Class"
+        perl6-on-nix.distributions."XML::Class"
     ];
     provides = {
         "Audio::Hydrogen::Song" = "lib/Audio/Hydrogen/Song.pm";
@@ -12185,7 +12185,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "08f1ylsh1nhgrl0bmxn37c6z128mwn6jqv2a5qira11cywn39x9h";
     };
     depends = [
-        perl6-on-nix.libraries."Concurrent::Stack"
+        perl6-on-nix.distributions."Concurrent::Stack"
     ];
     provides = {
         "DB::Connection" = "lib/DB/Connection.pm6";
@@ -12205,7 +12205,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0z5nsgaaqph4jkzx5fkjfvx72dy7llij42kyfpbhkclj1ck0cyxw";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build::Assembly::Patch" = "lib/Sparrowdo/VSTS/YAML/Build/Assembly/Patch.pm6";
@@ -12252,7 +12252,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0m67bhnd5yh51ffa418v0c12cihirai9fcbh1vkxql8712d1n2dm";
     };
     depends = [
-        perl6-on-nix.libraries."P5localtime"
+        perl6-on-nix.distributions."P5localtime"
     ];
     provides = {
         "Time::gmtime" = "lib/Time/gmtime.pm6";
@@ -12268,7 +12268,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1x57zbj7zl0hc9yixnp3ihwsyw882zb96rhbcinsfkv1183c8njh";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Inline::Perl5::Hash" = "lib/Inline/Perl5/Hash.pm6";
@@ -12295,7 +12295,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0gkjjyal27rcyni9g6djg01nk0fjdc599pdhjbzvcrbm1kbbq9rg";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -12327,7 +12327,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "15xfikpdgcjcj1lhf06rwg72g4hj1mxi7qppr77xv5nlyf2ldsym";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
+        perl6-on-nix.distributions."Cro::HTTP"
     ];
     provides = {
         "Cro::HTTP::Test" = "lib/Cro/HTTP/Test.pm6";
@@ -12344,7 +12344,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0s3gv511p02mh3lkzhnh2zwhzjrpzdyzr4qncg067clpkm3sx2kv";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
+        perl6-on-nix.distributions."Cro::HTTP"
     ];
     provides = {
         "Hastebin" = "lib/Hastebin.pm6";
@@ -12360,7 +12360,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "08ip91ywyr1hmgp3yw3qyzwmq8q8ljavw9816213nsa5fq3kgw28";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Solution" = "lib/Sparrowdo/VSTS/YAML/Solution.pm6";
@@ -12376,7 +12376,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0j0dgswkzf7vb7i9qf1rkx9c9rxp1j190xgy2pz97xb3g1f5lkgx";
     };
     depends = [
-        perl6-on-nix.libraries."Sparky"
+        perl6-on-nix.distributions."Sparky"
     ];
     provides = {
         "Sparky::Plugin::Hello" = "lib/Sparky/Plugin/Hello.pm6";
@@ -12392,13 +12392,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "0x77m6xb9jqhybw661wpr98kham1d4p6i94d7vm7j36cpki222k6";
     };
     depends = [
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."DBIish"
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Time::Crontab"
-        perl6-on-nix.libraries."Bailador"
-        perl6-on-nix.libraries."Text::Markdown"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."DBIish"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Time::Crontab"
+        perl6-on-nix.distributions."Bailador"
+        perl6-on-nix.distributions."Text::Markdown"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparky" = "lib/Sparky.pm6";
@@ -12452,8 +12452,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hsz5m4jmwla2lhkd678jil5l9sgwjqlsv2gihh78q1r2ycns9wk";
     };
     depends = [
-        perl6-on-nix.libraries."WhereList"
-        perl6-on-nix.libraries."File::Find"
+        perl6-on-nix.distributions."WhereList"
+        perl6-on-nix.distributions."File::Find"
     ];
     provides = {
         "OO::Plugin::Registry" = "lib/OO/Plugin/Registry.pm6";
@@ -12476,7 +12476,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1z69q3jdwgzf5nbq3jvav5q2ajjmiv6xxl9vsz2cpd8jqs7mrys3";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Terminal::Getpass" = "lib/Terminal/Getpass.pm6";
@@ -12492,17 +12492,17 @@ perl6-on-nix.mkDerivation {
         sha256 = "13cxdxqfk5i8xxyszx4ggi765zz0a9f18dzcqbdj9jiic44d93hz";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."IO::Path::ChildSecure"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."HTTP::HPACK"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro::TLS"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::JWT"
-        perl6-on-nix.libraries."DateTime::Parse"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."IO::Path::ChildSecure"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."HTTP::HPACK"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro::TLS"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::JWT"
+        perl6-on-nix.distributions."DateTime::Parse"
     ];
     provides = {
         "Cro::HTTP::Middleware" = "lib/Cro/HTTP/Middleware.pm6";
@@ -12579,7 +12579,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1qpgyzg3prg7b7l0m21p4zfz9pnw3khsldcrn1d1a7k18mxgarzr";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Perl6::Tidy" = "lib/Perl6/Tidy.pm6";
@@ -12610,11 +12610,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "13nmav8x2zr2wjbyd59xhl3bq7yk0xyayl92m5s0a8880fm0swsj";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::CheckOrigin" = "lib/App/Mi6/Release/CheckOrigin.pm6";
@@ -12646,7 +12646,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1aczhlf812ibhpv33m8n0n891dlpvx9ijnzzd9jvfzg4iyp8mjha";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Git::Object" = "lib/Git/Object.pm6";
@@ -12733,7 +12733,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1kkmx88ckqq6j4xk23hfgqrmqcsdkpcwybvl4rn7xs87b7y2fcm5";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::DotNet" = "lib/Sparrowdo/VSTS/YAML/DotNet.pm6";
@@ -12749,10 +12749,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "162rsm6k8nf21g3a8j3zrc2021sdjhs3phhr8g0cqf8bscnya156";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo" = "lib/Sparrowdo.pm6";
@@ -12782,7 +12782,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qadlk8khhh56bfx6q0pqvqsp5zbifvl73p2lhxgw5m80zdph5vw";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "epoll" = "lib/epoll.pm6";
@@ -12813,8 +12813,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "15rnf10dwbw49clvi5fr9kph48g1a4qj89r6sn7s8439saszgjs7";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."curl:from<bin>"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."curl:from<bin>"
     ];
     provides = {
         "HTTP::Tinyish" = "lib/HTTP/Tinyish.pm6";
@@ -12833,8 +12833,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "17x43nwrv2wgi7q5nm1i3a3zjmcq6xlrab0fqvhbanisfbzyfb18";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Marshal"
-        perl6-on-nix.libraries."JSON::Unmarshal"
+        perl6-on-nix.distributions."JSON::Marshal"
+        perl6-on-nix.distributions."JSON::Unmarshal"
     ];
     provides = {
         "JSON::Class" = "lib/JSON/Class.pm";
@@ -12850,7 +12850,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "034k58j5rxnxbpf2q4hd4pyb9py9q7kdq3pdcgl611051bl81rik";
     };
     depends = [
-        perl6-on-nix.libraries."FindBin"
+        perl6-on-nix.distributions."FindBin"
     ];
     provides = {
         "FileSystem::Parent" = "lib/FileSystem/Parent.pm6";
@@ -12881,9 +12881,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dwm5jrkibzcr5cax7ayaj2mq22ipsjcvqs503zfq8h9skf52k9v";
     };
     depends = [
-        perl6-on-nix.libraries."Net::ZMQ"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro"
+        perl6-on-nix.distributions."Net::ZMQ"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro"
     ];
     provides = {
         "Cro::ZeroMQ::Message" = "lib/Cro/ZeroMQ/Message.pm6";
@@ -12913,9 +12913,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0w7ni368725vdr8arysb40mmi35bsgjqj45va4rvhj4f1qa42xc5";
     };
     depends = [
-        perl6-on-nix.libraries."DBIish"
-        perl6-on-nix.libraries."DB::Pg"
-        perl6-on-nix.libraries."UUID"
+        perl6-on-nix.distributions."DBIish"
+        perl6-on-nix.distributions."DB::Pg"
+        perl6-on-nix.distributions."UUID"
     ];
     provides = {
         "Red::Statement" = "lib/Red/Statement.pm6";
@@ -12984,7 +12984,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1r6ry6jj5czpvxifbgh6jwfb1s7w4n3kpklkrja5yl6vszn33abn";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
+        perl6-on-nix.distributions."Cro::Core"
     ];
     provides = {
         "Cro::H" = "lib/Cro/H.pm6";
@@ -13015,7 +13015,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1pfgjd0v0hqdf6cvz255njqn5s8h80539dbiqgldc9782rhnx28q";
     };
     depends = [
-        perl6-on-nix.libraries."Browser::Open"
+        perl6-on-nix.distributions."Browser::Open"
     ];
     provides = {
         "P6Repl::Helper" = "lib/P6Repl/Helper.pm6";
@@ -13046,11 +13046,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0p86876pcv5pqc3l5jdxcq39gylanalg7id80zgvk9bk99lr1vhr";
     };
     depends = [
-        perl6-on-nix.libraries."AWS::Session"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."WebService::AWS::Auth::V4"
-        perl6-on-nix.libraries."String::CRC32"
+        perl6-on-nix.distributions."AWS::Session"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."WebService::AWS::Auth::V4"
+        perl6-on-nix.distributions."String::CRC32"
     ];
     provides = {
         "Amazon::DynamoDB::UA::AutoUA" = "lib/Amazon/DynamoDB/UA.pm6";
@@ -13085,10 +13085,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hksh9yskiax5cf19h4jacjciz1y5vr7fr21fs9x0py3nk2b6fy9";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Readsecret"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Readsecret"
     ];
     provides = {
         "App::Assixt::Commands::Touch::Test" = "lib/App/Assixt/Commands/Touch/Test.pm6";
@@ -13152,7 +13152,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ii1r6sbsxip6irrwx1n46w8k30q1ijx6rncs3lyzac31sskaj0p";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "HTTP::Tinyish::Base" = "lib/HTTP/Tinyish/Base.pm6";
@@ -13186,7 +13186,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "067363jzxg7w456i5i7pkc81xd7nvd2r71qjkqjsp9sfj22hdqqk";
     };
     depends = [
-        perl6-on-nix.libraries."RPi::Wiring::Pi"
+        perl6-on-nix.distributions."RPi::Wiring::Pi"
     ];
     provides = {
         "RPi::ButtonWatcher" = "lib/RPi/ButtonWatcher.pm6";
@@ -13202,7 +13202,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1grdks8p82dghkblccvgyjg74jnh3b2mr362h6mmkz6ciz20b87c";
     };
     depends = [
-        perl6-on-nix.libraries."AccessorFacade"
+        perl6-on-nix.distributions."AccessorFacade"
     ];
     provides = {
         "Audio::Libshout" = "lib/Audio/Libshout.pm";
@@ -13218,7 +13218,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "022anrlq5d663iy5cbk9sjls5hp4x09mk6yfjlc3nv1k1dzsnv93";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -13250,8 +13250,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "03n6zalhfzlx57wlqnqrl81yf0y0bcgxvzzchqaskrbsi6qj57fg";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -13297,8 +13297,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0swr7k2x5pbwygm09q5agf30xbajx39qbs12cw2asvgvj9gznpqk";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
-        perl6-on-nix.libraries."Term::Choose"
+        perl6-on-nix.distributions."Term::termios"
+        perl6-on-nix.distributions."Term::Choose"
     ];
     provides = {
         "Term::Form" = "lib/Term/Form.pm6";
@@ -13314,9 +13314,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "17m3919pxgbi99cx0z1dngymwz09v82mij2360a37yd160i27nfy";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."DateTime::Parse"
-        perl6-on-nix.libraries."JSON::Pointer"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."DateTime::Parse"
+        perl6-on-nix.distributions."JSON::Pointer"
     ];
     provides = {
         "JSON::Schema" = "lib/JSON/Schema.pm6";
@@ -13333,8 +13333,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1l3v4i8r0z035s0vaip7hyl522nlynf1pmlfi3c4vj2v0d0fnwsx";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -13350,8 +13350,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wpavjgwy2klmrhjb66q12zx3l59y2ap21mnvrp32bq68h4128x8";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -13367,7 +13367,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "04fv3v51pqxw32am47scfhr6j8ajw78ap64mbl8glmsancbycaj5";
     };
     depends = [
-        perl6-on-nix.libraries."Browser::Open"
+        perl6-on-nix.distributions."Browser::Open"
     ];
     provides = {
         "P6Repl::Helper" = "lib/P6Repl/Helper.pm6";
@@ -13383,7 +13383,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1q1ggjjalb8nly8cbm951qdhgb8442vdnbwb501wvrar584nlr35";
     };
     depends = [
-        perl6-on-nix.libraries."Color"
+        perl6-on-nix.distributions."Color"
     ];
     provides = {
         "Libui::Separator" = "lib/Libui/Separator.pm6";
@@ -13469,11 +13469,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "04rx9cfcli6b8l766m3m2pc05sb50zfmd78idjmd2a7akv1jvlnp";
     };
     depends = [
-        perl6-on-nix.libraries."Compress::Zlib::Raw"
-        perl6-on-nix.libraries."Compress::Zlib"
-        perl6-on-nix.libraries."Compress::Bzip2"
-        perl6-on-nix.libraries."CompUnit::Util"
-        perl6-on-nix.libraries."IO::Blob"
+        perl6-on-nix.distributions."Compress::Zlib::Raw"
+        perl6-on-nix.distributions."Compress::Zlib"
+        perl6-on-nix.distributions."Compress::Bzip2"
+        perl6-on-nix.distributions."CompUnit::Util"
+        perl6-on-nix.distributions."IO::Blob"
     ];
     provides = {
         "Archive::SimpleZip::Headers" = "lib/Archive/SimpleZip/Headers.pm6";
@@ -13491,8 +13491,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wqjb01c04k9ii691mxqq8f0hkn45dv3y5dzzgn4dqix78zqh7vp";
     };
     depends = [
-        perl6-on-nix.libraries."Term::Choose"
-        perl6-on-nix.libraries."Term::Choose::Util"
+        perl6-on-nix.distributions."Term::Choose"
+        perl6-on-nix.distributions."Term::Choose::Util"
     ];
     provides = {
         "Term::TablePrint" = "lib/Term/TablePrint.pm6";
@@ -13553,7 +13553,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wnd7alkpbdwqmqbjjr2372k9kllrixm8gdkvh958psaan6b9hf5";
     };
     depends = [
-        perl6-on-nix.libraries."OpenSSL"
+        perl6-on-nix.distributions."OpenSSL"
     ];
     provides = {
         "IO::Socket::Async::SSL" = "lib/IO/Socket/Async/SSL.pm6";
@@ -13602,8 +13602,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1iw9jk8asabnmgfz89pmgq0rp9jpkwisc04gd10ihyxhi8bzkszq";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."JSON::Name"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Name"
     ];
     provides = {
         "JSON::Marshal" = "lib/JSON/Marshal.pm";
@@ -13619,9 +13619,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0nk39bxpgigzqai53m48vasnrbdl2qlfbbk1bqv6k4s5ijcddf0r";
     };
     depends = [
-        perl6-on-nix.libraries."URI::Encode"
-        perl6-on-nix.libraries."HTTP::Client"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."URI::Encode"
+        perl6-on-nix.distributions."HTTP::Client"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Wikidata::API" = "lib/Wikidata/API.pm6";
@@ -13652,7 +13652,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "16qrb201hn91b7dvfi7big5np8kjl93jcxnd6vlh5qg4kc5y3pdb";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "HTTP::Tinyish::FileTempFactory" = "lib/HTTP/Tinyish/FileTempFactory.pm6";
@@ -13671,8 +13671,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fggssr9p28amdwy3jshp37q3i6xmy8vi13ggcqwkziq0zcwak9x";
     };
     depends = [
-        perl6-on-nix.libraries."Bailador"
-        perl6-on-nix.libraries."DBIx::NamedQueries"
+        perl6-on-nix.distributions."Bailador"
+        perl6-on-nix.distributions."DBIx::NamedQueries"
     ];
     provides = {
         "Bailador::Plugin::NamedQueries" = "lib/Bailador/Plugin/NamedQueries.pm";
@@ -13738,7 +13738,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wi38iafzs3xm93nxc6f2d061rfvmvy797baax7fyz6qzm5wff1k";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "HTTP::Tinyish::Base" = "lib/HTTP/Tinyish/Base.pm6";
@@ -13757,7 +13757,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vs5gkjns3kri8b5rx14rk3x2m3bc7lbr6vil14cg2lbb3x6vvac";
     };
     depends = [
-        perl6-on-nix.libraries."nqp"
+        perl6-on-nix.distributions."nqp"
     ];
     provides = {
         "ProcStats" = "lib/ProcStats.pm6";
@@ -13773,15 +13773,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0pndij7jzcx6d4v7wr18x05nap1m07d2q7zggqbqyqh33byg7asj";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::HTTP" = "lib/Uzu/HTTP.pm6";
@@ -13820,8 +13820,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0jvy02lprsabjl4acvb9n7gsbphvqzf5awig83lb68mm7fw5js6x";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -13867,16 +13867,16 @@ perl6-on-nix.mkDerivation {
         sha256 = "108fmcpsfkdc5anv9s0kh8n2a31nibmqk0gwq399lncannbw5psr";
     };
     depends = [
-        perl6-on-nix.libraries."Apache::LogFormat::Compiler"
-        perl6-on-nix.libraries."DateTime::Format"
-        perl6-on-nix.libraries."Digest::MD5"
-        perl6-on-nix.libraries."Hash::MultiValue"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Supply"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."Apache::LogFormat::Compiler"
+        perl6-on-nix.distributions."DateTime::Format"
+        perl6-on-nix.distributions."Digest::MD5"
+        perl6-on-nix.distributions."Hash::MultiValue"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Supply"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
     ];
     provides = {
         "HTTP::Message::P6WAPI" = "lib/HTTP/Message/P6WAPI.pm6";
@@ -13950,7 +13950,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "07351hmnsx8wsqrblf9ddhnja02lqral40jxs37vf7a6m27l4w5c";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Inline::Perl5::Extension" = "lib/Inline/Perl5/Extension.pm6";
@@ -13977,7 +13977,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1ngc4d86hfwvzahys2k050d29ps4p5s1dd6mwp84060xjpgfcc0m";
     };
     depends = [
-        perl6-on-nix.libraries."P5hex"
+        perl6-on-nix.distributions."P5hex"
     ];
     provides = {
         "P5oct" = "lib/P5oct.pm6";
@@ -13993,8 +13993,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "12xpzfld988nzv8p7lm0iykbfidvnlnh556c9zcmy7wd6b5wq39w";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "IO::Glob::Base" = "lib/IO/Glob.pm6";
@@ -14018,10 +14018,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rbdnkkmbgv75dka3rhzj7kb5ba2vzkkqnrwas7yv65fzav1klfx";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."JSON::Pointer"
-        perl6-on-nix.libraries."DateTime::Parse"
-        perl6-on-nix.libraries."ECMA262Regex"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."JSON::Pointer"
+        perl6-on-nix.distributions."DateTime::Parse"
+        perl6-on-nix.distributions."ECMA262Regex"
     ];
     provides = {
         "OpenAPI::Schema::Validate" = "lib/OpenAPI/Schema/Validate.pm6";
@@ -14067,8 +14067,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0a1s56x0clr9fyjjxn9wqpa2is9sj6s26c6nqm34b45i3gv9cnns";
     };
     depends = [
-        perl6-on-nix.libraries."IO::String"
-        perl6-on-nix.libraries."Linenoise"
+        perl6-on-nix.distributions."IO::String"
+        perl6-on-nix.distributions."Linenoise"
     ];
     provides = {
         "X::Path::Router" = "lib/X/Path/Router.pm6";
@@ -14109,11 +14109,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0aw0r0p7vsv5820hs547igy3yiwnxsliz71iix7vcbd7m6j74256";
     };
     depends = [
-        perl6-on-nix.libraries."PDF::Lite"
-        perl6-on-nix.libraries."PDF::Content"
-        perl6-on-nix.libraries."Font::FreeType"
-        perl6-on-nix.libraries."PDF"
-        perl6-on-nix.libraries."Native::Packing"
+        perl6-on-nix.distributions."PDF::Lite"
+        perl6-on-nix.distributions."PDF::Content"
+        perl6-on-nix.distributions."Font::FreeType"
+        perl6-on-nix.distributions."PDF"
+        perl6-on-nix.distributions."Native::Packing"
     ];
     provides = {
         "PDF::Font::Loader::Type1::Stream" = "lib/PDF/Font/Loader/Type1/Stream.pm";
@@ -14172,9 +14172,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "122kzc19x8g1sfdpd1rj8l2nrbxpj3cza61218f8k2yfhnr0rsjw";
     };
     depends = [
-        perl6-on-nix.libraries."DB"
-        perl6-on-nix.libraries."NativeLibs"
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."DB"
+        perl6-on-nix.distributions."NativeLibs"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "DB::SQLite::Native" = "lib/DB/SQLite/Native.pm6";
@@ -14226,8 +14226,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "172x8gk435d2bak3maiv558if1krb8mdq6y2y1qab1m7ymvri1mh";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Class"
-        perl6-on-nix.libraries."JSON::Name"
+        perl6-on-nix.distributions."JSON::Class"
+        perl6-on-nix.distributions."JSON::Name"
     ];
     provides = {
         "Audio::Playlist::JSPF" = "lib/Audio/Playlist/JSPF.pm";
@@ -14243,8 +14243,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ljhjk9xgjvg7zw5bxbsp2bg2d5h8b0i6bx4vygszh2wgj3fcsh6";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -14260,13 +14260,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "03jxy7xgzawdn7brdgdzxk186h6zn6qbmba5wbyfafhymvrlbaz4";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Notification::Recursive"
-        perl6-on-nix.libraries."Config::TOML"
-        perl6-on-nix.libraries."MongoDB"
-        perl6-on-nix.libraries."GTK::Glade"
-        perl6-on-nix.libraries."GTK::V3"
-        perl6-on-nix.libraries."MIME::Base64"
-        perl6-on-nix.libraries."Config::DataLang::Refine"
+        perl6-on-nix.distributions."IO::Notification::Recursive"
+        perl6-on-nix.distributions."Config::TOML"
+        perl6-on-nix.distributions."MongoDB"
+        perl6-on-nix.distributions."GTK::Glade"
+        perl6-on-nix.distributions."GTK::V3"
+        perl6-on-nix.distributions."MIME::Base64"
+        perl6-on-nix.distributions."Config::DataLang::Refine"
     ];
     provides = {
         "Library::MetaData" = "lib/Library/MetaData.pm6";
@@ -14294,8 +14294,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ffam8a3175hnrz6awv7iswqpc183w92cszrjjqsqzaf2lxq7i1m";
     };
     depends = [
-        perl6-on-nix.libraries."TAP"
-        perl6-on-nix.libraries."Getopt::Long"
+        perl6-on-nix.distributions."TAP"
+        perl6-on-nix.distributions."Getopt::Long"
     ];
     provides = {
         "App::Prove6" = "lib/App/Prove6.pm6";
@@ -14326,8 +14326,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vglv5agfjh2l1v40qmqk0pvbrhw8byjc61qm0vmz80r7ipfjb2g";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "IO::Glob::Globber::Match" = "lib/IO/Glob.pm6";
@@ -14351,7 +14351,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "047cr17a90xy0p40v9bwf4bj72s168r80kplbq2nwrf8k5riajkz";
     };
     depends = [
-        perl6-on-nix.libraries."RPi::Wiring::Pi"
+        perl6-on-nix.distributions."RPi::Wiring::Pi"
     ];
     provides = {
         "RPi::Device::ST7036" = "lib/RPi/Device/ST7036.pm6";
@@ -14368,7 +14368,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "063mbn6ygjcpxbjhrz5wblh20h44sqvdwdfk0cr623pfwk1jzj9c";
     };
     depends = [
-        perl6-on-nix.libraries."Temp::Path"
+        perl6-on-nix.distributions."Temp::Path"
     ];
     provides = {
         "Pod::Load" = "lib/Pod/Load.pm6";
@@ -14399,7 +14399,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1b2xm30sy2c2adxgwywpq2y4g3kz38va0mbn7dprgg7a59ah0xrc";
     };
     depends = [
-        perl6-on-nix.libraries."Object::Trampoline"
+        perl6-on-nix.distributions."Object::Trampoline"
     ];
     provides = {
         "Object::Delayed" = "lib/Object/Delayed.pm6";
@@ -14415,8 +14415,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "00lnr0s145jan0vrfirxfr6yc61axh6xm8yzysjn1z9g9fndfkf6";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
-        perl6-on-nix.libraries."Semi-xml"
+        perl6-on-nix.distributions."XML"
+        perl6-on-nix.distributions."Semi-xml"
     ];
     provides = {
         "TMap::Variant" = "lib/TMap/Variant.pm6";
@@ -14440,7 +14440,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qsnzxk55m62n7hn21gq62pyy77vymslbgyrph8h0vx3yfx46kff";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build::Assembly::Patch" = "lib/Sparrowdo/VSTS/YAML/Build/Assembly/Patch.pm6";
@@ -14456,7 +14456,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "01s4nf6gp7x7r99lswnqd6wlg0nqc4vkd4xzy1hk8rw90cdg3yaf";
     };
     depends = [
-        perl6-on-nix.libraries."DOM::Tiny"
+        perl6-on-nix.distributions."DOM::Tiny"
     ];
     provides = {
         "Template::Anti::Library" = "lib/Template/Anti.pm6";
@@ -14503,8 +14503,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "11pmdmjh9w8vpky5g4qfn5pyn7bgi54xdqsq76a8w5whixw5xcnq";
     };
     depends = [
-        perl6-on-nix.libraries."Perl6::Parser"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Perl6::Parser"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Perl6::Tidy" = "lib/Perl6/Tidy.pm6";
@@ -14520,10 +14520,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "15r7iiaw8nrpi21ffsnkrykrj4q1gsbpj8mh8xvv59416m6srlkd";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::Assixt::Commands::Help" = "lib/App/Assixt/Commands/Help.pm6";
@@ -14556,8 +14556,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0jx4axd49w9953npc7dsj5j4022rpqh26r0v73hcyc0hc4spf4mj";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."File::Which"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."File::Which"
     ];
     provides = {
         "File::Zip" = "lib/File/Zip.pm6";
@@ -14593,7 +14593,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "07z1im87hj5whhgz5fvv3srnrk1xgm33dfiz9plasy0g2nf0hm8d";
     };
     depends = [
-        perl6-on-nix.libraries."Temp::Path"
+        perl6-on-nix.distributions."Temp::Path"
     ];
     provides = {
         "Pod::Load" = "lib/Pod/Load.pm6";
@@ -14701,13 +14701,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "02rmql3nxz857if9q6hqna04ms1iy8aawrhgz6yv0bqv69icwhsn";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Entity"
-        perl6-on-nix.libraries."HTML::Parser::XML"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."IRC::Client"
-        perl6-on-nix.libraries."IRC::TextColor"
-        perl6-on-nix.libraries."URL::Find"
+        perl6-on-nix.distributions."HTML::Entity"
+        perl6-on-nix.distributions."HTML::Parser::XML"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."IRC::Client"
+        perl6-on-nix.distributions."IRC::TextColor"
+        perl6-on-nix.distributions."URL::Find"
     ];
     provides = {
         "IRC::Client::Plugin::UrlTitle::TypeFormatter" = "lib/IRC/Client/Plugin/UrlTitle/TypeFormatter.pm6";
@@ -14725,10 +14725,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fg0w7z7qirk24hzj2mwdrhcnrxn7qwca5h75zdz6sx0ykgaz5ff";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Server::Async"
-        perl6-on-nix.libraries."Test::Util::ServerPort"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Server::Async"
+        perl6-on-nix.distributions."Test::Util::ServerPort"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::UserAgent"
     ];
     provides = {
         "Test::HTTP::Server::Event" = "lib/Test/HTTP/Server/Event.pm6";
@@ -14760,7 +14760,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dcdwannc0v89qw6whfrsm6hd98dbf0l2w9snl642lyf5lia38g7";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Inline::Perl5" = "lib/Inline/Perl5.pm6";
@@ -14807,10 +14807,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "019gpvz1wya81yn0b168y76izc0jxhnq309pmdvpldvpks2ssipw";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::Systemd" = "lib/Sparrowdo/Core/DSL/Systemd.pm6";
@@ -14840,15 +14840,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fc640lmmrdp3akf2kgc6ghwx7s146qjnix89q1cqn2kmgf0nh6q";
     };
     depends = [
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."P5getpriority"
-        perl6-on-nix.libraries."P5localtime"
-        perl6-on-nix.libraries."Term::termios"
-        perl6-on-nix.libraries."Term::ReadKey"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."P5getpriority"
+        perl6-on-nix.distributions."P5localtime"
+        perl6-on-nix.distributions."Term::termios"
+        perl6-on-nix.distributions."Term::ReadKey"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "App::Tasks::TaskBody" = "lib/App/Tasks/TaskBody.pm6";
@@ -14884,7 +14884,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1c8axiq8i9xlc02rlzlp22r642abs5750zj6wyjnzkar3g1k7kf3";
     };
     depends = [
-        perl6-on-nix.libraries."Inline::Python"
+        perl6-on-nix.distributions."Inline::Python"
     ];
     provides = {
         "Pygments" = "lib/Pygments.pm6";
@@ -14900,7 +14900,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dc5vl4xfq1kw5x1j0i1m7mmvqqk8mm0rv01bp4iladbay1j85i2";
     };
     depends = [
-        perl6-on-nix.libraries."Sparky"
+        perl6-on-nix.distributions."Sparky"
     ];
     provides = {
         "Sparky::Plugin::Notify::Email" = "lib/Sparky/Plugin/Notify/Email.pm6";
@@ -14965,7 +14965,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0pycv3k13b2lkrlcc5l7yxbadickir5djjbll93q9w3kb8ifcpvp";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Archive::Libarchive::Constants" = "lib/Archive/Libarchive/Constants.pm6";
@@ -15017,12 +15017,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "14b2bdgylp78snv6895plhibpmmyk88cmy737pvidrgfg1afpqvq";
     };
     depends = [
-        perl6-on-nix.libraries."Cairo"
-        perl6-on-nix.libraries."Color"
-        perl6-on-nix.libraries."CSS::Properties"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Base64::Native"
-        perl6-on-nix.libraries."Font::FreeType"
+        perl6-on-nix.distributions."Cairo"
+        perl6-on-nix.distributions."Color"
+        perl6-on-nix.distributions."CSS::Properties"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Base64::Native"
+        perl6-on-nix.distributions."Font::FreeType"
     ];
     provides = {
         "HTML::Canvas::Gradient" = "lib/HTML/Canvas/Gradient.pm";
@@ -15044,8 +15044,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0iq99151x9p9jjxvsk3i6xr0lvz33b3zhb7slyyivy8lq2pl10qd";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -15076,8 +15076,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1d9i49n8pfhywfn2n9j2yx1y33dd6443yw879pk33zs8ng2xgvpj";
     };
     depends = [
-        perl6-on-nix.libraries."UUID"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."UUID"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "LogP6::ThreadLocal" = "lib/LogP6/ThreadLocal.pm6";
@@ -15176,11 +15176,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1s1vgn8v0rsk7mm4sl6lz2m369jmidbpq36d2amp0amk421w602c";
     };
     depends = [
-        perl6-on-nix.libraries."Archive::Libarchive"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Oyatul"
-        perl6-on-nix.libraries."XDG::BaseDirectory"
+        perl6-on-nix.distributions."Archive::Libarchive"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Oyatul"
+        perl6-on-nix.distributions."XDG::BaseDirectory"
     ];
     provides = {
         "Igo" = "lib/Igo.pm";
@@ -15196,7 +15196,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "09wazmg5x3nm0pns0lx7dzq56g8x0qafkkhnrc8vwy9znxg5lyip";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Grammar::Common::Expression::Prefix" = "lib/Grammar/Common/Expression/Prefix.pm6";
@@ -15281,11 +15281,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "08mfpfq9jgzkgam39dnnanqs83zw71b1yf7n6pgaq5bf6czrnf1y";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::BumpVersion" = "lib/App/Mi6/Release/BumpVersion.pm6";
@@ -15318,16 +15318,16 @@ perl6-on-nix.mkDerivation {
         sha256 = "1717qg91djxr7fzbvii5588g6zvljgagaa5pz8bqwrf1gx6113hh";
     };
     depends = [
-        perl6-on-nix.libraries."BSON"
-        perl6-on-nix.libraries."Semaphore::ReadersWriters"
-        perl6-on-nix.libraries."Config::DataLang::Refine"
-        perl6-on-nix.libraries."Auth::SCRAM"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."OpenSSL"
-        perl6-on-nix.libraries."URI::Escape"
-        perl6-on-nix.libraries."Unicode::PRECIS"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Log::Async"
+        perl6-on-nix.distributions."BSON"
+        perl6-on-nix.distributions."Semaphore::ReadersWriters"
+        perl6-on-nix.distributions."Config::DataLang::Refine"
+        perl6-on-nix.distributions."Auth::SCRAM"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."OpenSSL"
+        perl6-on-nix.distributions."URI::Escape"
+        perl6-on-nix.distributions."Unicode::PRECIS"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Log::Async"
     ];
     provides = {
         "MongoDB::HL::Users" = "lib/MongoDB/HL/Users.pm6";
@@ -15360,14 +15360,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "0nn5rv2h92li7f1qx5d4gsq43n4d2vg6rxp9i6yszb3cb8gj4cck";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::Watch" = "lib/Uzu/Watch.pm6";
@@ -15391,7 +15391,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "02z50wnzlmpjp0s7734xzc8l0ija6k8b4mb1ffpmqhngiyllpz0j";
     };
     depends = [
-        perl6-on-nix.libraries."DB"
+        perl6-on-nix.distributions."DB"
     ];
     provides = {
         "DB::Xoos::Pg::Searchable" = "lib/DB/Xoos/Pg/Searchable.pm6";
@@ -15419,8 +15419,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1hrkyi1q0nc7ljpsacn6sng8896nlh2ha2lnvfiq0lcdhhnxink6";
     };
     depends = [
-        perl6-on-nix.libraries."Config::INI"
-        perl6-on-nix.libraries."DateTime::Format::W3CDTF"
+        perl6-on-nix.distributions."Config::INI"
+        perl6-on-nix.distributions."DateTime::Format::W3CDTF"
     ];
     provides = {
         "AWS::Session" = "lib/AWS/Session.pm6";
@@ -15443,8 +15443,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fr6bkbh0vcl65l9nq0lysv9ixax63pslmzgjyhqk5l1hpkdn6ns";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit::Completion" = "lib/Tomtit/Completion.pm6";
@@ -15461,7 +15461,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0g13bsghysdxa8bhsxqvg5cxmz9r7fk2q5j7y1ff5b1fr0dsz19f";
     };
     depends = [
-        perl6-on-nix.libraries."Pod::To::HTML"
+        perl6-on-nix.distributions."Pod::To::HTML"
     ];
     provides = {
         "podviewer" = "bin/podviewer";
@@ -15478,8 +15478,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "14qgkkz6ic9g7l7yfq2h6wwnj4jsd7xvkwpwrn6c650k0z13wmv1";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."File::Which"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."File::Which"
     ];
     provides = {
         "File::Zip" = "lib/File/Zip.pm6";
@@ -15495,8 +15495,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "15cffvg57rqwgfckmk1jmhicb78c4408hjph0i7m8c5kd0p13cvp";
     };
     depends = [
-        perl6-on-nix.libraries."Perl6::Parser"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Perl6::Parser"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Perl6::Tidy" = "lib/Perl6/Tidy.pm6";
@@ -15543,7 +15543,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fakplnzw60466a1ikjinx6sr7zdab39v2zdwvsx0x1w4j5vqfxh";
     };
     depends = [
-        perl6-on-nix.libraries."LogP6"
+        perl6-on-nix.distributions."LogP6"
     ];
     provides = {
         "LogP6::WriterConf::Journald" = "lib/LogP6/WriterConf/Journald.pm6";
@@ -15590,10 +15590,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0znhx0a1gncdlzrmrvb514qk0w0fdlpcsz22ac8kdb29bqy6j6lq";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::Bash" = "lib/Sparrowdo/Core/DSL/Bash.pm6";
@@ -15652,7 +15652,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0zcgadaa2wla42r881l405qfp1qhavblnsn6m2lzqnfaw6vkh1af";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Oyatul" = "lib/Oyatul.pm";
@@ -15724,9 +15724,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0q44fcbpvf48kr93wx5kfxpnh3ly3ngrp1hzrs70s11h7swr0dls";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
     ];
     provides = {
         "Gnome::Gdk3::Keysyms" = "lib/Gnome/Gdk3/Keysyms.pm6";
@@ -15781,15 +15781,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0rm66593jjm48bcvdm3sl5sxm2kihv7zpm8pai514prwy72palhb";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::HTTP" = "lib/Uzu/HTTP.pm6";
@@ -15813,7 +15813,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "07djphfs0yslmlf1yh1p0a3nz0azhhmjij3vq6xj1h2n192cs2pb";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Inline::Language::ObjectKeeper" = "lib/Inline/Language/ObjectKeeper.pm6";
@@ -15840,11 +15840,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "09b7wpn5y834d00qzhx96q2g6kbr9z2g11z9bgzfi4w86is06n0k";
     };
     depends = [
-        perl6-on-nix.libraries."GraphQL"
-        perl6-on-nix.libraries."Cro::HTTP::Router"
-        perl6-on-nix.libraries."Cro::Transform"
-        perl6-on-nix.libraries."Cro::HTTP::Request"
-        perl6-on-nix.libraries."Cro::HTTP::Response"
+        perl6-on-nix.distributions."GraphQL"
+        perl6-on-nix.distributions."Cro::HTTP::Router"
+        perl6-on-nix.distributions."Cro::Transform"
+        perl6-on-nix.distributions."Cro::HTTP::Request"
+        perl6-on-nix.distributions."Cro::HTTP::Response"
     ];
     provides = {
         "CroX::HTTP::Transform::GraphQL" = "lib/CroX/HTTP/Transform/GraphQL.pm6";
@@ -15860,7 +15860,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1l6950qvv4lp1agd73gnhcm2wkaks08v4ql34ngbz0i9mgm0w9k2";
     };
     depends = [
-        perl6-on-nix.libraries."Map::Agnostic"
+        perl6-on-nix.distributions."Map::Agnostic"
     ];
     provides = {
         "Map::Ordered" = "lib/Map/Ordered.pm6";
@@ -15876,8 +15876,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "149vnddgqnjrjgv21cn99051lbykk6fxhj9qlsby0cni72nszhvz";
     };
     depends = [
-        perl6-on-nix.libraries."WWW"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."WWW"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Bitcoin::RPC::Client" = "lib/Bitcoin/RPC/Client.pm6";
@@ -15893,7 +15893,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "01gfjsl4s0vj29nyd3h7fzmr5scpyxrwdbb7rmzafq443gnb3yh3";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "RDF::Turtle::Error" = "lib/RDF/Turtle/Error.pm6";
@@ -15912,7 +15912,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rb1r3ihzdx7wfkjc1mlsrg9imj1gjm8pq7gmc477ic955v4i18n";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build" = "lib/Sparrowdo/VSTS/YAML/Build.pm6";
@@ -15928,11 +15928,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1q36jpf73dy9mi60xmpb2kg1nvf1d0rsbiw61cws4q0pk9snlm2b";
     };
     depends = [
-        perl6-on-nix.libraries."Archive::Libarchive"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Oyatul"
-        perl6-on-nix.libraries."XDG::BaseDirectory"
+        perl6-on-nix.distributions."Archive::Libarchive"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Oyatul"
+        perl6-on-nix.distributions."XDG::BaseDirectory"
     ];
     provides = {
         "Igo" = "lib/Igo.pm";
@@ -15963,7 +15963,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0mcnffb453x1iww3k1cb168a5shi3cn2kij78b0cxjmldhq339k0";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Doublephone" = "lib/Doublephone.pm";
@@ -15994,24 +15994,24 @@ perl6-on-nix.mkDerivation {
         sha256 = "0b8h3ddqn1111pidzbyzp4kc709zfw07l2m8w5qfalc95vzlr7c1";
     };
     depends = [
-        perl6-on-nix.libraries."Digest"
-        perl6-on-nix.libraries."Digest::HMAC"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::MultiPartParser"
-        perl6-on-nix.libraries."HTTP::Server::Ogre"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Log::Any"
-        perl6-on-nix.libraries."Path::Finder"
-        perl6-on-nix.libraries."Template::Mojo"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."URI::Encode"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Digest"
+        perl6-on-nix.distributions."Digest::HMAC"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::MultiPartParser"
+        perl6-on-nix.distributions."HTTP::Server::Ogre"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Log::Any"
+        perl6-on-nix.distributions."Path::Finder"
+        perl6-on-nix.distributions."Template::Mojo"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."URI::Encode"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Bailador::Command::easy" = "lib/Bailador/Command/easy.pm";
@@ -16113,8 +16113,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "17micw11bz6h3i75fhrznkkg6sgb185rxgvcx83i11c9vsmbwn43";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Sparrow6"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Sparrow6"
     ];
     provides = {
         "Sparrowdo::Docker" = "lib/Sparrowdo/Docker.pm6";
@@ -16171,11 +16171,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "08qf35ybbpp0cnhhv4wwi71p4kj4cv21h4gy793ymf6wv59d6ny4";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::WebSocket::Message" = "lib/Cro/WebSocket/Message.pm6";
@@ -16204,8 +16204,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "17486kzzfnxbj7f6c5y6phh5afbrp0kfln1zb7ncfknb33n667v3";
     };
     depends = [
-        perl6-on-nix.libraries."IO::String"
-        perl6-on-nix.libraries."Linenoise"
+        perl6-on-nix.distributions."IO::String"
+        perl6-on-nix.distributions."Linenoise"
     ];
     provides = {
         "Path::Router::Shell" = "lib/Path/Router/Shell.pm6";
@@ -16233,8 +16233,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1klnnj1dr3y25g1gnm4f3w2f794zwwgnr0rshz5s4dr3bq4ibmbv";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Email::Valid"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Email::Valid"
     ];
     provides = {
         "LIVR" = "lib/LIVR.pm6";
@@ -16258,10 +16258,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "147kzwpa66c6n169sxqnhzafj6y1zqbgvpyvinkgakvl5nki71y9";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::Assixt::Usage" = "lib/App/Assixt/Usage.pm6";
@@ -16296,11 +16296,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rdf0ks2vcgnq4k45czm86w0xj2xrviwh2rwrlzh07lxygg7kya9";
     };
     depends = [
-        perl6-on-nix.libraries."Text::Wrap"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."CommandLine::Usage"
+        perl6-on-nix.distributions."Text::Wrap"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."CommandLine::Usage"
     ];
     provides = {
         "App::Platform::CLI::Create" = "lib/App/Platform/CLI/Create.pm6";
@@ -16342,11 +16342,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "07d4s1q9gfcsymmrmwckgvqvnpqzlj2s84vbg6fxa764pamjx8zs";
     };
     depends = [
-        perl6-on-nix.libraries."Text::Wrap"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."CommandLine::Usage"
+        perl6-on-nix.distributions."Text::Wrap"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."CommandLine::Usage"
     ];
     provides = {
         "App::Platform" = "lib/App/Platform.pm6";
@@ -16418,11 +16418,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "13vq78c6b2jnv60zyhng0z7smy9947yf78q4l6jprh71pydkkwmr";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Text::Markdown"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Algorithm::Diff"
-        perl6-on-nix.libraries."HTML::Escape"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Text::Markdown"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Algorithm::Diff"
+        perl6-on-nix.distributions."HTML::Escape"
     ];
     provides = {
         "Oddmuse::Save" = "lib/Oddmuse/Save.pm6";
@@ -16454,7 +16454,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fcwmnpw470k6acm3149wg6vn6q26jz6xn942ca9r0av6wkvfbh0";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::Table"
+        perl6-on-nix.distributions."Terminal::Table"
     ];
     provides = {
         "Getopt::Advance::Context" = "lib/Getopt/Advance/Context.pm6";
@@ -16481,7 +16481,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vlnci85sfsakpn8liikk9ia92gffiv6cxq2qczwj81jd5v8x83h";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Sys::Utmp" = "lib/Sys/Utmp.pm";
@@ -16497,10 +16497,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fcylvpmmjjwq3aircsqhy5k5fxfw7nzc0gc9m4kcav8js6f2qyi";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."License::SPDX"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."License::SPDX"
     ];
     provides = {
         "Test::META" = "lib/Test/META.pm";
@@ -16531,7 +16531,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ljkkflf3al4w92k8hqr450g4rwni37nji0rivvnflfr0ph2dawc";
     };
     depends = [
-        perl6-on-nix.libraries."Pod::To::HTML"
+        perl6-on-nix.distributions."Pod::To::HTML"
     ];
     provides = {
         "podviewer" = "bin/podviewer";
@@ -16548,11 +16548,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0jxwyypmb8avgjww3wyzwriarzwi0mjh3nf83nw2r04v2mp9nk6w";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6" = "lib/App/Mi6.pm6";
@@ -16599,7 +16599,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "08kclkrnsw3w2kpdrzd41bsq3bw9gsm06wqdgpkhgrhi4a83bi0j";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -16615,9 +16615,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "08c8ii4mgbrcw58q33zcdwnahgg406xxg6jy0nippg8kkii3igcx";
     };
     depends = [
-        perl6-on-nix.libraries."List::Util"
-        perl6-on-nix.libraries."List::MoreUtils"
-        perl6-on-nix.libraries."List::UtilsBy"
+        perl6-on-nix.distributions."List::Util"
+        perl6-on-nix.distributions."List::MoreUtils"
+        perl6-on-nix.distributions."List::UtilsBy"
     ];
     provides = {
         "List::AllUtils" = "lib/List/AllUtils.pm6";
@@ -16663,7 +16663,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0md72ydx8m0s85f0bmv6vw915bf1pgjqcwa0vmpyb4gcivjhlfgv";
     };
     depends = [
-        perl6-on-nix.libraries."Object::Trampoline"
+        perl6-on-nix.distributions."Object::Trampoline"
     ];
     provides = {
         "Object::Delayed" = "lib/Object/Delayed.pm6";
@@ -16679,10 +16679,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0y0a3hvv6b97q5zw82927xcfkcin6mzk8m0xd4xpx1i2y3iyi47i";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::Assixt::Commands::New" = "lib/App/Assixt/Commands/New.pm6";
@@ -16717,7 +16717,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vbrhsmy2vgq59hp474cnzd59s15mk9i9yw81rpiaa2hkk39nvv3";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "JSON::Path" = "lib/JSON/Path.pm6";
@@ -16748,7 +16748,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0x09g9mqqfz6cr04lbmf2fjncqfknzps5lpghfx9vrhkx4q42fh2";
     };
     depends = [
-        perl6-on-nix.libraries."P5lc"
+        perl6-on-nix.distributions."P5lc"
     ];
     provides = {
         "P5uc" = "lib/P5uc.pm6";
@@ -16764,7 +16764,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1x474w3k14hsmmfsl2b1zca9f2h4l6dk9jbin8xsf58k734j61h3";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge"
+        perl6-on-nix.distributions."Hash::Merge"
     ];
     provides = {
         "Config::Parser" = "lib/Config/Parser.pm6";
@@ -16785,7 +16785,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0zi6s08yl32s3hh17pnsfmiqq06xfcvxhirxnz8jdfsjxbza8sqj";
     };
     depends = [
-        perl6-on-nix.libraries."Concurrent::Stack"
+        perl6-on-nix.distributions."Concurrent::Stack"
     ];
     provides = {
         "DB::Mock" = "lib/DB/Mock.pm6";
@@ -16805,8 +16805,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "17my7lplzqhzkqp4cka3i5ykzq7y2q62f27gmg9qiicmv9x90j6g";
     };
     depends = [
-        perl6-on-nix.libraries."Object::Permission"
-        perl6-on-nix.libraries."Unix::Groups"
+        perl6-on-nix.distributions."Object::Permission"
+        perl6-on-nix.distributions."Unix::Groups"
     ];
     provides = {
         "Object::Permission::Group" = "lib/Object/Permission/Group.pm";
@@ -16861,10 +16861,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0jx24s4vh7j0zd0dk301vaywrlmymj54gj8kz7z1la05ya2mr5m1";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrow6::DSL::Group" = "lib/Sparrow6/DSL/Group.pm6";
@@ -16932,12 +16932,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wmf0dzjw9n4qv7lgihrkysph8qpwjgnb5fx8wbirakj25wrzrr0";
     };
     depends = [
-        perl6-on-nix.libraries."WWW"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."LWP::Simple"
-        perl6-on-nix.libraries."Base64::Native"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Slippy::Semilist"
+        perl6-on-nix.distributions."WWW"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."LWP::Simple"
+        perl6-on-nix.distributions."Base64::Native"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Slippy::Semilist"
     ];
     provides = {
         "Verge::RPC::Client" = "lib/Verge/RPC/Client.pm6";
@@ -16954,12 +16954,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "1km3b7gl4gm04bfbj44l78ln4ybvqhngqxnadr86lcvm8a52gvxf";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Text::Markdown"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Algorithm::Diff"
-        perl6-on-nix.libraries."HTML::Escape"
-        perl6-on-nix.libraries."URI::Encode"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Text::Markdown"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Algorithm::Diff"
+        perl6-on-nix.distributions."HTML::Escape"
+        perl6-on-nix.distributions."URI::Encode"
     ];
     provides = {
         "Oddmuse::Secret" = "lib/Oddmuse/Secret.pm6";
@@ -16991,7 +16991,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wkvjxj0x3amqyc6nvx087q1sc030x9wkwca5qwwc3cdgsvnik2l";
     };
     depends = [
-        perl6-on-nix.libraries."InterceptAllMethods"
+        perl6-on-nix.distributions."InterceptAllMethods"
     ];
     provides = {
         "Object::Trampoline" = "lib/Object/Trampoline.pm6";
@@ -17042,9 +17042,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0yd5vcyi2paks86ix0g7hgh65yl5s4rxcl0vldndcdyjlaaykn76";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."LibUUID"
-        perl6-on-nix.libraries."epoll"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."LibUUID"
+        perl6-on-nix.distributions."epoll"
     ];
     provides = {
         "DB::Pg::Converter::Geometric" = "lib/DB/Pg/Converter/Geometric.pm6";
@@ -17071,7 +17071,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1nnqh6slxa0z0p8170n9wdf0d960a651m2qg48w5qzipg4fkij9q";
     };
     depends = [
-        perl6-on-nix.libraries."Pod::To::Text"
+        perl6-on-nix.distributions."Pod::To::Text"
     ];
     provides = {
         "Lingua::Palindrome" = "lib/Lingua/Palindrome.pm6";
@@ -17117,9 +17117,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "11c6ps26za1dpyrm8a506d7h2lxszn308yvag0rg9240029ygya1";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
     ];
     provides = {
         "Gnome::Gdk3::Window" = "lib/Gnome/Gdk3/Window.pm6";
@@ -17157,7 +17157,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "067wlql6qr1rlid1rw8xds0ml8gp78jyvd1rpwrb67bxzv3x5af2";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -17173,7 +17173,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "11pqjqdb7hj5mj590y67a5dbs487vm477sbx5h9xbyn98yzri14n";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::Table"
+        perl6-on-nix.distributions."Terminal::Table"
     ];
     provides = {
         "qm" = "bin/qm";
@@ -17206,8 +17206,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "061hhw11548s1waapp7cgmzzfdm31y4vbi87kk0m0j8i10wygqkh";
     };
     depends = [
-        perl6-on-nix.libraries."PDF::Class"
-        perl6-on-nix.libraries."PDF::Font::Loader"
+        perl6-on-nix.distributions."PDF::Class"
+        perl6-on-nix.distributions."PDF::Font::Loader"
     ];
     provides = {
         "ISO_32000::Goto_action_additional" = "gen/lib/ISO_32000/Goto_action_additional.pm6";
@@ -17487,10 +17487,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1i9j5sm99307j1vpprk81larczd59lx74khx214zrvrpcbkabkih";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::User" = "lib/Sparrowdo/Core/DSL/User.pm6";
@@ -17586,8 +17586,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "09hwqzdzlwzcwysy1hbck9jbs6vs8zkm4w7nb1vqhfswvqlvcpyy";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
     ];
     provides = {
         "Cro::TLS" = "lib/Cro/TLS.pm6";
@@ -17633,10 +17633,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0x1fgi54akz7mnmi0m614aiqspzblsiv4wvahrmx3p5n67dv14mr";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::INI" = "lib/App/Mi6/INI.pm6";
@@ -17669,7 +17669,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1m1i2ssr4myc1m55fx36vhl7v6k3cy41jqjniqzir1bg3vkjf781";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Term::Choose" = "lib/Term/Choose.pm6";
@@ -17690,15 +17690,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0mmc6winpx3dg2whb55vgylfilz3vq9jri8l0d7girh53cbafdqf";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::Logger" = "lib/Uzu/Logger.pm6";
@@ -17722,7 +17722,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "18ipn0008n0cc644k0skx5v0fkcvlc73rxw0mb3khwmd5jl5hbp3";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "RDF::Turtle::Actions" = "lib/RDF/Turtle/Actions.pm6";
@@ -17757,7 +17757,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1yzkgbyzii087k6q5i7nynhl6gmnmqx8jw2bah93jqaq7i4wmbqr";
     };
     depends = [
-        perl6-on-nix.libraries."FindBin"
+        perl6-on-nix.distributions."FindBin"
     ];
     provides = {
         "FileSystem::Parent" = "lib/FileSystem/Parent.pm6";
@@ -17804,7 +17804,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "07qvb35h82fpk6nfng9mxi4inx7sbc8cljdpj6fqngb9lh865im7";
     };
     depends = [
-        perl6-on-nix.libraries."NativeHelpers::Blob"
+        perl6-on-nix.distributions."NativeHelpers::Blob"
     ];
     provides = {
         "Image::Libexif::Constants" = "lib/Image/Libexif/Constants.pm6";
@@ -17855,7 +17855,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1gziw4pfk2qnvw12gv7rnpg484k5q7x8vn55pgmrdqxm2f9ikxgl";
     };
     depends = [
-        perl6-on-nix.libraries."Term::Choose"
+        perl6-on-nix.distributions."Term::Choose"
     ];
     provides = {
         "Term::Choose::Util" = "lib/Term/Choose/Util.pm6";
@@ -17871,10 +17871,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0j86zvjv7fgj5pii0rn6rvk2n13mszmd8bahapk229f61h1qijjd";
     };
     depends = [
-        perl6-on-nix.libraries."DB"
-        perl6-on-nix.libraries."NativeLibs"
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."DB"
+        perl6-on-nix.distributions."NativeLibs"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "DB::MySQL::Result" = "lib/DB/MySQL/Result.pm6";
@@ -17895,8 +17895,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1lq5i1837l8njpp1y76r69zjp3kjga6wdh2ipnpzw1z25hnsa5vp";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Blob"
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."IO::Blob"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "Stream::Buffered" = "lib/Stream/Buffered.pm6";
@@ -17915,8 +17915,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1a9mi08bzi0whawlisb697w4r6i1vgss9lk84ssa5bccl66h2i1i";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
-        perl6-on-nix.libraries."Term::Choose"
+        perl6-on-nix.distributions."Term::termios"
+        perl6-on-nix.distributions."Term::Choose"
     ];
     provides = {
         "Term::Form" = "lib/Term/Form.pm6";
@@ -17947,7 +17947,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0rqxw5g2kd1jv0m7q8f8vx29n7ammgsaxmnf7r9d7hks94wr2v0s";
     };
     depends = [
-        perl6-on-nix.libraries."Term::Choose"
+        perl6-on-nix.distributions."Term::Choose"
     ];
     provides = {
         "Term::Choose::Util" = "lib/Term/Choose/Util.pm6";
@@ -17963,15 +17963,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "03s3fwdb508h3ws6diasfx6dl6nibqc0gydjzkdjm6wp677kiac2";
     };
     depends = [
-        perl6-on-nix.libraries."Apache::LogFormat::Compiler"
-        perl6-on-nix.libraries."DateTime::Format"
-        perl6-on-nix.libraries."Digest::MD5"
-        perl6-on-nix.libraries."Hash::MultiValue"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Supply"
-        perl6-on-nix.libraries."HTTP::Status"
+        perl6-on-nix.distributions."Apache::LogFormat::Compiler"
+        perl6-on-nix.distributions."DateTime::Format"
+        perl6-on-nix.distributions."Digest::MD5"
+        perl6-on-nix.distributions."Hash::MultiValue"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Supply"
+        perl6-on-nix.distributions."HTTP::Status"
     ];
     provides = {
         "Smack::Runner" = "lib/Smack/Runner.pm6";
@@ -18071,14 +18071,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "12kvn1hv61p1axy70xkf3rs5gpm14bm95d1ygaypwsdkamfhx5lv";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."MIME::Base64"
-        perl6-on-nix.libraries."SemVer"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."MIME::Base64"
+        perl6-on-nix.distributions."SemVer"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "Dist::Helper::Path" = "lib/Dist/Helper/Path.pm6";
@@ -18098,18 +18098,18 @@ perl6-on-nix.mkDerivation {
         sha256 = "00wqxh4nw90jgb7viyxq3kw3rfsp9k8l3jnl0lc0lflkh1qx5r6h";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."IO::Path::ChildSecure"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."HTTP::HPACK"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro::TLS"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::JWT"
-        perl6-on-nix.libraries."DateTime::Parse"
-        perl6-on-nix.libraries."Log::Timeline"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."IO::Path::ChildSecure"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."HTTP::HPACK"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro::TLS"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::JWT"
+        perl6-on-nix.distributions."DateTime::Parse"
+        perl6-on-nix.distributions."Log::Timeline"
     ];
     provides = {
         "Cro::HTTP2::ResponseParser" = "lib/Cro/HTTP2/ResponseParser.pm6";
@@ -18217,8 +18217,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1xyx3s3dh1f43xj9vhn200pyig57r67fcjmf4ryw0y4vi25xp1xl";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "I18n::Simple::Template" = "lib/I18n/Simple/Template.pm6";
@@ -18235,7 +18235,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1avf3gwdg1iazgg31dia15b0lh05xpwrc9zfd2511avsmrw7vjhl";
     };
     depends = [
-        perl6-on-nix.libraries."AttrX::Mooish"
+        perl6-on-nix.distributions."AttrX::Mooish"
     ];
     provides = {
         "Async::Workers" = "lib/Async/Workers.pm6";
@@ -18252,7 +18252,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1f9bq2n7pyhvpwpfcvaw84ijsa30s773sn61pq81qnwqds5y7xxv";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Term::Choose::ReadKey" = "lib/Term/Choose/ReadKey.pm6";
@@ -18273,7 +18273,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0y8948671x3qwkmvmi56szfgvrw6a0m3mmgdi9sbccr1vfjwxmml";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Color::Names::X11" = "lib/Color/Names/X11.pm6";
@@ -18292,8 +18292,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "00hqxgcfa1zg2hqsi56w91pfqwwxi8rzkmip0v9igrr2lc1fmxhy";
     };
     depends = [
-        perl6-on-nix.libraries."Slang::Tuxic"
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."Slang::Tuxic"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "Text::CSV" = "lib/Text/CSV.pm";
@@ -18309,10 +18309,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1h8ryrpsaa2y72g14cyhxqvq1d329865s9q64ppd36fcridjll1z";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
-        perl6-on-nix.libraries."Gnome::Gdk3"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::Gdk3"
     ];
     provides = {
         "Gnome::Gtk3::StyleContext" = "lib/Gnome/Gtk3/StyleContext.pm6";
@@ -18374,7 +18374,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1ydsz5r4cjxxf1v8xj1lh243wqrhr3lvh65qwk9fia2izkkcwjr4";
     };
     depends = [
-        perl6-on-nix.libraries."Map::Agnostic"
+        perl6-on-nix.distributions."Map::Agnostic"
     ];
     provides = {
         "Map::Ordered" = "lib/Map/Ordered.pm6";
@@ -18428,7 +18428,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fqg1c3pc3qa283d9ligww319r83jzfz8bff2hrvk43i67a17byp";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Azure::Web::Cert" = "lib/Sparrowdo/Azure/Web/Cert.pm6";
@@ -18444,17 +18444,17 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vn1hp35amwkxwvr5k89msxky5bmjgc6ihjgbr87q1ivh5nwy45v";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."IO::Path::ChildSecure"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."HTTP::HPACK"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro::TLS"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::JWT"
-        perl6-on-nix.libraries."DateTime::Parse"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."IO::Path::ChildSecure"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."HTTP::HPACK"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro::TLS"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::JWT"
+        perl6-on-nix.distributions."DateTime::Parse"
     ];
     provides = {
         "Cro::HTTP::Router" = "lib/Cro/HTTP/Router.pm6";
@@ -18516,8 +18516,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jhl168z5hg7bndbvqrckmiwpilyfsk20kly12bn69jfmfr8aaci";
     };
     depends = [
-        perl6-on-nix.libraries."Config::INI"
-        perl6-on-nix.libraries."DateTime::Format::W3CDTF"
+        perl6-on-nix.distributions."Config::INI"
+        perl6-on-nix.distributions."DateTime::Format::W3CDTF"
     ];
     provides = {
         "AWS::Credentials" = "lib/AWS/Credentials.pm6";
@@ -18540,7 +18540,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "083h0y3yhivaykivxh9233d5y7gr6bjpay1j042mdbghc7f0fk0d";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Grammar" = "lib/ANTLR4/Grammar.pm6";
@@ -18557,8 +18557,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "076shr7bcg07zcz9mfk42z6jq7j78apn6la2ya2c71m0gf7z7s4x";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
     ];
     provides = {
         "Cro::TLS" = "lib/Cro/TLS.pm6";
@@ -18574,10 +18574,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vnwq1ag0fdcx7a2ivlwlj5bxg1dv60ccra162pfr6rp3vrz0dkk";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."JSON::Class"
-        perl6-on-nix.libraries."JSON::Name"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."JSON::Class"
+        perl6-on-nix.distributions."JSON::Name"
     ];
     provides = {
         "JSON::Infer" = "lib/JSON/Infer.pm";
@@ -18593,8 +18593,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0pfvqkynq3588ln7lc4nq5vc4xzi7xcz1y3wsh4z5yp4ns11251l";
     };
     depends = [
-        perl6-on-nix.libraries."Term::Choose"
-        perl6-on-nix.libraries."Term::Choose::Util"
+        perl6-on-nix.distributions."Term::Choose"
+        perl6-on-nix.distributions."Term::Choose::Util"
     ];
     provides = {
         "Term::TablePrint" = "lib/Term/TablePrint.pm6";
@@ -18610,15 +18610,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "13pr0mmw5npp3ir80c9nxb34cranfk1s5zfylnd12pl59mpkkd6j";
     };
     depends = [
-        perl6-on-nix.libraries."Apache::LogFormat::Compiler"
-        perl6-on-nix.libraries."DateTime::Format"
-        perl6-on-nix.libraries."Digest::MD5"
-        perl6-on-nix.libraries."Hash::MultiValue"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Supply"
-        perl6-on-nix.libraries."HTTP::Status"
+        perl6-on-nix.distributions."Apache::LogFormat::Compiler"
+        perl6-on-nix.distributions."DateTime::Format"
+        perl6-on-nix.distributions."Digest::MD5"
+        perl6-on-nix.distributions."Hash::MultiValue"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Supply"
+        perl6-on-nix.distributions."HTTP::Status"
     ];
     provides = {
         "Smack::Loader::Basic" = "lib/Smack/Loader/Basic.pm6";
@@ -18677,7 +18677,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0380qb1nrzmh2sjs80apk5iy3k2sdp085kbb95ixbl2w0f260qlp";
     };
     depends = [
-        perl6-on-nix.libraries."Matrix::Bot"
+        perl6-on-nix.distributions."Matrix::Bot"
     ];
     provides = {
         "Matrix::Bot::Plugin::AutoAcceptInvites" = "lib/Matrix/Bot/Plugin/AutoAcceptInvites.pm6";
@@ -18711,9 +18711,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1gdhdvjmgz9yphzjvk8g22zdx5kjjrdfr57kyfi96bwbnzn4954d";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."DBIish"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."DBIish"
     ];
     provides = {
         "CamelPub" = "lib/CamelPub.pm6";
@@ -18751,11 +18751,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1nbxbinfsbqb1r79nkiwcyimqkmw5yl45cq4qmvxzsr3hrybqdaa";
     };
     depends = [
-        perl6-on-nix.libraries."PDF::Lite"
-        perl6-on-nix.libraries."PDF::Content"
-        perl6-on-nix.libraries."Font::FreeType"
-        perl6-on-nix.libraries."PDF"
-        perl6-on-nix.libraries."Native::Packing"
+        perl6-on-nix.distributions."PDF::Lite"
+        perl6-on-nix.distributions."PDF::Content"
+        perl6-on-nix.distributions."Font::FreeType"
+        perl6-on-nix.distributions."PDF"
+        perl6-on-nix.distributions."Native::Packing"
     ];
     provides = {
         "PDF::Font::Loader::Type1::Stream" = "lib/PDF/Font/Loader/Type1/Stream.pm";
@@ -18781,12 +18781,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "0h0slcgn2nwxkdg9csdjg21k90rlffh0zwq0m6h11v6nd83xg5w8";
     };
     depends = [
-        perl6-on-nix.libraries."Text::Wrap"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."CommandLine::Usage"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Text::Wrap"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."CommandLine::Usage"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "App::Platform::Docker::DNS::Linux" = "lib/App/Platform/Docker/DNS/Linux.pm6";
@@ -18848,10 +18848,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fhg0wfqb6ys9bgfhphf427rpbfnwk9xqdfynkpxss8yp6pb7jhz";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
-        perl6-on-nix.libraries."Gnome::Gdk3"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::Gdk3"
     ];
     provides = {
         "Gnome::Gtk3::ComboBox" = "lib/Gnome/Gtk3/ComboBox.pm6";
@@ -18913,9 +18913,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1chjayjh0qy7nlrhx7m1di9i3czgkinhzcfbfba50gvl8rppy98p";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -18969,7 +18969,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1w04p5qgn91zcxc5n6afxi5j7li2dpk8vgqpw617gl9q8x4m4v1x";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Tinyish"
+        perl6-on-nix.distributions."HTTP::Tinyish"
     ];
     provides = {
         "CPAN::Uploader::Tiny::MultiPart" = "lib/CPAN/Uploader/Tiny/MultiPart.pm6";
@@ -19016,16 +19016,16 @@ perl6-on-nix.mkDerivation {
         sha256 = "1zymy591fnbnfxzj05xg25v90cqsb2ilkzjx1w32laq3x6zqfm0s";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."IO::Path::ChildSecure"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."HTTP::HPACK"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro::TLS"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::JWT"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."IO::Path::ChildSecure"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."HTTP::HPACK"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro::TLS"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::JWT"
     ];
     provides = {
         "Cro::HTTP::Middleware" = "lib/Cro/HTTP/Middleware.pm6";
@@ -19088,8 +19088,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mipgjiwgnasbb7rmmfzhkhbhs2g0c5f8q952dm3k412rw8sifcw";
     };
     depends = [
-        perl6-on-nix.libraries."XML::Actions"
-        perl6-on-nix.libraries."Gnome::Gtk3"
+        perl6-on-nix.distributions."XML::Actions"
+        perl6-on-nix.distributions."Gnome::Gtk3"
     ];
     provides = {
         "Gnome::Gtk3::Glade::X" = "lib/Gnome/Gtk3/Glade/X.pm6";
@@ -19110,8 +19110,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1m6hzandl90pikh8c6x7r60b8zjdqan3w775970l2rj4aakj1d80";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
     ];
     provides = {
         "Cro::TLS" = "lib/Cro/TLS.pm6";
@@ -19127,8 +19127,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fy0wqap04v33xpil9i86qnfzhr5dd85igr45kdr3r142yydy5km";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -19144,9 +19144,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1izwp0b9vkhm2a33a2j984343b76f6z9ks47accp9pp09vxsdr70";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."URI::Template"
-        perl6-on-nix.libraries."XML::Class"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."URI::Template"
+        perl6-on-nix.distributions."XML::Class"
     ];
     provides = {
         "Monitor::Monit" = "lib/Monitor/Monit.pm";
@@ -19162,12 +19162,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "13qc9j146j2pnk2bnlkxd7ckkci4naq1p2bvbd7naapbnfql199h";
     };
     depends = [
-        perl6-on-nix.libraries."WWW"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."LWP::Simple"
-        perl6-on-nix.libraries."Base64::Native"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Slippy::Semilist"
+        perl6-on-nix.distributions."WWW"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."LWP::Simple"
+        perl6-on-nix.distributions."Base64::Native"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Slippy::Semilist"
     ];
     provides = {
         "Verge::RPC::Client" = "lib/Verge/RPC/Client.pm6";
@@ -19184,7 +19184,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vagizc901p72c67d5mzayslbd3pvgy95mclf50ckf6bc7s2yf3g";
     };
     depends = [
-        perl6-on-nix.libraries."Array::Agnostic"
+        perl6-on-nix.distributions."Array::Agnostic"
     ];
     provides = {
         "Array::Sparse" = "lib/Array/Sparse.pm6";
@@ -19200,14 +19200,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "19j28mi0g7z2mxpa0za68aiwn85ydmz3x1x74mclsl2xlwln5rmv";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."MIME::Base64"
-        perl6-on-nix.libraries."SemVer"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."MIME::Base64"
+        perl6-on-nix.distributions."SemVer"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "Dist::Helper" = "lib/Dist/Helper.pm6";
@@ -19246,10 +19246,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "08d64nnk1qs79fw42ig8jfnckzsw5b2mqq6qgy78rx1qgnpgz2k8";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Terminal::Print"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Terminal::Print"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -19265,7 +19265,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0959vlh75m0ah57pl9ajxrjajpnck86qwficgl49y9fv4isz4l8c";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -19297,17 +19297,17 @@ perl6-on-nix.mkDerivation {
         sha256 = "1l6a19lpkdq8pizb2sdyq7h8kam6ihvim533q5x81wv3jpqydmvh";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."IO::Path::ChildSecure"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."HTTP::HPACK"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro::TLS"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::JWT"
-        perl6-on-nix.libraries."DateTime::Parse"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."IO::Path::ChildSecure"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."HTTP::HPACK"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro::TLS"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::JWT"
+        perl6-on-nix.distributions."DateTime::Parse"
     ];
     provides = {
         "Cro::HTTP::Auth::Basic" = "lib/Cro/HTTP/Auth/Basic.pm6";
@@ -19419,7 +19419,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ix789n0hj5qx787wpr0cgb4v6ajd5cj4alac3kfsh09xlwf767l";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build" = "lib/Sparrowdo/VSTS/YAML/Build.pm6";
@@ -19435,7 +19435,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0c9rnxglm16mignibdg2fw1dvb2s006bkff42bdb9zhbkzbnxp1p";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
+        perl6-on-nix.distributions."Test"
     ];
     provides = {
         "Test::SourceFiles" = "lib/Test/SourceFiles.pm6";
@@ -19451,7 +19451,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rk8wyh6pxq4p5hkfjm40fz9vkrdm1bqnhs5pk54r7sax5zzyg6n";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Grammar" = "lib/ANTLR4/Grammar.pm6";
@@ -19484,10 +19484,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0sddnf9dd6s1g52z4ykhb4dnrnadkyyxmq63b4rihgwlawhw5yw0";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
-        perl6-on-nix.libraries."Gnome::Gdk3"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::Gdk3"
     ];
     provides = {
         "Gnome::Gtk3::TextView" = "lib/Gnome/Gtk3/TextView.pm6";
@@ -19549,10 +19549,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fyjf44bk3wa35r785na3hyprvw6lzgyfyfikmh0x1q53zvjbhb3";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
-        perl6-on-nix.libraries."Gnome::Gdk3"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::Gdk3"
     ];
     provides = {
         "Gnome::Gtk3::StyleContext" = "lib/Gnome/Gtk3/StyleContext.pm6";
@@ -19629,10 +19629,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "11p75c8q7mj1kr5k9nfzxz0qm37sn01rv58qygw95l6amjnpkl34";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."Crypt::Random"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."Crypt::Random"
     ];
     provides = {
         "Cro::WebSocket::Frame" = "lib/Cro/WebSocket/Frame.pm6";
@@ -19657,10 +19657,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "13afy1rnhwyczad4p1nrzdapz40jj9nnf0vkh4z9mn3v51gry76k";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."DateTime::Parse"
-        perl6-on-nix.libraries."JSON::Pointer"
-        perl6-on-nix.libraries."ECMA262Regex"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."DateTime::Parse"
+        perl6-on-nix.distributions."JSON::Pointer"
+        perl6-on-nix.distributions."ECMA262Regex"
     ];
     provides = {
         "JSON::Schema" = "lib/JSON/Schema.pm6";
@@ -19691,7 +19691,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "06rgsmxg65mcdpqhy4lk8rhj6hzhyd8rgwhxj015ia73fmgssvkl";
     };
     depends = [
-        perl6-on-nix.libraries."P5getnetbyname"
+        perl6-on-nix.distributions."P5getnetbyname"
     ];
     provides = {
         "Net::netent" = "lib/Net/netent.pm6";
@@ -19722,7 +19722,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "17h0inxxxkw60wzxshfyh9b3jmhz58c3s6xa5clfza3dh9ibs2lq";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Digest::SHA256::Native" = "lib/Digest/SHA256/Native.pm6";
@@ -19783,10 +19783,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1y2zw45534b98pwh23r7amak7p30rdzl1pbsvixmm84kgnrmjwgw";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Text::Wrap"
-        perl6-on-nix.libraries."Bailador"
-        perl6-on-nix.libraries."Cro::HTTP::Router"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Text::Wrap"
+        perl6-on-nix.distributions."Bailador"
+        perl6-on-nix.distributions."Cro::HTTP::Router"
     ];
     provides = {
         "GraphQL::Types" = "lib/GraphQL/Types.pm";
@@ -19829,7 +19829,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "03p7jjpcvjac8yzsbwy7xqvkhjyshhbm9h7x1nvk1sgjylkv1i32";
     };
     depends = [
-        perl6-on-nix.libraries."DOM::Tiny"
+        perl6-on-nix.distributions."DOM::Tiny"
     ];
     provides = {
         "Template::Anti::Library" = "lib/Template/Anti.pm6";
@@ -19846,8 +19846,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1d7hppb4szxb92aw01krhwpafpiivhhngdq0cynpnwicdxi64c0h";
     };
     depends = [
-        perl6-on-nix.libraries."Lumberjack"
-        perl6-on-nix.libraries."Log::Syslog::Native"
+        perl6-on-nix.distributions."Lumberjack"
+        perl6-on-nix.distributions."Log::Syslog::Native"
     ];
     provides = {
         "Lumberjack::Dispatcher::Syslog" = "lib/Lumberjack/Dispatcher/Syslog.pm";
@@ -19878,8 +19878,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1ib0nzzlncyr6g2wyxr4ddysjhdil9hrzbmv52956ss5akn22zxv";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."JSON::Name"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Name"
     ];
     provides = {
         "JSON::Marshal" = "lib/JSON/Marshal.pm";
@@ -19895,7 +19895,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qh79xb60k1g01z727i5hjz4qwx3wq8lvccr119bphz00w3lkqb6";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
+        perl6-on-nix.distributions."NativeCall"
     ];
     provides = {
         "Munge::Context" = "lib/Munge/Context.pm6";
@@ -19912,8 +19912,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1lp2fd6s2h5nbwdvr3dsi4m8hhph7kkasn4gwln3aghcmnk61k30";
     };
     depends = [
-        perl6-on-nix.libraries."cro"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."cro"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::AizuOnlineJudge::BasicCourse" = "lib/App/AizuOnlineJudge/BasicCourse.pm6";
@@ -19932,8 +19932,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1nxj75qmvlhs4g7zr3iw82k5zcpjackzbz3aw46d95xg84254dbl";
     };
     depends = [
-        perl6-on-nix.libraries."TAP"
-        perl6-on-nix.libraries."Getopt::Long"
+        perl6-on-nix.distributions."TAP"
+        perl6-on-nix.distributions."Getopt::Long"
     ];
     provides = {
         "App::Prove6" = "lib/App/Prove6.pm6";
@@ -19949,7 +19949,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "01dd44p2fw020jx9h54jqgvnvyg8fssxbcl75nrrqfglbky08i1c";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
+        perl6-on-nix.distributions."XML"
     ];
     provides = {
         "XML::Class" = "lib/XML/Class.pm";
@@ -20016,7 +20016,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qnwz8cwb1bb2791im6940kd742sdfpkfl4xa7hlac06qh38blqb";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::DotNet" = "lib/Sparrowdo/VSTS/YAML/DotNet.pm6";
@@ -20032,9 +20032,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1pa75yf8abvi8fmcm9934a11jzvpa4wav5vkhv71rmcbphiainhl";
     };
     depends = [
-        perl6-on-nix.libraries."Net::ZMQ"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro"
+        perl6-on-nix.distributions."Net::ZMQ"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro"
     ];
     provides = {
         "Cro::ZeroMQ::Socket::Sub" = "lib/Cro/ZeroMQ/Socket/Sub.pm6";
@@ -20079,11 +20079,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0nczzx2xs389fwnw8kr7v8ixxkrrgmszf58z4sqaazxmbqrfj9bh";
     };
     depends = [
-        perl6-on-nix.libraries."PDF::Lite"
-        perl6-on-nix.libraries."PDF::Content"
-        perl6-on-nix.libraries."Font::FreeType"
-        perl6-on-nix.libraries."PDF"
-        perl6-on-nix.libraries."Native::Packing"
+        perl6-on-nix.distributions."PDF::Lite"
+        perl6-on-nix.distributions."PDF::Content"
+        perl6-on-nix.distributions."Font::FreeType"
+        perl6-on-nix.distributions."PDF"
+        perl6-on-nix.distributions."Native::Packing"
     ];
     provides = {
         "PDF::Font::Loader::Type1::Stream" = "lib/PDF/Font/Loader/Type1/Stream.pm";
@@ -20109,15 +20109,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0imgd744maphlwbrkqlncb1004r616dg8b5yr63xs698x4gb1wky";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config:api<1>"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."IO::Path::Dirstack"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Terminal::Getpass"
-        perl6-on-nix.libraries."Version::Semantic"
-        perl6-on-nix.libraries."zef"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config:api<1>"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."IO::Path::Dirstack"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Terminal::Getpass"
+        perl6-on-nix.distributions."Version::Semantic"
+        perl6-on-nix.distributions."zef"
     ];
     provides = {
         "App::Assixt::Commands::Upload" = "lib/App/Assixt/Commands/Upload.pm6";
@@ -20160,7 +20160,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "04hgi7a3gzqa9sg0n3x2ssc33wnnalxci4lzf641iy5k2rr6cii1";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Cordova::OSx::Build" = "lib/Sparrowdo/Cordova/OSx/Build.pm6";
@@ -20206,9 +20206,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1i2vac4yy89md1kjfi2xp448bc3n0vcjdpqjfrd173zfj2jndyll";
     };
     depends = [
-        perl6-on-nix.libraries."Base64::Native"
-        perl6-on-nix.libraries."Compress::Bzip2"
-        perl6-on-nix.libraries."Terminal::Readsecret"
+        perl6-on-nix.distributions."Base64::Native"
+        perl6-on-nix.distributions."Compress::Bzip2"
+        perl6-on-nix.distributions."Terminal::Readsecret"
     ];
     provides = {
         "KHPH" = "lib/KHPH.pm6";
@@ -20224,7 +20224,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "15y1zzyaz0cg0qx9j1ylhiina1lzyq3z9pl3xnrswijflmmn8jyb";
     };
     depends = [
-        perl6-on-nix.libraries."OpenSSL"
+        perl6-on-nix.distributions."OpenSSL"
     ];
     provides = {
         "IO::Socket::Async::SSL" = "lib/IO/Socket/Async/SSL.pm6";
@@ -20240,10 +20240,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0mlglb3lqskia88g1aaqhz7yx0b7lpvf55i29x5jljy250xvd9zf";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::Group" = "lib/Sparrowdo/Core/DSL/Group.pm6";
@@ -20273,13 +20273,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "0glcfr2a6d7wfx0my3jb6yyzk61l5kmfsxx06wmbkx5j3kd5a0yc";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."URI::Template"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."JSON::Class"
-        perl6-on-nix.libraries."JSON::Name"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."URI::Template"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."JSON::Class"
+        perl6-on-nix.distributions."JSON::Name"
     ];
     provides = {
         "WebService::Soundcloud" = "lib/WebService/Soundcloud.pm";
@@ -20310,8 +20310,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1gn0y0jv2wks855fqjl0whm7zbs5nl9ww6n4j7c5axdkfawrciyd";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -20342,8 +20342,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "07rv7cch2l2awgv1pzr6mgvd2k2rj0nwzcxynpj7fgbn0cwzkwdg";
     };
     depends = [
-        perl6-on-nix.libraries."Perl6::Parser"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Perl6::Parser"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Perl6::Tidy" = "lib/Perl6/Tidy.pm6";
@@ -20359,7 +20359,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qg4b2kabqzgsjs4p5i71snkh7i8hmq4l6rlhgl97pni01ckh0z7";
     };
     depends = [
-        perl6-on-nix.libraries."DateTime::Format"
+        perl6-on-nix.distributions."DateTime::Format"
     ];
     provides = {
         "Lumberjack" = "lib/Lumberjack.pm";
@@ -20390,7 +20390,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1drmcq016y3ws5g2ynwac7i899g0n4ph2wnjylxdsghi1lpsqsma";
     };
     depends = [
-        perl6-on-nix.libraries."Color"
+        perl6-on-nix.distributions."Color"
     ];
     provides = {
         "Libui::Combobox" = "lib/Libui/Combobox.pm6";
@@ -20461,8 +20461,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0g7msdjgqdn44y343ams7n2pqzxr9z94pl27wi12nd6p846jwf9a";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
     ];
     provides = {
         "Gnome::GObject::Signal" = "lib/Gnome/GObject/Signal.pm6";
@@ -20484,10 +20484,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "16ihmaziq42rhp4j1c7jqqqzkhb42sbb9vq6bg4bap2hpinm3xj9";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::Ssh" = "lib/Sparrowdo/Core/DSL/Ssh.pm6";
@@ -20517,8 +20517,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0j8c9w2sysnysgips2qn1dv0ciycisj3sqmhif22y2d4a7fkvfqs";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::RPC::JSON::Exception" = "lib/Cro/RPC/JSON/Exception.pm6";
@@ -20539,8 +20539,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "00k6h9xj8pp2mch1zzk60y2kqrq60k8vxbrdmkxa993li27diwx4";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -20571,11 +20571,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "06sd49c9x5s18gsxjb0yw75f6vr77j4z6wd5vays6gigkc2qrws4";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Path::Router"
-        perl6-on-nix.libraries."Smack"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Path::Router"
+        perl6-on-nix.distributions."Smack"
     ];
     provides = {
         "Cofra::Web::View::JSON::Instance" = "lib/Cofra/Web/View/JSON.pm6";
@@ -20626,9 +20626,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "09c01640dbj3r2w7sl50ia8pnkl2c0275i094ad5m0zjj5d220js";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."LibUUID"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."LibUUID"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "DB::Pg::ArrayParser" = "lib/DB/Pg/ArrayParser.pm6";
@@ -20676,7 +20676,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0rf4i3hbjqj50zr2fa03708zkd3kgyxvw9cskscvg22wzy3rnxb8";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Doublephone" = "lib/Doublephone.pm";
@@ -20707,7 +20707,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1kwl2ky35m8gih6s3in4fvya033lkv3h84ld9bc2bg5nbpligs5k";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge"
+        perl6-on-nix.distributions."Hash::Merge"
     ];
     provides = {
         "Config::Exception::MissingParserException" = "lib/Config/Exception/MissingParserException.pm6";
@@ -20728,9 +20728,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1szlc8biajykj4z2pi2f1f2s1fkff903h3m6aaj10h1fhk19qpc6";
     };
     depends = [
-        perl6-on-nix.libraries."XML::Class"
-        perl6-on-nix.libraries."URI::Template"
-        perl6-on-nix.libraries."HTTP::UserAgent"
+        perl6-on-nix.distributions."XML::Class"
+        perl6-on-nix.distributions."URI::Template"
+        perl6-on-nix.distributions."HTTP::UserAgent"
     ];
     provides = {
         "Audio::Icecast" = "lib/Audio/Icecast.pm";
@@ -20746,9 +20746,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1w7fmnfhl8may13731228x46zzd0ybgh31in4ikiq429qkvfign7";
     };
     depends = [
-        perl6-on-nix.libraries."Bailador"
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."IRC::Client"
+        perl6-on-nix.distributions."Bailador"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."IRC::Client"
     ];
     provides = {
         "IRC::Client::Plugin::Github::WebhookEvents::IssueComment" = "lib/IRC/Client/Plugin/Github/WebhookEvents/IssueComment.pm6";
@@ -20783,7 +20783,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "17kjgivqkgz32ch87yq0d940nxnyc5ag3b2abrw3bqflyccl64pl";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -20799,7 +20799,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1b3kb5dks8ac8d7iri9sa6fyib8npj02v0sgpdqj9i2drm6rh4av";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge:api<1>"
+        perl6-on-nix.distributions."Hash::Merge:api<1>"
     ];
     provides = {
         "Config::Parser" = "lib/Config/Parser.pm6";
@@ -20850,8 +20850,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0a00c65r4gckpmmyflmp3lkq9yzqpk49fja8d75hb7a89gyd67cz";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -20867,8 +20867,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "07sgllx778j09bg6wvafl5ykxk4k0c5bzmhypwxq15q53h7l9xfb";
     };
     depends = [
-        perl6-on-nix.libraries."SVG"
-        perl6-on-nix.libraries."SVG::Plot"
+        perl6-on-nix.distributions."SVG"
+        perl6-on-nix.distributions."SVG::Plot"
     ];
     provides = {
         "Math::Polygons" = "lib/Math/Polygons.pm6";
@@ -20884,15 +20884,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "16cmpgiv0m21dim68ipk9axdy9pm6lxmd9v2q51g22agbii75yjy";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::CLI" = "lib/Uzu/CLI.pm6";
@@ -20916,7 +20916,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "10i2rkbkm036w3kxaisvf6sbpyw533vrl1g8pq5m1illh273cdmv";
     };
     depends = [
-        perl6-on-nix.libraries."DateTime::Format"
+        perl6-on-nix.distributions."DateTime::Format"
     ];
     provides = {
         "Lumberjack" = "lib/Lumberjack.pm";
@@ -20955,7 +20955,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0nhkl04dp3csjsazv8gb393kcylc8qqdsyv61248ymcndjmy7vm3";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Actions::Perl6" = "lib/ANTLR4/Actions/Perl6.pm6";
@@ -20973,8 +20973,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "08l0hkh6r2pz1pjsm7aij36iawp38k32qlbz0qc4n7m24dfy8pds";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -20990,11 +20990,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rlisjpa5dssyqi0divq9jyr2mqckcpbkpy5d9sczaazllpdspal";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Path::Router"
-        perl6-on-nix.libraries."Smack"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Path::Router"
+        perl6-on-nix.distributions."Smack"
     ];
     provides = {
         "Cofra::Main" = "lib/Cofra/Main.pm6";
@@ -21097,7 +21097,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "100b2lj2vzw626l57qinh1gx74qlsmlk1704ry90vzxf5schpdnm";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Inline::Perl5::Array" = "lib/Inline/Perl5/Array.pm6";
@@ -21125,7 +21125,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1l9qlir2gmfas2gjdkwjnywsn6lxc13kj77j4nk7gzs18c0g8nd1";
     };
     depends = [
-        perl6-on-nix.libraries."FileSystem::Parent"
+        perl6-on-nix.distributions."FileSystem::Parent"
     ];
     provides = {
         "FindBin::libs" = "lib/FindBin/libs.pm6";
@@ -21232,9 +21232,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fi641fr8s01clg8cxzg0x2s1z2cxf9b74mm8z46ciqwfy6i54sa";
     };
     depends = [
-        perl6-on-nix.libraries."Net::ZMQ"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro"
+        perl6-on-nix.distributions."Net::ZMQ"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro"
     ];
     provides = {
         "Cro::ZeroMQ::Component" = "lib/Cro/ZeroMQ/Component.pm6";
@@ -21281,9 +21281,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "05mvahw3xcq0k7n0irw2yhnqyx9ldb3087lhdspn3jvpvrvhqsgn";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."LibUUID"
-        perl6-on-nix.libraries."epoll"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."LibUUID"
+        perl6-on-nix.distributions."epoll"
     ];
     provides = {
         "DB::Pg::Results" = "lib/DB/Pg/Results.pm6";
@@ -21310,7 +21310,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1i2if7svgihk26ha1n2yim38xkxh85252s9kamgiq55hg65l124q";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "CommonMark" = "lib/CommonMark.pm6";
@@ -21326,10 +21326,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0v0njqx6dfxjw2iv6281gb67f884ygfzgx8sfgqrcjbg6cvk0z33";
     };
     depends = [
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."cro"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."cro"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::AizuOnlineJudge::Submittable" = "lib/App/AizuOnlineJudge/Submittable.pm6";
@@ -21386,7 +21386,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "17kz484lrz3vjxhbawsbfbrl223whnc1y0nbnwxnygg0q7vzzy52";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge"
+        perl6-on-nix.distributions."Hash::Merge"
     ];
     provides = {
         "Config::Exception::FileNotFoundException" = "lib/Config/Exception/FileNotFoundException.pm6";
@@ -21407,8 +21407,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1lhcddfg1rqzmcn8p0k7w7v6j2aj9sh6pg47clf5cpx0rd2pclzr";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -21424,8 +21424,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1rn1mk11pici5qxabqsa7yh6ix3vk6hkayblgz040pnlzfk56fkn";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "LibCurl::EasyHandle" = "lib/LibCurl/EasyHandle.pm6";
@@ -21445,8 +21445,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0066ds7hlv3nsf558kjki8mpf1ppfg78h9vala60b62yvig1cy90";
     };
     depends = [
-        perl6-on-nix.libraries."Perl6::Parser"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Perl6::Parser"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Perl6::Tidy" = "lib/Perl6/Tidy.pm6";
@@ -21462,15 +21462,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hvzn0gh6az9jqsn4yjr0nc73crf5hmghjw757svrgq86jwdxy0n";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."Cro::WebSocket"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."Cro::WebSocket"
     ];
     provides = {
         "Cro::Tools::Runner" = "lib/Cro/Tools/Runner.pm6";
@@ -21505,8 +21505,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1zzzi2pzknxg4xfyflvdjqf6wn43lk88wwi0j4nzp0sg8bwg8sy2";
     };
     depends = [
-        perl6-on-nix.libraries."Config::INI"
-        perl6-on-nix.libraries."DateTime::Format::W3CDTF"
+        perl6-on-nix.distributions."Config::INI"
+        perl6-on-nix.distributions."DateTime::Format::W3CDTF"
     ];
     provides = {
         "AWS::Credentials::Provider" = "lib/AWS/Credentials.pm6";
@@ -21529,8 +21529,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1h81kckc0mjk7f9hfi6z45dwf28mkvc3kgzk827k5n30f75xbqds";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -21546,7 +21546,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "079i4rwfi5d6w1dj8zsvjvpp0m5k8mg0hbpnq7khwvv27xxyn8l3";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Update::Azure::SSL" = "lib/Sparrowdo/VSTS/YAML/Update/Azure/SSL.pm6";
@@ -21584,9 +21584,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1nb1abs3izcnyw3ww8x6lyml7xiwc6dmdfmia6q0bbs4d1n1s9ch";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -21603,7 +21603,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "10y7dbhv759057hn11dl6yiwsvvwnr3cli6hk5ylcskiraqxq6z8";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Class"
+        perl6-on-nix.distributions."JSON::Class"
     ];
     provides = {
         "META6" = "lib/META6.pm";
@@ -21650,7 +21650,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0bzkx36yr1lxsxffpny9qpsiqsildk74l46ws3qvllbbmrw33hcc";
     };
     depends = [
-        perl6-on-nix.libraries."P5getgrnam"
+        perl6-on-nix.distributions."P5getgrnam"
     ];
     provides = {
         "User::grent" = "lib/User/grent.pm6";
@@ -21681,8 +21681,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "03lp05wbs9v44fcrx0rbxixwf3yqc7azd3lfq8aclq6sjc99hbs0";
     };
     depends = [
-        perl6-on-nix.libraries."WhereList"
-        perl6-on-nix.libraries."File::Find"
+        perl6-on-nix.distributions."WhereList"
+        perl6-on-nix.distributions."File::Find"
     ];
     provides = {
         "OO::Plugin::Declarations" = "lib/OO/Plugin/Declarations.pm6";
@@ -21750,7 +21750,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0p7yfdgbhw14fwpz9bgd04gkafhmq4y5b5cmgj22m1ibs1vrdyw6";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::RemoteFile" = "lib/Sparrowdo/RemoteFile.pm6";
@@ -21796,7 +21796,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "176fhkwdimqld8n5cyx4brmvpcd4v0ass9p46ysz5jcrgqarm0kg";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Solution" = "lib/Sparrowdo/VSTS/YAML/Solution.pm6";
@@ -21832,16 +21832,16 @@ perl6-on-nix.mkDerivation {
         sha256 = "1j06i1c8qi78lqs26y86020rncvxn4n12nls75f74fi6ala6nh5a";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."Cro::WebSocket"
-        perl6-on-nix.libraries."Docker::File"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."Cro::WebSocket"
+        perl6-on-nix.distributions."Docker::File"
     ];
     provides = {
         "Cro::Tools::Template::Common" = "lib/Cro/Tools/Template/Common.pm6";
@@ -21876,15 +21876,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "08i07h22xb3myc7alg7wq03kmfbq9gsgygmm99px0hi3gy2bn31b";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."MIME::Base64"
-        perl6-on-nix.libraries."SemVer"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."MIME::Base64"
+        perl6-on-nix.distributions."SemVer"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "Dist::Helper::Clean" = "lib/Dist/Helper/Clean.pm6";
@@ -21919,11 +21919,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0m9fk4vpjwpx6y0yjr8cimk0skzpssq7q9k134wavqwd1mbsk31h";
     };
     depends = [
-        perl6-on-nix.libraries."Digest::HMAC"
-        perl6-on-nix.libraries."OpenSSL"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."PKCS5"
-        perl6-on-nix.libraries."Unicode::PRECIS"
+        perl6-on-nix.distributions."Digest::HMAC"
+        perl6-on-nix.distributions."OpenSSL"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."PKCS5"
+        perl6-on-nix.distributions."Unicode::PRECIS"
     ];
     provides = {
         "Auth::SCRAM" = "lib/Auth/SCRAM.pm6";
@@ -21941,7 +21941,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0i60iw93slihbydcmwsz0ahw56ypx0mb72iqxa390svap18ckjyy";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Nuget" = "lib/Sparrowdo/VSTS/YAML/Nuget.pm6";
@@ -22051,7 +22051,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "00zx3587zvn9d218cpahhvgq8pki72qmnadyn2pcjp44d3kgbfyc";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "Proc::InvokeEditor" = "lib/Proc/InvokeEditor.pm6";
@@ -22067,7 +22067,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1gp35x3gp4hv8p6sa3pdj2w8g8vr6l01ymfdq9k7kp5c870f8g4g";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "JSON::Path" = "lib/JSON/Path.pm6";
@@ -22083,7 +22083,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1gvn9zlyca8iai4laqgm23grwgjiwpj2lg0af7qi4sjyvbzxi4zw";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Cordova::OSx::Build" = "lib/Sparrowdo/Cordova/OSx/Build.pm6";
@@ -22130,13 +22130,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "12pczdy2mm0qggs85vz6lk47gz3a0kldx5yx89yb1xsppc2yv9k5";
     };
     depends = [
-        perl6-on-nix.libraries."Lumberjack"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."Crust"
-        perl6-on-nix.libraries."WebSocket"
-        perl6-on-nix.libraries."JSON::Class"
-        perl6-on-nix.libraries."Template6"
+        perl6-on-nix.distributions."Lumberjack"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."Crust"
+        perl6-on-nix.distributions."WebSocket"
+        perl6-on-nix.distributions."JSON::Class"
+        perl6-on-nix.distributions."Template6"
     ];
     provides = {
         "Lumberjack::Application" = "lib/Lumberjack/Application.pm";
@@ -22174,10 +22174,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1v6gczazhi2lc5ayw2wj4l4g0ymchg6n57qpzzh3l59bx3bcjxd2";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrow6::Task::Runner::Helpers::Perl6" = "lib/Sparrow6/Task/Runner/Helpers/Perl6.pm6";
@@ -22249,7 +22249,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0abnbw56qka5s84pv1l38zsd5wx1xxvszdisl79dbqxx1n2fn5w0";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Actions::Perl6" = "lib/ANTLR4/Actions/Perl6.pm6";
@@ -22297,7 +22297,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1wf32jiyhv0fa80yjinj82ly91nz8gd23hdnafavdrir4ccjhai4";
     };
     depends = [
-        perl6-on-nix.libraries."System::Passwd"
+        perl6-on-nix.distributions."System::Passwd"
     ];
     provides = {
         "Linux::Fuser" = "lib/Linux/Fuser.pm";
@@ -22315,7 +22315,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1cacipdzdhhv2dp1ia49lgmc3rp75m5npqfydnip4b4g0f2m9yiq";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build::Assembly::Patch" = "lib/Sparrowdo/VSTS/YAML/Build/Assembly/Patch.pm6";
@@ -22331,7 +22331,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fhy8v39plqlc6fcs0cdmh9ykdw1fq6mmar966awmi10h5qsw4gn";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build" = "lib/Sparrowdo/VSTS/YAML/Build.pm6";
@@ -22347,9 +22347,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qh9wvx6i37klyjw5cvwdk2yyzmzp9dq4g6z96gbrr7cbl0bg8ph";
     };
     depends = [
-        perl6-on-nix.libraries."WhereList"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."WhereList"
+        perl6-on-nix.distributions."WhereList"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."WhereList"
     ];
     provides = {
         "OO::Plugin::Metamodel::PluginHOW" = "lib/OO/Plugin/Metamodel/PluginHOW.pm6";
@@ -22387,9 +22387,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0nbjzfl366spgjzj055dfhz3bw3hz4frr7bvin2m0qamj6yyvfq2";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "OAuth2::Client::Google" = "lib/OAuth2/Client/Google.pm6";
@@ -22405,17 +22405,17 @@ perl6-on-nix.mkDerivation {
         sha256 = "0i41rqvf37a8cykyys25gx37d3h246sds64gvqbvls0r8rm5pfry";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."Cro::WebSocket"
-        perl6-on-nix.libraries."Docker::File"
-        perl6-on-nix.libraries."File::Ignore"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."Cro::WebSocket"
+        perl6-on-nix.distributions."Docker::File"
+        perl6-on-nix.distributions."File::Ignore"
     ];
     provides = {
         "Cro::Tools::LinkTemplate::WSS" = "lib/Cro/Tools/LinkTemplate/WSS.pm6";
@@ -22466,11 +22466,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ngwhfwjn67vywzc28r8c8bbii6kpw5dszx7ywdlcbs0r25wp0vs";
     };
     depends = [
-        perl6-on-nix.libraries."Archive::Libarchive"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Oyatul"
-        perl6-on-nix.libraries."XDG::BaseDirectory"
+        perl6-on-nix.distributions."Archive::Libarchive"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Oyatul"
+        perl6-on-nix.distributions."XDG::BaseDirectory"
     ];
     provides = {
         "Igo" = "lib/Igo.pm";
@@ -22486,8 +22486,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "12dc7rgnigsqd3kcvi0mq276g7f6hrcv2s6d7l0489114ls8ii3w";
     };
     depends = [
-        perl6-on-nix.libraries."Archive::Libarchive::Raw"
-        perl6-on-nix.libraries."NativeHelpers::Blob"
+        perl6-on-nix.distributions."Archive::Libarchive::Raw"
+        perl6-on-nix.distributions."NativeHelpers::Blob"
     ];
     provides = {
         "Archive::Libarchive" = "lib/Archive/Libarchive.pm6";
@@ -22542,10 +22542,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1z67azrmbn846xfks5zkajjxqxfaaa42wfndr33gyp7rwbfj2ci7";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config:api<1>"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config:api<1>"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::Assixt::Main" = "lib/App/Assixt/Main.pm6";
@@ -22644,8 +22644,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0jyiicci4aw6wnc6zdllb6sva501l395vj6p6mj9pcsaxz2mwcxc";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "I18n::Simple" = "lib/I18n/Simple.pm6";
@@ -22662,8 +22662,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "19wsy97s18al313q428qmaqwxhb1ikajqgmxlg649xdk47ssdbl2";
     };
     depends = [
-        perl6-on-nix.libraries."WhereList"
-        perl6-on-nix.libraries."File::Find"
+        perl6-on-nix.distributions."WhereList"
+        perl6-on-nix.distributions."File::Find"
     ];
     provides = {
         "OO::Plugin::Declarations" = "lib/OO/Plugin/Declarations.pm6";
@@ -22716,10 +22716,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0mvhncbhmrda24h9dqqs3dfq123gzxfh8lildxx1a2scwamk4x6d";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Desktop::Notify"
-        perl6-on-nix.libraries."HTML::Escape"
-        perl6-on-nix.libraries."MPD::Client"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Desktop::Notify"
+        perl6-on-nix.distributions."HTML::Escape"
+        perl6-on-nix.distributions."MPD::Client"
     ];
     provides = {
         "mpd-notify" = "bin/mpd-notify";
@@ -22735,7 +22735,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "14yaadpwrxsjd4h5azpdq1rbg6jlm888ishrj12d296n71ln7fdm";
     };
     depends = [
-        perl6-on-nix.libraries."InterceptAllMethods"
+        perl6-on-nix.distributions."InterceptAllMethods"
     ];
     provides = {
         "Object::Trampoline" = "lib/Object/Trampoline.pm6";
@@ -22751,8 +22751,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "19p4wh3qh4slcg1xxbyi06rz1z55lr9x0clj10k7qpkbxdqx6dp5";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -22768,7 +22768,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0kmg9acirddfd88f5xi4b0kyp2f41xfm500ghy2m26s4p7kdxics";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Log::Timeline::Output::JSONLines" = "lib/Log/Timeline/Output/JSONLines.pm6";
@@ -22787,8 +22787,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0yl71xcjl2piq06012zivp21j3bvj4dcff2pnv3x8v011ww9ls34";
     };
     depends = [
-        perl6-on-nix.libraries."Config::TOML"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Config::TOML"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Config::DataLang::Refine" = "lib/Config/DataLang/Refine.pm6";
@@ -22804,8 +22804,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1limca4sq4ldilamsw52b7h2q8rgsgjzgy4py4qlf1bz0l6iai30";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
-        perl6-on-nix.libraries."Term::Choose"
+        perl6-on-nix.distributions."Term::termios"
+        perl6-on-nix.distributions."Term::Choose"
     ];
     provides = {
         "Term::Form" = "lib/Term/Form.pm6";
@@ -22837,7 +22837,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fvn20sdk5rg8yxjxr7gsl5crhh5982wa0v4p3871a3ffzk16pj2";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Grammar" = "lib/ANTLR4/Grammar.pm6";
@@ -22869,8 +22869,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vf5wzbzp6b7wxxgkl6drqafhminlxy4fv40s5l5j2cbg29jc5x0";
     };
     depends = [
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Audio::Silan" = "lib/Audio/Silan.pm";
@@ -22886,8 +22886,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hb1ppycjz8cswhyxpbqwyqicbrkjb9l3fdhdm015lj5iswrb0i5";
     };
     depends = [
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."LibCurl"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."LibCurl"
     ];
     provides = {
         "HTTP::API::Pingdom" = "lib/HTTP/API/Pingdom.pm6";
@@ -22918,8 +22918,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0h7ypz9hq15sc4p9hcbkl2dh14vvjvzjmcszz3jf1jxfypmsqfdf";
     };
     depends = [
-        perl6-on-nix.libraries."OpenSSL"
-        perl6-on-nix.libraries."UUID"
+        perl6-on-nix.distributions."OpenSSL"
+        perl6-on-nix.distributions."UUID"
     ];
     provides = {
         "BSON::ObjectId" = "lib/BSON/ObjectId.pm6";
@@ -22974,7 +22974,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "18sk7avb33jxhzp3d5rpz35q8v3pi9rbkcy3p8givfqbc2anb3p8";
     };
     depends = [
-        perl6-on-nix.libraries."Result"
+        perl6-on-nix.distributions."Result"
     ];
     provides = {
         "Structable" = "lib/Structable.pm6";
@@ -23005,8 +23005,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "194q2yws8q5r3pr5442x967v86g5hr04shfmyy0nfy0s4jchcqk7";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit" = "lib/Tomtit.pm6";
@@ -23037,8 +23037,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0q45lqk1bljkly23z8a1x9zmfvzr207vbj94xww88n7flnwa3nqa";
     };
     depends = [
-        perl6-on-nix.libraries."Config::INI"
-        perl6-on-nix.libraries."HTTP::UserAgent"
+        perl6-on-nix.distributions."Config::INI"
+        perl6-on-nix.distributions."HTTP::UserAgent"
     ];
     provides = {
         "AWS::Credentials::Provider" = "lib/AWS/Credentials.pm6";
@@ -23076,9 +23076,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1dbp7zdhmc0h41jsgxy20aldz8lhslr9qs1k5qy3zqhvv3nzl4rf";
     };
     depends = [
-        perl6-on-nix.libraries."PDF"
-        perl6-on-nix.libraries."PDF::Grammar"
-        perl6-on-nix.libraries."PDF::Content"
+        perl6-on-nix.distributions."PDF"
+        perl6-on-nix.distributions."PDF::Grammar"
+        perl6-on-nix.distributions."PDF::Content"
     ];
     provides = {
         "PDF::Font::CIDFont" = "lib/PDF/Font/CIDFont.pm";
@@ -23202,7 +23202,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "04q573hjcd7ngqvwi5bsb6jq94dcxfjfzpbx0cjgpcnbivlc48i9";
     };
     depends = [
-        perl6-on-nix.libraries."RPi::Device::SMBus"
+        perl6-on-nix.distributions."RPi::Device::SMBus"
     ];
     provides = {
         "RPi::Device::PiGlow" = "lib/RPi/Device/PiGlow.pm";
@@ -23218,7 +23218,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0844m5bjhl6xanmsg9kbnf8vwj7a83qlvwk2li5fwayxv4a5sm0s";
     };
     depends = [
-        perl6-on-nix.libraries."NativeHelpers::Array"
+        perl6-on-nix.distributions."NativeHelpers::Array"
     ];
     provides = {
         "RPi::Device::SMBus" = "lib/RPi/Device/SMBus.pm";
@@ -23283,8 +23283,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "197m4c51qk0w2yngghsk2c1wgl7rq8z21mg6dk9qq82shdgha3xc";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
-        perl6-on-nix.libraries."Semi-xml"
+        perl6-on-nix.distributions."XML"
+        perl6-on-nix.distributions."Semi-xml"
     ];
     provides = {
     };
@@ -23314,8 +23314,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dfqip3bgm726pb2wg2f3834vmrlfqqfmcm9x9qmyw8x2d4iqwnw";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."IRC::Client"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."IRC::Client"
     ];
     provides = {
         "IRC::Client::Plugin::NickServ" = "lib/IRC/Client/Plugin/NickServ.pm6";
@@ -23331,11 +23331,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "08ah7kyk11pxrnjmq079dsrlp9zkgglj4b49g45jkw7awc5aa304";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Text::Markdown"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Algorithm::Diff"
-        perl6-on-nix.libraries."HTML::Escape"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Text::Markdown"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Algorithm::Diff"
+        perl6-on-nix.distributions."HTML::Escape"
     ];
     provides = {
         "Oddmuse::Storage::File::Lock" = "lib/Oddmuse/Storage/File/Lock.pm6";
@@ -23365,7 +23365,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0i0msd3n2fs96www5jsxhgz5ifh9ahbhhycca97zfc9npbp5mj2h";
     };
     depends = [
-        perl6-on-nix.libraries."FindBin"
+        perl6-on-nix.distributions."FindBin"
     ];
     provides = {
         "FileSystem::Parent" = "lib/FileSystem/Parent.pm6";
@@ -23452,24 +23452,24 @@ perl6-on-nix.mkDerivation {
         sha256 = "1cqn2x39nqjvnz39cq1hdyhdbikvfxg908jzbrv7dzaxlklk8jw4";
     };
     depends = [
-        perl6-on-nix.libraries."Digest"
-        perl6-on-nix.libraries."Digest::HMAC"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::MultiPartParser"
-        perl6-on-nix.libraries."HTTP::Server::Ogre"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Log::Any"
-        perl6-on-nix.libraries."Path::Iterator"
-        perl6-on-nix.libraries."Template::Mojo"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."URI::Encode"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Digest"
+        perl6-on-nix.distributions."Digest::HMAC"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::MultiPartParser"
+        perl6-on-nix.distributions."HTTP::Server::Ogre"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Log::Any"
+        perl6-on-nix.distributions."Path::Iterator"
+        perl6-on-nix.distributions."Template::Mojo"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."URI::Encode"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Bailador::Sessions" = "lib/Bailador/Sessions.pm";
@@ -23524,10 +23524,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1f14m7ym1s71b9gdqhrfbak3yz5qkxifl30lw9vapy287qy5b0ns";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::DistTest" = "lib/App/Mi6/Release/DistTest.pm6";
@@ -23560,10 +23560,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "09ij9dcx0nizamrs06finrh1sv1nnnljw90ldnsfj94s3h6aqsfd";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
-        perl6-on-nix.libraries."Gnome::Gdk3"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::Gdk3"
     ];
     provides = {
         "Gnome::Gtk3::Window" = "lib/Gnome/Gtk3/Window.pm6";
@@ -23625,7 +23625,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "14l7sa90yl4m7xw0fx36j4h2ff8l4b5ssxpq03fzq8h2s2vr3wv3";
     };
     depends = [
-        perl6-on-nix.libraries."DBIish"
+        perl6-on-nix.distributions."DBIish"
     ];
     provides = {
         "ModelDB::Column" = "lib/ModelDB/Column.pm6";
@@ -23666,8 +23666,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mpb4yxa16zdxxknsfs1kfwiairpjlm6srqm7440ifczvxim2vzy";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."XML"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "XML::XPath::Evaluable" = "lib/XML/XPath/Evaluable.pm6";
@@ -23743,7 +23743,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "10pgj9n35qpjbw1c0gp3md2vqm0xn97rv0hqqknb7x8v9yqa7v4w";
     };
     depends = [
-        perl6-on-nix.libraries."System::Query"
+        perl6-on-nix.distributions."System::Query"
     ];
     provides = {
         "Distribution::Builder::MakeFromJSON" = "lib/Distribution/Builder/MakeFromJSON.pm6";
@@ -23759,7 +23759,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0j33d9xpxbi3y4vfmy472wk33nx03i5zvl8dn1wkxjvbcw8g6af0";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
+        perl6-on-nix.distributions."Gnome::N"
     ];
     provides = {
         "Gnome::Glib::Main" = "lib/Gnome/Glib/Main.pm6";
@@ -23778,7 +23778,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "191r0mgjljrpx23c298yqbn2dsxavqhfw1sd197n40k0w4r7lh1j";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Nuget::Build" = "lib/Sparrowdo/VSTS/YAML/Nuget/Build.pm6";
@@ -23794,7 +23794,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0q6gmi6j0k4axq64f5snp163sapxg7imw5dpq03qmab7pskgf94d";
     };
     depends = [
-        perl6-on-nix.libraries."RPi::Device::SMBus"
+        perl6-on-nix.distributions."RPi::Device::SMBus"
     ];
     provides = {
         "RPi::Device::PiGlow" = "lib/RPi/Device/PiGlow.pm";
@@ -23810,8 +23810,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1q9npfyfc2sbqcgqqz4scfvdg2j9h3xrmhdpdfv2a0r01m2rgqw1";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Marshal"
-        perl6-on-nix.libraries."JSON::Unmarshal"
+        perl6-on-nix.distributions."JSON::Marshal"
+        perl6-on-nix.distributions."JSON::Unmarshal"
     ];
     provides = {
         "JSON::Class" = "lib/JSON/Class.pm";
@@ -23827,14 +23827,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "0kllpc380k34f52jd8qwplp2fmcryfrpc5vxk5gnxqij5rcd497b";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."IO::Path::ChildSecure"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."HTTP::HPACK"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro::TLS"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."IO::Path::ChildSecure"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."HTTP::HPACK"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro::TLS"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::Uri::HTTP" = "lib/Cro/Uri/HTTP.pm6";
@@ -23931,8 +23931,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mz8c1r9d54lz52pzr8b1q1mdkmvcm11c3cbsqcspqa52967f2ji";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
     ];
     provides = {
         "Gnome::GObject::Value" = "lib/Gnome/GObject/Value.pm6";
@@ -23954,7 +23954,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1gqkyh8qpsihj4flv0ycsgkbzarbfl8hcgkrq604vfcr4r1wmr7m";
     };
     depends = [
-        perl6-on-nix.libraries."P5localtime"
+        perl6-on-nix.distributions."P5localtime"
     ];
     provides = {
         "Time::localtime" = "lib/Time/localtime.pm6";
@@ -23970,16 +23970,16 @@ perl6-on-nix.mkDerivation {
         sha256 = "1a55v5kv1kh2p28442b61i5fxdvrwdj8hb6xwn7xwbbf8xi7124z";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."Cro::WebSocket"
-        perl6-on-nix.libraries."Docker::File"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."Cro::WebSocket"
+        perl6-on-nix.distributions."Docker::File"
     ];
     provides = {
         "Cro::Tools::Template" = "lib/Cro/Tools/Template.pm6";
@@ -24059,24 +24059,24 @@ perl6-on-nix.mkDerivation {
         sha256 = "082nfa6hn9gv6j2r629fbl2ya8a9yk2bjbka06ycmhqp75yy8bw3";
     };
     depends = [
-        perl6-on-nix.libraries."Digest"
-        perl6-on-nix.libraries."Digest::HMAC"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::MultiPartParser"
-        perl6-on-nix.libraries."HTTP::Server::Ogre"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Log::Any"
-        perl6-on-nix.libraries."Path::Iterator"
-        perl6-on-nix.libraries."Template::Mojo"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."URI::Encode"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Digest"
+        perl6-on-nix.distributions."Digest::HMAC"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::MultiPartParser"
+        perl6-on-nix.distributions."HTTP::Server::Ogre"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Log::Any"
+        perl6-on-nix.distributions."Path::Iterator"
+        perl6-on-nix.distributions."Template::Mojo"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."URI::Encode"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Bailador::Test" = "lib/Bailador/Test.pm";
@@ -24146,11 +24146,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1ay3v45wwc53kag241rbdz0hbrifn8xypp5jpw8f1g6hp87h28nx";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Template" = "lib/App/Mi6/Template.pm6";
@@ -24198,7 +24198,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "15zxx4fzxr0l4br56zkwbgpypsrlc1w0pvrl7r94xfa1bg5swn71";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Grammar::PrettyErrors" = "lib/Grammar/PrettyErrors.pm6";
@@ -24214,7 +24214,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1dhzjd4nq8yakya6az2m60v6rb1h21yy59kx8vfc3qrk2277x18x";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build::Assembly::Patch" = "lib/Sparrowdo/VSTS/YAML/Build/Assembly/Patch.pm6";
@@ -24230,14 +24230,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "0rvfyr2dk6kj9ibmx14diicbxjj955qig11yyq9b2vh9majid6pg";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Template6"
-        perl6-on-nix.libraries."Template::Mustache"
-        perl6-on-nix.libraries."Test::Output"
-        perl6-on-nix.libraries."HTTP::Server::Tiny"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Template6"
+        perl6-on-nix.distributions."Template::Mustache"
+        perl6-on-nix.distributions."Test::Output"
+        perl6-on-nix.distributions."HTTP::Server::Tiny"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Uzu::Utilities" = "lib/Uzu/Utilities.pm6";
@@ -24261,7 +24261,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0s3dyd6immpnsrmv77mp6z0285y4lfwk7l2v0nwhb8dvc4m1dzqz";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Terminal::Getpass" = "lib/Terminal/Getpass.pm6";
@@ -24292,7 +24292,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1lx4jr0qsgk1m2rhbj4x62rz92b8rap6v292za7k8j23fd85zj7p";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -24330,9 +24330,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0a1hwxcsr9hapcpwf7dkm6q1g2z61lx89hz98pxqyhni4f15yhmk";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "OAuth2::Client::Google" = "lib/OAuth2/Client/Google.pm6";
@@ -24348,8 +24348,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1yv1g4kndipd82b0aflc6flhpn6szxarjphsbabb6jjar5g2y356";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "IO::Glob::Globber" = "lib/IO/Glob.pm6";
@@ -24388,7 +24388,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ll6pa2446df5n7xg0srw6p82a7gzsap1y92dydyfsnflqbyazi8";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Actions::Perl6" = "lib/ANTLR4/Actions/Perl6.pm6";
@@ -24450,12 +24450,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "0sd3rmrj6cxh2p3pqx1944w1sk9xqp8xmjnxzxgdhr6azgqzgc3p";
     };
     depends = [
-        perl6-on-nix.libraries."Cairo"
-        perl6-on-nix.libraries."Color"
-        perl6-on-nix.libraries."CSS::Properties"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Base64::Native"
-        perl6-on-nix.libraries."Font::FreeType"
+        perl6-on-nix.distributions."Cairo"
+        perl6-on-nix.distributions."Color"
+        perl6-on-nix.distributions."CSS::Properties"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Base64::Native"
+        perl6-on-nix.distributions."Font::FreeType"
     ];
     provides = {
         "HTML::Canvas::To::Cairo" = "lib/HTML/Canvas/To/Cairo.pm";
@@ -24585,11 +24585,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1y7qy6j27fxg6klcxj4n8zcbvds657z2hqxcr63g4rrjkdcmzq29";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Terminal::Print"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Terminal::Print"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -24605,10 +24605,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "03mv7ddsm15vvmy5lv5m4lp947by8wf1qi3vjpxrzjmgcr1rvfc6";
     };
     depends = [
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrow6::Task::Runner::Helpers::Perl6" = "lib/Sparrow6/Task/Runner/Helpers/Perl6.pm6";
@@ -24692,7 +24692,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1sg7w0b6nkcr7pg5sr0r7yh697xlckk0i5qfi68c490jbzhbcly4";
     };
     depends = [
-        perl6-on-nix.libraries."FileSystem::Parent"
+        perl6-on-nix.distributions."FileSystem::Parent"
     ];
     provides = {
         "FindBin::libs" = "lib/FindBin/libs.pm6";
@@ -24739,7 +24739,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "11v2fnmy7sa7cvh4hwa2y786q2n7rfkjdspaw41mri586a263l90";
     };
     depends = [
-        perl6-on-nix.libraries."scan-upBin"
+        perl6-on-nix.distributions."scan-upBin"
     ];
     provides = {
         "FileSystem::Parent" = "lib/FileSystem/Parent.pm6";
@@ -24755,8 +24755,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1kc97dkxg8f2xhcrv4gq1pfpgxhbxgda4cqw5mykc23pgwpgwvv6";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
     ];
     provides = {
         "Cro::TLS" = "lib/Cro/TLS.pm6";
@@ -24787,7 +24787,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "12w6xzr5rvp5khrn4yqy3frflms1pk8189hd9kjxgxilm7kvfag9";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Perl6::Ecosystem" = "lib/Perl6/Ecosystem.pm6";
@@ -24803,8 +24803,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mlqgnraxinmnf7whkiwzrm3j1jdwbmy6pnxbp1fnd94xn4vk1gi";
     };
     depends = [
-        perl6-on-nix.libraries."DBIish"
-        perl6-on-nix.libraries."NativeHelpers::CStruct"
+        perl6-on-nix.distributions."DBIish"
+        perl6-on-nix.distributions."NativeHelpers::CStruct"
     ];
     provides = {
         "Pg::Notify" = "lib/Pg/Notify.pm";
@@ -24820,7 +24820,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "06px2ipflqal2ggj74vlzayjjwdj0bvnyyy7p4xfxw7s45ysb88h";
     };
     depends = [
-        perl6-on-nix.libraries."OpenSSL"
+        perl6-on-nix.distributions."OpenSSL"
     ];
     provides = {
         "IO::Socket::Async::SSL" = "lib/IO/Socket/Async/SSL.pm6";
@@ -24852,7 +24852,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "12vv1625lxlvvzshfvkdynizy06dlhjswvk2mlghndsxvzmka2is";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -24868,10 +24868,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0564wpm5zwszdgs8763g9ibc6gxs654bmy5989d9s0hvm6c77hsd";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
-        perl6-on-nix.libraries."Gnome::Gdk3"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::Gdk3"
     ];
     provides = {
         "Gnome::Gtk3::TextView" = "lib/Gnome/Gtk3/TextView.pm6";
@@ -24948,7 +24948,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0xgdc71126155ww0l1d2jfa5a1v00d8hfca1whzd4wgk90d44p0r";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Pod::To::Pager::BorderedBlock" = "lib/Pod/To/Pager/BorderedBlock.pm6";
@@ -24982,10 +24982,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "01h10srqi9kzds99rv57d57g1yhrib5y457mprkp8jgjxsd4m10s";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Terminal::Print"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Terminal::Print"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -25001,7 +25001,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "158cyvz7bb16grsyd4k338nn674xkp9b0di1nfff6jmmm3zw1y4c";
     };
     depends = [
-        perl6-on-nix.libraries."Term::Choose"
+        perl6-on-nix.distributions."Term::Choose"
     ];
     provides = {
         "Term::Choose::Util" = "lib/Term/Choose/Util.pm6";
@@ -25017,7 +25017,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0nlbnhnwc9gh3wnbmcph0yqnz95m7sgkxra6i03z8z583scb2lf8";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge:api<1>"
+        perl6-on-nix.distributions."Hash::Merge:api<1>"
     ];
     provides = {
         "Config" = "lib/Config.pm6";
@@ -25038,13 +25038,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "098m4hijz762y1cydiasrijcxlr0p79zp6wps2kzh0r1krcbzc03";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Entity"
-        perl6-on-nix.libraries."HTML::Parser::XML"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."IRC::Client"
-        perl6-on-nix.libraries."IRC::TextColor"
-        perl6-on-nix.libraries."URL::Find"
+        perl6-on-nix.distributions."HTML::Entity"
+        perl6-on-nix.distributions."HTML::Parser::XML"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."IRC::Client"
+        perl6-on-nix.distributions."IRC::TextColor"
+        perl6-on-nix.distributions."URL::Find"
     ];
     provides = {
         "IRC::Client::Plugin::UrlTitle::TypeFormatters::HTML" = "lib/IRC/Client/Plugin/UrlTitle/TypeFormatters/HTML.pm6";
@@ -25062,8 +25062,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ywrm5kvr2i5z2klck4wqprgy92h2byp0ywskx5nhymr9ia4ndy1";
     };
     depends = [
-        perl6-on-nix.libraries."Getopt::Advance"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Getopt::Advance"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Config::Searcher" = "lib/Config/Searcher.pm6";
@@ -25079,12 +25079,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vyh87mn5zw61g420f23gs3syp95rf40h8yzjvs5654yxgkiyhqc";
     };
     depends = [
-        perl6-on-nix.libraries."AWS::Session"
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."WebService::AWS::Auth::V4"
-        perl6-on-nix.libraries."String::CRC32"
+        perl6-on-nix.distributions."AWS::Session"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."WebService::AWS::Auth::V4"
+        perl6-on-nix.distributions."String::CRC32"
     ];
     provides = {
         "Amazon::DynamoDB" = "lib/Amazon/DynamoDB.pm6";
@@ -25149,8 +25149,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ma4i55lz591yfyhxf75kanyy8phg46l8ldflmvg8bd2zgwn384y";
     };
     depends = [
-        perl6-on-nix.libraries."Perl6::Parser"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Perl6::Parser"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Perl6::Tidy" = "lib/Perl6/Tidy.pm6";
@@ -25219,7 +25219,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "13c8mw4l1yjw0y9mm9kji1c2iv8dms935qcszh1qv5yx8b47hmgq";
     };
     depends = [
-        perl6-on-nix.libraries."Object::Trampoline"
+        perl6-on-nix.distributions."Object::Trampoline"
     ];
     provides = {
         "Object::Delayed" = "lib/Object/Delayed.pm6";
@@ -25235,19 +25235,19 @@ perl6-on-nix.mkDerivation {
         sha256 = "0arjai9pg306fi5x3idr54f38236qp3rxjagfr8dpb66anws2d1x";
     };
     depends = [
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config:api<2>"
-        perl6-on-nix.libraries."Dist::Helper:api<1>"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."I18n::Simple"
-        perl6-on-nix.libraries."IO::Path::Dirstack"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Pod::To::Pager"
-        perl6-on-nix.libraries."String::Fold"
-        perl6-on-nix.libraries."Terminal::Getpass"
-        perl6-on-nix.libraries."Version::Semantic"
-        perl6-on-nix.libraries."zef"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config:api<2>"
+        perl6-on-nix.distributions."Dist::Helper:api<1>"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."I18n::Simple"
+        perl6-on-nix.distributions."IO::Path::Dirstack"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Pod::To::Pager"
+        perl6-on-nix.distributions."String::Fold"
+        perl6-on-nix.distributions."Terminal::Getpass"
+        perl6-on-nix.distributions."Version::Semantic"
+        perl6-on-nix.distributions."zef"
     ];
     provides = {
         "App::Assixt::Output" = "lib/App/Assixt/Output.pm6";
@@ -25289,7 +25289,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ng12wz7bkcyq30kgz81bibaasxwjpivqln13mddiywx5sc67zl2";
     };
     depends = [
-        perl6-on-nix.libraries."LibraryMake"
+        perl6-on-nix.distributions."LibraryMake"
     ];
     provides = {
         "Inline::Perl5::ClassHOW" = "lib/Inline/Perl5/ClassHOW.pm6";
@@ -25376,8 +25376,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1w29p44s9642z2b0khn6zzbh0cncrq5s2d8ap78s7rf2bv5d180s";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -25453,7 +25453,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0xnjf1yp8nsv4l8ylb5mkzgp4562bg6v7pqcxli5kiqi5qqrk3m4";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Perl6::Ecosystem" = "lib/Perl6/Ecosystem.pm6";
@@ -25469,10 +25469,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1r1j96zf6g15khch2d9604i163d6hwk5nxid7dw37sw1f0jiajjw";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."JSON::Class"
-        perl6-on-nix.libraries."JSON::Name"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."JSON::Class"
+        perl6-on-nix.distributions."JSON::Name"
     ];
     provides = {
         "JSON::Infer" = "lib/JSON/Infer.pm";
@@ -25503,11 +25503,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1h1mg41xmx5a1nxc1d440zcwac9830lk966gnm4xymazi8qfg449";
     };
     depends = [
-        perl6-on-nix.libraries."AWS::Session"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."WebService::AWS::Auth::V4"
-        perl6-on-nix.libraries."String::CRC32"
+        perl6-on-nix.distributions."AWS::Session"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."WebService::AWS::Auth::V4"
+        perl6-on-nix.distributions."String::CRC32"
     ];
     provides = {
         "Amazon::DynamoDB" = "lib/Amazon/DynamoDB.pm6";
@@ -25572,7 +25572,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1qmwqcjzkwcbhmc7ddypgah5a8n5i7frf3xb2mkx5xyil6z0w1yw";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Cordova::OSx::Build" = "lib/Sparrowdo/Cordova/OSx/Build.pm6";
@@ -25588,8 +25588,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1x9ghj0xrxdv221fnlpf9d99ly1ndfam8fn19i0w7avdiyrsn46b";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
     ];
     provides = {
         "Gnome::GObject::Boxed" = "lib/Gnome/GObject/Boxed.pm6";
@@ -25611,11 +25611,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mdgaygwqs0ci346pq9qmib3gzgr83kwr46f300adfq0iij8nnkp";
     };
     depends = [
-        perl6-on-nix.libraries."Archive::Libarchive"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Oyatul"
-        perl6-on-nix.libraries."XDG::BaseDirectory"
+        perl6-on-nix.distributions."Archive::Libarchive"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Oyatul"
+        perl6-on-nix.distributions."XDG::BaseDirectory"
     ];
     provides = {
         "Igo" = "lib/Igo.pm";
@@ -25646,8 +25646,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0skkf3j6842djsx9yjjmcs7ll80qywqjvg9b7v57naz5r095f9na";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -25663,7 +25663,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mphvb1d2ldjnwjpgbkdz4m8myipzsa1plswwsrnkfqkm1f9zm6h";
     };
     depends = [
-        perl6-on-nix.libraries."NativeHelpers::Array"
+        perl6-on-nix.distributions."NativeHelpers::Array"
     ];
     provides = {
         "Audio::Convert::Samplerate" = "lib/Audio/Convert/Samplerate.pm";
@@ -25679,7 +25679,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1shhsg1nyhaclis7dl1mb4d7mbhssykxbc5iql7rdqra2cb14k91";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "Proc::InvokeEditor" = "lib/Proc/InvokeEditor.pm6";
@@ -25695,10 +25695,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "07wh7zrhl56yfd8mslyj7l0nz738lwgxfqb4ss6b3lxxgwaslqvg";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::Ssh" = "lib/Sparrowdo/Core/DSL/Ssh.pm6";
@@ -25759,7 +25759,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0w0imqrw7m6ayjks5gg36m2i41i936m60axrqvcn9ql8n5ca0r6i";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Cordova::OSx::Fortify" = "lib/Sparrowdo/Cordova/OSx/Fortify.pm6";
@@ -25775,11 +25775,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0322rv84rvd3ydbq3crx6qmipsk0d8sflpa5fz4b88vdzp7c9ja8";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::CheckUntrackedFiles" = "lib/App/Mi6/Release/CheckUntrackedFiles.pm6";
@@ -25841,10 +25841,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0jxlhygspwpi1qqvc7mfgzqnwwwawbq9hxzkz6x66qpz7vh92qh2";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."DBIish"
-        perl6-on-nix.libraries."HTML::Parser::XML"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."DBIish"
+        perl6-on-nix.distributions."HTML::Parser::XML"
     ];
     provides = {
         "CamelPub::ActivityPub" = "lib/CamelPub/ActivityPub.pm6";
@@ -25866,8 +25866,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0d66i65a47yir37lyjk2aazfw3qq7wxrh809n5bggbvppdi6884s";
     };
     depends = [
-        perl6-on-nix.libraries."UUID"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."UUID"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "LogP6::LoggerPure" = "lib/LogP6/LoggerPure.pm6";
@@ -25951,7 +25951,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0w5b5s4hk04rr06k3wns2w4ahr3933qx4x4baffc1akiwfff1gw4";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
     ];
     provides = {
         "Pod::To::Pager::Handlers" = "lib/Pod/To/Pager/Handlers.pm6";
@@ -25970,10 +25970,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "16j9gsy4bv3akg1z7rcar5c23k49br1wf8fwqkq6as67liq9m3lb";
     };
     depends = [
-        perl6-on-nix.libraries."Tinky"
-        perl6-on-nix.libraries."JSON::Name"
-        perl6-on-nix.libraries."JSON::Unmarshal"
-        perl6-on-nix.libraries."JSON::Class"
+        perl6-on-nix.distributions."Tinky"
+        perl6-on-nix.distributions."JSON::Name"
+        perl6-on-nix.distributions."JSON::Unmarshal"
+        perl6-on-nix.distributions."JSON::Class"
     ];
     provides = {
         "Tinky::JSON" = "lib/Tinky/JSON.pm";
@@ -25989,7 +25989,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1q8y2sxh9qnbj1jiry68fyda7hl7pgcgmw3f4w9zzr8dgqnlbwpx";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Agnostic"
+        perl6-on-nix.distributions."Hash::Agnostic"
     ];
     provides = {
         "Hash::Timeout" = "lib/Hash/Timeout.pm6";
@@ -26005,11 +26005,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "19w5vxnw5ra2gxvgc9z14i5r27cwr4lg0085im82rwfh7b69vkqg";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Terminal::Print"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Terminal::Print"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
     ];
     provides = {
         "Sparrowform" = "lib/Sparrowform.pm6";
@@ -26078,9 +26078,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1kh0w59l4lj75mygpd4m7ilm9l6w7nx7dqsyv34hcq8nvgbkna1x";
     };
     depends = [
-        perl6-on-nix.libraries."if"
-        perl6-on-nix.libraries."NativeHelpers::Blob"
-        perl6-on-nix.libraries."StrictClass"
+        perl6-on-nix.distributions."if"
+        perl6-on-nix.distributions."NativeHelpers::Blob"
+        perl6-on-nix.distributions."StrictClass"
     ];
     provides = {
         "TCP::LowLevel" = "lib/TCP/LowLevel.pm6";
@@ -26098,7 +26098,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qzn1ri0wcnlzgrwrf6826i9k8h0bxb0ldc12rfcw3g8lvn41lvm";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::Cordova::OSx::Build" = "lib/Sparrowdo/Cordova/OSx/Build.pm6";
@@ -26129,7 +26129,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0qrbw106m735q4ii9f6y74l738frgawhak711ykp1f9d834vknx4";
     };
     depends = [
-        perl6-on-nix.libraries."NativeHelpers::Array"
+        perl6-on-nix.distributions."NativeHelpers::Array"
     ];
     provides = {
         "Algorithm::LBFGS" = "lib/Algorithm/LBFGS.pm6";
@@ -26178,14 +26178,14 @@ perl6-on-nix.mkDerivation {
         sha256 = "1wik5zfvwkhx971csnp581s79j652lpvzi4cskzy608dymdhwcsl";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."MIME::Base64"
-        perl6-on-nix.libraries."SemVer"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."MIME::Base64"
+        perl6-on-nix.distributions."SemVer"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "Dist::Helper::Path" = "lib/Dist/Helper/Path.pm6";
@@ -26205,10 +26205,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0sxvb1wjh87x5wzrm5z5r4vhs6pd8d8kmy6cn76dy006cmibglqq";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
-        perl6-on-nix.libraries."Gnome::Gdk3"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::Gdk3"
     ];
     provides = {
         "Gnome::Gtk3::Widget" = "lib/Gnome/Gtk3/Widget.pm6";
@@ -26312,15 +26312,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0lw86gad7xc6mxkw9sim9b15yv39gzqgkyl15jjpgkihnqwi1vca";
     };
     depends = [
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."P5getpriority"
-        perl6-on-nix.libraries."P5localtime"
-        perl6-on-nix.libraries."Term::termios"
-        perl6-on-nix.libraries."Term::ReadKey"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."P5getpriority"
+        perl6-on-nix.distributions."P5localtime"
+        perl6-on-nix.distributions."Term::termios"
+        perl6-on-nix.distributions."Term::ReadKey"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "App::Tasks" = "lib/App/Tasks.pm6";
@@ -26341,11 +26341,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "17znh82rs6sbvb8qhv6yvqfmlpmwb778zfl1jkr9lysr9g1cn5mm";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::WebSocket::FrameSerializer" = "lib/Cro/WebSocket/FrameSerializer.pm6";
@@ -26374,12 +26374,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "1pv05w2x4ihbghrdlpc95gvh9vil88fc62w79x2pznbkmp8j3hx0";
     };
     depends = [
-        perl6-on-nix.libraries."WWW"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."LWP::Simple"
-        perl6-on-nix.libraries."Base64::Native"
-        perl6-on-nix.libraries."Data::Dump"
-        perl6-on-nix.libraries."Slippy::Semilist"
+        perl6-on-nix.distributions."WWW"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."LWP::Simple"
+        perl6-on-nix.distributions."Base64::Native"
+        perl6-on-nix.distributions."Data::Dump"
+        perl6-on-nix.distributions."Slippy::Semilist"
     ];
     provides = {
         "Bitcoin::Helpers::Config" = "lib/Bitcoin/Helpers/Config.pm6";
@@ -26412,8 +26412,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0l3pcdhq0ajaj80aaydg59nj5x6xvk91hn48a1mih3j4qiqra055";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Text::Wrap"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Text::Wrap"
     ];
     provides = {
         "GraphQL::Response" = "lib/GraphQL/Response.pm";
@@ -26438,7 +26438,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "15q816iggff9fhgqw0bbv9bwpg94l9hfvkqs0w1lg1a93ryr9mxr";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Tinyish"
+        perl6-on-nix.distributions."HTTP::Tinyish"
     ];
     provides = {
         "CPAN::Uploader::Tiny::MultiPart" = "lib/CPAN/Uploader/Tiny/MultiPart.pm6";
@@ -26455,11 +26455,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "059xpdhvclar0vhlhw68frx410cg99jz13ciaanv95s710k73zy5";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::WebSocket::FrameParser" = "lib/Cro/WebSocket/FrameParser.pm6";
@@ -26488,8 +26488,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0sl5s8h661c3q1ldga3l8kvmbii3a8jwjqw2aq8q6rizx5kfvbl5";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."JSON::Name"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Name"
     ];
     provides = {
         "JSON::Marshal" = "lib/JSON/Marshal.pm";
@@ -26527,7 +26527,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1wi4i5dbajk20sii3mqbi4hz7sypzkkbxzmazx0371s63wyyf8j5";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "ANTLR4::Grammar::Parser" = "lib/ANTLR4/Grammar/Parser.pm6";
@@ -26545,8 +26545,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0h62m8raxv1dxa92vxnb0gj02q6vc2klbk16bikrs0ljw7pga3bp";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."XML"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "XML::XPath::ExprOperator::NotEqual" = "lib/XML/XPath/ExprOperator/NotEqual.pm6";
@@ -26592,9 +26592,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "07gws41xvdqc64ia6h4wk1hbsw138nf7vxzlf79in5zcs41x2mkd";
     };
     depends = [
-        perl6-on-nix.libraries."WhereList"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."WhereList"
+        perl6-on-nix.distributions."WhereList"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."WhereList"
     ];
     provides = {
         "OO::Plugin::Metamodel::PlugRoleHOW" = "lib/OO/Plugin/Metamodel/PlugRoleHOW.pm6";
@@ -26617,8 +26617,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "18fds2nb7z3gs3zh9ymkcxsnqhxvaz0w2dkdm75i5hj2vilfz4aj";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
-        perl6-on-nix.libraries."Term::Choose"
+        perl6-on-nix.distributions."Term::termios"
+        perl6-on-nix.distributions."Term::Choose"
     ];
     provides = {
         "Term::Form" = "lib/Term/Form.pm6";
@@ -26634,7 +26634,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0l78f14vx7jiwi4i9q78v2c4b68vkqaki9qv1zf9sn4pagxp2s38";
     };
     depends = [
-        perl6-on-nix.libraries."DOM::Tiny"
+        perl6-on-nix.distributions."DOM::Tiny"
     ];
     provides = {
         "Template::Anti::Library::IO" = "lib/Template/Anti.pm6";
@@ -26670,15 +26670,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0b15xyy6qcv5xcmjww97nz5055nf1lm5yvibhraj0ikgzpbqffnx";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."XML::Class"
-        perl6-on-nix.libraries."URI::Encode"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."Digest"
-        perl6-on-nix.libraries."Digest::HMAC"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."URI"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."XML::Class"
+        perl6-on-nix.distributions."URI::Encode"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."Digest"
+        perl6-on-nix.distributions."Digest::HMAC"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."URI"
     ];
     provides = {
         "WebService::AWS::S3::Resources" = "lib/WebService/AWS/S3/Resources.pm6";
@@ -26711,8 +26711,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "11f5gk47kmgbgcxnlak8ividvyy11f67djdrhi2nam7qj0ix3b1k";
     };
     depends = [
-        perl6-on-nix.libraries."XML"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."XML"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "XML::XPath::ExprOperator::Equal" = "lib/XML/XPath/ExprOperator/Equal.pm6";
@@ -26754,8 +26754,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dpdbmc4xipq2ahsnm3cf4g6sg5nhxywin1is4q15arpw8dz43z9";
     };
     depends = [
-        perl6-on-nix.libraries."WhereList"
-        perl6-on-nix.libraries."File::Find"
+        perl6-on-nix.distributions."WhereList"
+        perl6-on-nix.distributions."File::Find"
     ];
     provides = {
         "OO::Plugin::Manager" = "lib/OO/Plugin/Manager.pm6";
@@ -26793,8 +26793,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "17ca4b8prdzn6hfmkky3hggav6bbjpi6i44djj2liwgjknd0zyhi";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Email::Valid"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Email::Valid"
     ];
     provides = {
         "LIVR" = "lib/LIVR.pm6";
@@ -26833,9 +26833,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1a59ga31qqvp2f61z37ckq2zwwgiv8dw41b3dkab3a0gwd68vncf";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."DBIish"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."DBIish"
     ];
     provides = {
         "CamelPub::ActivityPub" = "lib/CamelPub/ActivityPub.pm6";
@@ -26873,7 +26873,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0igk4326s8ir7gdqa04fn0vvr0v279wk54xqni1a1np2rwarvv4b";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "JSON::Path" = "lib/JSON/Path.pm6";
@@ -26925,7 +26925,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1v1jxrzhi2jhp28yh63lyfq77vdpx6lmg5lsrcmnlhyk6w6rzpa3";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Log::Timeline::Output::JSONLines" = "lib/Log/Timeline/Output/JSONLines.pm6";
@@ -26944,10 +26944,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "03nz64yjg4q22dafxs41fm2cdbq3fl9p9535n8jscn18fjxlm98a";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
-        perl6-on-nix.libraries."Gnome::Gdk3"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::Gdk3"
     ];
     provides = {
         "Gnome::Gtk3::FileChooserDialog" = "lib/Gnome/Gtk3/FileChooserDialog.pm6";
@@ -27024,8 +27024,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1wqpk4gkikm63jbs947460kx7z7kil9yjgkaxb9zphk01ma2mkfy";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
     ];
     provides = {
         "Tomtit::Completion" = "lib/Tomtit/Completion.pm6";
@@ -27042,10 +27042,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vv97r7770h57dy4fp6van6x35r134s2h0p2im8hfaxqf8h6v1dd";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::Assixt::Commands::Help" = "lib/App/Assixt/Commands/Help.pm6";
@@ -27078,11 +27078,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0cb7s2fp6s86p1n9s77fs4ayv47blbfj2j8g7nkqw36x9xg1bhy2";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6" = "lib/App/Mi6.pm6";
@@ -27168,8 +27168,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vf7psmdg44px75sqfrgaghmvss1abg6v57k73krs2fcyyyv6h85";
     };
     depends = [
-        perl6-on-nix.libraries."Test::META"
-        perl6-on-nix.libraries."URI"
+        perl6-on-nix.distributions."Test::META"
+        perl6-on-nix.distributions."URI"
     ];
     provides = {
         "Pod::To::HTMLBody" = "lib/Pod/To/HTMLBody.pm6";
@@ -27186,7 +27186,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "14k3fvi8rw4zagbr2xsblvwdhxchjphf3dzvk6r7m8n3qp6fhpfb";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::UserAgent"
     ];
     provides = {
         "Tika" = "lib/Tika.pm6";
@@ -27202,11 +27202,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "01yzh55ipi16m58bpsl1wf6vwk8r4j2nckphqznh67cxnvyffq8g";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Server::Async"
-        perl6-on-nix.libraries."Test::Util::ServerPort"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."HTTP::Server::Async"
+        perl6-on-nix.distributions."Test::Util::ServerPort"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Test::HTTP::Server::Event" = "lib/Test/HTTP/Server/Event.pm6";
@@ -27251,8 +27251,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0rkw8jsyycqgq4i492flklzf0p9701lfand7dynzaqvfhwk8kgf7";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."MPD::Client"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."MPD::Client"
     ];
     provides = {
         "App::MPD::AutoQueue" = "lib/App/MPD/AutoQueue.pm6";
@@ -27268,8 +27268,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0v3yv8yh7lfb6fg6y80pg98q89ch5nmxcwmkig240k1ngkqzk5n3";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Email::Valid"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Email::Valid"
     ];
     provides = {
         "LIVR::Utils" = "lib/LIVR/Utils.pm6";
@@ -27293,10 +27293,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1kfa2zqm3xa3iay47cjw138l0xawk5g4isiv0if6hsz8ymmk7s79";
     };
     depends = [
-        perl6-on-nix.libraries."DB"
-        perl6-on-nix.libraries."NativeLibs"
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."DB"
+        perl6-on-nix.distributions."NativeLibs"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "DB::MySQL::Statement" = "lib/DB/MySQL/Statement.pm6";
@@ -27347,13 +27347,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jc7bb0sww210igqijh34lzy99zglv2v0ml9mxk63hq81la4py1i";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Canvas"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."PDF::Lite"
-        perl6-on-nix.libraries."PDF::Content"
-        perl6-on-nix.libraries."Color"
-        perl6-on-nix.libraries."PDF::Font::Loader"
-        perl6-on-nix.libraries."CSS::Properties"
+        perl6-on-nix.distributions."HTML::Canvas"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."PDF::Lite"
+        perl6-on-nix.distributions."PDF::Content"
+        perl6-on-nix.distributions."Color"
+        perl6-on-nix.distributions."PDF::Font::Loader"
+        perl6-on-nix.distributions."CSS::Properties"
     ];
     provides = {
         "HTML::Canvas::To::PDF" = "lib/HTML/Canvas/To/PDF.pm6";
@@ -27389,12 +27389,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "0j6fvv6c1ap6x2fcd5vchdh7lj4sv470930gmvabqdvixslibdcb";
     };
     depends = [
-        perl6-on-nix.libraries."Config::TOML"
-        perl6-on-nix.libraries."Config::DataLang::Refine"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Color"
-        perl6-on-nix.libraries."XML"
-        perl6-on-nix.libraries."XML::XPath"
+        perl6-on-nix.distributions."Config::TOML"
+        perl6-on-nix.distributions."Config::DataLang::Refine"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Color"
+        perl6-on-nix.distributions."XML"
+        perl6-on-nix.distributions."XML::XPath"
     ];
     provides = {
         "SemiXML::Xml" = "lib/SemiXML/Xml.pm6";
@@ -27491,9 +27491,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1bzb2439ss2lavbrl08z1a39nqny6wyvm947j6k4zhkbdpzprdpp";
     };
     depends = [
-        perl6-on-nix.libraries."Gnome::N"
-        perl6-on-nix.libraries."Gnome::Glib"
-        perl6-on-nix.libraries."Gnome::GObject"
+        perl6-on-nix.distributions."Gnome::N"
+        perl6-on-nix.distributions."Gnome::Glib"
+        perl6-on-nix.distributions."Gnome::GObject"
     ];
     provides = {
         "Gnome::Gdk3::Keysyms" = "lib/Gnome/Gdk3/Keysyms.pm6";
@@ -27516,7 +27516,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0iirdfnh2x9ryldmqnvpb7v3ncx0c6k0p47ar8k40af7f2s5lc5q";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Solution" = "lib/Sparrowdo/VSTS/YAML/Solution.pm6";
@@ -27532,7 +27532,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "02fan7yavs6pasa8f7amw7p0615cd1vs69wwslacvfqmmq0x7yc8";
     };
     depends = [
-        perl6-on-nix.libraries."NativeHelpers::Array"
+        perl6-on-nix.distributions."NativeHelpers::Array"
     ];
     provides = {
         "MQ::Posix" = "lib/MQ/Posix.pm";
@@ -27548,7 +27548,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1hza2ywfc1rbgaj2x9xcz7dxz3a3bs0ga17nzbrmdvbildzl81p1";
     };
     depends = [
-        perl6-on-nix.libraries."Red"
+        perl6-on-nix.distributions."Red"
     ];
     provides = {
         "Cro::HTTP::Session::Red" = "lib/Cro/HTTP/Session/Red.pm6";
@@ -27564,8 +27564,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "00z2f59jmf2xizw68azmvyyfwnf0ibiclyap6cr1ypx1gdmpg0pb";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."NativeLibs"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."NativeLibs"
     ];
     provides = {
         "LibUUID" = "lib/LibUUID.pm6";
@@ -27596,11 +27596,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "03fk32zkz6p8p1jaygc49z151l7wq5l2zr0icfl4r6781dfcdz4m";
     };
     depends = [
-        perl6-on-nix.libraries."Archive::Libarchive"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Oyatul"
-        perl6-on-nix.libraries."XDG::BaseDirectory"
+        perl6-on-nix.distributions."Archive::Libarchive"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Oyatul"
+        perl6-on-nix.distributions."XDG::BaseDirectory"
     ];
     provides = {
         "Igo" = "lib/Igo.pm";
@@ -27616,7 +27616,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1wz9lk0kspmsj5ww7r2p8hjymfyk9g9x1hsxrn2dif7vvk2wm4jq";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Agnostic"
+        perl6-on-nix.distributions."Hash::Agnostic"
     ];
     provides = {
         "Map::Agnostic" = "lib/Map/Agnostic.pm6";
@@ -27632,15 +27632,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "1a6x6cf7l9z30798b2ylfhijv47jwrmw0aidl0iiga4vb179j9kp";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."Cro::WebSocket"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."Cro::WebSocket"
     ];
     provides = {
         "Cro::Tools::Services" = "lib/Cro/Tools/Services.pm6";
@@ -27744,10 +27744,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0n5z2lva6gfn2sk9i89s8gf1alxbpy4ypkqkzg9syppxncgmp6cx";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::Release::GitCommit" = "lib/App/Mi6/Release/GitCommit.pm6";
@@ -27780,11 +27780,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "061a6zdgvz1aws8gs5lglir419k2b3zbl1zrh3yzmp4ngkqlv6vb";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Status"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Path::Router"
-        perl6-on-nix.libraries."Smack"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Status"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Path::Router"
+        perl6-on-nix.distributions."Smack"
     ];
     provides = {
         "Cofra::Web::View::JSON::Instance" = "lib/Cofra/Web/View/JSON.pm6";
@@ -27853,8 +27853,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0b0bs9whwilrrqlh01ajpzd823d4rk8rsnll3rr1njk7rqm9jzbb";
     };
     depends = [
-        perl6-on-nix.libraries."Slang::Tuxic"
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."Slang::Tuxic"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "Text::CSV" = "lib/Text/CSV.pm";
@@ -27885,8 +27885,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mld9hzqfgx8g49isq754lwkb6f59mz98cvc9n1zjkqfmh1dfkvn";
     };
     depends = [
-        perl6-on-nix.libraries."Perl6::Parser"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Perl6::Parser"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Perl6::Tidy" = "lib/Perl6/Tidy.pm6";
@@ -27917,8 +27917,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1nkz6978nlgswzjdj0p391qsx69rgxdk60pisvzmpkkd1x8w8wd2";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "IO::Glob::Globber::Match" = "lib/IO/Glob.pm6";
@@ -27957,7 +27957,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0wf1ilr1wvqp418qm921zn208rs9gw2qbcx3m3wggpqfk0xvw5ja";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge"
+        perl6-on-nix.distributions."Hash::Merge"
     ];
     provides = {
         "Config::Parser" = "lib/Config/Parser.pm6";
@@ -27978,7 +27978,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "05kvc7pcm927ldl7ygp47m91jxbyd9vpzv28my0gw33psn70hq35";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build" = "lib/Sparrowdo/VSTS/YAML/Build.pm6";
@@ -28068,7 +28068,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1s5jbsq6j6lxf6ns7ygdjyj2ab1x479dk28sqwz4g4pjyqpjfdiw";
     };
     depends = [
-        perl6-on-nix.libraries."FileSystem::Parent"
+        perl6-on-nix.distributions."FileSystem::Parent"
     ];
     provides = {
         "FindBin::libs" = "lib/FindBin/libs.pm6";
@@ -28084,9 +28084,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "0hc4xrbv8rx4jflmi62vr7vbq8k17ic8q8j7d40fnsllr2nc737n";
     };
     depends = [
-        perl6-on-nix.libraries."NativeCall"
-        perl6-on-nix.libraries."LibUUID"
-        perl6-on-nix.libraries."epoll"
+        perl6-on-nix.distributions."NativeCall"
+        perl6-on-nix.distributions."LibUUID"
+        perl6-on-nix.distributions."epoll"
     ];
     provides = {
         "DB::Pg" = "lib/DB/Pg.pm6";
@@ -28128,10 +28128,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jyhpsb8hm5mq1z9w86bpw0ifcwqpiravs3wrvd8mfrba11izdc0";
     };
     depends = [
-        perl6-on-nix.libraries."Test"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."URI"
-        perl6-on-nix.libraries."License::SPDX"
+        perl6-on-nix.distributions."Test"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."URI"
+        perl6-on-nix.distributions."License::SPDX"
     ];
     provides = {
         "Test::META" = "lib/Test/META.pm";
@@ -28162,7 +28162,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "18cl8c90xpwa9h54w5sxvkijrq26768scllcjfdwh609a1l1icjs";
     };
     depends = [
-        perl6-on-nix.libraries."Term::termios"
+        perl6-on-nix.distributions."Term::termios"
     ];
     provides = {
         "Terminal::Getpass" = "lib/Terminal/Getpass.pm6";
@@ -28178,8 +28178,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1as6chsal168wsxbfyi4bf0rb8kv9wf1mr08b1aq68fms51kbkz9";
     };
     depends = [
-        perl6-on-nix.libraries."LogP6"
-        perl6-on-nix.libraries."Matrix::Client"
+        perl6-on-nix.distributions."LogP6"
+        perl6-on-nix.distributions."Matrix::Client"
     ];
     provides = {
         "Matrix::Bot::EventWrapper::RoomTextMessage" = "lib/Matrix/Bot/EventWrapper/RoomTextMessage.pm6";
@@ -28197,10 +28197,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ba8iqq0985hmv2byxhzrr3s369z22n8g82w8265n13m649bp863";
     };
     depends = [
-        perl6-on-nix.libraries."Config::Parser::toml"
-        perl6-on-nix.libraries."Config:api<1>"
-        perl6-on-nix.libraries."Dist::Helper"
-        perl6-on-nix.libraries."Terminal::Getpass"
+        perl6-on-nix.distributions."Config::Parser::toml"
+        perl6-on-nix.distributions."Config:api<1>"
+        perl6-on-nix.distributions."Dist::Helper"
+        perl6-on-nix.distributions."Terminal::Getpass"
     ];
     provides = {
         "App::Assixt::Commands::New" = "lib/App/Assixt/Commands/New.pm6";
@@ -28239,7 +28239,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "143kbz3xr9bra3h5qcww1cdzjfcwpwzi9wdwlaad71zyya84kb28";
     };
     depends = [
-        perl6-on-nix.libraries."DOM::Tiny"
+        perl6-on-nix.distributions."DOM::Tiny"
     ];
     provides = {
         "Template::Anti::Library::Resources" = "lib/Template/Anti.pm6";
@@ -28276,11 +28276,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ymmgzxpr0vidhwfbsy8lrrg7jachy8xwyxrw2sy21rr7q4hvr8f";
     };
     depends = [
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."JSON::Pretty"
-        perl6-on-nix.libraries."Pod::To::Markdown"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."CPAN::Uploader::Tiny"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."JSON::Pretty"
+        perl6-on-nix.distributions."Pod::To::Markdown"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."CPAN::Uploader::Tiny"
     ];
     provides = {
         "App::Mi6::INI" = "lib/App/Mi6/INI.pm6";
@@ -28299,7 +28299,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0xchsz3lixacfalqgqjvb6hfhx9lmpi36rj0aa3162vs60iaq9ay";
     };
     depends = [
-        perl6-on-nix.libraries."List::MoreUtils"
+        perl6-on-nix.distributions."List::MoreUtils"
     ];
     provides = {
         "List::SomeUtils" = "lib/List/SomeUtils.pm6";
@@ -28315,8 +28315,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "1lj1jdd2jjqpm0iawdfygfxc2z7p9a7xwh3hsznfiwbh5nrj9vlv";
     };
     depends = [
-        perl6-on-nix.libraries."Sparky"
-        perl6-on-nix.libraries."TelegramBot"
+        perl6-on-nix.distributions."Sparky"
+        perl6-on-nix.distributions."TelegramBot"
     ];
     provides = {
         "Sparky::Plugin::Notify::Telegram" = "lib/Sparky/Plugin/Notify/Telegram.pm6";
@@ -28332,10 +28332,10 @@ perl6-on-nix.mkDerivation {
         sha256 = "11p5wccmxqs48mfvfwplp6c2qkqwcgb0lgxq3hj8djn9dx0x9p9f";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."JSON::Tiny"
-        perl6-on-nix.libraries."Config::Simple"
-        perl6-on-nix.libraries."Data::Dump"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."JSON::Tiny"
+        perl6-on-nix.distributions."Config::Simple"
+        perl6-on-nix.distributions."Data::Dump"
     ];
     provides = {
         "Sparrowdo::Core::DSL::User" = "lib/Sparrowdo/Core/DSL/User.pm6";
@@ -28380,11 +28380,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "1942ygpj8251rnfsk5zblzk6aqqdd34i70mq2x400laa5yhalg02";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::Server::Async"
-        perl6-on-nix.libraries."Test::Util::ServerPort"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."HTTP::Server::Async"
+        perl6-on-nix.distributions."Test::Util::ServerPort"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Test::HTTP::Server" = "lib/Test/HTTP/Server.pm6";
@@ -28431,7 +28431,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "13zixdbm2f2yj7017wnq3z1rlcvwfjwxq4g5d5jr0byacwsq6dj3";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "JSON::Path" = "lib/JSON/Path.pm6";
@@ -28447,7 +28447,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dfx86w62wz29vf25xqjabsm0x0kg7bypgvwqjfsyj8wmsck39l3";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Cordova" = "lib/Sparrowdo/VSTS/YAML/Cordova.pm6";
@@ -28463,17 +28463,17 @@ perl6-on-nix.mkDerivation {
         sha256 = "1fgjmcf4waphi76p1j9kb0rzsyajzfnsqx2fg1mijh4r2w2sppjx";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Socket::Async::SSL"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."META6"
-        perl6-on-nix.libraries."Shell::Command"
-        perl6-on-nix.libraries."File::Find"
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."YAMLish"
-        perl6-on-nix.libraries."Cro::WebSocket"
-        perl6-on-nix.libraries."Docker::File"
-        perl6-on-nix.libraries."File::Ignore"
+        perl6-on-nix.distributions."IO::Socket::Async::SSL"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."META6"
+        perl6-on-nix.distributions."Shell::Command"
+        perl6-on-nix.distributions."File::Find"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."YAMLish"
+        perl6-on-nix.distributions."Cro::WebSocket"
+        perl6-on-nix.distributions."Docker::File"
+        perl6-on-nix.distributions."File::Ignore"
     ];
     provides = {
         "Cro::Tools::Web" = "lib/Cro/Tools/Web.pm6";
@@ -28522,9 +28522,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "06bdn0ij98rawpqk3vawrf07p2vv7hbgs3llx6h282w060hra29r";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."YAMLish"
+        perl6-on-nix.distributions."Sparrowdo"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."YAMLish"
     ];
     provides = {
         "Tomtit::Completion" = "lib/Tomtit/Completion.pm6";
@@ -28541,8 +28541,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0l564ahr2zhbxwarz8y0nys564s5d59hvkc5x91v9hlkca8cx5i0";
     };
     depends = [
-        perl6-on-nix.libraries."Perl6::Parser"
-        perl6-on-nix.libraries."Test::META"
+        perl6-on-nix.distributions."Perl6::Parser"
+        perl6-on-nix.distributions."Test::META"
     ];
     provides = {
         "Perl6::Tidy" = "lib/Perl6/Tidy.pm6";
@@ -28558,7 +28558,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0dwksa949wwv6xsb2axy0rm267kc27ncp6s6pvpps1fbbmm3xpf7";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::Build" = "lib/Sparrowdo/VSTS/YAML/Build.pm6";
@@ -28590,13 +28590,13 @@ perl6-on-nix.mkDerivation {
         sha256 = "0bha6wjpnxim3l0wj9phg49lqp714628f4x9m8009jssw3y8bdzg";
     };
     depends = [
-        perl6-on-nix.libraries."HTML::Entity"
-        perl6-on-nix.libraries."HTML::Parser::XML"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."IO::Socket::SSL"
-        perl6-on-nix.libraries."IRC::Client"
-        perl6-on-nix.libraries."IRC::TextColor"
-        perl6-on-nix.libraries."URL::Find"
+        perl6-on-nix.distributions."HTML::Entity"
+        perl6-on-nix.distributions."HTML::Parser::XML"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."IO::Socket::SSL"
+        perl6-on-nix.distributions."IRC::Client"
+        perl6-on-nix.distributions."IRC::TextColor"
+        perl6-on-nix.distributions."URL::Find"
     ];
     provides = {
         "IRC::Client::Plugin::UrlTitle" = "lib/IRC/Client/Plugin/UrlTitle.pm6";
@@ -28630,9 +28630,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1dfbh22h1jpimd8sdcg4xn957zbn50j7hgcwldqjs3danf6crp6z";
     };
     depends = [
-        perl6-on-nix.libraries."SVG"
-        perl6-on-nix.libraries."SVG::Plot"
-        perl6-on-nix.libraries."Math::Polygons"
+        perl6-on-nix.distributions."SVG"
+        perl6-on-nix.distributions."SVG::Plot"
+        perl6-on-nix.distributions."Math::Polygons"
     ];
     provides = {
         "Physics::Measure::Unit" = "lib/Physics/Measure/Unit.pm6";
@@ -28649,7 +28649,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ziaxhz690lxdd9rdpz0xjqr3ia770dpla4q0wl0si0svplnysf3";
     };
     depends = [
-        perl6-on-nix.libraries."P5getpwnam"
+        perl6-on-nix.distributions."P5getpwnam"
     ];
     provides = {
         "User::pwent" = "lib/User/pwent.pm6";
@@ -28680,15 +28680,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0sy717d6i3bnw0mqcg99fhd0w89q16h8yqm5lrl82jkcqj53yg0h";
     };
     depends = [
-        perl6-on-nix.libraries."Apache::LogFormat::Compiler"
-        perl6-on-nix.libraries."DateTime::Format"
-        perl6-on-nix.libraries."Digest::MD5"
-        perl6-on-nix.libraries."Hash::MultiValue"
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."HTTP::Easy"
-        perl6-on-nix.libraries."HTTP::Headers"
-        perl6-on-nix.libraries."HTTP::Supply"
-        perl6-on-nix.libraries."HTTP::Status"
+        perl6-on-nix.distributions."Apache::LogFormat::Compiler"
+        perl6-on-nix.distributions."DateTime::Format"
+        perl6-on-nix.distributions."Digest::MD5"
+        perl6-on-nix.distributions."Hash::MultiValue"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."HTTP::Easy"
+        perl6-on-nix.distributions."HTTP::Headers"
+        perl6-on-nix.distributions."HTTP::Supply"
+        perl6-on-nix.distributions."HTTP::Status"
     ];
     provides = {
         "Smack::Middleware::Conditional" = "lib/Smack/Middleware/Conditional.pm6";
@@ -28795,7 +28795,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1qp75h6qpvf9ks6zi9r5wii61m2w9qxf6awzhmkizky1b9awnx6g";
     };
     depends = [
-        perl6-on-nix.libraries."Sparrowdo"
+        perl6-on-nix.distributions."Sparrowdo"
     ];
     provides = {
         "Sparrowdo::VSTS::YAML::MsBuild" = "lib/Sparrowdo/VSTS/YAML/MsBuild.pm6";
@@ -28842,9 +28842,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1lagr6zp8kb5302l3fydhzwx7c5d2y86j1zpbdzp9sw0ah6h333s";
     };
     depends = [
-        perl6-on-nix.libraries."GraphQL"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."Bailador"
+        perl6-on-nix.distributions."GraphQL"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."Bailador"
     ];
     provides = {
         "GraphQL::Server" = "lib/GraphQL/Server.pm6";
@@ -28893,8 +28893,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "17cfzgs7y3yrngqjg2abh1c1ys7fbrmghp276qv8nvkdyw2mnz0z";
     };
     depends = [
-        perl6-on-nix.libraries."IO::Capture::Simple"
-        perl6-on-nix.libraries."Test"
+        perl6-on-nix.distributions."IO::Capture::Simple"
+        perl6-on-nix.distributions."Test"
     ];
     provides = {
         "Test::Declare::Suite" = "lib/Test/Declare/Suite.pm6";
@@ -28915,7 +28915,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0mlzkdadrmdygjvg2784xli0n2ra8prxbyairzs2hdprhyar567p";
     };
     depends = [
-        perl6-on-nix.libraries."IRC::Client"
+        perl6-on-nix.distributions."IRC::Client"
     ];
     provides = {
         "IRC::Client::Plugin::Ignore::TargetList" = "lib/IRC/Client/Plugin/Ignore/TargetList.pm6";
@@ -28932,7 +28932,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "1v2qw8saq2qdd9f1agi19hyn9c7jlpjn8fmp9v4pbvwyv5d9nssc";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Log::Timeline::Output::Socket" = "lib/Log/Timeline/Output/Socket.pm6";
@@ -29023,7 +29023,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "02llrm1987ivyrnqplb1yi8h5lp4a03nvgfjk2p3dqfhc5jgn4ha";
     };
     depends = [
-        perl6-on-nix.libraries."Log::Async"
+        perl6-on-nix.distributions."Log::Async"
     ];
     provides = {
         "Algorithm::Evolutionary::Fitness::P-Peaks" = "lib/Algorithm/Evolutionary/Fitness/P-Peaks.pm6";
@@ -29040,11 +29040,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "0pyc6j420f42ywkawninbl8d9krrnwha1r1dc3qnrxh283r9hr31";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::HTTP::Router::WebSocket" = "lib/Cro/HTTP/Router/WebSocket.pm6";
@@ -29073,9 +29073,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "193pfhgwg9d9nmwp54ym1gmpis7zpzc8v1f9vbzf70qgiqwzfk4l";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."URI::Template"
-        perl6-on-nix.libraries."XML::Class"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."URI::Template"
+        perl6-on-nix.distributions."XML::Class"
     ];
     provides = {
         "Monitor::Monit" = "lib/Monitor/Monit.pm";
@@ -29091,7 +29091,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0vydv6b7mz7n7vngzjy9lv8syi25sih7frsdq3z3jrc1nl8sq0dw";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Class"
+        perl6-on-nix.distributions."JSON::Class"
     ];
     provides = {
         "META6" = "lib/META6.pm";
@@ -29137,9 +29137,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1mm5s83m5pwrp633h17vjh032m5zl0mh85kr9126hjsqff3jdy3l";
     };
     depends = [
-        perl6-on-nix.libraries."Terminal::ANSIColor"
-        perl6-on-nix.libraries."Terminal::WCWidth"
-        perl6-on-nix.libraries."Text::Tabs"
+        perl6-on-nix.distributions."Terminal::ANSIColor"
+        perl6-on-nix.distributions."Terminal::WCWidth"
+        perl6-on-nix.distributions."Text::Tabs"
     ];
     provides = {
         "Terminal::Table::String" = "lib/Terminal/Table/String.pm6";
@@ -29164,11 +29164,11 @@ perl6-on-nix.mkDerivation {
         sha256 = "10ym1lw7d6ghib0sxbi61c5hmc17x6g6kzw1611apgkc8vjh946b";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."Base64"
-        perl6-on-nix.libraries."Digest::SHA1::Native"
-        perl6-on-nix.libraries."Crypt::Random"
-        perl6-on-nix.libraries."JSON::Fast"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."Base64"
+        perl6-on-nix.distributions."Digest::SHA1::Native"
+        perl6-on-nix.distributions."Crypt::Random"
+        perl6-on-nix.distributions."JSON::Fast"
     ];
     provides = {
         "Cro::WebSocket::FrameSerializer" = "lib/Cro/WebSocket/FrameSerializer.pm6";
@@ -29197,7 +29197,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0lvx1m4l1h89f5hnqp33jdf0ihzcgqvb5q5my8z6c1yz5rg6mnb7";
     };
     depends = [
-        perl6-on-nix.libraries."JSON::Class"
+        perl6-on-nix.distributions."JSON::Class"
     ];
     provides = {
         "License::SPDX" = "lib/License/SPDX.pm";
@@ -29213,7 +29213,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "10dn6jl462dkw01xz47xk6arxm1vp0zbb24pbgxqfmbbd15iw0r9";
     };
     depends = [
-        perl6-on-nix.libraries."File::Temp"
+        perl6-on-nix.distributions."File::Temp"
     ];
     provides = {
         "Proc::InvokeEditor" = "lib/Proc/InvokeEditor.pm6";
@@ -29229,8 +29229,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0w4xc6nqsl02jsiliagmwgklvl1l4r505afc11yqlcrh9f9y6nzs";
     };
     depends = [
-        perl6-on-nix.libraries."DateTime::Format"
-        perl6-on-nix.libraries."Staticish"
+        perl6-on-nix.distributions."DateTime::Format"
+        perl6-on-nix.distributions."Staticish"
     ];
     provides = {
         "Lumberjack" = "lib/Lumberjack.pm";
@@ -29246,7 +29246,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "0a83xzd8rspdh4dwnyb5dxjfzrjapk11jzb7w8pskn16m1gxbl7w";
     };
     depends = [
-        perl6-on-nix.libraries."Hash::Merge"
+        perl6-on-nix.distributions."Hash::Merge"
     ];
     provides = {
         "Config::Exception::FileNotFoundException" = "lib/Config/Exception/FileNotFoundException.pm6";
@@ -29267,12 +29267,12 @@ perl6-on-nix.mkDerivation {
         sha256 = "0i6b1p9w0x8l9czzcc22vfyvwhpv1n4rm7wqxfwqz38cd5wc8plv";
     };
     depends = [
-        perl6-on-nix.libraries."if"
-        perl6-on-nix.libraries."DateTime::Monotonic"
-        perl6-on-nix.libraries."NativeHelpers::Blob"
-        perl6-on-nix.libraries."OO::Monitors"
-        perl6-on-nix.libraries."StrictClass"
-        perl6-on-nix.libraries."TCP::LowLevel"
+        perl6-on-nix.distributions."if"
+        perl6-on-nix.distributions."DateTime::Monotonic"
+        perl6-on-nix.distributions."NativeHelpers::Blob"
+        perl6-on-nix.distributions."OO::Monitors"
+        perl6-on-nix.distributions."StrictClass"
+        perl6-on-nix.distributions."TCP::LowLevel"
     ];
     provides = {
         "Net::BGP::Path-Attribute::AS-Path" = "lib/Net/BGP/Path-Attribute/AS-Path.pm6";
@@ -29362,9 +29362,9 @@ perl6-on-nix.mkDerivation {
         sha256 = "1ggi483wz7sv93cl470yfixipl6qr18km9c6vwl1r6v1w2p1608x";
     };
     depends = [
-        perl6-on-nix.libraries."Net::ZMQ"
-        perl6-on-nix.libraries."Cro::Core"
-        perl6-on-nix.libraries."Cro"
+        perl6-on-nix.distributions."Net::ZMQ"
+        perl6-on-nix.distributions."Cro::Core"
+        perl6-on-nix.distributions."Cro"
     ];
     provides = {
         "Cro::ZeroMQ::Socket::Push" = "lib/Cro/ZeroMQ/Socket/Push.pm6";
@@ -29394,15 +29394,15 @@ perl6-on-nix.mkDerivation {
         sha256 = "0i8i46gy908lpvs7i2hlx62xvi0z9ksyd205zn0jz29q6jrr0h8f";
     };
     depends = [
-        perl6-on-nix.libraries."Config"
-        perl6-on-nix.libraries."File::Directory::Tree"
-        perl6-on-nix.libraries."File::Temp"
-        perl6-on-nix.libraries."File::Which"
-        perl6-on-nix.libraries."Hash::Merge"
-        perl6-on-nix.libraries."JSON::Fast"
-        perl6-on-nix.libraries."MIME::Base64"
-        perl6-on-nix.libraries."SemVer"
-        perl6-on-nix.libraries."Template::Mustache"
+        perl6-on-nix.distributions."Config"
+        perl6-on-nix.distributions."File::Directory::Tree"
+        perl6-on-nix.distributions."File::Temp"
+        perl6-on-nix.distributions."File::Which"
+        perl6-on-nix.distributions."Hash::Merge"
+        perl6-on-nix.distributions."JSON::Fast"
+        perl6-on-nix.distributions."MIME::Base64"
+        perl6-on-nix.distributions."SemVer"
+        perl6-on-nix.distributions."Template::Mustache"
     ];
     provides = {
         "Dist::Helper::Clean" = "lib/Dist/Helper/Clean.pm6";
@@ -29437,7 +29437,7 @@ perl6-on-nix.mkDerivation {
         sha256 = "193kw3b2r2a61qg0n8i00sm9i3s8klc59c46l3mncnglykrdyvmv";
     };
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
+        perl6-on-nix.distributions."Cro::HTTP"
     ];
     provides = {
         "Cro::WebApp::Template::AST" = "lib/Cro/WebApp/Template/AST.pm6";
@@ -29459,8 +29459,8 @@ perl6-on-nix.mkDerivation {
         sha256 = "0ba2pk7505lg4kv00sj59b0mjb1frbz6wbln6n2b7mqjmw05y1wb";
     };
     depends = [
-        perl6-on-nix.libraries."DBIish"
-        perl6-on-nix.libraries."DB::Pg"
+        perl6-on-nix.distributions."DBIish"
+        perl6-on-nix.distributions."DB::Pg"
     ];
     provides = {
         "Red::Query" = "lib/Red/Query.pm6";
@@ -29524,566 +29524,566 @@ perl6-on-nix.mkDerivation {
         sha256 = "1a093y2av6nqb77p1lcp2z5di8qhrbqkvmyqz61x5dhcn8qrhdpx";
     };
     depends = [
-        perl6-on-nix.libraries."HTTP::UserAgent"
-        perl6-on-nix.libraries."JSON::Unmarshal"
-        perl6-on-nix.libraries."URI"
+        perl6-on-nix.distributions."HTTP::UserAgent"
+        perl6-on-nix.distributions."JSON::Unmarshal"
+        perl6-on-nix.distributions."URI"
     ];
     provides = {
         "Geo::Coder::OpenCage" = "lib/Geo/Coder/OpenCage.pm";
         "Geo::Coder::OpenCage::Response" = "lib/Geo/Coder/OpenCage/Response.pm";
     };
 }) {};
-    "P5readlink" = perl6-on-nix.libraries."P5readlink:ver<0.0.4>";
-    "XDG::BaseDirectory" = perl6-on-nix.libraries."XDG::BaseDirectory:ver<0.0.11>";
-    "Test::SourceFiles" = perl6-on-nix.libraries."Test::SourceFiles:ver<0.0.1>";
-    "Sys::Lastlog" = perl6-on-nix.libraries."Sys::Lastlog:ver<0.0.10>";
-    "App::MoarVM::ConfprogCompiler" = perl6-on-nix.libraries."App::MoarVM::ConfprogCompiler:ver<0.0.8>";
-    "IO::Path::Dirstack" = perl6-on-nix.libraries."IO::Path::Dirstack:ver<0.1.1>";
-    "Sparrowdo::Prometheus" = perl6-on-nix.libraries."Sparrowdo::Prometheus:ver<0.0.1>";
-    "P5chr" = perl6-on-nix.libraries."P5chr:ver<0.0.5>";
-    "Pod::To::Man" = perl6-on-nix.libraries."Pod::To::Man:ver<0.1.0>";
-    "Net::protoent" = perl6-on-nix.libraries."Net::protoent:ver<0.0.1>";
-    "Map::Agnostic" = perl6-on-nix.libraries."Map::Agnostic:ver<0.0.3>";
-    "Magento" = perl6-on-nix.libraries."Magento:ver<0.0.2>";
-    "Physics::Measure" = perl6-on-nix.libraries."Physics::Measure:ver<0.0.2>";
-    "Tinky::Hash" = perl6-on-nix.libraries."Tinky::Hash:ver<0.4.2.7>";
-    "Sparrow6" = perl6-on-nix.libraries."Sparrow6:ver<0.0.8>";
-    "List::SomeUtils" = perl6-on-nix.libraries."List::SomeUtils:ver<0.0.5>";
-    "P5localtime" = perl6-on-nix.libraries."P5localtime:ver<0.0.6>";
-    "P5getgrnam" = perl6-on-nix.libraries."P5getgrnam:ver<0.0.6>";
-    "Manifesto" = perl6-on-nix.libraries."Manifesto:ver<0.0.4>";
-    "Path::Through" = perl6-on-nix.libraries."Path::Through:ver<0.0.1>";
-    "Tie::Array" = perl6-on-nix.libraries."Tie::Array:ver<0.0.4>";
-    "Tie::StdArray" = perl6-on-nix.libraries."Tie::StdArray:ver<0.0.3>";
-    "Crypt::Libcrypt" = perl6-on-nix.libraries."Crypt::Libcrypt:ver<0.0.9>";
-    "Acme::Meow" = perl6-on-nix.libraries."Acme::Meow:ver<0.1>";
-    "Array::Agnostic" = perl6-on-nix.libraries."Array::Agnostic:ver<0.0.6>";
-    "Igo" = perl6-on-nix.libraries."Igo:ver<0.0.5>";
-    "Gnome::Glib" = perl6-on-nix.libraries."Gnome::Glib:ver<0.13.3>";
-    "Sparrowdo::Azure::Web::Cert" = perl6-on-nix.libraries."Sparrowdo::Azure::Web::Cert:ver<0.0.3>";
-    "Desktop::Notify::Progress" = perl6-on-nix.libraries."Desktop::Notify::Progress:ver<0.0.1>";
-    "Audio::Liquidsoap" = perl6-on-nix.libraries."Audio::Liquidsoap:ver<0.0.7>";
-    "LibGit2" = perl6-on-nix.libraries."LibGit2:ver<0.2>";
-    "Matrix::Bot::Plugin::AutoAcceptInvites" = perl6-on-nix.libraries."Matrix::Bot::Plugin::AutoAcceptInvites:ver<0.1.0>";
-    "DBIx::NamedQueries" = perl6-on-nix.libraries."DBIx::NamedQueries:ver<0.0.3>";
-    "App::MPD::Notify" = perl6-on-nix.libraries."App::MPD::Notify:ver<0.1.0>";
-    "WebService::Discourse" = perl6-on-nix.libraries."WebService::Discourse:ver<0.1.0>";
-    "Hash::Restricted" = perl6-on-nix.libraries."Hash::Restricted:ver<0.0.5>";
-    "Desktop::Notify" = perl6-on-nix.libraries."Desktop::Notify:ver<0.3.2>";
-    "Sparrowdo::RemoteFile" = perl6-on-nix.libraries."Sparrowdo::RemoteFile:ver<0.0.2>";
-    "Algorithm::GooglePolylineEncoding" = perl6-on-nix.libraries."Algorithm::GooglePolylineEncoding:ver<1.0.2>";
-    "Staticish" = perl6-on-nix.libraries."Staticish:ver<0.0.7>";
-    "Amazon::DynamoDB" = perl6-on-nix.libraries."Amazon::DynamoDB:ver<0.4.0>";
-    "Algorithm::SkewHeap" = perl6-on-nix.libraries."Algorithm::SkewHeap:ver<0.0.1>";
-    "Email::Address" = perl6-on-nix.libraries."Email::Address:ver<0.2>";
-    "P5lcfirst" = perl6-on-nix.libraries."P5lcfirst:ver<0.0.7>";
-    "SDL2::Raw" = perl6-on-nix.libraries."SDL2::Raw:ver<0.3>";
-    "Text::BorderedBlock" = perl6-on-nix.libraries."Text::BorderedBlock:ver<0.1.0>";
-    "Grammar::ErrorReporting" = perl6-on-nix.libraries."Grammar::ErrorReporting:ver<0.2>";
-    "Backtrace::AsHTML" = perl6-on-nix.libraries."Backtrace::AsHTML:ver<0.0.1>";
-    "XML::Actions" = perl6-on-nix.libraries."XML::Actions:ver<0.3.2>";
-    "App::MPD::AutoQueue" = perl6-on-nix.libraries."App::MPD::AutoQueue:ver<0.1.1>";
-    "P5__DATA__" = perl6-on-nix.libraries."P5__DATA__:ver<0.0.1>";
-    "Color::Names" = perl6-on-nix.libraries."Color::Names:ver<1.001003>";
-    "Image::Libexif" = perl6-on-nix.libraries."Image::Libexif:ver<0.1.0>";
-    "Date::Calendar::Hebrew" = perl6-on-nix.libraries."Date::Calendar::Hebrew:ver<0.0.1>";
-    "Sparrowdo::VSTS::YAML::MsBuild" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::MsBuild:ver<0.0.2>";
-    "Archive::SimpleZip" = perl6-on-nix.libraries."Archive::SimpleZip:ver<0.2.3>";
-    "XML::Class" = perl6-on-nix.libraries."XML::Class:ver<0.0.7>";
-    "Math::Polygons" = perl6-on-nix.libraries."Math::Polygons:ver<0.0.4>";
-    "Cro::Core" = perl6-on-nix.libraries."Cro::Core:ver<0.8.1>";
-    "DB::SQLite" = perl6-on-nix.libraries."DB::SQLite:ver<0.3>";
-    "CompUnit::Repository::Mask" = perl6-on-nix.libraries."CompUnit::Repository::Mask:ver<0.0.1>";
-    "Git::Log" = perl6-on-nix.libraries."Git::Log:ver<0.2.0>";
-    "Graphics::TinyTIFF" = perl6-on-nix.libraries."Graphics::TinyTIFF:ver<0.0.6>";
-    "UNIX::Privileges" = perl6-on-nix.libraries."UNIX::Privileges:ver<0.1.2>";
-    "Sys::Hostname" = perl6-on-nix.libraries."Sys::Hostname:ver<0.0.7>";
-    "Constants::Netinet::In" = perl6-on-nix.libraries."Constants::Netinet::In:ver<0.0.1>";
-    "META6" = perl6-on-nix.libraries."META6:ver<0.0.23>";
-    "Numeric::Nearest" = perl6-on-nix.libraries."Numeric::Nearest:ver<0.5.1>";
-    "PDF::ISO_32000" = perl6-on-nix.libraries."PDF::ISO_32000:ver<0.0.6>";
-    "TMap" = perl6-on-nix.libraries."TMap:ver<0.2.0>";
-    "FindBin" = perl6-on-nix.libraries."FindBin:ver<0.4.3>";
-    "Sparrowdo::VSTS::YAML::Build::Assembly::Patch" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::Build::Assembly::Patch:ver<1.0.0>";
-    "Log::Syslog::Native" = perl6-on-nix.libraries."Log::Syslog::Native:ver<0.0.9>";
-    "DOM::Tiny" = perl6-on-nix.libraries."DOM::Tiny:ver<0.5.2>";
-    "Acme::Insult::Lala" = perl6-on-nix.libraries."Acme::Insult::Lala:ver<0.0.4>";
-    "P5chomp" = perl6-on-nix.libraries."P5chomp:ver<0.0.5>";
-    "Digest::SHA256::Native" = perl6-on-nix.libraries."Digest::SHA256::Native:ver<0.03>";
-    "App::Assixt" = perl6-on-nix.libraries."App::Assixt:ver<1.0.0>";
-    "App::Unicode::Mangle" = perl6-on-nix.libraries."App::Unicode::Mangle:ver<1.0.1>";
-    "App::ModuleSnap" = perl6-on-nix.libraries."App::ModuleSnap:ver<0.0.11>";
-    "Getopt::Long" = perl6-on-nix.libraries."Getopt::Long:ver<0.1.2>";
-    "P5push" = perl6-on-nix.libraries."P5push:ver<0.0.4>";
-    "RPi::Device::ST7036" = perl6-on-nix.libraries."RPi::Device::ST7036:ver<0.0.3>";
-    "URI::FetchFile" = perl6-on-nix.libraries."URI::FetchFile:ver<0.0.3>";
-    "Config::Parser::yaml" = perl6-on-nix.libraries."Config::Parser::yaml:ver<1.0.1>";
-    "IRC::Client::Plugin::NickServ" = perl6-on-nix.libraries."IRC::Client::Plugin::NickServ:ver<0.1.1>";
-    "Geo::Coder::OpenCage" = perl6-on-nix.libraries."Geo::Coder::OpenCage:ver<1.0>";
-    "Ops::SI" = perl6-on-nix.libraries."Ops::SI:ver<0.1.1>";
-    "P5math" = perl6-on-nix.libraries."P5math:ver<0.0.2>";
-    "FindBin::libs" = perl6-on-nix.libraries."FindBin::libs:ver<0.2.1>";
-    "MsgPack" = perl6-on-nix.libraries."MsgPack:ver<0.0.7>";
-    "JSON::Class" = perl6-on-nix.libraries."JSON::Class:ver<0.0.13>";
-    "P5substr" = perl6-on-nix.libraries."P5substr:ver<0.0.4>";
-    "Sub::Util" = perl6-on-nix.libraries."Sub::Util:ver<0.0.3>";
-    "Attribute::Lazy" = perl6-on-nix.libraries."Attribute::Lazy:ver<0.0.4>";
-    "StrictClass" = perl6-on-nix.libraries."StrictClass:ver<0.0.3>";
-    "CommonMark" = perl6-on-nix.libraries."CommonMark:ver<0.0.5>";
-    "P5study" = perl6-on-nix.libraries."P5study:ver<0.0.3>";
-    "ENIGMA::Machine" = perl6-on-nix.libraries."ENIGMA::Machine:ver<0.0.2>";
-    "ProcStats" = perl6-on-nix.libraries."ProcStats:ver<0.2.1>";
-    "Acme::Test::Module" = perl6-on-nix.libraries."Acme::Test::Module:ver<1.0.4>";
-    "Config::DataLang::Refine" = perl6-on-nix.libraries."Config::DataLang::Refine:ver<0.7.3>";
-    "Lingua::Palindrome" = perl6-on-nix.libraries."Lingua::Palindrome:ver<0.1.0>";
-    "Sparrowdo::Cordova::OSx::Build" = perl6-on-nix.libraries."Sparrowdo::Cordova::OSx::Build:ver<0.0.7>";
-    "Oyatul" = perl6-on-nix.libraries."Oyatul:ver<0.0.6>";
-    "P5times" = perl6-on-nix.libraries."P5times:ver<0.0.6>";
-    "GraphQL::Html" = perl6-on-nix.libraries."GraphQL::Html:ver<0.7.0>";
-    "Font::AFM" = perl6-on-nix.libraries."Font::AFM:ver<1.24.2>";
-    "Lumberjack" = perl6-on-nix.libraries."Lumberjack:ver<0.0.9>";
-    "Sparrowdo::VSTS::YAML::Nuget::Build" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::Nuget::Build:ver<0.0.3>";
-    "Audio::Libshout" = perl6-on-nix.libraries."Audio::Libshout:ver<0.0.11>";
-    "P5fileno" = perl6-on-nix.libraries."P5fileno:ver<0.0.3>";
-    "Math::FFT::Libfftw3" = perl6-on-nix.libraries."Math::FFT::Libfftw3:ver<0.1.2>";
-    "InterceptAllMethods" = perl6-on-nix.libraries."InterceptAllMethods:ver<0.0.1>";
-    "App::Prove6" = perl6-on-nix.libraries."App::Prove6:ver<0.0.10>";
-    "Game::Sudoku" = perl6-on-nix.libraries."Game::Sudoku:ver<1.1.2>";
-    "Chronic" = perl6-on-nix.libraries."Chronic:ver<0.0.7>";
-    "P5sleep" = perl6-on-nix.libraries."P5sleep:ver<0.0.7>";
-    "P5opendir" = perl6-on-nix.libraries."P5opendir:ver<0.0.4>";
-    "SQL::Lexer" = perl6-on-nix.libraries."SQL::Lexer:ver<0.2.2>";
-    "String::Fold" = perl6-on-nix.libraries."String::Fold:ver<0.1.2>";
-    "I18N::LangTags" = perl6-on-nix.libraries."I18N::LangTags:ver<0.1.0>";
-    "File::XML::DMARC::Google" = perl6-on-nix.libraries."File::XML::DMARC::Google:ver<0.1.1>";
-    "Vroom::Reveal" = perl6-on-nix.libraries."Vroom::Reveal:ver<0.0.2>";
-    "Lingua::Lipogram" = perl6-on-nix.libraries."Lingua::Lipogram:ver<0.1.0>";
-    "Net::BGP" = perl6-on-nix.libraries."Net::BGP:ver<0.1.2>";
-    "DB" = perl6-on-nix.libraries."DB:ver<0.4>";
-    "Template::Anti" = perl6-on-nix.libraries."Template::Anti:ver<0.5.2>";
-    "Sparrowdo::VSTS::YAML::Angular::Build" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::Angular::Build:ver<0.0.6>";
-    "P5quotemeta" = perl6-on-nix.libraries."P5quotemeta:ver<0.0.3>";
-    "US-ASCII" = perl6-on-nix.libraries."US-ASCII:ver<0.6.6>";
-    "P5lc" = perl6-on-nix.libraries."P5lc:ver<0.0.6>";
-    "JSON::Infer" = perl6-on-nix.libraries."JSON::Infer:ver<0.0.17>";
-    "Cro::RPC::JSON" = perl6-on-nix.libraries."Cro::RPC::JSON:ver<0.0.5>";
-    "Cro::ZeroMQ" = perl6-on-nix.libraries."Cro::ZeroMQ:ver<0.8.1>";
-    "Printing::Jdf" = perl6-on-nix.libraries."Printing::Jdf:ver<0.1.1>";
-    "TAP" = perl6-on-nix.libraries."TAP:ver<0.0.9>";
-    "Sub::Name" = perl6-on-nix.libraries."Sub::Name:ver<0.0.6>";
-    "Tie::Hash" = perl6-on-nix.libraries."Tie::Hash:ver<0.0.4>";
-    "Lumberjack::Application" = perl6-on-nix.libraries."Lumberjack::Application:ver<0.0.7>";
-    "META6::To::Man" = perl6-on-nix.libraries."META6::To::Man:ver<0.2.0>";
-    "Sys::Utmp" = perl6-on-nix.libraries."Sys::Utmp:ver<0.0.12>";
-    "Map::Ordered" = perl6-on-nix.libraries."Map::Ordered:ver<0.0.2>";
-    "Podviewer" = perl6-on-nix.libraries."Podviewer:ver<0.0.2>";
-    "App::CPAN" = perl6-on-nix.libraries."App::CPAN:ver<0.0.2>";
-    "Data::Selector" = perl6-on-nix.libraries."Data::Selector:ver<v.1.02>";
-    "App::AizuOnlineJudge" = perl6-on-nix.libraries."App::AizuOnlineJudge:ver<0.0.2>";
-    "Method::Also" = perl6-on-nix.libraries."Method::Also:ver<0.0.2>";
-    "Net::servent" = perl6-on-nix.libraries."Net::servent:ver<0.0.1>";
-    "Attribute::Predicate" = perl6-on-nix.libraries."Attribute::Predicate:ver<0.0.1>";
-    "Sparrowform" = perl6-on-nix.libraries."Sparrowform:ver<0.0.15>";
-    "Unix::errno" = perl6-on-nix.libraries."Unix::errno:ver<0.0.2>";
-    "Term::ReadKey" = perl6-on-nix.libraries."Term::ReadKey:ver<0.0.1>";
-    "MongoDB" = perl6-on-nix.libraries."MongoDB:ver<0.43.8>";
-    "Unix::Groups" = perl6-on-nix.libraries."Unix::Groups:ver<0.0.4>";
-    "Smack" = perl6-on-nix.libraries."Smack:ver<0.4.0>";
-    "Verge::RPC::Client" = perl6-on-nix.libraries."Verge::RPC::Client:ver<0.0.2>";
-    "Algorithm::HierarchicalPAM" = perl6-on-nix.libraries."Algorithm::HierarchicalPAM:ver<0.0.1>";
-    "Math::Curves" = perl6-on-nix.libraries."Math::Curves:ver<0.0.1>";
-    "ScaleVec" = perl6-on-nix.libraries."ScaleVec:ver<0.0.5>";
-    "Net::LibIDN" = perl6-on-nix.libraries."Net::LibIDN:ver<0.0.2>";
-    "Constants::Net::If" = perl6-on-nix.libraries."Constants::Net::If:ver<0.0.1>";
-    "Math::Factorial::Operator" = perl6-on-nix.libraries."Math::Factorial::Operator:ver<0.1.2>";
-    "EuclideanRhythm" = perl6-on-nix.libraries."EuclideanRhythm:ver<0.0.3>";
-    "Grammar::Common" = perl6-on-nix.libraries."Grammar::Common:ver<0.2.0>";
-    "Constants::Sys::Socket" = perl6-on-nix.libraries."Constants::Sys::Socket:ver<0.0.1>";
-    "WriteOnceHash" = perl6-on-nix.libraries."WriteOnceHash:ver<0.0.3>";
-    "QM" = perl6-on-nix.libraries."QM:ver<0.0.2>";
-    "File::Zip" = perl6-on-nix.libraries."File::Zip:ver<0.1.2>";
-    "Text::CSV" = perl6-on-nix.libraries."Text::CSV:ver<0.008>";
-    "Adverb::Eject" = perl6-on-nix.libraries."Adverb::Eject:ver<0.0.1>";
-    "Lingua::Stopwords" = perl6-on-nix.libraries."Lingua::Stopwords:ver<0.0.3>";
-    "SQL::NamedPlaceholder" = perl6-on-nix.libraries."SQL::NamedPlaceholder:ver<0.1.1>";
-    "Fcntl" = perl6-on-nix.libraries."Fcntl:ver<0.0.1>";
-    "P5defined" = perl6-on-nix.libraries."P5defined:ver<0.0.2>";
-    "File::Stat" = perl6-on-nix.libraries."File::Stat:ver<0.0.1>";
-    "Wkhtmltox" = perl6-on-nix.libraries."Wkhtmltox:ver<0.0.1>";
-    "Serialise::Map" = perl6-on-nix.libraries."Serialise::Map:ver<0.1.1>";
-    "Tomtit" = perl6-on-nix.libraries."Tomtit:ver<0.1.0>";
-    "P5tie" = perl6-on-nix.libraries."P5tie:ver<0.0.11>";
-    "UEncoding" = perl6-on-nix.libraries."UEncoding:ver<0.1.0>";
-    "Reaper::Control" = perl6-on-nix.libraries."Reaper::Control:ver<0.0.2>";
-    "Config::Parser::json" = perl6-on-nix.libraries."Config::Parser::json:ver<0.1.0>";
-    "MQ::Posix" = perl6-on-nix.libraries."MQ::Posix:ver<0.0.2>";
-    "JSON::Tiny" = perl6-on-nix.libraries."JSON::Tiny:ver<1.0>";
-    "Tie::StdHash" = perl6-on-nix.libraries."Tie::StdHash:ver<0.0.4>";
-    "WebService::AWS::S3" = perl6-on-nix.libraries."WebService::AWS::S3:ver<0.0.2>";
-    "OpenAPI::Schema::Validate" = perl6-on-nix.libraries."OpenAPI::Schema::Validate:ver<1.0.7>";
-    "Cro::HTTP::Test" = perl6-on-nix.libraries."Cro::HTTP::Test:ver<0.8.0>";
-    "Memoize" = perl6-on-nix.libraries."Memoize:ver<0.0.4>";
-    "Libclang" = perl6-on-nix.libraries."Libclang:ver<0.2.0>";
-    "Terminal::Table" = perl6-on-nix.libraries."Terminal::Table:ver<0.0.7>";
-    "Range::SetOps" = perl6-on-nix.libraries."Range::SetOps:ver<0.0.3>";
-    "Perl6::Tidy" = perl6-on-nix.libraries."Perl6::Tidy:ver<0.0.7>";
-    "PKCS5" = perl6-on-nix.libraries."PKCS5:ver<v.0.1.6.2>";
-    "Text::More" = perl6-on-nix.libraries."Text::More:ver<0.1.8>";
-    "Array::Sparse" = perl6-on-nix.libraries."Array::Sparse:ver<0.0.4>";
-    "P5uc" = perl6-on-nix.libraries."P5uc:ver<0.0.3>";
-    "Uzu" = perl6-on-nix.libraries."Uzu:ver<0.3.4>";
-    "Util::Bitfield" = perl6-on-nix.libraries."Util::Bitfield:ver<0.0.4>";
-    "Cro::TLS" = perl6-on-nix.libraries."Cro::TLS:ver<0.8.1>";
-    "BlkMeV" = perl6-on-nix.libraries."BlkMeV:ver<0.2.0>";
-    "List::Util" = perl6-on-nix.libraries."List::Util:ver<0.0.7>";
-    "Device::Velleman::K8055" = perl6-on-nix.libraries."Device::Velleman::K8055:ver<0.0.3>";
-    "AttrX::Mooish" = perl6-on-nix.libraries."AttrX::Mooish:ver<0.6.2>";
-    "CPAN::Uploader::Tiny" = perl6-on-nix.libraries."CPAN::Uploader::Tiny:ver<0.0.6>";
-    "PowerNap" = perl6-on-nix.libraries."PowerNap:ver<0.0.2>";
-    "pack6" = perl6-on-nix.libraries."pack6:ver<0.2>";
-    "DateTime::Monotonic" = perl6-on-nix.libraries."DateTime::Monotonic:ver<0.0.4>";
-    "Munge" = perl6-on-nix.libraries."Munge:ver<0.1>";
-    "HTTP::Tinyish" = perl6-on-nix.libraries."HTTP::Tinyish:ver<0.1.4>";
-    "OO::Plugin" = perl6-on-nix.libraries."OO::Plugin:ver<0.0.7>";
-    "TimeUnit" = perl6-on-nix.libraries."TimeUnit:ver<0.1.2>";
-    "Sparrowdo::VSTS::YAML::Cordova" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::Cordova:ver<0.0.17>";
-    "Tuple" = perl6-on-nix.libraries."Tuple:ver<0.0.5>";
-    "TCP::LowLevel" = perl6-on-nix.libraries."TCP::LowLevel:ver<0.0.2>";
-    "Gnome::Gdk3" = perl6-on-nix.libraries."Gnome::Gdk3:ver<0.14.9>";
-    "List::UtilsBy" = perl6-on-nix.libraries."List::UtilsBy:ver<0.0.4>";
-    "Oddmuse6" = perl6-on-nix.libraries."Oddmuse6:ver<0.0.4>";
-    "PDF::Class" = perl6-on-nix.libraries."PDF::Class:ver<0.3.7>";
-    "Linux::Fuser" = perl6-on-nix.libraries."Linux::Fuser:ver<0.0.11>";
-    "Text::Names" = perl6-on-nix.libraries."Text::Names:ver<0.0.2>";
-    "HTML::Lazy" = perl6-on-nix.libraries."HTML::Lazy:ver<0.0.1>";
-    "Hastebin" = perl6-on-nix.libraries."Hastebin:ver<0.0.4>";
-    "Geo::Coordinates::UTM" = perl6-on-nix.libraries."Geo::Coordinates::UTM:ver<0.9.0>";
-    "Color::Scheme" = perl6-on-nix.libraries."Color::Scheme:ver<1.001001>";
-    "AccessorFacade" = perl6-on-nix.libraries."AccessorFacade:ver<0.0.9>";
-    "P5rand" = perl6-on-nix.libraries."P5rand:ver<0.0.5>";
-    "Operator::grandpa" = perl6-on-nix.libraries."Operator::grandpa:ver<1.001001>";
-    "Trait::Env" = perl6-on-nix.libraries."Trait::Env:ver<0.5.2>";
-    "Audio::Playlist::JSPF" = perl6-on-nix.libraries."Audio::Playlist::JSPF:ver<0.0.3>";
-    "Acme::Cow" = perl6-on-nix.libraries."Acme::Cow:ver<0.0.4>";
-    "Tinky" = perl6-on-nix.libraries."Tinky:ver<0.0.8>";
-    "P5ord" = perl6-on-nix.libraries."P5ord:ver<0.0.5>";
-    "GraphQL::Server" = perl6-on-nix.libraries."GraphQL::Server:ver<0.1>";
-    "User::pwent" = perl6-on-nix.libraries."User::pwent:ver<0.0.1>";
-    "P5length" = perl6-on-nix.libraries."P5length:ver<0.0.4>";
-    "SemiXML" = perl6-on-nix.libraries."SemiXML:ver<v.0.48.1>";
-    "JSON::Marshal" = perl6-on-nix.libraries."JSON::Marshal:ver<0.0.18>";
-    "Getopt::Advance" = perl6-on-nix.libraries."Getopt::Advance:ver<1.1.4>";
-    "Archive::Libarchive::Raw" = perl6-on-nix.libraries."Archive::Libarchive::Raw:ver<0.0.9>";
-    "Object::Delayed" = perl6-on-nix.libraries."Object::Delayed:ver<0.0.6>";
-    "Sparky" = perl6-on-nix.libraries."Sparky:ver<0.0.24>";
-    "Sparrowdo::VSTS::YAML::Build" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::Build:ver<0.0.7>";
-    "Path::Finder" = perl6-on-nix.libraries."Path::Finder:ver<0.2.0>";
-    "P5getservbyname" = perl6-on-nix.libraries."P5getservbyname:ver<0.0.4>";
-    "P5__FILE__" = perl6-on-nix.libraries."P5__FILE__:ver<0.0.2>";
-    "Scalar::Util" = perl6-on-nix.libraries."Scalar::Util:ver<0.0.5>";
-    "Cofra" = perl6-on-nix.libraries."Cofra:ver<0.1.1>";
-    "Linux::Cpuinfo" = perl6-on-nix.libraries."Linux::Cpuinfo:ver<0.0.9>";
-    "Sparrowdo::Cordova::OSx::Fortify" = perl6-on-nix.libraries."Sparrowdo::Cordova::OSx::Fortify:ver<0.0.1>";
-    "Term::Choose" = perl6-on-nix.libraries."Term::Choose:ver<1.5.9>";
-    "FINALIZER" = perl6-on-nix.libraries."FINALIZER:ver<0.0.5>";
-    "ULID" = perl6-on-nix.libraries."ULID:ver<0.1.0>";
-    "Cro::HTTP" = perl6-on-nix.libraries."Cro::HTTP:ver<0.8.1>";
-    "Text::Sift4" = perl6-on-nix.libraries."Text::Sift4:ver<0.0.6>";
-    "Tika" = perl6-on-nix.libraries."Tika:ver<0.1.0>";
-    "Gnome::N" = perl6-on-nix.libraries."Gnome::N:ver<0.13.5>";
-    "Term::Choose::Util" = perl6-on-nix.libraries."Term::Choose::Util:ver<1.2.9>";
-    "Sparky::Plugin::Notify::Email" = perl6-on-nix.libraries."Sparky::Plugin::Notify::Email:ver<0.0.1>";
-    "P5shift" = perl6-on-nix.libraries."P5shift:ver<0.0.4>";
-    "MagickWand" = perl6-on-nix.libraries."MagickWand:ver<0.1.0>";
-    "JSON::Fast" = perl6-on-nix.libraries."JSON::Fast:ver<0.9.18>";
-    "HTTP::Server::Tiny" = perl6-on-nix.libraries."HTTP::Server::Tiny:ver<0.0.1>";
-    "Libui" = perl6-on-nix.libraries."Libui:ver<0.0.3>";
-    "DirHandle" = perl6-on-nix.libraries."DirHandle:ver<0.0.2>";
-    "P5-X" = perl6-on-nix.libraries."P5-X:ver<0.0.2>";
-    "Audio::Hydrogen" = perl6-on-nix.libraries."Audio::Hydrogen:ver<0.0.4>";
-    "LIVR" = perl6-on-nix.libraries."LIVR:ver<2.1.0>";
-    "RPi::Device::PiGlow" = perl6-on-nix.libraries."RPi::Device::PiGlow:ver<0.0.3>";
-    "Acme::Cow6" = perl6-on-nix.libraries."Acme::Cow6:ver<0.0.1>";
-    "Proc::More" = perl6-on-nix.libraries."Proc::More:ver<0.3.0>";
-    "P5ref" = perl6-on-nix.libraries."P5ref:ver<0.0.4>";
-    "RPi::ButtonWatcher" = perl6-on-nix.libraries."RPi::ButtonWatcher:ver<0.0.1>";
-    "Concurrent::Trie" = perl6-on-nix.libraries."Concurrent::Trie:ver<1.1>";
-    "HandleSupplier" = perl6-on-nix.libraries."HandleSupplier:ver<0.0.1>";
-    "Audio::Convert::Samplerate" = perl6-on-nix.libraries."Audio::Convert::Samplerate:ver<0.0.8>";
-    "Ranker" = perl6-on-nix.libraries."Ranker:ver<0.0.2>";
-    "zef" = perl6-on-nix.libraries."zef:ver<0.1.15>";
-    "Acme::Don't" = perl6-on-nix.libraries."Acme::Don't:ver<0.0.2>";
-    "Log::Minimal" = perl6-on-nix.libraries."Log::Minimal:ver<0.0.1>";
-    "Inline" = perl6-on-nix.libraries."Inline:ver<1.2.1>";
-    "Sparrowdo::VSTS::YAML::Nuget" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::Nuget:ver<0.0.2>";
-    "Grid" = perl6-on-nix.libraries."Grid:ver<0.0.2>";
-    "Hash::Agnostic" = perl6-on-nix.libraries."Hash::Agnostic:ver<0.0.4>";
-    "Inline::Perl5" = perl6-on-nix.libraries."Inline::Perl5:ver<0.40>";
-    "CucumisSextus" = perl6-on-nix.libraries."CucumisSextus:ver<0.1.1>";
-    "P5seek" = perl6-on-nix.libraries."P5seek:ver<0.0.2>";
-    "FastCGI::NativeCall::PSGI" = perl6-on-nix.libraries."FastCGI::NativeCall::PSGI:ver<0.0.4>";
-    "Concurrent::Stack" = perl6-on-nix.libraries."Concurrent::Stack:ver<1.2>";
-    "IP::Addr" = perl6-on-nix.libraries."IP::Addr:ver<0.0.2>";
-    "JSON::Pointer" = perl6-on-nix.libraries."JSON::Pointer:ver<1.0>";
-    "Crypt::CAST5" = perl6-on-nix.libraries."Crypt::CAST5:ver<0.1.0>";
-    "Lumberjack::Dispatcher::Syslog" = perl6-on-nix.libraries."Lumberjack::Dispatcher::Syslog:ver<0.0.3>";
-    "ANTLR4::Grammar" = perl6-on-nix.libraries."ANTLR4::Grammar:ver<0.6.2>";
-    "CI::Gen" = perl6-on-nix.libraries."CI::Gen:ver<0.0.1>";
-    "File::Metadata::Libextractor" = perl6-on-nix.libraries."File::Metadata::Libextractor:ver<0.0.2>";
-    "App::nm2perl6" = perl6-on-nix.libraries."App::nm2perl6:ver<0.0.3>";
-    "Distribution::Builder::MakeFromJSON" = perl6-on-nix.libraries."Distribution::Builder::MakeFromJSON:ver<0.4>";
-    "ModelDB" = perl6-on-nix.libraries."ModelDB:ver<0.0.3>";
-    "DB::MySQL" = perl6-on-nix.libraries."DB::MySQL:ver<0.5>";
-    "JSON::Path" = perl6-on-nix.libraries."JSON::Path:ver<1.7>";
-    "Config::Parser::toml" = perl6-on-nix.libraries."Config::Parser::toml:ver<1.0.1>";
-    "Seq::Bounded" = perl6-on-nix.libraries."Seq::Bounded:ver<1.0.1>";
-    "Readline" = perl6-on-nix.libraries."Readline:ver<0.1.5>";
-    "vars" = perl6-on-nix.libraries."vars:ver<0.0.3>";
-    "Cache::Async" = perl6-on-nix.libraries."Cache::Async:ver<0.1.6>";
-    "MessagePack::Class" = perl6-on-nix.libraries."MessagePack::Class:ver<0.0.2>";
-    "Net::IP" = perl6-on-nix.libraries."Net::IP:ver<1.0.0>";
-    "Test::META" = perl6-on-nix.libraries."Test::META:ver<0.0.16>";
-    "MPD::Client" = perl6-on-nix.libraries."MPD::Client:ver<0.1.3>";
-    "Pod::Render" = perl6-on-nix.libraries."Pod::Render:ver<0.8.0>";
-    "Algorithm::Evolutionary::Simple" = perl6-on-nix.libraries."Algorithm::Evolutionary::Simple:ver<0.0.8>";
-    "I18n::Simple" = perl6-on-nix.libraries."I18n::Simple:ver<0.1.2>";
-    "Native::Exec" = perl6-on-nix.libraries."Native::Exec:ver<0.1>";
-    "Zodiac::Chinese" = perl6-on-nix.libraries."Zodiac::Chinese:ver<0.0.1>";
-    "Sub::Memoized" = perl6-on-nix.libraries."Sub::Memoized:ver<0.0.3>";
-    "Red" = perl6-on-nix.libraries."Red:ver<0.0.3>";
-    "Scheduler::DelayBetween" = perl6-on-nix.libraries."Scheduler::DelayBetween:ver<1.3.1>";
-    "Library" = perl6-on-nix.libraries."Library:ver<0.13.4>";
-    "Music::Engine" = perl6-on-nix.libraries."Music::Engine:ver<0.0.2>";
-    "List::AllUtils" = perl6-on-nix.libraries."List::AllUtils:ver<0.0.4>";
-    "Audio::Sndfile" = perl6-on-nix.libraries."Audio::Sndfile:ver<0.0.13>";
-    "Gnome::GObject" = perl6-on-nix.libraries."Gnome::GObject:ver<0.13.14>";
-    "Crypt::RSA" = perl6-on-nix.libraries."Crypt::RSA:ver<0.1.0>";
-    "Date::Names" = perl6-on-nix.libraries."Date::Names:ver<2.0.2>";
-    "IO::Blob" = perl6-on-nix.libraries."IO::Blob:ver<0.0.1>";
-    "LibraryCheck" = perl6-on-nix.libraries."LibraryCheck:ver<0.0.8>";
-    "P5getpwnam" = perl6-on-nix.libraries."P5getpwnam:ver<0.0.5>";
-    "GDBM" = perl6-on-nix.libraries."GDBM:ver<0.0.4>";
-    "LogP6-Writer-Journald" = perl6-on-nix.libraries."LogP6-Writer-Journald:ver<1.3.1>";
-    "RDF::Turtle" = perl6-on-nix.libraries."RDF::Turtle:ver<0.0.3>";
-    "HTTP::Headers" = perl6-on-nix.libraries."HTTP::Headers:ver<0.4.0>";
-    "FileSystem::Parent" = perl6-on-nix.libraries."FileSystem::Parent:ver<0.3.4>";
-    "CroX::HTTP::FallbackPassthru" = perl6-on-nix.libraries."CroX::HTTP::FallbackPassthru:ver<0.1>";
-    "Lingua::Stem::Es" = perl6-on-nix.libraries."Lingua::Stem::Es:ver<0.0.1>";
-    "P5hex" = perl6-on-nix.libraries."P5hex:ver<0.0.5>";
-    "HTTP::Supply" = perl6-on-nix.libraries."HTTP::Supply:ver<0.3.5>";
-    "Terminal::Getpass" = perl6-on-nix.libraries."Terminal::Getpass:ver<0.0.6>";
-    "Config" = perl6-on-nix.libraries."Config:ver<2.1.0>";
-    "Perl6::Ecosystem" = perl6-on-nix.libraries."Perl6::Ecosystem:ver<0.0.3>";
-    "Perl6::Parser" = perl6-on-nix.libraries."Perl6::Parser:ver<0.3.0>";
-    "Object::Trampoline" = perl6-on-nix.libraries."Object::Trampoline:ver<0.0.6>";
-    "Grammar::PrettyErrors" = perl6-on-nix.libraries."Grammar::PrettyErrors:ver<0.0.3>";
-    "Seq::PreFetch" = perl6-on-nix.libraries."Seq::PreFetch:ver<0.1.0>";
-    "Cro::HTTP::Session::Red" = perl6-on-nix.libraries."Cro::HTTP::Session::Red:ver<0.0.2>";
-    "Number::More" = perl6-on-nix.libraries."Number::More:ver<0.2.0>";
-    "Bits" = perl6-on-nix.libraries."Bits:ver<0.0.2>";
-    "Sparrowdo::VSTS::YAML::Update::Azure::SSL" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::Update::Azure::SSL:ver<0.0.1>";
-    "Cro::WebApp" = perl6-on-nix.libraries."Cro::WebApp:ver<0.8.1>";
-    "Pod::To::HTMLBody" = perl6-on-nix.libraries."Pod::To::HTMLBody:ver<0.0.1>";
-    "Doublephone" = perl6-on-nix.libraries."Doublephone:ver<0.0.5>";
-    "AWS::Session" = perl6-on-nix.libraries."AWS::Session:ver<0.8.0>";
-    "Object::Permission::Group" = perl6-on-nix.libraries."Object::Permission::Group:ver<0.0.3>";
-    "Propius" = perl6-on-nix.libraries."Propius:ver<0.1.1>";
-    "Bailador" = perl6-on-nix.libraries."Bailador:ver<0.0.18>";
-    "Test::Declare" = perl6-on-nix.libraries."Test::Declare:ver<0.0.2>";
-    "Sparky::Plugin::Hello" = perl6-on-nix.libraries."Sparky::Plugin::Hello:ver<0.0.2>";
-    "AccountableBagHash" = perl6-on-nix.libraries."AccountableBagHash:ver<0.0.2>";
-    "Getopt::ForClass" = perl6-on-nix.libraries."Getopt::ForClass:ver<0.2>";
-    "epoll" = perl6-on-nix.libraries."epoll:ver<0.3>";
-    "Net::NNG" = perl6-on-nix.libraries."Net::NNG:ver<0.0.1>";
-    "OAuth2::Client::Google" = perl6-on-nix.libraries."OAuth2::Client::Google:ver<0.1.1>";
-    "Gnome::Gtk3" = perl6-on-nix.libraries."Gnome::Gtk3:ver<0.17.9>";
-    "Algorithm::MinMaxHeap" = perl6-on-nix.libraries."Algorithm::MinMaxHeap:ver<0.13.4>";
-    "Bailador::Plugin::NamedQueries" = perl6-on-nix.libraries."Bailador::Plugin::NamedQueries:ver<0.1001>";
-    "IRC::Client::Plugin::Ignore" = perl6-on-nix.libraries."IRC::Client::Plugin::Ignore:ver<0.1.0>";
-    "Audio::Encode::LameMP3" = perl6-on-nix.libraries."Audio::Encode::LameMP3:ver<0.0.11>";
-    "RPi::Device::SMBus" = perl6-on-nix.libraries."RPi::Device::SMBus:ver<0.0.4>";
-    "Term::TablePrint" = perl6-on-nix.libraries."Term::TablePrint:ver<1.5.0>";
-    "Matrix::Bot" = perl6-on-nix.libraries."Matrix::Bot:ver<0.2.0>";
-    "IConv" = perl6-on-nix.libraries."IConv:ver<0.0.2>";
-    "Router::Boost" = perl6-on-nix.libraries."Router::Boost:ver<0.0.1>";
-    "unprint" = perl6-on-nix.libraries."unprint:ver<0.0.2>";
-    "IP::Random" = perl6-on-nix.libraries."IP::Random:ver<0.0.10>";
-    "Slang::Predicate" = perl6-on-nix.libraries."Slang::Predicate:ver<0.0.1>";
-    "P5reverse" = perl6-on-nix.libraries."P5reverse:ver<0.0.5>";
-    "Digest::BubbleBabble" = perl6-on-nix.libraries."Digest::BubbleBabble:ver<0.0.2>";
-    "Dist::Helper" = perl6-on-nix.libraries."Dist::Helper:ver<1.0.0>";
-    "Acme::ಠ_ಠ" = perl6-on-nix.libraries."Acme::ಠ_ಠ:ver<0.0.1>";
-    "Font::FreeType" = perl6-on-nix.libraries."Font::FreeType:ver<0.2.0>";
-    "P5ucfirst" = perl6-on-nix.libraries."P5ucfirst:ver<0.0.4>";
-    "Hash::Timeout" = perl6-on-nix.libraries."Hash::Timeout:ver<0.0.1>";
-    "Operator::Listcat" = perl6-on-nix.libraries."Operator::Listcat:ver<1.0.0>";
-    "CheckSocket" = perl6-on-nix.libraries."CheckSocket:ver<0.0.6>";
-    "Compress::Zstd" = perl6-on-nix.libraries."Compress::Zstd:ver<0.0.1>";
-    "IRC::Client::Plugin::UrlTitle" = perl6-on-nix.libraries."IRC::Client::Plugin::UrlTitle:ver<1.1.3>";
-    "Array::Circular" = perl6-on-nix.libraries."Array::Circular:ver<0.0.1>";
-    "Audio::Silan" = perl6-on-nix.libraries."Audio::Silan:ver<0.0.7>";
-    "IoC" = perl6-on-nix.libraries."IoC:ver<0.0.4>";
-    "P5print" = perl6-on-nix.libraries."P5print:ver<0.0.3>";
-    "DB::Pg" = perl6-on-nix.libraries."DB::Pg:ver<0.6>";
-    "Term::Form" = perl6-on-nix.libraries."Term::Form:ver<1.2.6>";
-    "Neo4j" = perl6-on-nix.libraries."Neo4j:ver<0.1.0.1>";
-    "Cro::OpenAPI::RoutesFromDefinition" = perl6-on-nix.libraries."Cro::OpenAPI::RoutesFromDefinition:ver<1.0.1>";
-    "Pg::Notify" = perl6-on-nix.libraries."Pg::Notify:ver<0.0.3>";
-    "Test::Performance" = perl6-on-nix.libraries."Test::Performance:ver<0.2.1>";
-    "JSON::Hjson" = perl6-on-nix.libraries."JSON::Hjson:ver<0.0.1>";
-    "BitEnum" = perl6-on-nix.libraries."BitEnum:ver<0.1>";
-    "EventSource::Server" = perl6-on-nix.libraries."EventSource::Server:ver<0.0.4>";
-    "Sparrowdo::VSTS::YAML::Solution" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::Solution:ver<0.0.4>";
-    "P5getnetbyname" = perl6-on-nix.libraries."P5getnetbyname:ver<0.0.4>";
-    "XML::XPath" = perl6-on-nix.libraries."XML::XPath:ver<0.9.3>";
-    "Math::RungeKutta" = perl6-on-nix.libraries."Math::RungeKutta:ver<0.1>";
-    "Archive::Libarchive" = perl6-on-nix.libraries."Archive::Libarchive:ver<0.0.13>";
-    "Template::Prometheus" = perl6-on-nix.libraries."Template::Prometheus:ver<0.1.0>";
-    "Algorithm::LDA" = perl6-on-nix.libraries."Algorithm::LDA:ver<0.0.9>";
-    "Time::Repeat" = perl6-on-nix.libraries."Time::Repeat:ver<0.0.1>";
-    "Proc::InvokeEditor" = perl6-on-nix.libraries."Proc::InvokeEditor:ver<0.0.6>";
-    "Audio::Fingerprint::Chromaprint" = perl6-on-nix.libraries."Audio::Fingerprint::Chromaprint:ver<0.0.2>";
-    "Algorithm::Heap::Binary" = perl6-on-nix.libraries."Algorithm::Heap::Binary:ver<0.0.1>";
-    "Hash::LRU" = perl6-on-nix.libraries."Hash::LRU:ver<0.0.1>";
-    "NativeHelpers::Array" = perl6-on-nix.libraries."NativeHelpers::Array:ver<0.0.3>";
-    "Hash::MultiValue" = perl6-on-nix.libraries."Hash::MultiValue:ver<0.7>";
-    "TAP::Harness" = perl6-on-nix.libraries."TAP::Harness:ver<0.0.4>";
-    "P5built-ins" = perl6-on-nix.libraries."P5built-ins:ver<0.0.22>";
-    "Semaphore::ReadersWriters" = perl6-on-nix.libraries."Semaphore::ReadersWriters:ver<0.2.6.1>";
-    "Color::Named" = perl6-on-nix.libraries."Color::Named:ver<1.001002>";
-    "Proc::Editor" = perl6-on-nix.libraries."Proc::Editor:ver<0.0.2>";
-    "Stream::Buffered" = perl6-on-nix.libraries."Stream::Buffered:ver<0.0.1>";
-    "Decimal" = perl6-on-nix.libraries."Decimal:ver<0.3.1>";
-    "Object::Container" = perl6-on-nix.libraries."Object::Container:ver<0.0.2>";
-    "Type::EnumHOW" = perl6-on-nix.libraries."Type::EnumHOW:ver<0.0.1>";
-    "IO::Prompt" = perl6-on-nix.libraries."IO::Prompt:ver<0.0.2>";
-    "HTTP::Request::FormData" = perl6-on-nix.libraries."HTTP::Request::FormData:ver<0.2>";
-    "GraphQL" = perl6-on-nix.libraries."GraphQL:ver<0.6.1>";
-    "POFile" = perl6-on-nix.libraries."POFile:ver<0.7.2>";
-    "Version::Semantic" = perl6-on-nix.libraries."Version::Semantic:ver<0.1.0>";
-    "P5getpriority" = perl6-on-nix.libraries."P5getpriority:ver<0.0.5>";
-    "App::Game::Concentration" = perl6-on-nix.libraries."App::Game::Concentration:ver<0.0.2>";
-    "HTML::Escape" = perl6-on-nix.libraries."HTML::Escape:ver<0.0.1>";
-    "Lingua::Pangram" = perl6-on-nix.libraries."Lingua::Pangram:ver<0.1.1>";
-    "Time::localtime" = perl6-on-nix.libraries."Time::localtime:ver<0.0.3>";
-    "Net::Telnet" = perl6-on-nix.libraries."Net::Telnet:ver<0.0.1>";
-    "Net::LibIDN2" = perl6-on-nix.libraries."Net::LibIDN2:ver<0.1.0>";
-    "IRC::Client::Plugin::Github" = perl6-on-nix.libraries."IRC::Client::Plugin::Github:ver<0.1.5>";
-    "JSON::Name" = perl6-on-nix.libraries."JSON::Name:ver<0.0.4>";
-    "OEIS" = perl6-on-nix.libraries."OEIS:ver<1.0.0>";
-    "Sparrowdo" = perl6-on-nix.libraries."Sparrowdo:ver<0.1.1>";
-    "Sparrowdo::VSTS::YAML::Artifact" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::Artifact:ver<0.0.1>";
-    "JSON::Schema" = perl6-on-nix.libraries."JSON::Schema:ver<0.9>";
-    "Tinky::JSON" = perl6-on-nix.libraries."Tinky::JSON:ver<0.0.5>";
-    "Acme::Polyglot::Levenshtein::Damerau" = perl6-on-nix.libraries."Acme::Polyglot::Levenshtein::Damerau:ver<0.1>";
-    "LibCurl" = perl6-on-nix.libraries."LibCurl:ver<0.8>";
-    "Algorithm::Manacher" = perl6-on-nix.libraries."Algorithm::Manacher:ver<0.0.1>";
-    "Structable" = perl6-on-nix.libraries."Structable:ver<0.0.3>";
-    "App::Mi6" = perl6-on-nix.libraries."App::Mi6:ver<0.2.6>";
-    "Gnome::Gtk3::Glade" = perl6-on-nix.libraries."Gnome::Gtk3::Glade:ver<0.8.6>";
-    "Hash::Util" = perl6-on-nix.libraries."Hash::Util:ver<0.0.1>";
-    "Libarchive" = perl6-on-nix.libraries."Libarchive:ver<0.1>";
-    "P5caller" = perl6-on-nix.libraries."P5caller:ver<0.0.6>";
-    "CamelPub" = perl6-on-nix.libraries."CamelPub:ver<0.2.6>";
-    "HTML::Canvas::To::PDF" = perl6-on-nix.libraries."HTML::Canvas::To::PDF:ver<0.0.3>";
-    "Sparky::Plugin::Notify::Telegram" = perl6-on-nix.libraries."Sparky::Plugin::Notify::Telegram:ver<0.0.2>";
-    "User::grent" = perl6-on-nix.libraries."User::grent:ver<0.0.1>";
-    "P5pack" = perl6-on-nix.libraries."P5pack:ver<0.0.7>";
-    "Wikidata::API" = perl6-on-nix.libraries."Wikidata::API:ver<0.0.3>";
-    "App::FindSource" = perl6-on-nix.libraries."App::FindSource:ver<0.0.6>";
-    "Result" = perl6-on-nix.libraries."Result:ver<0.2.4>";
-    "Env" = perl6-on-nix.libraries."Env:ver<0.0.2>";
-    "Algorithm::AhoCorasick" = perl6-on-nix.libraries."Algorithm::AhoCorasick:ver<0.0.11>";
-    "Hash::Merge" = perl6-on-nix.libraries."Hash::Merge:ver<1.0.0>";
-    "WebService::Soundcloud" = perl6-on-nix.libraries."WebService::Soundcloud:ver<0.0.7>";
-    "P5fc" = perl6-on-nix.libraries."P5fc:ver<0.0.5>";
-    "MeCab" = perl6-on-nix.libraries."MeCab:ver<0.0.13>";
-    "CroX::HTTP::Transform::GraphQL" = perl6-on-nix.libraries."CroX::HTTP::Transform::GraphQL:ver<0.1>";
-    "App::Perl6LangServer" = perl6-on-nix.libraries."App::Perl6LangServer:ver<0.2.0>";
-    "P5rindex" = perl6-on-nix.libraries."P5rindex:ver<0.0.3>";
-    "Test::Color" = perl6-on-nix.libraries."Test::Color:ver<1.001002>";
-    "OpenAPI::Model" = perl6-on-nix.libraries."OpenAPI::Model:ver<1.0.4>";
-    "P5reset" = perl6-on-nix.libraries."P5reset:ver<0.0.3>";
-    "P5getprotobyname" = perl6-on-nix.libraries."P5getprotobyname:ver<0.0.3>";
-    "URL" = perl6-on-nix.libraries."URL:ver<0.2.0>";
-    "Supply::Timeout" = perl6-on-nix.libraries."Supply::Timeout:ver<0.0.1>";
-    "FastCGI::NativeCall" = perl6-on-nix.libraries."FastCGI::NativeCall:ver<0.0.6>";
-    "Sparrowdo::VSTS::YAML::DotNet" = perl6-on-nix.libraries."Sparrowdo::VSTS::YAML::DotNet:ver<0.0.2>";
-    "Test::Util::ServerPort" = perl6-on-nix.libraries."Test::Util::ServerPort:ver<0.0.2>";
-    "HTML::Canvas" = perl6-on-nix.libraries."HTML::Canvas:ver<0.0.7>";
-    "SDL2" = perl6-on-nix.libraries."SDL2:ver<0.0.1>";
-    "Path::Router" = perl6-on-nix.libraries."Path::Router:ver<0.5.0>";
-    "Test::Script::Output" = perl6-on-nix.libraries."Test::Script::Output:ver<0.0.4>";
-    "Geo::Hash" = perl6-on-nix.libraries."Geo::Hash:ver<0.0.1>";
-    "IO::Path::Mode" = perl6-on-nix.libraries."IO::Path::Mode:ver<0.0.7>";
-    "NativeHelpers::Callback" = perl6-on-nix.libraries."NativeHelpers::Callback:ver<0.1>";
-    "Log::Timeline" = perl6-on-nix.libraries."Log::Timeline:ver<0.3>";
-    "Auth::SCRAM" = perl6-on-nix.libraries."Auth::SCRAM:ver<0.4.7.1>";
-    "cro" = perl6-on-nix.libraries."cro:ver<0.8.1>";
-    "CCLog" = perl6-on-nix.libraries."CCLog:ver<0.0.6>";
-    "App::Uni" = perl6-on-nix.libraries."App::Uni:ver<1.0.1>";
-    "IO::Socket::Async::SSL" = perl6-on-nix.libraries."IO::Socket::Async::SSL:ver<0.7.4>";
-    "Audio::Icecast" = perl6-on-nix.libraries."Audio::Icecast:ver<0.0.3>";
-    "KHPH" = perl6-on-nix.libraries."KHPH:ver<0.0.9>";
-    "Future" = perl6-on-nix.libraries."Future:ver<0.1>";
-    "Math::Model" = perl6-on-nix.libraries."Math::Model:ver<0.3>";
-    "URI::Template" = perl6-on-nix.libraries."URI::Template:ver<0.0.7>";
-    "Pygments" = perl6-on-nix.libraries."Pygments:ver<0.0.1>";
-    "Math::Vector3D" = perl6-on-nix.libraries."Math::Vector3D:ver<0.0.1>";
-    "Date::Calendar::FrenchRevolutionary" = perl6-on-nix.libraries."Date::Calendar::FrenchRevolutionary:ver<0.0.2>";
-    "Timer::Breakable" = perl6-on-nix.libraries."Timer::Breakable:ver<0.1.1>";
-    "Pod::Load" = perl6-on-nix.libraries."Pod::Load:ver<0.5.5>";
-    "Canoe" = perl6-on-nix.libraries."Canoe:ver<0.0.3>";
-    "P5chop" = perl6-on-nix.libraries."P5chop:ver<0.0.4>";
-    "CroX::HTTP::Auth::Munge" = perl6-on-nix.libraries."CroX::HTTP::Auth::Munge:ver<0.1>";
-    "Monitor::Monit" = perl6-on-nix.libraries."Monitor::Monit:ver<0.0.3>";
-    "P5index" = perl6-on-nix.libraries."P5index:ver<0.0.4>";
-    "Unicode::PRECIS" = perl6-on-nix.libraries."Unicode::PRECIS:ver<v.0.5.1.1>";
-    "FastCGI::NativeCall::Async" = perl6-on-nix.libraries."FastCGI::NativeCall::Async:ver<0.0.2>";
-    "HTTP::Request::Supply" = perl6-on-nix.libraries."HTTP::Request::Supply:ver<0.2.0>";
-    "Chart::Gnuplot" = perl6-on-nix.libraries."Chart::Gnuplot:ver<0.0.11>";
-    "Algorithm::SetUnion" = perl6-on-nix.libraries."Algorithm::SetUnion:ver<0.0.1>";
-    "BSON" = perl6-on-nix.libraries."BSON:ver<0.11.6>";
-    "Cro::WebSocket" = perl6-on-nix.libraries."Cro::WebSocket:ver<0.8.1>";
-    "LibUUID" = perl6-on-nix.libraries."LibUUID:ver<0.5>";
-    "VCard" = perl6-on-nix.libraries."VCard:ver<0.0.1>";
-    "IO::Glob" = perl6-on-nix.libraries."IO::Glob:ver<0.8.1>";
-    "Net::netent" = perl6-on-nix.libraries."Net::netent:ver<0.0.2>";
-    "Git::Blame" = perl6-on-nix.libraries."Git::Blame:ver<0.0.1>";
-    "Algorithm::LibSVM" = perl6-on-nix.libraries."Algorithm::LibSVM:ver<0.0.4>";
-    "List::MoreUtils" = perl6-on-nix.libraries."List::MoreUtils:ver<0.0.5>";
-    "P6Repl::Helper" = perl6-on-nix.libraries."P6Repl::Helper:ver<0.0.3>";
-    "Geo::Ellipsoid" = perl6-on-nix.libraries."Geo::Ellipsoid:ver<1.0.0>";
-    "App::Platform" = perl6-on-nix.libraries."App::Platform:ver<0.4.2>";
-    "Concurrent::Queue" = perl6-on-nix.libraries."Concurrent::Queue:ver<1.1>";
-    "App::Tasks" = perl6-on-nix.libraries."App::Tasks:ver<0.0.15>";
-    "PDF::Font::Loader" = perl6-on-nix.libraries."PDF::Font::Loader:ver<0.2.5>";
-    "P5chdir" = perl6-on-nix.libraries."P5chdir:ver<0.0.5>";
-    "Inline::Go" = perl6-on-nix.libraries."Inline::Go:ver<0.0.4>";
-    "Object::Permission" = perl6-on-nix.libraries."Object::Permission:ver<0.0.3>";
-    "P5each" = perl6-on-nix.libraries."P5each:ver<0.0.5>";
-    "Cro::H" = perl6-on-nix.libraries."Cro::H:ver<0.0.2>";
-    "HTTP::API::Pingdom" = perl6-on-nix.libraries."HTTP::API::Pingdom:ver<0.1.0>";
-    "Image::QRCode" = perl6-on-nix.libraries."Image::QRCode:ver<0.0.1>";
-    "Test::HTTP::Server" = perl6-on-nix.libraries."Test::HTTP::Server:ver<0.5.0>";
-    "Rdf" = perl6-on-nix.libraries."Rdf:ver<0.3.3.1>";
-    "Algorithm::NaiveBayes" = perl6-on-nix.libraries."Algorithm::NaiveBayes:ver<0.0.3>";
-    "Bitcoin::RPC::Client" = perl6-on-nix.libraries."Bitcoin::RPC::Client:ver<0.0.2>";
-    "DB::Xoos" = perl6-on-nix.libraries."DB::Xoos:ver<0.0.13>";
-    "Failable" = perl6-on-nix.libraries."Failable:ver<0.0.2>";
-    "Algorithm::LBFGS" = perl6-on-nix.libraries."Algorithm::LBFGS:ver<0.0.4>";
-    "Async::Command" = perl6-on-nix.libraries."Async::Command:ver<0.0.3>";
-    "P5oct" = perl6-on-nix.libraries."P5oct:ver<0.0.4>";
-    "License::SPDX" = perl6-on-nix.libraries."License::SPDX:ver<3.6.0>";
-    "LogP6" = perl6-on-nix.libraries."LogP6:ver<1.6.1>";
-    "Time::gmtime" = perl6-on-nix.libraries."Time::gmtime:ver<0.0.4>";
-    "Terminal::Spinners" = perl6-on-nix.libraries."Terminal::Spinners:ver<1.3.0>";
-    "Pod::To::Pager" = perl6-on-nix.libraries."Pod::To::Pager:ver<0.2.0>";
-    "Random::Choice" = perl6-on-nix.libraries."Random::Choice:ver<0.0.6>";
-    "Temp::Path" = perl6-on-nix.libraries."Temp::Path:ver<1.001007>";
-    "Async::Workers" = perl6-on-nix.libraries."Async::Workers:ver<0.0.8>";
-    "Hash-with" = perl6-on-nix.libraries."Hash-with:ver<0.0.2>";
-    "DateTime::DST" = perl6-on-nix.libraries."DateTime::DST:ver<0.3>";
-    "DB::Migration::Simple" = perl6-on-nix.libraries."DB::Migration::Simple:ver<1.0>";
-    "ArrayHash" = perl6-on-nix.libraries."ArrayHash:ver<0.4.1>";
+    "P5readlink" = perl6-on-nix.distributions."P5readlink:ver<0.0.4>";
+    "XDG::BaseDirectory" = perl6-on-nix.distributions."XDG::BaseDirectory:ver<0.0.11>";
+    "Test::SourceFiles" = perl6-on-nix.distributions."Test::SourceFiles:ver<0.0.1>";
+    "Sys::Lastlog" = perl6-on-nix.distributions."Sys::Lastlog:ver<0.0.10>";
+    "App::MoarVM::ConfprogCompiler" = perl6-on-nix.distributions."App::MoarVM::ConfprogCompiler:ver<0.0.8>";
+    "IO::Path::Dirstack" = perl6-on-nix.distributions."IO::Path::Dirstack:ver<0.1.1>";
+    "Sparrowdo::Prometheus" = perl6-on-nix.distributions."Sparrowdo::Prometheus:ver<0.0.1>";
+    "P5chr" = perl6-on-nix.distributions."P5chr:ver<0.0.5>";
+    "Pod::To::Man" = perl6-on-nix.distributions."Pod::To::Man:ver<0.1.0>";
+    "Net::protoent" = perl6-on-nix.distributions."Net::protoent:ver<0.0.1>";
+    "Map::Agnostic" = perl6-on-nix.distributions."Map::Agnostic:ver<0.0.3>";
+    "Magento" = perl6-on-nix.distributions."Magento:ver<0.0.2>";
+    "Physics::Measure" = perl6-on-nix.distributions."Physics::Measure:ver<0.0.2>";
+    "Tinky::Hash" = perl6-on-nix.distributions."Tinky::Hash:ver<0.4.2.7>";
+    "Sparrow6" = perl6-on-nix.distributions."Sparrow6:ver<0.0.8>";
+    "List::SomeUtils" = perl6-on-nix.distributions."List::SomeUtils:ver<0.0.5>";
+    "P5localtime" = perl6-on-nix.distributions."P5localtime:ver<0.0.6>";
+    "P5getgrnam" = perl6-on-nix.distributions."P5getgrnam:ver<0.0.6>";
+    "Manifesto" = perl6-on-nix.distributions."Manifesto:ver<0.0.4>";
+    "Path::Through" = perl6-on-nix.distributions."Path::Through:ver<0.0.1>";
+    "Tie::Array" = perl6-on-nix.distributions."Tie::Array:ver<0.0.4>";
+    "Tie::StdArray" = perl6-on-nix.distributions."Tie::StdArray:ver<0.0.3>";
+    "Crypt::Libcrypt" = perl6-on-nix.distributions."Crypt::Libcrypt:ver<0.0.9>";
+    "Acme::Meow" = perl6-on-nix.distributions."Acme::Meow:ver<0.1>";
+    "Array::Agnostic" = perl6-on-nix.distributions."Array::Agnostic:ver<0.0.6>";
+    "Igo" = perl6-on-nix.distributions."Igo:ver<0.0.5>";
+    "Gnome::Glib" = perl6-on-nix.distributions."Gnome::Glib:ver<0.13.3>";
+    "Sparrowdo::Azure::Web::Cert" = perl6-on-nix.distributions."Sparrowdo::Azure::Web::Cert:ver<0.0.3>";
+    "Desktop::Notify::Progress" = perl6-on-nix.distributions."Desktop::Notify::Progress:ver<0.0.1>";
+    "Audio::Liquidsoap" = perl6-on-nix.distributions."Audio::Liquidsoap:ver<0.0.7>";
+    "LibGit2" = perl6-on-nix.distributions."LibGit2:ver<0.2>";
+    "Matrix::Bot::Plugin::AutoAcceptInvites" = perl6-on-nix.distributions."Matrix::Bot::Plugin::AutoAcceptInvites:ver<0.1.0>";
+    "DBIx::NamedQueries" = perl6-on-nix.distributions."DBIx::NamedQueries:ver<0.0.3>";
+    "App::MPD::Notify" = perl6-on-nix.distributions."App::MPD::Notify:ver<0.1.0>";
+    "WebService::Discourse" = perl6-on-nix.distributions."WebService::Discourse:ver<0.1.0>";
+    "Hash::Restricted" = perl6-on-nix.distributions."Hash::Restricted:ver<0.0.5>";
+    "Desktop::Notify" = perl6-on-nix.distributions."Desktop::Notify:ver<0.3.2>";
+    "Sparrowdo::RemoteFile" = perl6-on-nix.distributions."Sparrowdo::RemoteFile:ver<0.0.2>";
+    "Algorithm::GooglePolylineEncoding" = perl6-on-nix.distributions."Algorithm::GooglePolylineEncoding:ver<1.0.2>";
+    "Staticish" = perl6-on-nix.distributions."Staticish:ver<0.0.7>";
+    "Amazon::DynamoDB" = perl6-on-nix.distributions."Amazon::DynamoDB:ver<0.4.0>";
+    "Algorithm::SkewHeap" = perl6-on-nix.distributions."Algorithm::SkewHeap:ver<0.0.1>";
+    "Email::Address" = perl6-on-nix.distributions."Email::Address:ver<0.2>";
+    "P5lcfirst" = perl6-on-nix.distributions."P5lcfirst:ver<0.0.7>";
+    "SDL2::Raw" = perl6-on-nix.distributions."SDL2::Raw:ver<0.3>";
+    "Text::BorderedBlock" = perl6-on-nix.distributions."Text::BorderedBlock:ver<0.1.0>";
+    "Grammar::ErrorReporting" = perl6-on-nix.distributions."Grammar::ErrorReporting:ver<0.2>";
+    "Backtrace::AsHTML" = perl6-on-nix.distributions."Backtrace::AsHTML:ver<0.0.1>";
+    "XML::Actions" = perl6-on-nix.distributions."XML::Actions:ver<0.3.2>";
+    "App::MPD::AutoQueue" = perl6-on-nix.distributions."App::MPD::AutoQueue:ver<0.1.1>";
+    "P5__DATA__" = perl6-on-nix.distributions."P5__DATA__:ver<0.0.1>";
+    "Color::Names" = perl6-on-nix.distributions."Color::Names:ver<1.001003>";
+    "Image::Libexif" = perl6-on-nix.distributions."Image::Libexif:ver<0.1.0>";
+    "Date::Calendar::Hebrew" = perl6-on-nix.distributions."Date::Calendar::Hebrew:ver<0.0.1>";
+    "Sparrowdo::VSTS::YAML::MsBuild" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::MsBuild:ver<0.0.2>";
+    "Archive::SimpleZip" = perl6-on-nix.distributions."Archive::SimpleZip:ver<0.2.3>";
+    "XML::Class" = perl6-on-nix.distributions."XML::Class:ver<0.0.7>";
+    "Math::Polygons" = perl6-on-nix.distributions."Math::Polygons:ver<0.0.4>";
+    "Cro::Core" = perl6-on-nix.distributions."Cro::Core:ver<0.8.1>";
+    "DB::SQLite" = perl6-on-nix.distributions."DB::SQLite:ver<0.3>";
+    "CompUnit::Repository::Mask" = perl6-on-nix.distributions."CompUnit::Repository::Mask:ver<0.0.1>";
+    "Git::Log" = perl6-on-nix.distributions."Git::Log:ver<0.2.0>";
+    "Graphics::TinyTIFF" = perl6-on-nix.distributions."Graphics::TinyTIFF:ver<0.0.6>";
+    "UNIX::Privileges" = perl6-on-nix.distributions."UNIX::Privileges:ver<0.1.2>";
+    "Sys::Hostname" = perl6-on-nix.distributions."Sys::Hostname:ver<0.0.7>";
+    "Constants::Netinet::In" = perl6-on-nix.distributions."Constants::Netinet::In:ver<0.0.1>";
+    "META6" = perl6-on-nix.distributions."META6:ver<0.0.23>";
+    "Numeric::Nearest" = perl6-on-nix.distributions."Numeric::Nearest:ver<0.5.1>";
+    "PDF::ISO_32000" = perl6-on-nix.distributions."PDF::ISO_32000:ver<0.0.6>";
+    "TMap" = perl6-on-nix.distributions."TMap:ver<0.2.0>";
+    "FindBin" = perl6-on-nix.distributions."FindBin:ver<0.4.3>";
+    "Sparrowdo::VSTS::YAML::Build::Assembly::Patch" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::Build::Assembly::Patch:ver<1.0.0>";
+    "Log::Syslog::Native" = perl6-on-nix.distributions."Log::Syslog::Native:ver<0.0.9>";
+    "DOM::Tiny" = perl6-on-nix.distributions."DOM::Tiny:ver<0.5.2>";
+    "Acme::Insult::Lala" = perl6-on-nix.distributions."Acme::Insult::Lala:ver<0.0.4>";
+    "P5chomp" = perl6-on-nix.distributions."P5chomp:ver<0.0.5>";
+    "Digest::SHA256::Native" = perl6-on-nix.distributions."Digest::SHA256::Native:ver<0.03>";
+    "App::Assixt" = perl6-on-nix.distributions."App::Assixt:ver<1.0.0>";
+    "App::Unicode::Mangle" = perl6-on-nix.distributions."App::Unicode::Mangle:ver<1.0.1>";
+    "App::ModuleSnap" = perl6-on-nix.distributions."App::ModuleSnap:ver<0.0.11>";
+    "Getopt::Long" = perl6-on-nix.distributions."Getopt::Long:ver<0.1.2>";
+    "P5push" = perl6-on-nix.distributions."P5push:ver<0.0.4>";
+    "RPi::Device::ST7036" = perl6-on-nix.distributions."RPi::Device::ST7036:ver<0.0.3>";
+    "URI::FetchFile" = perl6-on-nix.distributions."URI::FetchFile:ver<0.0.3>";
+    "Config::Parser::yaml" = perl6-on-nix.distributions."Config::Parser::yaml:ver<1.0.1>";
+    "IRC::Client::Plugin::NickServ" = perl6-on-nix.distributions."IRC::Client::Plugin::NickServ:ver<0.1.1>";
+    "Geo::Coder::OpenCage" = perl6-on-nix.distributions."Geo::Coder::OpenCage:ver<1.0>";
+    "Ops::SI" = perl6-on-nix.distributions."Ops::SI:ver<0.1.1>";
+    "P5math" = perl6-on-nix.distributions."P5math:ver<0.0.2>";
+    "FindBin::libs" = perl6-on-nix.distributions."FindBin::libs:ver<0.2.1>";
+    "MsgPack" = perl6-on-nix.distributions."MsgPack:ver<0.0.7>";
+    "JSON::Class" = perl6-on-nix.distributions."JSON::Class:ver<0.0.13>";
+    "P5substr" = perl6-on-nix.distributions."P5substr:ver<0.0.4>";
+    "Sub::Util" = perl6-on-nix.distributions."Sub::Util:ver<0.0.3>";
+    "Attribute::Lazy" = perl6-on-nix.distributions."Attribute::Lazy:ver<0.0.4>";
+    "StrictClass" = perl6-on-nix.distributions."StrictClass:ver<0.0.3>";
+    "CommonMark" = perl6-on-nix.distributions."CommonMark:ver<0.0.5>";
+    "P5study" = perl6-on-nix.distributions."P5study:ver<0.0.3>";
+    "ENIGMA::Machine" = perl6-on-nix.distributions."ENIGMA::Machine:ver<0.0.2>";
+    "ProcStats" = perl6-on-nix.distributions."ProcStats:ver<0.2.1>";
+    "Acme::Test::Module" = perl6-on-nix.distributions."Acme::Test::Module:ver<1.0.4>";
+    "Config::DataLang::Refine" = perl6-on-nix.distributions."Config::DataLang::Refine:ver<0.7.3>";
+    "Lingua::Palindrome" = perl6-on-nix.distributions."Lingua::Palindrome:ver<0.1.0>";
+    "Sparrowdo::Cordova::OSx::Build" = perl6-on-nix.distributions."Sparrowdo::Cordova::OSx::Build:ver<0.0.7>";
+    "Oyatul" = perl6-on-nix.distributions."Oyatul:ver<0.0.6>";
+    "P5times" = perl6-on-nix.distributions."P5times:ver<0.0.6>";
+    "GraphQL::Html" = perl6-on-nix.distributions."GraphQL::Html:ver<0.7.0>";
+    "Font::AFM" = perl6-on-nix.distributions."Font::AFM:ver<1.24.2>";
+    "Lumberjack" = perl6-on-nix.distributions."Lumberjack:ver<0.0.9>";
+    "Sparrowdo::VSTS::YAML::Nuget::Build" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::Nuget::Build:ver<0.0.3>";
+    "Audio::Libshout" = perl6-on-nix.distributions."Audio::Libshout:ver<0.0.11>";
+    "P5fileno" = perl6-on-nix.distributions."P5fileno:ver<0.0.3>";
+    "Math::FFT::Libfftw3" = perl6-on-nix.distributions."Math::FFT::Libfftw3:ver<0.1.2>";
+    "InterceptAllMethods" = perl6-on-nix.distributions."InterceptAllMethods:ver<0.0.1>";
+    "App::Prove6" = perl6-on-nix.distributions."App::Prove6:ver<0.0.10>";
+    "Game::Sudoku" = perl6-on-nix.distributions."Game::Sudoku:ver<1.1.2>";
+    "Chronic" = perl6-on-nix.distributions."Chronic:ver<0.0.7>";
+    "P5sleep" = perl6-on-nix.distributions."P5sleep:ver<0.0.7>";
+    "P5opendir" = perl6-on-nix.distributions."P5opendir:ver<0.0.4>";
+    "SQL::Lexer" = perl6-on-nix.distributions."SQL::Lexer:ver<0.2.2>";
+    "String::Fold" = perl6-on-nix.distributions."String::Fold:ver<0.1.2>";
+    "I18N::LangTags" = perl6-on-nix.distributions."I18N::LangTags:ver<0.1.0>";
+    "File::XML::DMARC::Google" = perl6-on-nix.distributions."File::XML::DMARC::Google:ver<0.1.1>";
+    "Vroom::Reveal" = perl6-on-nix.distributions."Vroom::Reveal:ver<0.0.2>";
+    "Lingua::Lipogram" = perl6-on-nix.distributions."Lingua::Lipogram:ver<0.1.0>";
+    "Net::BGP" = perl6-on-nix.distributions."Net::BGP:ver<0.1.2>";
+    "DB" = perl6-on-nix.distributions."DB:ver<0.4>";
+    "Template::Anti" = perl6-on-nix.distributions."Template::Anti:ver<0.5.2>";
+    "Sparrowdo::VSTS::YAML::Angular::Build" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::Angular::Build:ver<0.0.6>";
+    "P5quotemeta" = perl6-on-nix.distributions."P5quotemeta:ver<0.0.3>";
+    "US-ASCII" = perl6-on-nix.distributions."US-ASCII:ver<0.6.6>";
+    "P5lc" = perl6-on-nix.distributions."P5lc:ver<0.0.6>";
+    "JSON::Infer" = perl6-on-nix.distributions."JSON::Infer:ver<0.0.17>";
+    "Cro::RPC::JSON" = perl6-on-nix.distributions."Cro::RPC::JSON:ver<0.0.5>";
+    "Cro::ZeroMQ" = perl6-on-nix.distributions."Cro::ZeroMQ:ver<0.8.1>";
+    "Printing::Jdf" = perl6-on-nix.distributions."Printing::Jdf:ver<0.1.1>";
+    "TAP" = perl6-on-nix.distributions."TAP:ver<0.0.9>";
+    "Sub::Name" = perl6-on-nix.distributions."Sub::Name:ver<0.0.6>";
+    "Tie::Hash" = perl6-on-nix.distributions."Tie::Hash:ver<0.0.4>";
+    "Lumberjack::Application" = perl6-on-nix.distributions."Lumberjack::Application:ver<0.0.7>";
+    "META6::To::Man" = perl6-on-nix.distributions."META6::To::Man:ver<0.2.0>";
+    "Sys::Utmp" = perl6-on-nix.distributions."Sys::Utmp:ver<0.0.12>";
+    "Map::Ordered" = perl6-on-nix.distributions."Map::Ordered:ver<0.0.2>";
+    "Podviewer" = perl6-on-nix.distributions."Podviewer:ver<0.0.2>";
+    "App::CPAN" = perl6-on-nix.distributions."App::CPAN:ver<0.0.2>";
+    "Data::Selector" = perl6-on-nix.distributions."Data::Selector:ver<v.1.02>";
+    "App::AizuOnlineJudge" = perl6-on-nix.distributions."App::AizuOnlineJudge:ver<0.0.2>";
+    "Method::Also" = perl6-on-nix.distributions."Method::Also:ver<0.0.2>";
+    "Net::servent" = perl6-on-nix.distributions."Net::servent:ver<0.0.1>";
+    "Attribute::Predicate" = perl6-on-nix.distributions."Attribute::Predicate:ver<0.0.1>";
+    "Sparrowform" = perl6-on-nix.distributions."Sparrowform:ver<0.0.15>";
+    "Unix::errno" = perl6-on-nix.distributions."Unix::errno:ver<0.0.2>";
+    "Term::ReadKey" = perl6-on-nix.distributions."Term::ReadKey:ver<0.0.1>";
+    "MongoDB" = perl6-on-nix.distributions."MongoDB:ver<0.43.8>";
+    "Unix::Groups" = perl6-on-nix.distributions."Unix::Groups:ver<0.0.4>";
+    "Smack" = perl6-on-nix.distributions."Smack:ver<0.4.0>";
+    "Verge::RPC::Client" = perl6-on-nix.distributions."Verge::RPC::Client:ver<0.0.2>";
+    "Algorithm::HierarchicalPAM" = perl6-on-nix.distributions."Algorithm::HierarchicalPAM:ver<0.0.1>";
+    "Math::Curves" = perl6-on-nix.distributions."Math::Curves:ver<0.0.1>";
+    "ScaleVec" = perl6-on-nix.distributions."ScaleVec:ver<0.0.5>";
+    "Net::LibIDN" = perl6-on-nix.distributions."Net::LibIDN:ver<0.0.2>";
+    "Constants::Net::If" = perl6-on-nix.distributions."Constants::Net::If:ver<0.0.1>";
+    "Math::Factorial::Operator" = perl6-on-nix.distributions."Math::Factorial::Operator:ver<0.1.2>";
+    "EuclideanRhythm" = perl6-on-nix.distributions."EuclideanRhythm:ver<0.0.3>";
+    "Grammar::Common" = perl6-on-nix.distributions."Grammar::Common:ver<0.2.0>";
+    "Constants::Sys::Socket" = perl6-on-nix.distributions."Constants::Sys::Socket:ver<0.0.1>";
+    "WriteOnceHash" = perl6-on-nix.distributions."WriteOnceHash:ver<0.0.3>";
+    "QM" = perl6-on-nix.distributions."QM:ver<0.0.2>";
+    "File::Zip" = perl6-on-nix.distributions."File::Zip:ver<0.1.2>";
+    "Text::CSV" = perl6-on-nix.distributions."Text::CSV:ver<0.008>";
+    "Adverb::Eject" = perl6-on-nix.distributions."Adverb::Eject:ver<0.0.1>";
+    "Lingua::Stopwords" = perl6-on-nix.distributions."Lingua::Stopwords:ver<0.0.3>";
+    "SQL::NamedPlaceholder" = perl6-on-nix.distributions."SQL::NamedPlaceholder:ver<0.1.1>";
+    "Fcntl" = perl6-on-nix.distributions."Fcntl:ver<0.0.1>";
+    "P5defined" = perl6-on-nix.distributions."P5defined:ver<0.0.2>";
+    "File::Stat" = perl6-on-nix.distributions."File::Stat:ver<0.0.1>";
+    "Wkhtmltox" = perl6-on-nix.distributions."Wkhtmltox:ver<0.0.1>";
+    "Serialise::Map" = perl6-on-nix.distributions."Serialise::Map:ver<0.1.1>";
+    "Tomtit" = perl6-on-nix.distributions."Tomtit:ver<0.1.0>";
+    "P5tie" = perl6-on-nix.distributions."P5tie:ver<0.0.11>";
+    "UEncoding" = perl6-on-nix.distributions."UEncoding:ver<0.1.0>";
+    "Reaper::Control" = perl6-on-nix.distributions."Reaper::Control:ver<0.0.2>";
+    "Config::Parser::json" = perl6-on-nix.distributions."Config::Parser::json:ver<0.1.0>";
+    "MQ::Posix" = perl6-on-nix.distributions."MQ::Posix:ver<0.0.2>";
+    "JSON::Tiny" = perl6-on-nix.distributions."JSON::Tiny:ver<1.0>";
+    "Tie::StdHash" = perl6-on-nix.distributions."Tie::StdHash:ver<0.0.4>";
+    "WebService::AWS::S3" = perl6-on-nix.distributions."WebService::AWS::S3:ver<0.0.2>";
+    "OpenAPI::Schema::Validate" = perl6-on-nix.distributions."OpenAPI::Schema::Validate:ver<1.0.7>";
+    "Cro::HTTP::Test" = perl6-on-nix.distributions."Cro::HTTP::Test:ver<0.8.0>";
+    "Memoize" = perl6-on-nix.distributions."Memoize:ver<0.0.4>";
+    "Libclang" = perl6-on-nix.distributions."Libclang:ver<0.2.0>";
+    "Terminal::Table" = perl6-on-nix.distributions."Terminal::Table:ver<0.0.7>";
+    "Range::SetOps" = perl6-on-nix.distributions."Range::SetOps:ver<0.0.3>";
+    "Perl6::Tidy" = perl6-on-nix.distributions."Perl6::Tidy:ver<0.0.7>";
+    "PKCS5" = perl6-on-nix.distributions."PKCS5:ver<v.0.1.6.2>";
+    "Text::More" = perl6-on-nix.distributions."Text::More:ver<0.1.8>";
+    "Array::Sparse" = perl6-on-nix.distributions."Array::Sparse:ver<0.0.4>";
+    "P5uc" = perl6-on-nix.distributions."P5uc:ver<0.0.3>";
+    "Uzu" = perl6-on-nix.distributions."Uzu:ver<0.3.4>";
+    "Util::Bitfield" = perl6-on-nix.distributions."Util::Bitfield:ver<0.0.4>";
+    "Cro::TLS" = perl6-on-nix.distributions."Cro::TLS:ver<0.8.1>";
+    "BlkMeV" = perl6-on-nix.distributions."BlkMeV:ver<0.2.0>";
+    "List::Util" = perl6-on-nix.distributions."List::Util:ver<0.0.7>";
+    "Device::Velleman::K8055" = perl6-on-nix.distributions."Device::Velleman::K8055:ver<0.0.3>";
+    "AttrX::Mooish" = perl6-on-nix.distributions."AttrX::Mooish:ver<0.6.2>";
+    "CPAN::Uploader::Tiny" = perl6-on-nix.distributions."CPAN::Uploader::Tiny:ver<0.0.6>";
+    "PowerNap" = perl6-on-nix.distributions."PowerNap:ver<0.0.2>";
+    "pack6" = perl6-on-nix.distributions."pack6:ver<0.2>";
+    "DateTime::Monotonic" = perl6-on-nix.distributions."DateTime::Monotonic:ver<0.0.4>";
+    "Munge" = perl6-on-nix.distributions."Munge:ver<0.1>";
+    "HTTP::Tinyish" = perl6-on-nix.distributions."HTTP::Tinyish:ver<0.1.4>";
+    "OO::Plugin" = perl6-on-nix.distributions."OO::Plugin:ver<0.0.7>";
+    "TimeUnit" = perl6-on-nix.distributions."TimeUnit:ver<0.1.2>";
+    "Sparrowdo::VSTS::YAML::Cordova" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::Cordova:ver<0.0.17>";
+    "Tuple" = perl6-on-nix.distributions."Tuple:ver<0.0.5>";
+    "TCP::LowLevel" = perl6-on-nix.distributions."TCP::LowLevel:ver<0.0.2>";
+    "Gnome::Gdk3" = perl6-on-nix.distributions."Gnome::Gdk3:ver<0.14.9>";
+    "List::UtilsBy" = perl6-on-nix.distributions."List::UtilsBy:ver<0.0.4>";
+    "Oddmuse6" = perl6-on-nix.distributions."Oddmuse6:ver<0.0.4>";
+    "PDF::Class" = perl6-on-nix.distributions."PDF::Class:ver<0.3.7>";
+    "Linux::Fuser" = perl6-on-nix.distributions."Linux::Fuser:ver<0.0.11>";
+    "Text::Names" = perl6-on-nix.distributions."Text::Names:ver<0.0.2>";
+    "HTML::Lazy" = perl6-on-nix.distributions."HTML::Lazy:ver<0.0.1>";
+    "Hastebin" = perl6-on-nix.distributions."Hastebin:ver<0.0.4>";
+    "Geo::Coordinates::UTM" = perl6-on-nix.distributions."Geo::Coordinates::UTM:ver<0.9.0>";
+    "Color::Scheme" = perl6-on-nix.distributions."Color::Scheme:ver<1.001001>";
+    "AccessorFacade" = perl6-on-nix.distributions."AccessorFacade:ver<0.0.9>";
+    "P5rand" = perl6-on-nix.distributions."P5rand:ver<0.0.5>";
+    "Operator::grandpa" = perl6-on-nix.distributions."Operator::grandpa:ver<1.001001>";
+    "Trait::Env" = perl6-on-nix.distributions."Trait::Env:ver<0.5.2>";
+    "Audio::Playlist::JSPF" = perl6-on-nix.distributions."Audio::Playlist::JSPF:ver<0.0.3>";
+    "Acme::Cow" = perl6-on-nix.distributions."Acme::Cow:ver<0.0.4>";
+    "Tinky" = perl6-on-nix.distributions."Tinky:ver<0.0.8>";
+    "P5ord" = perl6-on-nix.distributions."P5ord:ver<0.0.5>";
+    "GraphQL::Server" = perl6-on-nix.distributions."GraphQL::Server:ver<0.1>";
+    "User::pwent" = perl6-on-nix.distributions."User::pwent:ver<0.0.1>";
+    "P5length" = perl6-on-nix.distributions."P5length:ver<0.0.4>";
+    "SemiXML" = perl6-on-nix.distributions."SemiXML:ver<v.0.48.1>";
+    "JSON::Marshal" = perl6-on-nix.distributions."JSON::Marshal:ver<0.0.18>";
+    "Getopt::Advance" = perl6-on-nix.distributions."Getopt::Advance:ver<1.1.4>";
+    "Archive::Libarchive::Raw" = perl6-on-nix.distributions."Archive::Libarchive::Raw:ver<0.0.9>";
+    "Object::Delayed" = perl6-on-nix.distributions."Object::Delayed:ver<0.0.6>";
+    "Sparky" = perl6-on-nix.distributions."Sparky:ver<0.0.24>";
+    "Sparrowdo::VSTS::YAML::Build" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::Build:ver<0.0.7>";
+    "Path::Finder" = perl6-on-nix.distributions."Path::Finder:ver<0.2.0>";
+    "P5getservbyname" = perl6-on-nix.distributions."P5getservbyname:ver<0.0.4>";
+    "P5__FILE__" = perl6-on-nix.distributions."P5__FILE__:ver<0.0.2>";
+    "Scalar::Util" = perl6-on-nix.distributions."Scalar::Util:ver<0.0.5>";
+    "Cofra" = perl6-on-nix.distributions."Cofra:ver<0.1.1>";
+    "Linux::Cpuinfo" = perl6-on-nix.distributions."Linux::Cpuinfo:ver<0.0.9>";
+    "Sparrowdo::Cordova::OSx::Fortify" = perl6-on-nix.distributions."Sparrowdo::Cordova::OSx::Fortify:ver<0.0.1>";
+    "Term::Choose" = perl6-on-nix.distributions."Term::Choose:ver<1.5.9>";
+    "FINALIZER" = perl6-on-nix.distributions."FINALIZER:ver<0.0.5>";
+    "ULID" = perl6-on-nix.distributions."ULID:ver<0.1.0>";
+    "Cro::HTTP" = perl6-on-nix.distributions."Cro::HTTP:ver<0.8.1>";
+    "Text::Sift4" = perl6-on-nix.distributions."Text::Sift4:ver<0.0.6>";
+    "Tika" = perl6-on-nix.distributions."Tika:ver<0.1.0>";
+    "Gnome::N" = perl6-on-nix.distributions."Gnome::N:ver<0.13.5>";
+    "Term::Choose::Util" = perl6-on-nix.distributions."Term::Choose::Util:ver<1.2.9>";
+    "Sparky::Plugin::Notify::Email" = perl6-on-nix.distributions."Sparky::Plugin::Notify::Email:ver<0.0.1>";
+    "P5shift" = perl6-on-nix.distributions."P5shift:ver<0.0.4>";
+    "MagickWand" = perl6-on-nix.distributions."MagickWand:ver<0.1.0>";
+    "JSON::Fast" = perl6-on-nix.distributions."JSON::Fast:ver<0.9.18>";
+    "HTTP::Server::Tiny" = perl6-on-nix.distributions."HTTP::Server::Tiny:ver<0.0.1>";
+    "Libui" = perl6-on-nix.distributions."Libui:ver<0.0.3>";
+    "DirHandle" = perl6-on-nix.distributions."DirHandle:ver<0.0.2>";
+    "P5-X" = perl6-on-nix.distributions."P5-X:ver<0.0.2>";
+    "Audio::Hydrogen" = perl6-on-nix.distributions."Audio::Hydrogen:ver<0.0.4>";
+    "LIVR" = perl6-on-nix.distributions."LIVR:ver<2.1.0>";
+    "RPi::Device::PiGlow" = perl6-on-nix.distributions."RPi::Device::PiGlow:ver<0.0.3>";
+    "Acme::Cow6" = perl6-on-nix.distributions."Acme::Cow6:ver<0.0.1>";
+    "Proc::More" = perl6-on-nix.distributions."Proc::More:ver<0.3.0>";
+    "P5ref" = perl6-on-nix.distributions."P5ref:ver<0.0.4>";
+    "RPi::ButtonWatcher" = perl6-on-nix.distributions."RPi::ButtonWatcher:ver<0.0.1>";
+    "Concurrent::Trie" = perl6-on-nix.distributions."Concurrent::Trie:ver<1.1>";
+    "HandleSupplier" = perl6-on-nix.distributions."HandleSupplier:ver<0.0.1>";
+    "Audio::Convert::Samplerate" = perl6-on-nix.distributions."Audio::Convert::Samplerate:ver<0.0.8>";
+    "Ranker" = perl6-on-nix.distributions."Ranker:ver<0.0.2>";
+    "zef" = perl6-on-nix.distributions."zef:ver<0.1.15>";
+    "Acme::Don't" = perl6-on-nix.distributions."Acme::Don't:ver<0.0.2>";
+    "Log::Minimal" = perl6-on-nix.distributions."Log::Minimal:ver<0.0.1>";
+    "Inline" = perl6-on-nix.distributions."Inline:ver<1.2.1>";
+    "Sparrowdo::VSTS::YAML::Nuget" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::Nuget:ver<0.0.2>";
+    "Grid" = perl6-on-nix.distributions."Grid:ver<0.0.2>";
+    "Hash::Agnostic" = perl6-on-nix.distributions."Hash::Agnostic:ver<0.0.4>";
+    "Inline::Perl5" = perl6-on-nix.distributions."Inline::Perl5:ver<0.40>";
+    "CucumisSextus" = perl6-on-nix.distributions."CucumisSextus:ver<0.1.1>";
+    "P5seek" = perl6-on-nix.distributions."P5seek:ver<0.0.2>";
+    "FastCGI::NativeCall::PSGI" = perl6-on-nix.distributions."FastCGI::NativeCall::PSGI:ver<0.0.4>";
+    "Concurrent::Stack" = perl6-on-nix.distributions."Concurrent::Stack:ver<1.2>";
+    "IP::Addr" = perl6-on-nix.distributions."IP::Addr:ver<0.0.2>";
+    "JSON::Pointer" = perl6-on-nix.distributions."JSON::Pointer:ver<1.0>";
+    "Crypt::CAST5" = perl6-on-nix.distributions."Crypt::CAST5:ver<0.1.0>";
+    "Lumberjack::Dispatcher::Syslog" = perl6-on-nix.distributions."Lumberjack::Dispatcher::Syslog:ver<0.0.3>";
+    "ANTLR4::Grammar" = perl6-on-nix.distributions."ANTLR4::Grammar:ver<0.6.2>";
+    "CI::Gen" = perl6-on-nix.distributions."CI::Gen:ver<0.0.1>";
+    "File::Metadata::Libextractor" = perl6-on-nix.distributions."File::Metadata::Libextractor:ver<0.0.2>";
+    "App::nm2perl6" = perl6-on-nix.distributions."App::nm2perl6:ver<0.0.3>";
+    "Distribution::Builder::MakeFromJSON" = perl6-on-nix.distributions."Distribution::Builder::MakeFromJSON:ver<0.4>";
+    "ModelDB" = perl6-on-nix.distributions."ModelDB:ver<0.0.3>";
+    "DB::MySQL" = perl6-on-nix.distributions."DB::MySQL:ver<0.5>";
+    "JSON::Path" = perl6-on-nix.distributions."JSON::Path:ver<1.7>";
+    "Config::Parser::toml" = perl6-on-nix.distributions."Config::Parser::toml:ver<1.0.1>";
+    "Seq::Bounded" = perl6-on-nix.distributions."Seq::Bounded:ver<1.0.1>";
+    "Readline" = perl6-on-nix.distributions."Readline:ver<0.1.5>";
+    "vars" = perl6-on-nix.distributions."vars:ver<0.0.3>";
+    "Cache::Async" = perl6-on-nix.distributions."Cache::Async:ver<0.1.6>";
+    "MessagePack::Class" = perl6-on-nix.distributions."MessagePack::Class:ver<0.0.2>";
+    "Net::IP" = perl6-on-nix.distributions."Net::IP:ver<1.0.0>";
+    "Test::META" = perl6-on-nix.distributions."Test::META:ver<0.0.16>";
+    "MPD::Client" = perl6-on-nix.distributions."MPD::Client:ver<0.1.3>";
+    "Pod::Render" = perl6-on-nix.distributions."Pod::Render:ver<0.8.0>";
+    "Algorithm::Evolutionary::Simple" = perl6-on-nix.distributions."Algorithm::Evolutionary::Simple:ver<0.0.8>";
+    "I18n::Simple" = perl6-on-nix.distributions."I18n::Simple:ver<0.1.2>";
+    "Native::Exec" = perl6-on-nix.distributions."Native::Exec:ver<0.1>";
+    "Zodiac::Chinese" = perl6-on-nix.distributions."Zodiac::Chinese:ver<0.0.1>";
+    "Sub::Memoized" = perl6-on-nix.distributions."Sub::Memoized:ver<0.0.3>";
+    "Red" = perl6-on-nix.distributions."Red:ver<0.0.3>";
+    "Scheduler::DelayBetween" = perl6-on-nix.distributions."Scheduler::DelayBetween:ver<1.3.1>";
+    "Library" = perl6-on-nix.distributions."Library:ver<0.13.4>";
+    "Music::Engine" = perl6-on-nix.distributions."Music::Engine:ver<0.0.2>";
+    "List::AllUtils" = perl6-on-nix.distributions."List::AllUtils:ver<0.0.4>";
+    "Audio::Sndfile" = perl6-on-nix.distributions."Audio::Sndfile:ver<0.0.13>";
+    "Gnome::GObject" = perl6-on-nix.distributions."Gnome::GObject:ver<0.13.14>";
+    "Crypt::RSA" = perl6-on-nix.distributions."Crypt::RSA:ver<0.1.0>";
+    "Date::Names" = perl6-on-nix.distributions."Date::Names:ver<2.0.2>";
+    "IO::Blob" = perl6-on-nix.distributions."IO::Blob:ver<0.0.1>";
+    "LibraryCheck" = perl6-on-nix.distributions."LibraryCheck:ver<0.0.8>";
+    "P5getpwnam" = perl6-on-nix.distributions."P5getpwnam:ver<0.0.5>";
+    "GDBM" = perl6-on-nix.distributions."GDBM:ver<0.0.4>";
+    "LogP6-Writer-Journald" = perl6-on-nix.distributions."LogP6-Writer-Journald:ver<1.3.1>";
+    "RDF::Turtle" = perl6-on-nix.distributions."RDF::Turtle:ver<0.0.3>";
+    "HTTP::Headers" = perl6-on-nix.distributions."HTTP::Headers:ver<0.4.0>";
+    "FileSystem::Parent" = perl6-on-nix.distributions."FileSystem::Parent:ver<0.3.4>";
+    "CroX::HTTP::FallbackPassthru" = perl6-on-nix.distributions."CroX::HTTP::FallbackPassthru:ver<0.1>";
+    "Lingua::Stem::Es" = perl6-on-nix.distributions."Lingua::Stem::Es:ver<0.0.1>";
+    "P5hex" = perl6-on-nix.distributions."P5hex:ver<0.0.5>";
+    "HTTP::Supply" = perl6-on-nix.distributions."HTTP::Supply:ver<0.3.5>";
+    "Terminal::Getpass" = perl6-on-nix.distributions."Terminal::Getpass:ver<0.0.6>";
+    "Config" = perl6-on-nix.distributions."Config:ver<2.1.0>";
+    "Perl6::Ecosystem" = perl6-on-nix.distributions."Perl6::Ecosystem:ver<0.0.3>";
+    "Perl6::Parser" = perl6-on-nix.distributions."Perl6::Parser:ver<0.3.0>";
+    "Object::Trampoline" = perl6-on-nix.distributions."Object::Trampoline:ver<0.0.6>";
+    "Grammar::PrettyErrors" = perl6-on-nix.distributions."Grammar::PrettyErrors:ver<0.0.3>";
+    "Seq::PreFetch" = perl6-on-nix.distributions."Seq::PreFetch:ver<0.1.0>";
+    "Cro::HTTP::Session::Red" = perl6-on-nix.distributions."Cro::HTTP::Session::Red:ver<0.0.2>";
+    "Number::More" = perl6-on-nix.distributions."Number::More:ver<0.2.0>";
+    "Bits" = perl6-on-nix.distributions."Bits:ver<0.0.2>";
+    "Sparrowdo::VSTS::YAML::Update::Azure::SSL" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::Update::Azure::SSL:ver<0.0.1>";
+    "Cro::WebApp" = perl6-on-nix.distributions."Cro::WebApp:ver<0.8.1>";
+    "Pod::To::HTMLBody" = perl6-on-nix.distributions."Pod::To::HTMLBody:ver<0.0.1>";
+    "Doublephone" = perl6-on-nix.distributions."Doublephone:ver<0.0.5>";
+    "AWS::Session" = perl6-on-nix.distributions."AWS::Session:ver<0.8.0>";
+    "Object::Permission::Group" = perl6-on-nix.distributions."Object::Permission::Group:ver<0.0.3>";
+    "Propius" = perl6-on-nix.distributions."Propius:ver<0.1.1>";
+    "Bailador" = perl6-on-nix.distributions."Bailador:ver<0.0.18>";
+    "Test::Declare" = perl6-on-nix.distributions."Test::Declare:ver<0.0.2>";
+    "Sparky::Plugin::Hello" = perl6-on-nix.distributions."Sparky::Plugin::Hello:ver<0.0.2>";
+    "AccountableBagHash" = perl6-on-nix.distributions."AccountableBagHash:ver<0.0.2>";
+    "Getopt::ForClass" = perl6-on-nix.distributions."Getopt::ForClass:ver<0.2>";
+    "epoll" = perl6-on-nix.distributions."epoll:ver<0.3>";
+    "Net::NNG" = perl6-on-nix.distributions."Net::NNG:ver<0.0.1>";
+    "OAuth2::Client::Google" = perl6-on-nix.distributions."OAuth2::Client::Google:ver<0.1.1>";
+    "Gnome::Gtk3" = perl6-on-nix.distributions."Gnome::Gtk3:ver<0.17.9>";
+    "Algorithm::MinMaxHeap" = perl6-on-nix.distributions."Algorithm::MinMaxHeap:ver<0.13.4>";
+    "Bailador::Plugin::NamedQueries" = perl6-on-nix.distributions."Bailador::Plugin::NamedQueries:ver<0.1001>";
+    "IRC::Client::Plugin::Ignore" = perl6-on-nix.distributions."IRC::Client::Plugin::Ignore:ver<0.1.0>";
+    "Audio::Encode::LameMP3" = perl6-on-nix.distributions."Audio::Encode::LameMP3:ver<0.0.11>";
+    "RPi::Device::SMBus" = perl6-on-nix.distributions."RPi::Device::SMBus:ver<0.0.4>";
+    "Term::TablePrint" = perl6-on-nix.distributions."Term::TablePrint:ver<1.5.0>";
+    "Matrix::Bot" = perl6-on-nix.distributions."Matrix::Bot:ver<0.2.0>";
+    "IConv" = perl6-on-nix.distributions."IConv:ver<0.0.2>";
+    "Router::Boost" = perl6-on-nix.distributions."Router::Boost:ver<0.0.1>";
+    "unprint" = perl6-on-nix.distributions."unprint:ver<0.0.2>";
+    "IP::Random" = perl6-on-nix.distributions."IP::Random:ver<0.0.10>";
+    "Slang::Predicate" = perl6-on-nix.distributions."Slang::Predicate:ver<0.0.1>";
+    "P5reverse" = perl6-on-nix.distributions."P5reverse:ver<0.0.5>";
+    "Digest::BubbleBabble" = perl6-on-nix.distributions."Digest::BubbleBabble:ver<0.0.2>";
+    "Dist::Helper" = perl6-on-nix.distributions."Dist::Helper:ver<1.0.0>";
+    "Acme::ಠ_ಠ" = perl6-on-nix.distributions."Acme::ಠ_ಠ:ver<0.0.1>";
+    "Font::FreeType" = perl6-on-nix.distributions."Font::FreeType:ver<0.2.0>";
+    "P5ucfirst" = perl6-on-nix.distributions."P5ucfirst:ver<0.0.4>";
+    "Hash::Timeout" = perl6-on-nix.distributions."Hash::Timeout:ver<0.0.1>";
+    "Operator::Listcat" = perl6-on-nix.distributions."Operator::Listcat:ver<1.0.0>";
+    "CheckSocket" = perl6-on-nix.distributions."CheckSocket:ver<0.0.6>";
+    "Compress::Zstd" = perl6-on-nix.distributions."Compress::Zstd:ver<0.0.1>";
+    "IRC::Client::Plugin::UrlTitle" = perl6-on-nix.distributions."IRC::Client::Plugin::UrlTitle:ver<1.1.3>";
+    "Array::Circular" = perl6-on-nix.distributions."Array::Circular:ver<0.0.1>";
+    "Audio::Silan" = perl6-on-nix.distributions."Audio::Silan:ver<0.0.7>";
+    "IoC" = perl6-on-nix.distributions."IoC:ver<0.0.4>";
+    "P5print" = perl6-on-nix.distributions."P5print:ver<0.0.3>";
+    "DB::Pg" = perl6-on-nix.distributions."DB::Pg:ver<0.6>";
+    "Term::Form" = perl6-on-nix.distributions."Term::Form:ver<1.2.6>";
+    "Neo4j" = perl6-on-nix.distributions."Neo4j:ver<0.1.0.1>";
+    "Cro::OpenAPI::RoutesFromDefinition" = perl6-on-nix.distributions."Cro::OpenAPI::RoutesFromDefinition:ver<1.0.1>";
+    "Pg::Notify" = perl6-on-nix.distributions."Pg::Notify:ver<0.0.3>";
+    "Test::Performance" = perl6-on-nix.distributions."Test::Performance:ver<0.2.1>";
+    "JSON::Hjson" = perl6-on-nix.distributions."JSON::Hjson:ver<0.0.1>";
+    "BitEnum" = perl6-on-nix.distributions."BitEnum:ver<0.1>";
+    "EventSource::Server" = perl6-on-nix.distributions."EventSource::Server:ver<0.0.4>";
+    "Sparrowdo::VSTS::YAML::Solution" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::Solution:ver<0.0.4>";
+    "P5getnetbyname" = perl6-on-nix.distributions."P5getnetbyname:ver<0.0.4>";
+    "XML::XPath" = perl6-on-nix.distributions."XML::XPath:ver<0.9.3>";
+    "Math::RungeKutta" = perl6-on-nix.distributions."Math::RungeKutta:ver<0.1>";
+    "Archive::Libarchive" = perl6-on-nix.distributions."Archive::Libarchive:ver<0.0.13>";
+    "Template::Prometheus" = perl6-on-nix.distributions."Template::Prometheus:ver<0.1.0>";
+    "Algorithm::LDA" = perl6-on-nix.distributions."Algorithm::LDA:ver<0.0.9>";
+    "Time::Repeat" = perl6-on-nix.distributions."Time::Repeat:ver<0.0.1>";
+    "Proc::InvokeEditor" = perl6-on-nix.distributions."Proc::InvokeEditor:ver<0.0.6>";
+    "Audio::Fingerprint::Chromaprint" = perl6-on-nix.distributions."Audio::Fingerprint::Chromaprint:ver<0.0.2>";
+    "Algorithm::Heap::Binary" = perl6-on-nix.distributions."Algorithm::Heap::Binary:ver<0.0.1>";
+    "Hash::LRU" = perl6-on-nix.distributions."Hash::LRU:ver<0.0.1>";
+    "NativeHelpers::Array" = perl6-on-nix.distributions."NativeHelpers::Array:ver<0.0.3>";
+    "Hash::MultiValue" = perl6-on-nix.distributions."Hash::MultiValue:ver<0.7>";
+    "TAP::Harness" = perl6-on-nix.distributions."TAP::Harness:ver<0.0.4>";
+    "P5built-ins" = perl6-on-nix.distributions."P5built-ins:ver<0.0.22>";
+    "Semaphore::ReadersWriters" = perl6-on-nix.distributions."Semaphore::ReadersWriters:ver<0.2.6.1>";
+    "Color::Named" = perl6-on-nix.distributions."Color::Named:ver<1.001002>";
+    "Proc::Editor" = perl6-on-nix.distributions."Proc::Editor:ver<0.0.2>";
+    "Stream::Buffered" = perl6-on-nix.distributions."Stream::Buffered:ver<0.0.1>";
+    "Decimal" = perl6-on-nix.distributions."Decimal:ver<0.3.1>";
+    "Object::Container" = perl6-on-nix.distributions."Object::Container:ver<0.0.2>";
+    "Type::EnumHOW" = perl6-on-nix.distributions."Type::EnumHOW:ver<0.0.1>";
+    "IO::Prompt" = perl6-on-nix.distributions."IO::Prompt:ver<0.0.2>";
+    "HTTP::Request::FormData" = perl6-on-nix.distributions."HTTP::Request::FormData:ver<0.2>";
+    "GraphQL" = perl6-on-nix.distributions."GraphQL:ver<0.6.1>";
+    "POFile" = perl6-on-nix.distributions."POFile:ver<0.7.2>";
+    "Version::Semantic" = perl6-on-nix.distributions."Version::Semantic:ver<0.1.0>";
+    "P5getpriority" = perl6-on-nix.distributions."P5getpriority:ver<0.0.5>";
+    "App::Game::Concentration" = perl6-on-nix.distributions."App::Game::Concentration:ver<0.0.2>";
+    "HTML::Escape" = perl6-on-nix.distributions."HTML::Escape:ver<0.0.1>";
+    "Lingua::Pangram" = perl6-on-nix.distributions."Lingua::Pangram:ver<0.1.1>";
+    "Time::localtime" = perl6-on-nix.distributions."Time::localtime:ver<0.0.3>";
+    "Net::Telnet" = perl6-on-nix.distributions."Net::Telnet:ver<0.0.1>";
+    "Net::LibIDN2" = perl6-on-nix.distributions."Net::LibIDN2:ver<0.1.0>";
+    "IRC::Client::Plugin::Github" = perl6-on-nix.distributions."IRC::Client::Plugin::Github:ver<0.1.5>";
+    "JSON::Name" = perl6-on-nix.distributions."JSON::Name:ver<0.0.4>";
+    "OEIS" = perl6-on-nix.distributions."OEIS:ver<1.0.0>";
+    "Sparrowdo" = perl6-on-nix.distributions."Sparrowdo:ver<0.1.1>";
+    "Sparrowdo::VSTS::YAML::Artifact" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::Artifact:ver<0.0.1>";
+    "JSON::Schema" = perl6-on-nix.distributions."JSON::Schema:ver<0.9>";
+    "Tinky::JSON" = perl6-on-nix.distributions."Tinky::JSON:ver<0.0.5>";
+    "Acme::Polyglot::Levenshtein::Damerau" = perl6-on-nix.distributions."Acme::Polyglot::Levenshtein::Damerau:ver<0.1>";
+    "LibCurl" = perl6-on-nix.distributions."LibCurl:ver<0.8>";
+    "Algorithm::Manacher" = perl6-on-nix.distributions."Algorithm::Manacher:ver<0.0.1>";
+    "Structable" = perl6-on-nix.distributions."Structable:ver<0.0.3>";
+    "App::Mi6" = perl6-on-nix.distributions."App::Mi6:ver<0.2.6>";
+    "Gnome::Gtk3::Glade" = perl6-on-nix.distributions."Gnome::Gtk3::Glade:ver<0.8.6>";
+    "Hash::Util" = perl6-on-nix.distributions."Hash::Util:ver<0.0.1>";
+    "Libarchive" = perl6-on-nix.distributions."Libarchive:ver<0.1>";
+    "P5caller" = perl6-on-nix.distributions."P5caller:ver<0.0.6>";
+    "CamelPub" = perl6-on-nix.distributions."CamelPub:ver<0.2.6>";
+    "HTML::Canvas::To::PDF" = perl6-on-nix.distributions."HTML::Canvas::To::PDF:ver<0.0.3>";
+    "Sparky::Plugin::Notify::Telegram" = perl6-on-nix.distributions."Sparky::Plugin::Notify::Telegram:ver<0.0.2>";
+    "User::grent" = perl6-on-nix.distributions."User::grent:ver<0.0.1>";
+    "P5pack" = perl6-on-nix.distributions."P5pack:ver<0.0.7>";
+    "Wikidata::API" = perl6-on-nix.distributions."Wikidata::API:ver<0.0.3>";
+    "App::FindSource" = perl6-on-nix.distributions."App::FindSource:ver<0.0.6>";
+    "Result" = perl6-on-nix.distributions."Result:ver<0.2.4>";
+    "Env" = perl6-on-nix.distributions."Env:ver<0.0.2>";
+    "Algorithm::AhoCorasick" = perl6-on-nix.distributions."Algorithm::AhoCorasick:ver<0.0.11>";
+    "Hash::Merge" = perl6-on-nix.distributions."Hash::Merge:ver<1.0.0>";
+    "WebService::Soundcloud" = perl6-on-nix.distributions."WebService::Soundcloud:ver<0.0.7>";
+    "P5fc" = perl6-on-nix.distributions."P5fc:ver<0.0.5>";
+    "MeCab" = perl6-on-nix.distributions."MeCab:ver<0.0.13>";
+    "CroX::HTTP::Transform::GraphQL" = perl6-on-nix.distributions."CroX::HTTP::Transform::GraphQL:ver<0.1>";
+    "App::Perl6LangServer" = perl6-on-nix.distributions."App::Perl6LangServer:ver<0.2.0>";
+    "P5rindex" = perl6-on-nix.distributions."P5rindex:ver<0.0.3>";
+    "Test::Color" = perl6-on-nix.distributions."Test::Color:ver<1.001002>";
+    "OpenAPI::Model" = perl6-on-nix.distributions."OpenAPI::Model:ver<1.0.4>";
+    "P5reset" = perl6-on-nix.distributions."P5reset:ver<0.0.3>";
+    "P5getprotobyname" = perl6-on-nix.distributions."P5getprotobyname:ver<0.0.3>";
+    "URL" = perl6-on-nix.distributions."URL:ver<0.2.0>";
+    "Supply::Timeout" = perl6-on-nix.distributions."Supply::Timeout:ver<0.0.1>";
+    "FastCGI::NativeCall" = perl6-on-nix.distributions."FastCGI::NativeCall:ver<0.0.6>";
+    "Sparrowdo::VSTS::YAML::DotNet" = perl6-on-nix.distributions."Sparrowdo::VSTS::YAML::DotNet:ver<0.0.2>";
+    "Test::Util::ServerPort" = perl6-on-nix.distributions."Test::Util::ServerPort:ver<0.0.2>";
+    "HTML::Canvas" = perl6-on-nix.distributions."HTML::Canvas:ver<0.0.7>";
+    "SDL2" = perl6-on-nix.distributions."SDL2:ver<0.0.1>";
+    "Path::Router" = perl6-on-nix.distributions."Path::Router:ver<0.5.0>";
+    "Test::Script::Output" = perl6-on-nix.distributions."Test::Script::Output:ver<0.0.4>";
+    "Geo::Hash" = perl6-on-nix.distributions."Geo::Hash:ver<0.0.1>";
+    "IO::Path::Mode" = perl6-on-nix.distributions."IO::Path::Mode:ver<0.0.7>";
+    "NativeHelpers::Callback" = perl6-on-nix.distributions."NativeHelpers::Callback:ver<0.1>";
+    "Log::Timeline" = perl6-on-nix.distributions."Log::Timeline:ver<0.3>";
+    "Auth::SCRAM" = perl6-on-nix.distributions."Auth::SCRAM:ver<0.4.7.1>";
+    "cro" = perl6-on-nix.distributions."cro:ver<0.8.1>";
+    "CCLog" = perl6-on-nix.distributions."CCLog:ver<0.0.6>";
+    "App::Uni" = perl6-on-nix.distributions."App::Uni:ver<1.0.1>";
+    "IO::Socket::Async::SSL" = perl6-on-nix.distributions."IO::Socket::Async::SSL:ver<0.7.4>";
+    "Audio::Icecast" = perl6-on-nix.distributions."Audio::Icecast:ver<0.0.3>";
+    "KHPH" = perl6-on-nix.distributions."KHPH:ver<0.0.9>";
+    "Future" = perl6-on-nix.distributions."Future:ver<0.1>";
+    "Math::Model" = perl6-on-nix.distributions."Math::Model:ver<0.3>";
+    "URI::Template" = perl6-on-nix.distributions."URI::Template:ver<0.0.7>";
+    "Pygments" = perl6-on-nix.distributions."Pygments:ver<0.0.1>";
+    "Math::Vector3D" = perl6-on-nix.distributions."Math::Vector3D:ver<0.0.1>";
+    "Date::Calendar::FrenchRevolutionary" = perl6-on-nix.distributions."Date::Calendar::FrenchRevolutionary:ver<0.0.2>";
+    "Timer::Breakable" = perl6-on-nix.distributions."Timer::Breakable:ver<0.1.1>";
+    "Pod::Load" = perl6-on-nix.distributions."Pod::Load:ver<0.5.5>";
+    "Canoe" = perl6-on-nix.distributions."Canoe:ver<0.0.3>";
+    "P5chop" = perl6-on-nix.distributions."P5chop:ver<0.0.4>";
+    "CroX::HTTP::Auth::Munge" = perl6-on-nix.distributions."CroX::HTTP::Auth::Munge:ver<0.1>";
+    "Monitor::Monit" = perl6-on-nix.distributions."Monitor::Monit:ver<0.0.3>";
+    "P5index" = perl6-on-nix.distributions."P5index:ver<0.0.4>";
+    "Unicode::PRECIS" = perl6-on-nix.distributions."Unicode::PRECIS:ver<v.0.5.1.1>";
+    "FastCGI::NativeCall::Async" = perl6-on-nix.distributions."FastCGI::NativeCall::Async:ver<0.0.2>";
+    "HTTP::Request::Supply" = perl6-on-nix.distributions."HTTP::Request::Supply:ver<0.2.0>";
+    "Chart::Gnuplot" = perl6-on-nix.distributions."Chart::Gnuplot:ver<0.0.11>";
+    "Algorithm::SetUnion" = perl6-on-nix.distributions."Algorithm::SetUnion:ver<0.0.1>";
+    "BSON" = perl6-on-nix.distributions."BSON:ver<0.11.6>";
+    "Cro::WebSocket" = perl6-on-nix.distributions."Cro::WebSocket:ver<0.8.1>";
+    "LibUUID" = perl6-on-nix.distributions."LibUUID:ver<0.5>";
+    "VCard" = perl6-on-nix.distributions."VCard:ver<0.0.1>";
+    "IO::Glob" = perl6-on-nix.distributions."IO::Glob:ver<0.8.1>";
+    "Net::netent" = perl6-on-nix.distributions."Net::netent:ver<0.0.2>";
+    "Git::Blame" = perl6-on-nix.distributions."Git::Blame:ver<0.0.1>";
+    "Algorithm::LibSVM" = perl6-on-nix.distributions."Algorithm::LibSVM:ver<0.0.4>";
+    "List::MoreUtils" = perl6-on-nix.distributions."List::MoreUtils:ver<0.0.5>";
+    "P6Repl::Helper" = perl6-on-nix.distributions."P6Repl::Helper:ver<0.0.3>";
+    "Geo::Ellipsoid" = perl6-on-nix.distributions."Geo::Ellipsoid:ver<1.0.0>";
+    "App::Platform" = perl6-on-nix.distributions."App::Platform:ver<0.4.2>";
+    "Concurrent::Queue" = perl6-on-nix.distributions."Concurrent::Queue:ver<1.1>";
+    "App::Tasks" = perl6-on-nix.distributions."App::Tasks:ver<0.0.15>";
+    "PDF::Font::Loader" = perl6-on-nix.distributions."PDF::Font::Loader:ver<0.2.5>";
+    "P5chdir" = perl6-on-nix.distributions."P5chdir:ver<0.0.5>";
+    "Inline::Go" = perl6-on-nix.distributions."Inline::Go:ver<0.0.4>";
+    "Object::Permission" = perl6-on-nix.distributions."Object::Permission:ver<0.0.3>";
+    "P5each" = perl6-on-nix.distributions."P5each:ver<0.0.5>";
+    "Cro::H" = perl6-on-nix.distributions."Cro::H:ver<0.0.2>";
+    "HTTP::API::Pingdom" = perl6-on-nix.distributions."HTTP::API::Pingdom:ver<0.1.0>";
+    "Image::QRCode" = perl6-on-nix.distributions."Image::QRCode:ver<0.0.1>";
+    "Test::HTTP::Server" = perl6-on-nix.distributions."Test::HTTP::Server:ver<0.5.0>";
+    "Rdf" = perl6-on-nix.distributions."Rdf:ver<0.3.3.1>";
+    "Algorithm::NaiveBayes" = perl6-on-nix.distributions."Algorithm::NaiveBayes:ver<0.0.3>";
+    "Bitcoin::RPC::Client" = perl6-on-nix.distributions."Bitcoin::RPC::Client:ver<0.0.2>";
+    "DB::Xoos" = perl6-on-nix.distributions."DB::Xoos:ver<0.0.13>";
+    "Failable" = perl6-on-nix.distributions."Failable:ver<0.0.2>";
+    "Algorithm::LBFGS" = perl6-on-nix.distributions."Algorithm::LBFGS:ver<0.0.4>";
+    "Async::Command" = perl6-on-nix.distributions."Async::Command:ver<0.0.3>";
+    "P5oct" = perl6-on-nix.distributions."P5oct:ver<0.0.4>";
+    "License::SPDX" = perl6-on-nix.distributions."License::SPDX:ver<3.6.0>";
+    "LogP6" = perl6-on-nix.distributions."LogP6:ver<1.6.1>";
+    "Time::gmtime" = perl6-on-nix.distributions."Time::gmtime:ver<0.0.4>";
+    "Terminal::Spinners" = perl6-on-nix.distributions."Terminal::Spinners:ver<1.3.0>";
+    "Pod::To::Pager" = perl6-on-nix.distributions."Pod::To::Pager:ver<0.2.0>";
+    "Random::Choice" = perl6-on-nix.distributions."Random::Choice:ver<0.0.6>";
+    "Temp::Path" = perl6-on-nix.distributions."Temp::Path:ver<1.001007>";
+    "Async::Workers" = perl6-on-nix.distributions."Async::Workers:ver<0.0.8>";
+    "Hash-with" = perl6-on-nix.distributions."Hash-with:ver<0.0.2>";
+    "DateTime::DST" = perl6-on-nix.distributions."DateTime::DST:ver<0.3>";
+    "DB::Migration::Simple" = perl6-on-nix.distributions."DB::Migration::Simple:ver<1.0>";
+    "ArrayHash" = perl6-on-nix.distributions."ArrayHash:ver<0.4.1>";
 }

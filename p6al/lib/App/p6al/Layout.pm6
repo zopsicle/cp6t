@@ -5,7 +5,7 @@ use Template::Classic;
 my $layout := template :($title, @body, :$query), q:to/EOF/;
     <!DOCTYPE html>
     <meta charset="utf-8">
-    <title><%= $title %></title>
+    <title>P6AL » <%= $title %></title>
     <link rel="stylesheet" href="/static/p6al.css">
     <header class="p6al--header">
         <h1 class="-title">P6AL</h1>

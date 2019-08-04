@@ -1,8 +1,8 @@
 unit module App::meta6-to-nix;
 
-#| Returns a list with four elements: the name of the library, the version
-#| number, the full name of the library including its version number, the
-#| version number, and the Nix expression for the library.
+#| Returns a list with four elements: the name of the distribution, the version
+#| number, the full name of the distribution including its version number, and
+#| the Nix expression for the distribution.
 #|
 #| The distribution argument must refer to the directory containing
 #| META6.json. The src argument must be a Nix expression.
@@ -32,7 +32,7 @@ sub meta6-to-nix(IO(Cool) :$distribution, Str:D :$src --> List:D)
                     # TODO: Until we find a nice way to deal with them, we will
                     # TODO: ignore ver and auth bounds.
                     my $dep-full := S/‘:’ [ver | auth] .*//;
-                    qq｢\n        perl6-on-nix.libraries."$dep-full"｣
+                    qq｢\n        perl6-on-nix.distributions."$dep-full"｣
                 }).join
             }
             ];

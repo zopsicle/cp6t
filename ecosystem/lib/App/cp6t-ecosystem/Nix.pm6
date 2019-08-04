@@ -10,8 +10,8 @@ sub nix-archive-path(Str:D $url, Str:D $hash --> IO::Path:D)
     $proc.out.lines[1].IO;
 }
 
-#| List the names of all libraries in perl6-on-nix.
-sub list-nix-libraries(--> Seq:D)
+#| List the names of all distributions in perl6-on-nix.
+sub list-nix-distributions(--> Seq:D)
     is export
 {
     my $nix := q:to/EOF/;
@@ -21,7 +21,7 @@ sub list-nix-libraries(--> Seq:D)
         in
             nixpkgs.lib.concatStrings (
                 nixpkgs.lib.mapAttrsToList (k: v: k + "\n")
-                    perl6-on-nix.libraries
+                    perl6-on-nix.distributions
             )
     EOF
     my @cmd := «nix eval --raw “($nix)”»;
@@ -30,8 +30,8 @@ sub list-nix-libraries(--> Seq:D)
     $proc.out.lines.grep(/‘:ver’/);
 }
 
-#| Build a library in perl6-on-nix and return its Nix store path.
-sub build-nix-library(Str:D $library --> IO::Path:D)
+#| Build a distribution in perl6-on-nix and return its Nix store path.
+sub build-nix-distribution(Str:D $distribution --> IO::Path:D)
     is export
 {
     # FIXME: Avoid Nix injection.
@@ -40,7 +40,7 @@ sub build-nix-library(Str:D $library --> IO::Path:D)
             nixpkgs = import ./nix/nixpkgs.nix \{\};
             perl6-on-nix = nixpkgs.callPackage ./perl6-on-nix \{\};
         in
-            perl6-on-nix.libraries."{$library}"
+            perl6-on-nix.distributions."{$distribution}"
     EOF
     my @cmd := «nix-build --no-out-link --expr “($nix)”»;
     my $proc := run @cmd, :out, :err;

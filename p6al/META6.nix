@@ -5,8 +5,8 @@ perl6-on-nix.mkDerivation {
     name = "App::p6al";
     src = import ./pre.nix;
     depends = [
-        perl6-on-nix.libraries."Cro::HTTP"
-        perl6-on-nix.libraries."DBIish"
+        perl6-on-nix.distributions."Cro::HTTP"
+        perl6-on-nix.distributions."DBIish"
     ];
     provides = {
         "App::p6al::Application" = "lib/App/p6al/Application.pm6";

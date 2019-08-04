@@ -28,9 +28,10 @@ archive if necessary. The Nix expressions are written to stdout.
 
 =head2 cp6t-ecosystem database generate DATABASE
 
-Generate a database with detailed information about each library. For each
-library, the database contains metadata about the library, the packages in
-the library, and rendered POD. This database is used by P6AL.
+Generate a database with detailed information about each distribution. For
+each distribution, the database contains metadata about the distribution, the
+comp units in the distribution, and rendered POD. This database is used by
+P6AL.
 
 =head1 CAVEATS
 

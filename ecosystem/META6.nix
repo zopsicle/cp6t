@@ -5,8 +5,8 @@ perl6-on-nix.mkDerivation {
     name = "App::cp6t-ecosystem";
     src = ./.;
     depends = [
-        perl6-on-nix.libraries."App::meta6-to-nix"
-        perl6-on-nix.libraries."DBIish"
+        perl6-on-nix.distributions."App::meta6-to-nix"
+        perl6-on-nix.distributions."DBIish"
     ];
     provides = {
         "App::cp6t-ecosystem::CPAN" = "lib/App/cp6t-ecosystem/CPAN.pm6";

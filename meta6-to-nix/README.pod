@@ -15,6 +15,7 @@ expression. The Nix expression is written to stdout.
 =head2 meta6-to-nix --distribution=DISTRIBUTION --src=SRC
 
 Generate a Nix expression for I<DISTRIBUTION/META6.json>, with SRC as the src
-attribute of the library. The generated Nix expression is to be used with
-callPackage; it receives perl6-on-nix as input. Dependencies listed in the
-depends property of META6.json are taken from C<perl6-on-nix.libraries>.
+attribute of the distribution. The generated Nix expression is to be used
+with callPackage; it receives perl6-on-nix as input. Dependencies listed in
+the depends property of META6.json are taken from
+C<perl6-on-nix.distributions>.

@@ -4,10 +4,10 @@ if rakudo.version == "2017.01" then throw (
     "version. Consider using rakudo-nix instead."
 ) else
 rec {
-    # The libraries from CPAN and the ecosystem.
-    libraries = cpan // p6c;
-    cpan      = callPackage ../ecosystem/cpan.nix {};
-    p6c       = callPackage ../ecosystem/p6c.nix {};
+    # The distributions from CPAN and the ecosystem.
+    distributions = cpan // p6c;
+    cpan          = callPackage ../ecosystem/cpan.nix {};
+    p6c           = callPackage ../ecosystem/p6c.nix {};
 
     # Take a package and turn it into a derivation. The derivation will contain
     # some metadata about the package in $out/share and wrappers for any
@@ -41,7 +41,7 @@ rec {
                     echo -n ,'file#'$out/share/DISTRIBUTION
                 } > $out/share/PERL6LIB
 
-                # Install the library so that it gets precompiled. We must
+                # Install the distribution so that it gets precompiled. We must
                 # *not* pass the --for option, since that clears PERL6LIB.
                 # TODO: Don't pass OpenSSL and SQLite here; make it
                 # TODO: configurable which libraries a library needs during
