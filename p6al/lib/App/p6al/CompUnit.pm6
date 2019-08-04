@@ -37,7 +37,7 @@ my &comp-unit-template := template :($distribution, $version, $name, $documentat
             </h1>
         </header>
         <section class="-documentation">
-            <pre><%= $documentation %></pre>
+            <% take $documentation %>
         </section>
     </article>
     HTML

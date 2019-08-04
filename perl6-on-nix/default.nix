@@ -52,17 +52,25 @@ rec {
                         --from=$out/share/DISTRIBUTION \
                         --to='inst#'$out/share/REPOSITORY
 
-                # Render documentation for each compilation unit.
+                # Render documentation for each compilation unit, unless this
+                # is a dependency of Pod::To::HTML.
                 ${
+                    if name == "Pod::Load"
+                    || name == "Template::Mustache"
+                    || name == "URI"
+                    || name == "Pod::To::HTML"
+                    then "" else
+                    let pod-to-html = distributions."Pod::To::HTML"; in
                     lib.concatStringsSep "\n" (
                         lib.mapAttrsToList (comp-unit: file: ''
                             # TODO: Don't pass OpenSSL and SQLite here; make it
                             # TODO: configurable which libraries a library
                             # TODO: needs during compilation.
                             LD_LIBRARY_PATH=${lib.makeLibraryPath [openssl sqlite]}:$LD_LIBRARY_PATH \
-                            PERL6LIB=$(< $out/share/PERL6LIB) \
-                                ${rakudo}/bin/perl6 --doc $out/share/DISTRIBUTION/${file} \
-                                > $out/share/DOCUMENTATION/${comp-unit}.txt
+                            PERL6LIB=${./pod-to-html-wrapper},$(< ${pod-to-html}/share/PERL6LIB),$(< $out/share/PERL6LIB) \
+                                ${rakudo}/bin/perl6 --doc=HTMLWrapper \
+                                    $out/share/DISTRIBUTION/${file} \
+                                    > $out/share/DOCUMENTATION/${comp-unit}.html
                         '') provides
                     )
                 }

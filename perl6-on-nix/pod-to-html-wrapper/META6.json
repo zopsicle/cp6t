@@ -1,0 +1,9 @@
+{
+    "name": "Pod::To::HTMLWrapper",
+    "provides": {
+        "Pod::To::HTMLWrapper": "lib/Pod/To/HTMLWrapper.pm6"
+    },
+    "resources": [
+        "templates"
+    ]
+}

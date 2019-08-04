@@ -1,0 +1,9 @@
+Like Pod::To::HTML, but with a custom template.
+
+First of all there are two things you must know:
+
+ 1. Pod::Load can’t cope with source files, only with POD-only files.
+ 2. Pod::To::HTML can’t be given a custom template when invoked with perl6 --doc=HTML.
+
+The solution: make a module Pod::To::HTMLWrapper which calls Pod::To::HTML
+with a custom template. This way we don’t need Pod::Load.

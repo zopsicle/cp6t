@@ -67,7 +67,7 @@ sub insert-distribution(IO::Path:D $path --> Nil)
         SQL
 
     for %meta<provides>.keys -> $comp-unit {
-        my $documentation := $path.add(‘share’).add(‘DOCUMENTATION’).add(“$comp-unit.txt”).slurp;
+        my $documentation := $path.add(‘share’).add(‘DOCUMENTATION’).add(“$comp-unit.html”).slurp;
         $*database.prepare(q:to/SQL/).execute(|%meta<name version>, $comp-unit, $documentation)
             INSERT INTO comp_units (distribution, version, name, documentation)
             VALUES (?, ?, ?, ?)

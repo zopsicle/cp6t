@@ -100,12 +100,5 @@ strong
     & > .-documentation
     {
         margin-top: $unit * $gr;
-
-        & > pre
-        {
-            font-family: monospace;
-
-            line-height: $unit * $gr;
-        }
     }
 }
