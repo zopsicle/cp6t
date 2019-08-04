@@ -16,10 +16,12 @@ sub generate-database(IO() $path --> Nil)
     install-schema;
 
     for list-nix-distributions() -> $distribution {
+        $*ERR.put: qq｢BUILD $distribution｣;
         my $path := try build-nix-distribution($distribution);
         with $! {
-            $*ERR.put: qq｢Cannot build $distribution: $!｣;
+            $*ERR.put: qq｢ERROR $distribution $!｣;
         } else {
+            $*ERR.put: qq｢SUCCESS $distribution @ $path｣;
             insert-distribution($path);
         }
     }

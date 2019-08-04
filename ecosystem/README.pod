@@ -6,7 +6,7 @@ cp6t-ecosystem - Perl 6 ecosystem scraping
 
 =head1 SYNOPSIS
 
-    nix-build ./ecosystem
+    ./nix-build.sh ./ecosystem
     result/bin/cp6t-ecosystem cpan update-archives ecosystem/cpan.archives
     result/bin/cp6t-ecosystem cpan generate-nix ecosystem/cpan.archives > ecosystem/cpan.nix
     result/bin/cp6t-ecosystem database generate ecosystem/database.sqlite3

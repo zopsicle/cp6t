@@ -4,7 +4,7 @@ meta6-to-nix - Turn META6.json into META6.nix
 
 =head1 SYNOPSIS
 
-    nix-build ./meta6-to-nix
+    ./nix-build.sh ./meta6-to-nix
     result/bin/meta6-to-nix --distribution=example --src=./. > example/META6.nix
 
 =head1 DESCRIPTION

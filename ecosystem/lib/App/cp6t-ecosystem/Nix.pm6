@@ -42,8 +42,8 @@ sub build-nix-distribution(Str:D $distribution --> IO::Path:D)
         in
             perl6-on-nix.distributions."{$distribution}"
     EOF
-    my @cmd := «nix-build --no-out-link --expr “($nix)”»;
+    my @cmd := «./nix-build.sh --no-out-link --expr “($nix)”»;
     my $proc := run @cmd, :out, :err;
-    $proc.out.lines[* - 1].IO;
-    # TODO: What to do with stderr?
+    $proc.exitcode == 0 ?? $proc.out.lines[* - 1].IO
+                        !! fail $proc.err.slurp;
 }
