@@ -8,35 +8,82 @@ use Template::Classic;
 sub comp-unit(DBDish::SQLite::Connection:D $database,
               Str:D $distribution,
               Str:D $version,
-              Str:D $name)
+              Str:D $comp-unit)
     is export(:handlers)
 {
-    my $sth := $database.prepare(q:to/SQL/);
+    my $comp-units-sth := $database.prepare(q:to/SQL/);
         SELECT documentation
         FROM comp_units
         WHERE
             distribution = ? AND
             version = ? AND
-            name = ?
+            comp_unit = ?
         SQL
-    $sth.execute($distribution, $version, $name);
-    my ($documentation) := $sth.row || do { not-found; return };
+    $comp-units-sth.execute($distribution, $version, $comp-unit);
+    my ($documentation) := $comp-units-sth.row || do { not-found; return };
 
-    my $title := qq｢{$distribution}:ver<$version> » $name｣;
-    my @body = comp-unit-template($distribution, $version, $name, $documentation);
+    my $distribution-sth := $database.prepare(q:to/SQL/);
+        SELECT license, source_url
+        FROM distributions
+        WHERE
+            distribution = ? AND
+            version = ?
+        SQL
+    $distribution-sth.execute($distribution, $version);
+    my ($license, $source-url) := $distribution-sth.row;
+
+    my $authors-sth := $database.prepare(q:to/SQL/);
+        SELECT author
+        FROM distribution_authors
+        WHERE
+            distribution = ? AND
+            version = ?
+        ORDER BY author ASC
+        SQL
+    $authors-sth.execute($distribution, $version);
+    my @authors = $authors-sth.allrows»[0];
+
+    my $title := qq｢{$distribution}:ver<$version> » $comp-unit｣;
+    my @body = comp-unit-template($distribution, $version, $license, $source-url, @authors, $comp-unit, $documentation);
     my $html := layout $title, @body;
     content ‘text/html’, $html.eager.join;
 }
 
-my &comp-unit-template := template :($distribution, $version, $name, $documentation), q:to/HTML/;
+my &comp-unit-template := template :($distribution, $version, $license, $source-url, @authors, $comp-unit, $documentation), q:to/HTML/;
     <article class="p6al--comp-unit">
         <header class="-header">
             <h1>
                 <a href="/distribution/<%= $distribution %>/<%= $version %>"><%= $distribution %>:ver&lt;<%= $version %>></a>
-                » <%= $name %>
+                » <%= $comp-unit %>
             </h1>
         </header>
         <aside class="-toolbar">
+            <section class="-authors">
+                <header>
+                    <h1>Authors</h1>
+                </header>
+                <ul>
+                    <% for @authors -> $author { %>
+                        <li><%= $author %></li>
+                    <% } %>
+                </ul>
+            </section>
+            <% if $license.defined { %>
+                <section class="-license">
+                    <header>
+                        <h1>License</h1>
+                    <header>
+                    <p><%= $license %></p>
+                </section>
+            <% } %>
+            <% if $source-url.defined { %>
+                <section class="-license">
+                    <header>
+                        <h1>Source</h1>
+                    <header>
+                    <p><a href="<%= $source-url %>" rel="nofollow"><%= $source-url %></a></p>
+                </section>
+            <% } %>
             <section class="-install">
                 <header>
                     <h1>Install with</h1>

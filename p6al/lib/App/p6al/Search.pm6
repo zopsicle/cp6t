@@ -16,15 +16,15 @@ my class Result
     method for-distributions(DBDish::SQLite::Connection:D $database, Str:D $query --> Seq:D)
     {
         my $stmt := $database.prepare(q:to/SQL/);
-            SELECT name, version
+            SELECT distribution, version
             FROM distributions
-            WHERE name LIKE '%' || ? || '%' ESCAPE '@'
+            WHERE distribution LIKE '%' || ? || '%' ESCAPE '@'
             SQL
         $stmt.execute(likeable($query));
-        $stmt.allrows.map: -> ($name, $version) {
+        $stmt.allrows.map: -> ($distribution, $version) {
             self.new(
-                url   => qq｢/distribution/$name/$version｣,
-                title => qq｢{$name}:ver<$version>｣,
+                url   => qq｢/distribution/$distribution/$version｣,
+                title => qq｢{$distribution}:ver<$version>｣,
             );
         }
     }
@@ -33,15 +33,15 @@ my class Result
     method for-comp-units(DBDish::SQLite::Connection:D $database, Str:D $query --> Seq:D)
     {
         my $stmt := $database.prepare(q:to/SQL/);
-            SELECT distribution, version, name, documentation
+            SELECT distribution, version, comp_unit, documentation
             FROM comp_units
-            WHERE name LIKE '%' || ? || '%' ESCAPE '@'
+            WHERE comp_unit LIKE '%' || ? || '%' ESCAPE '@'
             SQL
         $stmt.execute(likeable($query));
-        $stmt.allrows.map: -> ($distribution, $version, $name, $documentation) {
+        $stmt.allrows.map: -> ($distribution, $version, $comp-unit, $documentation) {
             self.new(
-                url         => qq｢/distribution/$distribution/$version/comp-unit/$name｣,
-                title       => qq｢{$distribution}:ver<$version> » $name｣,
+                url         => qq｢/distribution/$distribution/$version/comp-unit/$comp-unit｣,
+                title       => qq｢{$distribution}:ver<$version> » $comp-unit｣,
                 description => $documentation.substr(0, 100) ~
                                ｢ …｣ x ($documentation.chars > 100),
             );

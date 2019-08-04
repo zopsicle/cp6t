@@ -22,7 +22,10 @@ sub generate-database(IO() $path --> Nil)
             $*ERR.put: qq｢ERROR $distribution $!｣;
         } else {
             $*ERR.put: qq｢SUCCESS $distribution @ $path｣;
-            insert-distribution($path);
+            try insert-distribution($path);
+            with $! {
+                $*ERR.put: qq｢ERROR-INSERT $distribution $!｣;
+            }
         }
     }
 }
@@ -31,27 +34,39 @@ sub install-schema(--> Nil)
 {
     $*database.do(q:to/SQL/);
         CREATE TABLE distributions (
-            name            TEXT    NOT NULL,
+            distribution    TEXT    NOT NULL,
             version         TEXT    NOT NULL,
-            PRIMARY KEY (name, version)
+            description     TEXT,
+            license         TEXT,
+            source_url      TEXT,
+            PRIMARY KEY (distribution, version)
         )
+        SQL
+
+    $*database.do(q:to/SQL/);
+        CREATE TABLE distribution_authors (
+            distribution    TEXT    NOT NULL,
+            version         TEXT    NOT NULL,
+            author          TEXT    NOT NULL,
+            PRIMARY KEY (distribution, version, author)
+        );
         SQL
 
     $*database.do(q:to/SQL/);
         CREATE TABLE comp_units (
             distribution    TEXT    NOT NULL,
             version         TEXT    NOT NULL,
-            name            TEXT    NOT NULL,
+            comp_unit       TEXT    NOT NULL,
             documentation   TEXT    NOT NULL,
-            PRIMARY KEY (distribution, version, name),
+            PRIMARY KEY (distribution, version, comp_unit),
             FOREIGN KEY (distribution, version)
-                REFERENCES distributions (name, version)
+                REFERENCES distributions (distribution, version)
         )
         SQL
 
     $*database.do(q:to/SQL/);
         CREATE INDEX comp_units_name_ix
-            ON comp_units (name)
+            ON comp_units (comp_unit)
         SQL
 }
 
@@ -60,18 +75,31 @@ sub install-schema(--> Nil)
 sub insert-distribution(IO::Path:D $path --> Nil)
 {
     my $distribution-path := $path.add(‘share’).add(‘DISTRIBUTION’);
-    my $distribution := Distribution::Path.new($distribution-path);
-    my %meta := $distribution.meta;
+    my %meta := Distribution::Path.new($distribution-path).meta;
 
-    $*database.prepare(q:to/SQL/).execute(|%meta<name version>);
-        INSERT INTO distributions (name, version)
-        VALUES (?, ?)
+    my Str:D $distribution := %meta<name>;
+    my Str:D $version      := %meta<version>;
+    my Str   $description  := %meta<description>;
+    my Str   $license      := %meta<license>;
+    my Str:D @authors       = |%meta<authors> // ();
+    my Str   $source-url   := %meta<source-url>;
+
+    $*database.prepare(q:to/SQL/).execute($distribution, $version, $description, $license, $source-url);
+        INSERT INTO distributions (distribution, version, description, license, source_url)
+        VALUES (?, ?, ?, ?, ?)
         SQL
+
+    for @authors -> $author {
+        $*database.prepare(q:to/SQL/).execute($distribution, $version, $author);
+            INSERT INTO distribution_authors (distribution, version, author)
+            VALUES (?, ?, ?)
+            SQL
+    }
 
     for %meta<provides>.keys -> $comp-unit {
         my $documentation := $path.add(‘share’).add(‘DOCUMENTATION’).add(“$comp-unit.html”).slurp;
-        $*database.prepare(q:to/SQL/).execute(|%meta<name version>, $comp-unit, $documentation)
-            INSERT INTO comp_units (distribution, version, name, documentation)
+        $*database.prepare(q:to/SQL/).execute($distribution, $version, $comp-unit, $documentation)
+            INSERT INTO comp_units (distribution, version, comp_unit, documentation)
             VALUES (?, ?, ?, ?)
             SQL
     }
