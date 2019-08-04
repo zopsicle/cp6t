@@ -100,5 +100,21 @@ strong
     & > .-documentation
     {
         margin-top: $unit * $gr;
+
+        h1 { font-size: 1.8 * $unit; }
+        h2 { font-size: 1.6 * $unit; }
+        h3 { font-size: 1.4 * $unit; }
+        h4 { font-size: 1.2 * $unit; }
+        h5 { font-size: 1.0 * $unit; }
+        h6 { font-size: 1.0 * $unit; }
+        h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+        h1, h2, h3, h4 { line-height: 2 * $unit * $gr; }
+        h5, h6         { line-height: 1 * $unit * $gr; }
+
+        .pod-block-code
+        {
+            font-family: monospace;
+            line-height: $unit * $gr;
+        }
     }
 }
