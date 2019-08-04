@@ -70,8 +70,19 @@ strong
         width: 100%;
     }
 
-    & > .-info > .-intro
+    & > .-info
     {
-        margin-bottom: $unit * $gr;
+        & > .-title
+        {
+            font-size: 2 * $unit;
+            font-weight: bold;
+
+            line-height: 2 * $unit * $gr;
+        }
+
+        & > .-intro
+        {
+            margin: $unit * $gr 0;
+        }
     }
 }

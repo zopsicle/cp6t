@@ -15,6 +15,7 @@ my &home-template := template :(), q:to/HTML/;
     <section class="p6al--home">
         <img class="-logo" src="/static/p6al.svg" alt="P6AL">
         <div class="-info">
+            <h1 class="-title">Perl 6 Archive Listing</h1>
             <p class="-intro">
                 The <strong>Perl 6 Archive Listing</strong> is a place where
                 you can search for Perl 6 distributions and comp units, read
