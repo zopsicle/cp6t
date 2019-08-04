@@ -275,8 +275,8 @@
     "Template::Classic" =
         let
             tarball = fetchTarball {
-                url = "https://github.com/chloekek/Template-Classic/archive/v0.0.0.tar.gz";
-                sha256 = "0lxikyly2r3x8qarri0vp1l00laax7vgvy5rs5sqyxax81hw8nck";
+                url = "https://github.com/chloekek/Template-Classic/archive/v0.0.1.tar.gz";
+                sha256 = "056dh7sl13rjgxqsv66v0xjk77szbwqjnzc9vgq4i3narhp7cr9y";
             };
         in
             callPackage (tarball + "/META6.nix") {};
