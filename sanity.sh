@@ -5,7 +5,6 @@
 # bad.
 
 nix-build \
-    --option build-use-substitutes false \
     --no-out-link \
     --expr '
         let nixpkgs = import ./nix/nixpkgs.nix {}; in
