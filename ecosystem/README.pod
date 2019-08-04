@@ -29,3 +29,27 @@ archive if necessary. The Nix expressions are written to stdout.
 Generate a database with detailed information about each library. For each
 library, the database contains metadata about the library, the packages in
 the library, and rendered POD. This database is used by P6AL.
+
+=head1 CAVEATS
+
+cp6t-ecosystem cannot cope with multiple authors defining distributions with
+the same name. There is simply no way to deal with this in a reproducible
+way, unless the auth field is mandatory both in META6 and when importing
+modules, which it isn’t.
+
+Imagine two authors A and B define a module M. Which one will you import? You
+could import A’s since it has highest version number. Now B updates their
+module with a version number greater than A’s. Now you’re suddenly importing
+B’s. So, you will be alternating back and forth between authors as they
+update their versions.
+
+=head1 BUGS
+
+cp6t-ecosystem discards version bounds on depends. This will be fixed in a
+future version, but for now it will always pick the latest version of each
+distribution.
+
+cp6t-ecosystem ignores the api field. This will be fixed in a future version,
+but for now it will only take the version field into account.
+
+=back
