@@ -54,6 +54,7 @@ sub search(DBDish::SQLite::Connection:D $database, Str $query)
 {
     if !$query.defined || $query eq '' {
         redirect ｢/｣;
+        return;
     }
 
     my @distributions = Result.for-distributions($database, $query);
