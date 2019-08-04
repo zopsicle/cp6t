@@ -172,6 +172,20 @@
             "JSON::JWT" = "lib/JSON/JWT.pm6";
         };
     };
+    "JSON::Unmarshal" = perl6-on-nix.mkDerivation {
+        name = "JSON::Unmarshal";
+        src = fetchTarball {
+            url = "https://github.com/tadzik/JSON-Unmarshal/archive/e1b6288c5f3165058f36c0f4e171cdf2dfd640da.tar.gz";
+            sha256 = "14azsmzmwdn8k0gqcpvballharcvzylmlyrx2wmv4kpqfnz29fjc";
+        };
+        depends = [
+            perl6-on-nix.distributions."JSON::Fast"
+            perl6-on-nix.distributions."JSON::Name"
+        ];
+        provides = {
+            "JSON::Unmarshal" = "lib/JSON/Unmarshal.pm";
+        };
+    };
     "MIME::Base64" = perl6-on-nix.mkDerivation {
         name = "MIME::Base64";
         src = fetchTarball {
