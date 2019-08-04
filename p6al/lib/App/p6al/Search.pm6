@@ -75,12 +75,12 @@ my &search-template := template :(@results), q:to/HTML/;
                             <a href="<%= $result.url %>"><%= $result.title %></a>
                         </h1>
                     </header>
+                    <% with $result.description -> $description { %>
+                        <section>
+                            <p><%= $description %></p>
+                        </section>
+                    <% } %>
                 </article>
-                <% with $result.description -> $description { %>
-                    <section>
-                        <p><%= $description %></p>
-                    </section>
-                <% } %>
             </li>
         <% } %>
     </ul>
