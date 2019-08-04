@@ -20,6 +20,12 @@ sub meta6-to-nix(IO(Cool) :$distribution, Str:D :$src --> List:D)
 
     # FIXME: Guard against Nix injection attacks.
 
+    # Core modules should not be included in the Nix expression as
+    # dependencies, since they are already shipped with Rakudo.
+    my %core-modules := set <
+        Test
+    >;
+
     my $nix := qq:to/EOF/.chomp;
         # !!! THIS IS A GENERATED FILE !!!
         # DO NOT UPDATE THIS FILE MANUALLY
@@ -28,7 +34,7 @@ sub meta6-to-nix(IO(Cool) :$distribution, Str:D :$src --> List:D)
             name = "$name";
             src = $src;
             depends = [{
-                @depends.map({
+                @depends.grep(* !∈ %core-modules).map({
                     # TODO: Until we find a nice way to deal with them, we will
                     # TODO: ignore ver and auth bounds.
                     my $dep-full := S/‘:’ [ver | auth] .*//;

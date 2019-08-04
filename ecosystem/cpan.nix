@@ -64,7 +64,6 @@ perl6-on-nix.mkDerivation {
     };
     depends = [
         perl6-on-nix.distributions."IO::Capture::Simple"
-        perl6-on-nix.distributions."Test"
     ];
     provides = {
         "Test::Declare" = "lib/Test/Declare.pm6";
@@ -7480,7 +7479,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0k95rjd39aimsxxs7d4rbyvmrgxh26ca5fmfb49gzlxxk8bg0b5h";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."XML::Class"
         perl6-on-nix.distributions."URI::Encode"
         perl6-on-nix.distributions."IO::Socket::SSL"
@@ -10693,7 +10691,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0s8d4zi0rlwpza8pywz9fqxc1vghi3b6wsmvxp4ggj020d75yxx6";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."Test::META"
     ];
     provides = {
@@ -11610,7 +11607,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0irnlp0krkjzhfqwjv2chbk12v3mbnvrxlgdzjjw9fr7lax4yzki";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."Test::META"
     ];
     provides = {
@@ -13993,7 +13989,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "12xpzfld988nzv8p7lm0iykbfidvnlnh556c9zcmy7wd6b5wq39w";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."Test::META"
     ];
     provides = {
@@ -14326,7 +14321,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1vglv5agfjh2l1v40qmqk0pvbrhw8byjc61qm0vmz80r7ipfjb2g";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."Test::META"
     ];
     provides = {
@@ -16497,7 +16491,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0fcylvpmmjjwq3aircsqhy5k5fxfw7nzc0gc9m4kcav8js6f2qyi";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."META6"
         perl6-on-nix.distributions."URI"
         perl6-on-nix.distributions."License::SPDX"
@@ -19435,7 +19428,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0c9rnxglm16mignibdg2fw1dvb2s006bkff42bdb9zhbkzbnxp1p";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
     ];
     provides = {
         "Test::SourceFiles" = "lib/Test/SourceFiles.pm6";
@@ -24348,7 +24340,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1yv1g4kndipd82b0aflc6flhpn6szxarjphsbabb6jjar5g2y356";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."Test::META"
     ];
     provides = {
@@ -26670,7 +26661,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "0b15xyy6qcv5xcmjww97nz5055nf1lm5yvibhraj0ikgzpbqffnx";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."XML::Class"
         perl6-on-nix.distributions."URI::Encode"
         perl6-on-nix.distributions."IO::Socket::SSL"
@@ -27917,7 +27907,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1nkz6978nlgswzjdj0p391qsx69rgxdk60pisvzmpkkd1x8w8wd2";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."Test::META"
     ];
     provides = {
@@ -28128,7 +28117,6 @@ perl6-on-nix.mkDerivation {
         sha256 = "1jyhpsb8hm5mq1z9w86bpw0ifcwqpiravs3wrvd8mfrba11izdc0";
     };
     depends = [
-        perl6-on-nix.distributions."Test"
         perl6-on-nix.distributions."META6"
         perl6-on-nix.distributions."URI"
         perl6-on-nix.distributions."License::SPDX"
@@ -28894,7 +28882,6 @@ perl6-on-nix.mkDerivation {
     };
     depends = [
         perl6-on-nix.distributions."IO::Capture::Simple"
-        perl6-on-nix.distributions."Test"
     ];
     provides = {
         "Test::Declare::Suite" = "lib/Test/Declare/Suite.pm6";
