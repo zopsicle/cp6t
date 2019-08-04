@@ -1,6 +1,6 @@
 # In this files you find Perl 6 Nix expressions for the modules from the Perl 6
 # ecosystem list.
-{perl6-on-nix}: {
+{callPackage, perl6-on-nix}: {
     "ArrayHash" = perl6-on-nix.mkDerivation {
         # XXX: Not actually in the ecosystem, but fun to try out.
         name = "ArrayHash";
@@ -271,6 +271,15 @@
             "Pod::To::HTML" = "lib/Pod/To/HTML.pm";
         };
     };
+    # XXX: Not actually in the ecosystem, but we need it for P6AL.
+    "Template::Classic" =
+        let
+            tarball = fetchTarball {
+                url = "https://github.com/chloekek/Template-Classic/archive/v0.0.0.tar.gz";
+                sha256 = "0lxikyly2r3x8qarri0vp1l00laax7vgvy5rs5sqyxax81hw8nck";
+            };
+        in
+            callPackage (tarball + "/META6.nix") {};
     "Template::Mustache" = perl6-on-nix.mkDerivation {
         name = "Template::Mustache";
         src = fetchTarball {

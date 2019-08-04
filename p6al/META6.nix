@@ -7,6 +7,7 @@ perl6-on-nix.mkDerivation {
     depends = [
         perl6-on-nix.distributions."Cro::HTTP"
         perl6-on-nix.distributions."DBIish"
+        perl6-on-nix.distributions."Template::Classic"
     ];
     provides = {
         "App::p6al::Application" = "lib/App/p6al/Application.pm6";
@@ -15,6 +16,5 @@ perl6-on-nix.mkDerivation {
         "App::p6al::Layout" = "lib/App/p6al/Layout.pm6";
         "App::p6al::Main" = "lib/App/p6al/Main.pm6";
         "App::p6al::Search" = "lib/App/p6al/Search.pm6";
-        "Template::Classic" = "lib/Template/Classic.pm6";
     };
 }
