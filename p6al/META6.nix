@@ -10,6 +10,7 @@ perl6-on-nix.mkDerivation {
     ];
     provides = {
         "App::p6al::Application" = "lib/App/p6al/Application.pm6";
+        "App::p6al::CompUnit" = "lib/App/p6al/CompUnit.pm6";
         "App::p6al::Home" = "lib/App/p6al/Home.pm6";
         "App::p6al::Layout" = "lib/App/p6al/Layout.pm6";
         "App::p6al::Main" = "lib/App/p6al/Main.pm6";

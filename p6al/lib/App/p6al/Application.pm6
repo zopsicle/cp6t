@@ -1,5 +1,6 @@
 unit module App::p6al::Application;
 
+use App::p6al::CompUnit :handlers;
 use App::p6al::Home :handlers;
 use App::p6al::Search :handlers;
 use Cro::HTTP::Router;
@@ -33,20 +34,6 @@ my &distribution-template := template :($name, $version, @comp-units), q:to/HTML
     </article>
     HTML
 
-my &comp-unit-template := template :($distribution, $version, $name, $documentation), q:to/HTML/;
-    <article>
-        <header>
-            <h1>
-                <a href="/distribution/<%= $distribution %>/<%= $version %>"><%= $distribution %>:ver&lt;<%= $version %>></a>
-                <%= $name %>
-            </h1>
-        </header>
-        <section>
-            <pre><%= $documentation %></pre>
-        </section>
-    </article>
-    HTML
-
 sub application(DBDish::SQLite::Connection:D $database --> Cro::Transform:D)
     is export
 {
@@ -73,19 +60,9 @@ sub application(DBDish::SQLite::Connection:D $database --> Cro::Transform:D)
 
             content ‘text/html’, distribution-template($name, $version, @comp-units).eager.join;
         }
-        get -> ‘distribution’, Str:D $distribution, Str:D $version, ‘comp-unit’, Str:D $name {
-            my $sth := $database.prepare(q:to/SQL/);
-                    SELECT documentation
-                    FROM comp_units
-                    WHERE
-                        distribution = ? AND
-                        version = ? AND
-                        name = ?
-                    SQL
-            $sth.execute($distribution, $version, $name);
-            my ($documentation) := $sth.row // die ‘404’;
 
-            content ‘text/html’, comp-unit-template($distribution, $version, $name, $documentation).eager.join;
+        get -> ‘distribution’, Str:D $distribution, Str:D $version, ‘comp-unit’, Str:D $name {
+            comp-unit($database, $distribution, $version, $name);
         }
     }
 }
