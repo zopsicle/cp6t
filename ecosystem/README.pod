@@ -1,3 +1,5 @@
+=encoding utf8
+
 =head1 NAME
 
 cp6t-ecosystem - Perl 6 ecosystem scraping
@@ -51,5 +53,3 @@ distribution.
 
 cp6t-ecosystem ignores the api field. This will be fixed in a future version,
 but for now it will only take the version field into account.
-
-=back
