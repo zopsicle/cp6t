@@ -1,4 +1,4 @@
-{lib, callPackage, fetchzip, stdenv, makeWrapper, rakudo, openssl, sqlite}:
+{lib, callPackage, fetchzip, stdenv, makeWrapper, perl, rakudo, openssl, sqlite}:
 if rakudo.version == "2017.01" then throw (
     "It seems like you are using Rakudo from Nixpkgs. This is an outdated " +
     "version. Consider using rakudo-nix instead."
@@ -88,6 +88,17 @@ rec {
                             --add-flags $f
                     done
                 fi
+
+                # Generate a test script.
+                # TODO: Don't pass OpenSSL and SQLite here; make it
+                # TODO: configurable which libraries a library needs during
+                # TODO: testing.
+                makeWrapper ${perl}/bin/prove $out/share/TEST \
+                    --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [openssl sqlite]} \
+                    --set PERL6LIB $(< $out/share/PERL6LIB) \
+                    --add-flags --exec \
+                    --add-flags ${rakudo}/bin/perl6 \
+                    --add-flags $out/share/DISTRIBUTION/t
             '';
         };
 }
