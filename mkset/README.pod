@@ -1,0 +1,8 @@
+=head1 NAME
+
+App::cp6t-mkset - Generate distribution sets
+
+=head1 DESCRIPTION
+
+For now, see L<https://github.com/chloekek/cp6t/issues/16> for an overview.
+This readme will be populated as development goes on.
