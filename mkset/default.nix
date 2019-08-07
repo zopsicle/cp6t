@@ -10,7 +10,11 @@ nixpkgs.stdenv.mkDerivation {
         mkdir --parents $out/{bin,share}
 
         makeWrapper ${nixpkgs.rakudo}/bin/perl6 $out/bin/cp6t-mkset \
-            --set PATH ${nixpkgs.rsync}/bin \
+            --set PATH ${"''"} \
+            --prefix PATH : ${nixpkgs.curl}/bin \
+            --prefix PATH : ${nixpkgs.git}/bin \
+            --prefix PATH : ${nixpkgs.jq}/bin \
+            --prefix PATH : ${nixpkgs.rsync}/bin \
             --set PERL6LIB 'file#'$out/share \
             --add-flags $out/share/bin/cp6t-mkset
 
