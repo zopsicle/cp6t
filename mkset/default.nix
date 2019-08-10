@@ -14,7 +14,10 @@ nixpkgs.stdenv.mkDerivation {
             --prefix PATH : ${nixpkgs.curl}/bin \
             --prefix PATH : ${nixpkgs.git}/bin \
             --prefix PATH : ${nixpkgs.jq}/bin \
+            --prefix PATH : ${nixpkgs.nix}/bin \
             --prefix PATH : ${nixpkgs.rsync}/bin \
+            --prefix PATH : ${nixpkgs.gnutar}/bin \
+            --prefix PATH : ${nixpkgs.gzip}/bin \
             --set PERL6LIB 'file#'$out/share \
             --add-flags $out/share/bin/cp6t-mkset
 
