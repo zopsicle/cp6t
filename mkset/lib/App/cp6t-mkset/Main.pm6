@@ -40,3 +40,14 @@ multi MAIN(‘hash-archives’ --> Nil)
         }
     }
 }
+
+multi MAIN(‘list-distributions’ --> Nil)
+    is export
+{
+    for lines.map(*.split(/\s+/)) -> ($url, $hash) {
+        with unpack-archive($url, $hash) -> $path {
+            $*OUT.put: qq｢$url $hash $path｣;
+            $*OUT.flush;
+        }
+    }
+}
