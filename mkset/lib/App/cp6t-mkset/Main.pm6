@@ -23,7 +23,10 @@ multi MAIN(‘list-archives’ --> Nil)
     ;
 
     for @archiveses -> $archives {
-        .put for $archives.list-archives;
+        for $archives.list-archives -> $archive {
+            $*OUT.put: $archive;
+            $*OUT.flush;
+        }
     }
 }
 
@@ -32,7 +35,8 @@ multi MAIN(‘hash-archives’ --> Nil)
 {
     for lines() -> $url {
         with hash-archive($url) -> $hash {
-            put qq｢$url $hash｣;
+            $*OUT.put: qq｢$url $hash｣;
+            $*OUT.flush;
         }
     }
 }
