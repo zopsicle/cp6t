@@ -3,10 +3,12 @@ unit module App::cp6t-mkset::Main;
 use App::cp6t-mkset::Archive;
 use App::cp6t-mkset::Archives;
 use App::cp6t-mkset::CPAN;
+use App::cp6t-mkset::Meta;
 use App::cp6t-mkset::p6c;
 
 my constant Archives = App::cp6t-mkset::Archives;
 my constant CPAN = App::cp6t-mkset::CPAN;
+my constant Meta = App::cp6t-mkset::Meta;
 my constant p6c = App::cp6t-mkset::p6c;
 
 multi MAIN(‘list-archives’ --> Nil)
@@ -46,8 +48,16 @@ multi MAIN(‘list-distributions’ --> Nil)
 {
     for lines.map(*.split(/\s+/)) -> ($url, $hash) {
         with unpack-archive($url, $hash) -> $path {
-            $*OUT.put: qq｢$url $hash $path｣;
-            $*OUT.flush;
+            with Meta.new($path) -> $meta {
+                $*OUT.put: qq｢archive $url $hash｣;
+                $*OUT.put: qq｢name {$meta.name}｣;
+                $*OUT.put: qq｢license $_｣ with $meta.license;
+                $*OUT.put: qq｢source-url $_｣ with $meta.source-url;
+                $*OUT.put: qq｢author $_｣ for $meta.authors;
+                $*OUT.put: qq｢depends $_｣ for $meta.depends;
+                $*OUT.put: qq｢provides {.key} {.value}｣ for $meta.provides.pairs;
+                $*OUT.put: ｢---｣;
+            }
         }
     }
 }
