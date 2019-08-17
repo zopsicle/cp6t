@@ -6,6 +6,7 @@
         "App::cp6t-mkset::CPAN": "lib/App/cp6t-mkset/CPAN.pm6",
         "App::cp6t-mkset::Main": "lib/App/cp6t-mkset/Main.pm6",
         "App::cp6t-mkset::Meta": "lib/App/cp6t-mkset/Meta.pm6",
+        "App::cp6t-mkset::Nix": "lib/App/cp6t-mkset/Nix.pm6",
         "App::cp6t-mkset::p6c": "lib/App/cp6t-mkset/p6c.pm6"
     }
 }

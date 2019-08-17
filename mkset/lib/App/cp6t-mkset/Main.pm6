@@ -4,6 +4,7 @@ use App::cp6t-mkset::Archive;
 use App::cp6t-mkset::Archives;
 use App::cp6t-mkset::CPAN;
 use App::cp6t-mkset::Meta;
+use App::cp6t-mkset::Nix;
 use App::cp6t-mkset::p6c;
 
 my constant Archives = App::cp6t-mkset::Archives;
@@ -58,6 +59,32 @@ multi MAIN(‘list-distributions’ --> Nil)
                 $*OUT.put: qq｢provides {.key} {.value}｣ for $meta.provides.pairs;
                 $*OUT.put: ｢---｣;
             }
+        }
+    }
+}
+
+multi MAIN(‘generate-derivations’ --> Nil)
+    is export
+{
+    my %info;
+    for lines() {
+        %info.append: $/.hash when /^ ｢archive｣ \s+ $<url>=[\S+] \s+ $<hash>=[\S+] $/;
+        %info.append: $/.hash when /^ ｢name｣ \s+ $<name>=[.+] $/;
+        %info.append: $/.hash when /^ ｢license｣ \s+ $<license>=[.+] $/;
+        %info.append: $/.hash when /^ ｢source-url｣ \s+ $<source-url>=[.+] $/;
+        %info.append: $/.hash when /^ ｢author｣ \s+ $<author>=[.+] $/;
+
+        when /^ ｢depends｣ \s+ $<depends>=[\S+] $/ {
+            %info<depends>.push: $<depends>;
+        }
+
+        when /^ ｢provides｣ \s+ $<comp-unit>=[\S+] \s+ $<path>=[\S+] $/ {
+            %info<provides>{$<comp-unit>} = $<path>;
+        }
+
+        when ｢---｣ {
+            put($_) with generate-derivation(|%info);
+            %info = Empty;
         }
     }
 }
